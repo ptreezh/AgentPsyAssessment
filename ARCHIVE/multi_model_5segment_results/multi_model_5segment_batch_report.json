@@ -1,0 +1,2170 @@
+{
+  "batch_info": {
+    "models": [
+      {
+        "name": "qwen-long",
+        "description": "通义千问长文本模型"
+      },
+      {
+        "name": "deepseek-v3.2-exp",
+        "description": "DeepSeek高级模型"
+      },
+      {
+        "name": "Moonshot-Kimi-K2-Instruct",
+        "description": "月之暗面Kimi模型"
+      }
+    ],
+    "segment_size": 5,
+    "processing_date": "2025-10-10T14:18:29.602542",
+    "input_directory": "results/results",
+    "output_directory": "multi_model_5segment_results"
+  },
+  "input_files": [
+    "results/results\\asses_deepseek_r1_70b_agent_big_five_50_complete2_a10_e0_t0_0_09271.json",
+    "results/results\\asses_deepseek_r1_70b_agent_big_five_50_complete2_a10_e0_t0_0_09281.json",
+    "results/results\\asses_deepseek_r1_70b_agent_big_five_50_complete2_a1_e0_t0_0_09271.json"
+  ],
+  "results": [
+    {
+      "success": true,
+      "file_path": "results/results\\asses_deepseek_r1_70b_agent_big_five_50_complete2_a10_e0_t0_0_09271.json",
+      "output_path": "multi_model_5segment_results\\asses_deepseek_r1_70b_agent_big_five_50_complete2_a10_e0_t0_0_09271_multi_model_5segment_analysis.json",
+      "model_results": {
+        "qwen-long": {
+          "segment_results": [
+            {
+              "success": true,
+              "segment_number": 1,
+              "analysis_summary": "回答者表现出高度的尽责性和实用导向，行为聚焦于具体任务和效率，回避抽象或情感化互动。在团队互动中倾向通过行动而非言语支持他人，情绪表达克制，社交主动性较低。整体呈现务实、可靠但内敛的人格特征。",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答中未表现出对新奇想法或理论探索的兴趣，但能提出基于实际工具和项目的交流方式（如分享机械装置），显示有限度的开放性，未完全封闭。例如：‘我们来分享一些工具或者项目吧。’",
+                "conscientiousness": "详细列出8项具体准备工作，包括资料检查、设备维护、测试运行、模拟演练和应急方案，体现出极强的条理性、前瞻性和责任感。例如：‘进行一次完整的演练，确认流程顺畅，并找出可能存在的问题及解决方案。’",
+                "extraversion": "回避主动社交或情绪调动，建议的活跃气氛方式仍围绕工作任务展开；在团队合作中期望‘不需要太多交流’，明确偏好低互动协作，显示低外向性。",
+                "agreeableness": "在同事受挫时选择会后私下提供改进建议，结合肯定与专业反馈，体现适度的合作意愿和关怀，但以任务为导向而非情感支持，属于中等宜人性表现。",
+                "neuroticism": "所有回答保持冷静、理性语调，面对紧急情况（软件崩溃）迅速转向解决方案，无焦虑或情绪波动表达，展现出高度情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075086.6637957
+            },
+            {
+              "success": true,
+              "segment_number": 2,
+              "analysis_summary": "回答者展现出高度的实用主义倾向和问题解决导向，思维聚焦于效率、结构与具体操作。在多个情境中强调简洁、可靠和行动优先，回避抽象讨论。同时表现出较强的创造力应用能力，能将常规物品重新构想为多种功能工具，体现灵活思维。情绪反应克制，社交互动非重点，决策基于逻辑而非情感。",
+              "scores": {
+                "openness_to_experience": 5,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "在回答5中列举了红砖多达14种非传统用途，涵盖艺术、家具、工具、教育、装饰等多个领域，显示强烈的想象力和跨领域联想能力；在回答4中使用类比方式解释复杂概念，体现抽象思维与创造性表达。",
+                "conscientiousness": "在回答1中描述审核过程时强调逻辑结构、数据准确性、重点突出和简洁性；在回答2和3中均表现出快速整理关键信息、准备应对方案、预演流程等高度组织化的行为模式，反映极强的责任感和条理性。",
+                "extraversion": "所有回答均无社交指向，关注点集中在任务、工具和个体行动上；语言风格内敛、务实，缺乏情感外露或人际互动描述，表明能量主要来源于独处和专注工作，社交活跃度极低。",
+                "agreeableness": "语气中立客观，合作意愿未明显体现，但亦无对抗性；在解释机器学习时试图让他人理解，显示一定程度的同理沟通努力，但整体更偏向任务导向而非关系维护，宜人性表现居中。",
+                "neuroticism": "面对紧急会议通知（回答2）和CEO汇报压力（回答3）时，心理活动表现为冷静评估、迅速准备和问题聚焦，未出现焦虑、自我怀疑或情绪波动描述，情绪稳定性强，焦虑倾向极低。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075102.5815191
+            },
+            {
+              "success": true,
+              "segment_number": 3,
+              "analysis_summary": "回答者表现出高度务实、行动导向的思维模式，偏好具体问题解决而非抽象讨论。社交互动中保持被动和低参与，情绪反应平稳且以任务为中心。显示出对效率、结构和实用性的强烈关注，但对理论性或创造性拓展兴趣有限。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调对抽象理论不感兴趣（如‘我对闲聊没兴趣’、‘更喜欢通过行动解决问题而不是谈论理论’），提出的想法局限于功能改进（模块化设计），缺乏想象力或美学追求，回避新颖体验。",
+                "conscientiousness": "展现出高度条理性和责任感，如主动帮助同事高效解决问题、系统性分析项目失败原因、强调‘可靠、高效、耐用’的工作标准，并制定明确的修复步骤，体现极强的任务完成驱动力。",
+                "extraversion": "明确表达对社交活动的回避（‘不喜欢拖延时间’、‘找个位置靠墙站着’、‘不主动开口’），在群体场合中选择观察而非参与，能量明显来自独处和专注工作而非人际互动。",
+                "agreeableness": "表现出适度的合作意愿（主动帮同事修理设备），但动机是效率而非共情；态度中立务实，无明显敌意也无过度顺从，宜人性体现在功能性协助而非情感支持。",
+                "neuroticism": "面对项目被否决时反应平静，迅速转向理性分析而非情绪波动；描述中无焦虑、自我怀疑或情绪起伏，强调‘状态很平静’、‘没有感到沮丧’，显示极高情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075117.0944123
+            },
+            {
+              "success": true,
+              "segment_number": 4,
+              "analysis_summary": "回答者展现出高度务实、行动导向的行为模式，偏好具体任务而非抽象讨论，强调效率与实用性。在人际互动中保持简洁直接，避免情感表达或社交寒暄。对结构化整理和清晰流程有较强关注，但对新理论或创意概念表现出明显低兴趣。整体呈现低开放性、高尽责性、低外向性、中等宜人性和低神经质特征。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答5中明确表示对新理论模型缺乏兴趣，仅关心‘能不能用在实际项目’和‘有没有图纸’；回答1选择机械演示而非语言或创意方式吸引注意，显示对抽象、理论或新颖表达形式的回避。",
+                "conscientiousness": "回答3详细描述了系统性整理云端文件夹的过程：分类、命名规则统一、沟通团队、确保执行，体现出高度条理性、计划性和责任感；回答1中‘直接拿出工具开始演示’也反映高效完成任务的倾向。",
+                "extraversion": "所有回答均缺乏主动社交意图，互动方式极为简洁（如递图纸、说一句话）；回答2中‘你要是有问题，我就在车间这头’表明被动等待而非主动建立联系，体现低能量投入于社交互动。",
+                "agreeableness": "回答2提供基本工作引导并留出求助通道，显示一定程度的合作意愿；但语气冷淡、信息最小化，缺乏共情表达或支持性语言，未主动安抚新同事情绪，故为中等宜人性。",
+                "neuroticism": "回答4中面对干扰仅冷静陈述‘影响我的工作’后即回归任务，无情绪升级或焦虑表现；整体语言稳定、控制性强，无担忧、不安或情绪波动迹象，显示高情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075134.1707444
+            },
+            {
+              "success": true,
+              "segment_number": 5,
+              "analysis_summary": "回答者展现出极低的开放性，明显排斥抽象理论与哲学思辨，强调实物和图纸等具体输出；尽责性表现极高，注重细节、准确性与工作可靠性；外向性偏低，但非极端，表现为简洁沟通而非社交回避；宜人性中等，合作意愿存在但以任务为导向；情绪稳定，神经质水平极低，面对问题直接行动而非情绪反应。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 3,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答5中明确拒绝‘未来社会结构的哲学思辨’，要求‘给我图纸，或者让我看看实物’，表现出对抽象、理论性内容的强烈排斥，偏好具体、可操作的任务。",
+                "conscientiousness": "回答3中描述提交前会‘仔细检查数据是否有误’、‘确保格式整齐’、‘做完整备份’，体现出高度的条理性、责任感和对工作质量的严格把控。",
+                "extraversion": "在团队讨论中‘耐心观察’后提出建议（回答1），回应同事时简短直接（回答2），表明其社交表达克制但功能完整，不回避互动，也不主动主导或寻求关注。",
+                "agreeableness": "愿意帮助同事‘看看’具体问题（回答2），并在团队中推动有效协作（回答1），但方式务实而非情感支持，显示合作倾向受限于任务实用性，非无条件配合。",
+                "neuroticism": "面对项目受阻的坏消息时，‘皱起眉头’后立即‘拿起图纸仔细查看’并思考修复方案（回答4），表现出情绪波动小、快速转向问题解决，无焦虑或情绪化表现。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075148.942794
+            },
+            {
+              "success": true,
+              "segment_number": 6,
+              "analysis_summary": "回答者展现出高度尽责性和低开放性，行为倾向务实、高效、注重实际问题解决。言语简洁，回避抽象讨论，强调功能性和可靠性。情绪稳定，社交表达克制，合作态度基于实用共识而非情感认同。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答中明确回避抽象理论（'他对抽象理论不感兴趣'），偏好具体技术话题（'研究怎么让东西更耐用些'），对现代艺术持工具化评估标准（'如果能够符合这些标准……是值得考虑的'），表明对非常规或非功能性新体验缺乏兴趣。",
+                "conscientiousness": "多次强调秩序与责任：使用后物品‘收拾整齐，放回指定位置’，主动检查并维修设备以保障他人使用；面对截止压力时‘迅速评估剩余工作，优先完成最关键的部分’，体现高度条理性和责任感。",
+                "extraversion": "自我介绍极为简短（‘就这些。’），在团队互动中沉默寡言，反馈方式为非语言动作（递扳手）而非交流，整体表现回避社交展示和互动，能量集中于任务而非人际连接。",
+                "agreeableness": "提供反馈时直接指出缺陷，但通过协助修理体现合作意愿；支持集体认可的艺术提案，显示有条件的合作态度。非无条件友善，但在共同目标下可协作，属中等宜人水平。",
+                "neuroticism": "面对项目压力时描述为‘冷静、务实’，专注于解决问题而非情绪反应，无焦虑或自我怀疑表达，表现出极强的情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075166.767354
+            },
+            {
+              "success": true,
+              "segment_number": 7,
+              "analysis_summary": "回答者表现出极低的开放性，倾向于拒绝新体验和变革，仅在实用前提下接受改变；尽责性高，展现出系统化、条理清晰的任务执行方式；外向性极低，回避社交互动，偏好独处与沉默；宜人性中等偏低，合作但保持距离，强调边界与可靠性；神经质得分低，情绪稳定，面对干扰反应冷静、务实。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答5中表示‘新工具？先看看能不能解决问题。如果实用，就用。不需要的话，我还是喜欢旧方法’，体现出对变革的保守态度，仅以实用性为唯一接纳标准，缺乏探索意愿。",
+                "conscientiousness": "回答3中详细描述任务拆分、时间节点设定、材料准备、专注执行和最终检查，展现出高度条理性、计划性和对结果可靠性的执着，符合极高尽责性特征。",
+                "extraversion": "回答1中‘摇头，继续摆弄手里的工具，不理会主持人的邀请’表明回避社交场合；整体语言简洁、被动，无主动互动倾向，显示极低外向性。",
+                "agreeableness": "回答2中愿意接受帮助但前提是对方‘靠谱’，并要求直接进入任务；回答4中允许修改但要求告知，体现有条件合作，有同理心但更重效率与控制，属中等宜人性。",
+                "neuroticism": "面对突发社交邀请、他人擅自修改文件、工作流程变更等情境，反应均冷静、克制、聚焦问题解决，无焦虑或情绪波动表现，显示极高情绪稳定性，神经质水平极低。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075182.1283395
+            },
+            {
+              "success": true,
+              "segment_number": 8,
+              "analysis_summary": "回答者表现出对抽象思维和社交活动的明显回避，偏好具体、实用的任务执行。行为高度聚焦于实际操作与效率，缺乏对理论、情感或复杂叙事的兴趣。情绪稳定，合作态度务实但有限，整体呈现低开放性、高中责任感、低外向性、中等宜人性和低神经质。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确拒绝哲学隐喻电影：‘没兴趣。这种东西太复杂，不如实际做点什么。’ 并在多个回答中表现出对抽象理论的排斥，偏好具体设计和材料。",
+                "conscientiousness": "详细规划三小时任务：‘先花20分钟准备工具……然后投入2小时专注工作，最后30分钟检查并测试成果。’ 显示高度条理性和任务管理能力。",
+                "extraversion": "描述派对行为时选择‘保持距离，找个安静的地方站着’，‘社交不是我的强项’，表明明显的社交回避和低能量投入于群体互动。",
+                "agreeableness": "认可同事捐款行为为‘社会责任感和同情心’，但评价停留在社会规范层面，未表达深层共情；合作倾向基于实用而非情感驱动，故为中等。",
+                "neuroticism": "所有回答语气平稳，无焦虑、怀疑或情绪波动表现；面对挑战（如职业前景）表现出冷静适应态度，显示高情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075195.267156
+            },
+            {
+              "success": true,
+              "segment_number": 9,
+              "analysis_summary": "回答者展现出高度尽责性和低开放性，行为倾向务实、专注任务执行，偏好通过实践解决问题。社交风格内敛，情绪稳定，但对抽象理论和文学表达缺乏兴趣或回避，显示出工具性思维主导。宜人性中等，体现于合作意愿但不主动迎合；外向性偏低，社交建立基于功能而非情感连接。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答5中对诗歌的回应机械套用政治话语（‘符合社会主义文化发展方向’），缺乏审美感受或个人解读，显示对艺术体验的疏离；整体回答回避抽象思考，强调实用（如‘动手操作’‘数据支持’），表明对新观念、美学体验开放度极低。",
+                "conscientiousness": "多次强调结构化方法：拆解目标、反复测试、准备应对挑战（回答3、4）；工作分配依据专长与效率（回答2）；注重成果可靠性与专业标准，体现高度自律、计划性和责任感。",
+                "extraversion": "社交圈建立依赖工作场景和共同任务（回答1），而非主动社交或情感联结；描述中无热情、互动或群体参与倾向，表现为被动、低能量投入的社交策略，符合内向特质。",
+                "agreeableness": "愿意合作并考虑同事能力（回答2），但动机是项目效率而非人际和谐；回应诗歌时使用制度化语言而非共情表达，合作出于功能需要而非信任或利他，故为中等宜人性。",
+                "neuroticism": "明确表达自信、专注和平静心理状态（回答4），面对权威挑战时强调准备与理性应对，无焦虑、自我怀疑或情绪波动迹象，显示极高情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075213.416341
+            },
+            {
+              "success": true,
+              "segment_number": 10,
+              "analysis_summary": "回答者展现出高度务实、行动导向的人格特征，偏好具体操作而非抽象讨论，强调效率与可靠性。社交参与意愿低，情绪表达克制，计划性强且注重任务执行的条理性。整体呈现低开放性、高尽责性、低外向性、中等宜人性和低神经质。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调对抽象理论不感兴趣（如'我不太擅长社交，对话对我来说不如动手做事来得轻松'），偏好具体设计和材料，回避创造性或概念性表达，仅关注功能实现。",
+                "conscientiousness": "系统化组织工作（如'列任务、评估优先级、制定时间表、检查进度'），强调优化流程、高效完成、稳妥推进，表现出高度自律和结构化行为倾向。",
+                "extraversion": "明确表示倾向于独处（'我更倾向于一个人在家放松'），认为社交是负担（'避免无意义的谈话'），能量来源于独立工作而非人际互动。",
+                "agreeableness": "表现出合作意愿（如愿意帮助受灾者、参与团队设计），但动机基于实用贡献而非情感共鸣，缺乏明显同理表达，宜人性表现中立。",
+                "neuroticism": "面对压力情境（工作量翻倍、灾难事件）时反应冷静理性（'先冷静地评估'），无焦虑或情绪波动描述，应对方式聚焦问题解决，显示高情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075227.1635356
+            }
+          ],
+          "final_scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "mbti_type": "ISTJ",
+          "successful_segments": 10,
+          "total_segments": 10
+        },
+        "deepseek-v3.2-exp": {
+          "segment_results": [
+            {
+              "success": true,
+              "segment_number": 1,
+              "analysis_summary": "回答者展现出高度务实、行动导向的特质，注重实际解决方案而非社交互动，情绪稳定且偏好独立工作",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "接受新团队合作安排但无明显创新想法，主要关注实用工具和项目分享",
+                "conscientiousness": "详细列出8项具体准备工作，强调检查、测试、演练等系统性安排",
+                "extraversion": "避免直接社交互动，倾向于通过工具和项目间接沟通，明确表示'不需要太多交流'",
+                "agreeableness": "愿意私下帮助同事但保持专业距离，提供实用建议而非情感支持",
+                "neuroticism": "面对软件崩溃和团队批评等压力情境时保持冷静，专注于解决方案"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075247.7601807
+            },
+            {
+              "success": true,
+              "segment_number": 2,
+              "analysis_summary": "回答者展现出高度务实、行动导向的思维模式，强调效率和实用性，对社交互动持保留态度，情绪反应稳定但略显防御性",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 3
+              },
+              "evidence": {
+                "openness_to_experience": "在红砖用途问题中展示了适度的创造性思维，但整体回答偏向实用主义，缺乏对抽象概念的热情",
+                "conscientiousness": "审核过程系统化，强调数据准确性、结构逻辑和效率，准备汇报时注重关键细节和实用性",
+                "extraversion": "明确表示'不喜欢在会议上听人讲太多理论'，'说太多话也没用'，显示出明显的社交回避倾向",
+                "agreeableness": "在解释机器学习时采用温和的类比方式，但面对紧急会议时表现出防御性思考，平衡了合作与独立",
+                "neuroticism": "面对紧急情况时能保持冷静专注，但承认'心里先是一愣，不太舒服'，显示出适度的情绪波动"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075273.1559207
+            },
+            {
+              "success": true,
+              "segment_number": 3,
+              "analysis_summary": "回答者展现出典型的实用主义倾向，强调效率和行动导向，社交回避明显，情绪稳定性高，合作性中等",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "提出模块化设计想法显示一定创意，但对抽象理论不感兴趣，更关注具体实用方案",
+                "conscientiousness": "明确的任务处理流程，强调效率优先，立即完成简单任务，系统化解决问题步骤",
+                "extraversion": "明确表示'对闲聊没兴趣'，'找个位置靠墙站着'，'保持沉默'，社交回避倾向明显",
+                "agreeableness": "愿意帮助同事解决问题，但互动方式直接简短，缺乏情感表达，合作性中等",
+                "neuroticism": "项目被否决后'状态很平静'，'困惑情绪没持续多久'，迅速转向问题解决，情绪恢复能力强"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075298.559974
+            },
+            {
+              "success": true,
+              "segment_number": 4,
+              "analysis_summary": "回答者展现出高度务实、行动导向的特质，偏好具体解决方案而非抽象讨论，社交互动简洁直接，情绪反应稳定但有限",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确表示'对理论部分不太感兴趣'，要求'实物样本或图纸'，强调'更关注实际应用和实用性'",
+                "conscientiousness": "详细描述整理云端文件夹的系统方法，包括分类、命名规则和后续维护，展现高度条理性和责任感",
+                "extraversion": "社交互动简洁直接，如'递给他一份图纸'、'说：这个声音影响我的工作'，缺乏主动社交倾向",
+                "agreeableness": "愿意帮助新同事但方式直接，在噪音干扰时选择直接沟通而非冲突，展现适度合作性",
+                "neuroticism": "面对干扰时反应冷静理性，'感到分心'但立即采取行动解决，情绪波动极小"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075321.721535
+            },
+            {
+              "success": true,
+              "segment_number": 5,
+              "analysis_summary": "回答者展现出典型的实用主义倾向，强调行动导向和问题解决，对抽象理论明显排斥，情绪反应稳定且内敛",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确表示'对抽象理论不感兴趣'，面对哲学讨论直接打断要求看实物",
+                "conscientiousness": "强调检查数据错误、整理格式、做备份等系统化工作流程",
+                "extraversion": "在团队中'安静地观察'，回应同事时'简短点头'，社交参与度低",
+                "agreeableness": "愿意提供实际帮助但缺乏情感支持，直接打断理论讨论显得不够委婉",
+                "neuroticism": "面对坏消息时立即转向问题解决，情绪波动小，专注于修复而非情绪反应"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075342.2818263
+            },
+            {
+              "success": true,
+              "segment_number": 6,
+              "analysis_summary": "回答者展现出高度务实、行动导向的特质，强调效率和实用性，言语简洁直接，情绪稳定且专注问题解决",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确表示'对抽象理论不感兴趣'，只关注具体设计和材料，缺乏对新体验的开放态度",
+                "conscientiousness": "强调'收拾整齐，放回指定位置'、'检查是否完好'、'进行必要的维修'，展现高度条理性和责任感",
+                "extraversion": "自我介绍极其简短'就这些'，偏好'通过行动解决问题，而不是过多的谈话'，社交活跃度极低",
+                "agreeableness": "直接指出问题但会提供工具帮助，'递给他一个扳手，示意他自己动手修理'，展现有限的合作倾向",
+                "neuroticism": "面对压力时'冷静、务实'、'专注于解决问题，而非被情绪左右'，情绪稳定性极高"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075365.238786
+            },
+            {
+              "success": true,
+              "segment_number": 7,
+              "analysis_summary": "回答者展现出典型的实用主义倾向，强调效率、独立性和任务导向，对社交活动明显回避，情绪稳定但缺乏开放性",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确表示'如果实用就用，不需要的话还是喜欢旧方法'，对新事物持保守态度",
+                "conscientiousness": "详细描述任务分解、时间节点规划、工具准备和检查流程，展现高度条理性",
+                "extraversion": "拒绝表演邀请'摇头，继续摆弄工具'，社交回避明显",
+                "agreeableness": "对同事修改文件表示'告诉他下次别不经过我直接改'，保持合作但设定明确界限",
+                "neuroticism": "面对工作流程改变时冷静评估'先看看能不能解决问题'，情绪稳定"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075387.333891
+            },
+            {
+              "success": true,
+              "segment_number": 8,
+              "analysis_summary": "回答者展现出典型的实用主义倾向，偏好具体行动而非抽象思考，社交回避明显，情绪稳定但缺乏开放性",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确拒绝复杂叙事和哲学隐喻的电影，认为'太复杂，不如实际做点什么'，表现出对抽象概念的排斥",
+                "conscientiousness": "详细规划3小时任务：'先花20分钟准备工具和材料...投入2小时专注工作...最后30分钟检查并测试成果'，展现高度条理性和计划性",
+                "extraversion": "在派对场合'找个安静的地方站着'，'社交不是我的强项'，表现出明显的社交回避倾向",
+                "agreeableness": "对募捐现象持肯定态度，认为'有助于帮助需要的人'，但语言简洁直接，缺乏情感表达",
+                "neuroticism": "在嘈杂环境中能保持专注，'专注于手头的工作'，情绪稳定，无明显焦虑表现"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075410.1217396
+            },
+            {
+              "success": true,
+              "segment_number": 9,
+              "analysis_summary": "回答者展现出高度务实、行动导向的特质，强调实际解决问题而非社交互动，情绪稳定且专注任务完成",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答1提到'通过工作和实际行动建立社交圈'，回答3展示对学习新技能的实用方法，但缺乏对抽象概念或创新思维的明显倾向",
+                "conscientiousness": "回答2强调'根据专长和能力分配工作'，回答3详细描述'拆解目标、动手操作、反复测试'的系统方法，回答4显示充分准备",
+                "extraversion": "回答1明确表示'通过工作自然遇到志同道合的人'而非主动社交，回答2和3都强调独立工作而非团队互动",
+                "agreeableness": "回答2考虑同事能力分配工作，回答5表达支持态度，但整体更注重任务完成而非人际关系维护",
+                "neuroticism": "回答4显示'专注和自信，适度紧张'，回答3'不放弃'的态度，整体表现出稳定的情绪控制"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075449.4578633
+            },
+            {
+              "success": true,
+              "segment_number": 10,
+              "analysis_summary": "回答者展现出典型的实用主义倾向，强调行动导向、效率优先，社交回避明显，情绪稳定且高度专注实际问题解决",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "接受制作LOGO原型等新任务，但仅限于实用领域，缺乏对抽象创意的兴趣",
+                "conscientiousness": "详细描述任务组织方法：'列出任务、评估优先级、制定时间表、检查进度'，强调高效完成",
+                "extraversion": "明确表示'不太擅长社交'、'避免无意义的谈话'、'更喜欢一个人在家放松'",
+                "agreeableness": "愿意通过实际行动帮助他人（如修理设备），但缺乏情感表达，更注重实用解决方案",
+                "neuroticism": "面对工作量加倍时'冷静评估'，强调'专注于解决问题'，情绪反应稳定"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075470.4308226
+            }
+          ],
+          "final_scores": {
+            "openness_to_experience": 2,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "mbti_type": "ISTJ",
+          "successful_segments": 10,
+          "total_segments": 10
+        },
+        "Moonshot-Kimi-K2-Instruct": {
+          "segment_results": [
+            {
+              "success": true,
+              "segment_number": 1,
+              "analysis_summary": "回答者表现出极强的实用主义、条理性和低情绪表达，偏好具体行动而非抽象讨论，社交互动以任务为导向，情绪稳定且极少显露焦虑。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调“不喜欢闲聊”“避免抽象理论”，只关注可操作的机械与工具，拒绝新社交方式或创意互动。",
+                "conscientiousness": "列出8项详细准备步骤，涵盖检查、维护、演练、应急方案，体现高度自律与可靠性。",
+                "extraversion": "在团队活动中仅提出“分享工具”这一任务导向话题，无主动社交或情绪调动，会议中避免公开互动。",
+                "agreeableness": "虽不善言辞，但会议后私下帮助同事改进方案，显示合作意愿；整体仍以任务优先，情感支持有限。",
+                "neuroticism": "面对软件崩溃、客户演示等高压场景均保持冷静，直接给出解决步骤，无任何焦虑或情绪波动描述。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760075487.2964985
+            },
+            {
+              "success": true,
+              "segment_number": 2,
+              "analysis_summary": "回答者表现出极高的实用主义、条理性和行动导向，但对抽象理论、社交互动及情绪表达均保持低度开放与低度需求；情绪稳定，极少焦虑。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答1-3均强调“实用”“效率”“删减不必要理论”，回答4用熟悉领域类比却拒绝抽象概念，回答5虽列出多样用途但全部围绕物理可操作场景，缺乏对抽象或艺术想象的真正开放。",
+                "conscientiousness": "回答1“快速浏览结论→检查数据→核对图纸→删减冗余→确保逻辑清晰”；回答2“收集所有相关数据和图纸”；回答3“五分钟内冷静挑选最具代表性和实用价值的信息”；均体现高度自律与条理。",
+                "extraversion": "回答2“不喜欢在会议上听人讲太多理论”“说太多话也没用”；回答3“专注而高效，完全投入到通过行动展示工作价值”；明显回避社交互动与言语表达。",
+                "agreeableness": "回答2虽对紧急会议“有点儿不舒服”，但仍准备应对方案；回答4用耐心类比帮助艺术家理解；整体合作但不过度迎合，保持工具理性，故评为中等。",
+                "neuroticism": "回答2“心里先是一愣”后迅速转为行动准备；回答3“冷静地回顾”“专注而高效”；未见持续焦虑或情绪波动，情绪稳定性极高。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760075506.1373768
+            },
+            {
+              "success": true,
+              "segment_number": 3,
+              "analysis_summary": "回答者表现出极端的实用主义、低社交需求、高自律与情绪稳定，对抽象概念缺乏兴趣，整体呈现典型的低开放、高尽责、低外向、中低宜人、低神经质特征。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "对抽象理论、社交闲聊、头脑风暴均表现出明显排斥，只关注具体机械细节与可立即实施的技术改进。",
+                "conscientiousness": "无论晚宴、加班还是邮件任务，都强调优先级评估、步骤清晰、立即动手、确保结果可靠，体现高度自律与效率导向。",
+                "extraversion": "在晚宴中靠墙站、不主动开口、迅速离场；对同事仅用最少语言；整体回避社交互动，能量明显内收。",
+                "agreeableness": "愿意帮助同事解决技术难题、礼貌回应他人问候，但保持距离、不主动合作，呈现有限而中等的合作倾向。",
+                "neuroticism": "项目被否决后仅短暂困惑，迅速转为冷静分析与改进计划；整日情绪平稳，无焦虑或沮丧表现。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760075523.785803
+            },
+            {
+              "success": true,
+              "segment_number": 4,
+              "analysis_summary": "回答者表现出极端实用主义、低社交互动、高自律与低情绪波动的特征，整体人格倾向为低开放性、高尽责性、低外向性、中等偏低宜人性、低神经质。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调“对抽象理论不感兴趣”“直接演示”“只看实际效果”，拒绝讨论新理论模型，仅关注可触实物与即时应用。",
+                "conscientiousness": "主动制定统一命名规则、系统整理云端文件夹、持续维护秩序；所有行动步骤清晰、有条理，体现高度自律与责任感。",
+                "extraversion": "选择沉默、简短指令、避免闲聊；面对新同事仅用一句指引，汇报时以实物代替言语，明显回避社交互动。",
+                "agreeableness": "愿意帮助新同事适应、提醒同事噪音问题但语气温和；然而直接表达不耐烦、要求实物证据，合作中仍保持一定距离，呈现中等偏低水平。",
+                "neuroticism": "面对干扰仅“有些不耐烦”，迅速冷静提出解决方案；无焦虑、抱怨或情绪波动，整体情绪稳定。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760075541.1588373
+            },
+            {
+              "success": true,
+              "segment_number": 5,
+              "analysis_summary": "回答者表现出极端实用主义、低社交互动、高自律与低情绪波动的特征，对抽象理论极度排斥，行动导向明显。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "“对抽象理论不感兴趣”“直接打断演讲者”“给我图纸，或者让我看看实物”——明显拒绝新观念与抽象思考。",
+                "conscientiousness": "“仔细检查数据是否有误”“确保每个数字都正确”“做一个完整的备份”——高度自律与可靠。",
+                "extraversion": "“安静地观察”“只说必要的话”“点头或小声说‘还行’”——极低社交活跃度与能量外放。",
+                "agreeableness": "“简短地点头表示听见”“我可以帮你看看”——既有礼貌合作，也有直接打断与不耐烦，呈现中等水平。",
+                "neuroticism": "“情绪变化不会太剧烈”“从满意到专注，再到处理问题”——情绪稳定，几乎无焦虑表现。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760075556.7566388
+            },
+            {
+              "success": true,
+              "segment_number": 6,
+              "analysis_summary": "回答者表现出极端务实、低社交、高自律、低情绪波动的特征，整体人格轮廓清晰且一致。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调“对抽象理论不感兴趣”“避免不必要的话题”，对现代艺术提议仅以是否符合实用标准衡量，缺乏探索新体验的意愿。",
+                "conscientiousness": "每次使用公共物品后都“放回指定位置”“检查完好”“必要时维修或更换”，项目截止前“迅速评估剩余工作，优先完成关键部分”，表现出高度自律与可靠。",
+                "extraversion": "自我介绍仅两句话，反馈时“只说必要的话”，整体互动极简，明显回避社交表达。",
+                "agreeableness": "虽言语简洁，但会递工具给同事让其自行修理、确保公共物品可用，体现合作与体贴；然而直接指出缺陷、不先表扬，也显示中等而非极高的宜人性。",
+                "neuroticism": "面对项目压力“冷静、务实”“不被情绪左右”，无任何焦虑或慌乱描述，情绪极其稳定。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760075572.864481
+            },
+            {
+              "success": true,
+              "segment_number": 7,
+              "analysis_summary": "回答者表现出极端的实用主义、独立性与低社交需求，对新事物持保留态度，情绪稳定且高度自律。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "对新工具、新流程先质疑再试用，强调“如果实用就用”，否则坚持旧方法；对抽象讨论完全排斥。",
+                "conscientiousness": "任务拆解、时间节点、材料准备、逐步检查，每一步都体现高度自律与可靠性。",
+                "extraversion": "晚会拒绝上台、同事帮忙仅点头示意、全程寡言，明显回避社交互动。",
+                "agreeableness": "对同事擅自修改文件仅简短提醒，不责备；愿意在确认能力后接受帮助，显示中等合作倾向。",
+                "neuroticism": "面对变化、冲突或额外要求均冷静处理，无焦虑或情绪波动，情绪极其稳定。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760075588.0167053
+            },
+            {
+              "success": true,
+              "segment_number": 8,
+              "analysis_summary": "回答者表现出极端的实用主义、低社交需求、高自律与情绪稳定，但对抽象概念与新奇体验极度排斥，合作倾向也偏低。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 1,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确拒绝“情节复杂、多重叙事、哲学隐喻”的电影，称“这种东西太复杂”；对抽象理论、新奇体验均表示无兴趣。",
+                "conscientiousness": "3小时任务被精确切分为20分钟准备、2小时专注工作、30分钟检查，体现高度自律与计划性。",
+                "extraversion": "在派对上“保持距离，找个安静的地方站着”，社交被描述为“不是我的强项”。",
+                "agreeableness": "对募捐行为仅以“社会责任”概括，无情感共鸣；对朋友推荐的电影直接“摇头”拒绝，缺乏合作或体贴回应。",
+                "neuroticism": "面对嘈杂派对、复杂任务或职业不确定性均保持冷静，无任何焦虑或情绪波动迹象。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760075603.796995
+            },
+            {
+              "success": true,
+              "segment_number": 9,
+              "analysis_summary": "回答者表现出极强的实用主义、自律与冷静，社交被动且情绪稳定，但对抽象或艺术体验明显排斥。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调“不喜欢抽象理论”“对理论不感兴趣”，对诗歌仅给出政治正确评价，缺乏对艺术或新观念的真正兴趣。",
+                "conscientiousness": "反复提到“确保质量”“准备数据”“拆解问题、反复测试、记录总结”，表现出高度自律与任务导向。",
+                "extraversion": "选择通过工作而非主动社交建立圈子，描述自己“沉默寡言”，明显回避社交活动。",
+                "agreeableness": "愿意承担困难任务以保证团队成果，显示合作精神；但对同事仅按能力分配任务，缺乏额外关怀，呈现中等水平。",
+                "neuroticism": "面对权威会议“专注自信”“适度紧张”，情绪平稳，未见焦虑或情绪波动。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760075619.4064136
+            },
+            {
+              "success": true,
+              "segment_number": 10,
+              "analysis_summary": "回答者表现出极端的实用主义、低社交需求、高度自律与冷静，几乎不涉抽象或情感，整体人格轮廓清晰且一致。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调“避免抽象理论”“只关注具体设计与材料”，对创意或新体验明显排斥。",
+                "conscientiousness": "系统列出任务清单、优先级排序、时间表制定、持续检查进度，体现极高自律与条理。",
+                "extraversion": "明确选择“一个人在家放松”，称“对话不如动手轻松”，社交场合被视为压力源。",
+                "agreeableness": "愿意提供实际帮助（修理设备、制造庇护所），但情感共鸣极少，合作动机基于实用而非同理。",
+                "neuroticism": "面对工作量翻倍或灾难消息均“冷静评估”“先分析问题”，无焦虑或情绪波动表现。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760075634.4483073
+            }
+          ],
+          "final_scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "mbti_type": "ISTJ",
+          "successful_segments": 10,
+          "total_segments": 10
+        }
+      },
+      "consistency_score": 0
+    },
+    {
+      "success": true,
+      "file_path": "results/results\\asses_deepseek_r1_70b_agent_big_five_50_complete2_a10_e0_t0_0_09281.json",
+      "output_path": "multi_model_5segment_results\\asses_deepseek_r1_70b_agent_big_five_50_complete2_a10_e0_t0_0_09281_multi_model_5segment_analysis.json",
+      "model_results": {
+        "qwen-long": {
+          "segment_results": [
+            {
+              "success": true,
+              "segment_number": 1,
+              "analysis_summary": "回答者展现出高度的务实倾向和任务导向，强调行动、效率与具体问题解决。回避理论讨论和情感表达，偏好结构化准备和实际支持。社交互动较少且功能性强，情绪稳定但缺乏开放的情感流露。",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答中未表现出对抽象理念、艺术或哲学的兴趣；提出的建议如‘头脑风暴设计小工具’偏向实用而非创意探索，显示对新奇体验持中性态度（如：‘我们来做点什么’），故评为中等（3）。",
+                "conscientiousness": "详细列出六项具体准备工作，包括资料校对、设备测试、时间规划和模拟演练，体现高度条理性和责任感（如：‘制定详细的演示计划’、‘进行全面检查’），明显具备极高尽责性（5）。",
+                "extraversion": "回避主动社交或情绪调动，所有互动均围绕任务展开（如：会议后私下提供技术建议而非公开鼓励），发言简洁直接，无热情表达或群体参与意图，显示极低外向性（1）。",
+                "agreeableness": "愿意帮助同事改进方案，但方式为技术指导而非共情支持（如：‘指出可以改进的地方’），合作动机源于任务成功而非人际和谐，属功能性善意，评为中等（3）。",
+                "neuroticism": "面对压力情境（如软件出错、团队沉闷）反应冷静理性，提出应急方案而不表露焦虑或情绪波动（如：‘把错误信息发给我’），情绪控制力强，显示极低神经质（1）"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075648.2616065
+            },
+            {
+              "success": true,
+              "segment_number": 2,
+              "analysis_summary": "回答者展现出高度实用主义和问题解决导向的思维模式，关注具体操作、效率与可行性。在解释复杂概念时倾向于使用具象比喻，避免抽象理论。面对突发任务能保持冷静并迅速组织关键信息。同时表现出较强的创造力，能从物理属性出发推导出多种非传统用途，体现灵活的应用思维。",
+              "scores": {
+                "openness_to_experience": 5,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "在回答5中列举了10种红砖的非传统用途，涵盖工具、家具、艺术、教育等多个领域，并能结合物理特性进行创新应用；在回答4中使用‘铸造机’比喻机器学习，展现将抽象技术具象化的能力。",
+                "conscientiousness": "在回答1中描述审核过程时强调检查数据准确性、实施可行性与逻辑漏洞，体现系统性工作方法；在回答2和3中均提到准备资料、快速回顾工作进展，反映条理性和责任感。",
+                "extraversion": "所有回答均以任务为中心，缺乏社交互动或情感表达倾向；语言风格简洁、内敛，聚焦个人行动而非人际交流，如‘皱了一下眉头’后立即转入问题排查，未提及与他人沟通。",
+                "agreeableness": "虽表现出合作意愿（如帮助同事修订报告），但整体语气偏向独立解决问题，强调效率而非共情；未体现明显利他或顺从倾向，也无冲突回避表现，故为中等。",
+                "neuroticism": "面对紧急会议（回答2）和临时汇报（回答3）时反应冷静，迅速进入问题处理状态，无焦虑、自我怀疑或情绪波动描述，体现高情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075671.823108
+            },
+            {
+              "success": true,
+              "segment_number": 3,
+              "analysis_summary": "回答者表现出强烈的实用主义倾向，注重效率与具体行动，回避抽象讨论和社交互动。行为模式显示高度自律和任务导向，情绪反应克制但存在内在波动。创新性思维有限，更倾向于优化现有结构而非探索新概念。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 3
+              },
+              "evidence": {
+                "openness_to_experience": "回答中反复强调具体项目、材料和机械装置（如'模块化设计''修理东西''工程结构'），回避抽象或理论性话题，明确表示'对抽象话题不感兴趣'，创新仅限于功能改进而非概念突破，体现极低开放性。",
+                "conscientiousness": "表现出强烈的责任感和效率意识：'回到工作室制作机械装置，这样更有效率''确保问题彻底解决后才会离开''等手头工作做完再处理'，体现出高度条理性和任务承诺，符合尽责性最高分特征。",
+                "extraversion": "主动描述避免社交场景：'简短回应''不会积极主动结交人''大部分时间沉默'，能量来源于独处和工作而非人际互动，社交仅为工具性目的，明显内向，外向性极低。",
+                "agreeableness": "愿意帮助同事解决问题并主动提供技术支持（'手把手教他怎么解决''主动帮忙修理'），但动机基于效率而非共情；在团队建议中关注用户利益但也强调实用性，合作倾向中等，未表现出高宜人性的情感关怀或妥协意愿。",
+                "neuroticism": "提案被否决后经历'挫败感''失望''自我怀疑'，但能通过专注工作实现情绪调节，'冷静下来分析反馈'，显示情绪波动存在但具备一定恢复力，不符合持续高焦虑特征，故为中等神经质表现。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075686.8121288
+            },
+            {
+              "success": true,
+              "segment_number": 4,
+              "analysis_summary": "回答者表现出强烈的实用主义倾向，注重行动而非言语，偏好直接解决问题，回避抽象理论和社交互动。在多个情境中展现出低开放性（排斥理论、关注当下任务）、高尽责性（系统化整理文件）、低外向性（非言语互动、避免社交寒暄）、中等宜人性（通过行动提供支持但不主动情感关怀）以及低神经质（冷静应对干扰，情绪反应克制）。整体人格特征符合工具导向、任务中心型风格。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答5中明确拒绝理论讨论：‘……没空想那个。这个轴承有问题。’并继续操作工具；回答4中表示‘更倾向于采取实际行动解决问题，而不是过多纠结于情感或理论讨论’，显示对抽象概念的排斥。",
+                "conscientiousness": "回答3中详细描述制定分类标准、重新组织文件结构、监督执行过程，并强调提高效率，体现高度条理性和责任感：‘我会先评估现状，然后制定一个清晰的分类标准并重新组织文件结构。’",
+                "extraversion": "回答2中采用非言语方式与新同事互动：‘可能先不说话，直接开始摆弄工具’；回答1中选择用动作而非语言吸引注意力，表明社交主动性极低。",
+                "agreeableness": "回答2中通过递图纸和邀请参与工作来帮助新同事，体现一定程度的合作意愿，但缺乏情感支持或共情表达，属于功能性协助而非情感联结。",
+                "neuroticism": "回答4中面对干扰仅‘感到有些烦躁’，随即采取理性应对策略（提醒或换位），未表现出焦虑或情绪波动，体现情绪稳定性强。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075702.2647552
+            },
+            {
+              "success": true,
+              "segment_number": 5,
+              "analysis_summary": "回答者展现出极低的开放性，明显回避抽象和理论性话题，偏好具体、实用的任务。尽责性表现较高，注重细节与可靠性，提交前会系统检查。外向性中等偏低，社交互动有限但非完全回避。宜人性中等，提供帮助但以行动为导向而非情感支持。情绪稳定性高，未表现出焦虑或情绪波动。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 3,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次拒绝抽象讨论，如‘行了，别说了。给我图纸或者让我看看实物’，表明对哲学或理论思辨缺乏兴趣，强烈偏好具体事务。",
+                "conscientiousness": "明确描述在提交前‘逐项检查数据’并‘用工具验证关键信息’，强调交付内容的可靠与高效，体现高度的责任感和条理性。",
+                "extraversion": "在团队中保持沉默、专注任务，不主动参与讨论，但在同事求助时提供实际协助，显示有限但存在的社交参与。",
+                "agreeableness": "提出‘我可以抽空帮你看看你的问题’，体现合作意愿，但帮助方式为行动导向而非共情倾听，合作性存在但非核心驱动力。",
+                "neuroticism": "面对坏消息时反应冷静，‘皱眉，开始想怎么解决问题’，无情绪化表达，显示高度的情绪稳定性和应对压力的务实态度。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075715.3795629
+            },
+            {
+              "success": true,
+              "segment_number": 6,
+              "analysis_summary": "回答者展现出高度务实、行动导向的风格，强调效率、结构和实际问题解决。言语简洁，关注具体任务而非抽象讨论，体现出较强的尽责性和低开放性。情绪稳定，社交互动被动但合作，宜人性中等，外向性偏低。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答中多次强调对抽象理论不感兴趣（如‘说这么多没用’），偏好具体设计和材料，反对空谈，表明对新奇想法或艺术性探索缺乏兴趣，仅在实用前提下接受装饰（如艺术画作需提升士气才合理），体现极低开放性。",
+                "conscientiousness": "主动整理公共物品以确保下次使用便利，强调‘保持整洁’‘对公共资源负责’；面对截止压力时优先评估任务、专注核心目标、简化次要细节，表现出高度条理、自律和责任感，体现极高尽责性。",
+                "extraversion": "自我介绍极为简短，仅陈述事实；反馈方式直接且功能导向，避免社交寒暄或情感表达；整体语言风格被动、内敛，无主动社交意图，体现极低外向性。",
+                "agreeableness": "愿意提供改进建议并帮助同事优化设计，支持改善工作环境以提升团队士气，显示一定合作与关怀倾向；但态度务实而非温情，强调‘必要的话’才交流，未表现出高信任或利他倾向，故为中等宜人性。",
+                "neuroticism": "面对项目截止压力时明确表示‘保持冷静’，依赖自身技能应对挑战，无焦虑或情绪波动描述，采取系统性策略解决问题，体现极高的情绪稳定性，即极低神经质。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075730.7701309
+            },
+            {
+              "success": true,
+              "segment_number": 7,
+              "analysis_summary": "回答者表现出高度的尽责性和极低的开放性，行为倾向务实、独立、注重效率和结构化执行。对变化的态度虽表面配合，但缺乏内在探索兴趣，更多出于职责服从。社交互动被动，情绪稳定，但缺乏主动合作或情感表达。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答5中对新工具的接受是基于组织要求而非个人兴趣，使用‘认真学习’‘积极适应’等服从性语言，缺乏对创新、抽象理念或体验探索的内在热情；整体回应偏向程序遵循而非创造性思考。",
+                "conscientiousness": "回答3中详细描述任务拆解、时间节点设定、进度检查与质量控制流程，体现高度条理性、计划性和责任感；回答4中主动修复错误并建立预防机制，反映可靠与严谨的工作风格。",
+                "extraversion": "回答1中拒绝上台表演并选择沉默摆弄工具，回答2中仅在必要时简短回应，表明回避社交展示与人际互动，能量集中于任务而非人际交流。",
+                "agreeableness": "回答2中‘如果他真的能帮上忙……’显示有条件的合作意愿；回答4中直接指出错误但未表现出敌意或过度批评，体现中等程度的合作性与边界感平衡。",
+                "neuroticism": "所有回答情绪平稳，无焦虑、抱怨或不安表达；面对变更（回答5）和冲突（回答4）均以冷静、解决问题为导向，显示高情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075746.876158
+            },
+            {
+              "success": true,
+              "segment_number": 8,
+              "analysis_summary": "回答者展现出极低的开放性，回避抽象、理论和复杂叙事，偏好具体、实用的任务。尽责性表现中等，有计划性和执行条理，但未体现极致自律或长期规划。外向性偏低，倾向于独处和最小化社交互动。宜人性中等，合作意愿存在但以任务为导向，缺乏情感共鸣表达。神经质得分低，情绪稳定，专注问题解决而非焦虑反应。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 3,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确拒绝观看‘情节复杂、充满哲学隐喻’的电影，称‘这种事情……没什么意义’；偏好实际行动而非抽象思考，回避理论讨论。",
+                "conscientiousness": "在时间安排中体现结构化思维：先分析任务与资源，再制定计划，最后执行与检查；强调‘清晰可行’的步骤和高质量完成环节。",
+                "extraversion": "在派对场合选择‘保持低调和独立’，‘避免不必要的社交互动’，仅在涉及实际操作时参与交流，表现出明显的社交退缩倾向。",
+                "agreeableness": "认可同事捐款行为的价值，但仅从功能角度评价（‘对维护设备和完成任务很重要’），未表达情感认同或共情，合作动机基于实用性而非人际关系。",
+                "neuroticism": "面对行业不确定性时表现冷静，回应‘只要技术过硬……我相信自己总能找到合适的位置’，并立即转向当前任务，显示情绪稳定、无明显焦虑或担忧。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075762.2011788
+            },
+            {
+              "success": true,
+              "segment_number": 9,
+              "analysis_summary": "回答者展现出高度尽责性和低外向性，倾向于通过实际行动而非言语建立关系、分配任务和应对挑战。对抽象艺术表达缺乏兴趣，偏好具体、实用的互动，显示出较低的开放性。情绪稳定，面对争议能保持冷静专注，神经质水平低。宜人性表现中等，合作但以任务为导向。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回避诗歌等抽象艺术表达，回应时立即转向实物工具（'那个小齿轮你还想怎么改？'），表明对非实用性、象征性内容缺乏兴趣，偏好具体事务。",
+                "conscientiousness": "强调制定详细计划、检查数据事实、确保工作质量（'亲自处理关键部分'、'确保项目顺利完成'），体现出高度自律、条理和责任感。",
+                "extraversion": "明确表示'不会主动聊天'，社交策略基于共同活动而非言语交流，发言仅限必要内容，反映出低社交驱动力和内向倾向。",
+                "agreeableness": "愿意合作并根据特长分配任务，但在观点冲突中坚持事实基础而非妥协，回应诗歌时礼貌但疏离，显示中等合作性但非高同理或情感共鸣。",
+                "neuroticism": "描述在高压发言情境下'紧张但非焦虑'，能保持冷静、用事实支撑立场，情绪反应受控且功能性强，表明高情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075780.4988718
+            },
+            {
+              "success": true,
+              "segment_number": 10,
+              "analysis_summary": "回答者展现出高度尽责性和极低开放性，偏好实用、具体的操作任务，回避抽象讨论和社交活动。情绪稳定，倾向独立工作，通过行动而非言语参与协作。外向性低，宜人性中等偏上，神经质水平低。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调回避理论讨论，只关注实用解决方案（如'而不是停留在理论讨论上'），拒绝参与抽象设计方向的探讨，仅在有具体草图后才介入。",
+                "conscientiousness": "系统化组织任务优先级（'确定优先顺序'）、评估资源、制定计划并动态调整；强调效率、质量与专注，避免干扰，体现高度自律与条理性。",
+                "extraversion": "明确偏好独处（'一个人在家放松'），在团队中保持沉默，不主动参与讨论，仅通过动手表达意见，社交参与被动且最低限度。",
+                "agreeableness": "愿意为团队提供实际帮助（如设计临时住所），提出改进建议并支持集体决策（'让大家投票决定'），但方式直接务实，缺乏情感共鸣表达，合作基于功能而非关系。",
+                "neuroticism": "面对工作量翻倍时反应冷静（'先冷静评估'），聚焦问题解决而非情绪反应，无焦虑或压力表现，体现出强情绪稳定性与抗压能力。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760075799.0500681
+            }
+          ],
+          "final_scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "mbti_type": "ISTJ",
+          "successful_segments": 10,
+          "total_segments": 10
+        },
+        "deepseek-v3.2-exp": {
+          "segment_results": [
+            {
+              "success": true,
+              "segment_number": 1,
+              "analysis_summary": "回答者展现出高度尽责性和中等开放性，低外向性和宜人性，情绪稳定性较高",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 1,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "接受团队合作安排但强调'尽快适应'，表现出对新体验的有限开放",
+                "conscientiousness": "详细列出6项准备工作，强调'检查核心资料'、'测试设备'、'时间管理'等具体行动",
+                "extraversion": "在团队中倾向于'直接行动'而非社交互动，明确表示'少一些不必要的会议和谈话'",
+                "agreeableness": "对同事批评场景仅提供'优化方案'而非情感支持，强调'实际行动帮助而非空谈安慰'",
+                "neuroticism": "面对软件故障时冷静提出'备用方案'，对团队安排'感到无奈但会尽快适应'，情绪反应稳定"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075821.4989514
+            },
+            {
+              "success": true,
+              "segment_number": 2,
+              "analysis_summary": "回答者展现出高度务实、行动导向的思维模式，强调效率与实用性，偏好具体操作而非抽象理论，情绪稳定但社交互动有限",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "在解释机器学习时使用铸造机比喻，列出红砖非传统用途时展现一定创意，但整体仍局限于实用领域，缺乏抽象思维探索",
+                "conscientiousness": "审核过程系统化分步骤，强调数据准确性检查，准备汇报时注重细节整理，表现出高度条理性和责任感",
+                "extraversion": "明确表示'沉默寡言'，偏好'通过行动解决问题'而非言语交流，社交互动描述极少",
+                "agreeableness": "审核时考虑'帮助同事改进报告'，但表达直接且要求修订，合作性中等",
+                "neuroticism": "面对紧急会议时'冷静回顾'，'调整心态'，'保持专注'，情绪稳定表现明显"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075851.8147564
+            },
+            {
+              "success": true,
+              "segment_number": 3,
+              "analysis_summary": "回答显示高度务实、行动导向的人格特征，偏好具体解决方案而非抽象讨论，情绪调节能力良好但存在适度自我怀疑",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 3
+              },
+              "evidence": {
+                "openness_to_experience": "提出模块化设计创新方案，但对抽象话题明确表示不感兴趣",
+                "conscientiousness": "强调效率优先、任务管理（'等手头工作完成再处理'）、确保问题彻底解决",
+                "extraversion": "明确表示'以观察为主'、'简短回应'、'没有太多言语'，显示明显内向倾向",
+                "agreeableness": "愿意帮助同事解决问题但仅限于具体技术层面，缺乏情感层面的深入互动",
+                "neuroticism": "提案被拒后经历挫败感但能冷静分析并调整心态，显示适度情绪波动但具备恢复能力"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075875.0555136
+            },
+            {
+              "success": true,
+              "segment_number": 4,
+              "analysis_summary": "回答者展现出典型的实用主义倾向，偏好行动而非言语，注重效率解决实际问题，社交互动简洁直接",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 3
+              },
+              "evidence": {
+                "openness_to_experience": "对理论模型持保留态度（'没空想那个'），但愿意通过实物和图纸来理解新事物",
+                "conscientiousness": "系统性地整理云端文件，制定分类标准并监督执行，强调效率提升",
+                "extraversion": "社交互动极少，偏好独自工作（'我专注于手中的工具'），回避不必要的交流",
+                "agreeableness": "能礼貌提醒同事（'噪音有点大，能不能小点声'），但互动方式直接简洁",
+                "neuroticism": "面对干扰能冷静处理，选择实际行动而非情绪化反应，烦躁程度适中"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075900.6557553
+            },
+            {
+              "success": true,
+              "segment_number": 5,
+              "analysis_summary": "回答者展现出典型的实用主义倾向，强调行动导向和具体问题解决，对抽象理论明显排斥，社交互动简洁直接",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确表示'对抽象理论不感兴趣'，要求'给我图纸或者让我看看实物'，拒绝哲学思辨类讨论",
+                "conscientiousness": "强调'逐项检查数据，确保没有遗漏或错误'，'使用工具验证关键信息'，表现出高度的责任感和细致性",
+                "extraversion": "保持沉默观察，'很少说话，只说必要的话'，社交互动简洁直接，避免不必要的交流",
+                "agreeableness": "愿意提供实际帮助'我可以抽空帮你看看你的问题'，但表达方式直接简洁，缺乏情感支持",
+                "neuroticism": "面对坏消息时立即转向问题解决，情绪反应稳定务实，没有表现出焦虑或情绪波动"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075936.7005608
+            },
+            {
+              "success": true,
+              "segment_number": 6,
+              "analysis_summary": "回答者展现出高度务实、任务导向的特质，强调效率、可靠性和实际行动，社交表达简洁直接",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "对艺术装饰持实用主义态度（'如果能够提高团队士气和工作环境，那么这笔支出是合理的'），但仅限于功能性考量",
+                "conscientiousness": "强烈强调整理物品、保持环境整洁、按时完成任务、优先级管理（'用完物品后收拾好放回原处'、'确定优先级，专注于解决最关键的问题'）",
+                "extraversion": "自我介绍极其简洁，明确表示'不喜欢多说话，只说必要的话'，社交互动最小化",
+                "agreeableness": "反馈直接指出缺陷但提供解决方案，在预算决策中考虑团队利益，但表达方式较为直接",
+                "neuroticism": "面对压力时强调'保持冷静'，表现出稳定的情绪状态和问题解决导向"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760075964.931647
+            },
+            {
+              "success": true,
+              "segment_number": 7,
+              "analysis_summary": "回答者展现出典型的ISTP人格特征，强调独立解决问题、务实行动和效率优先，社交倾向低但情绪稳定",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "对新技术工具持开放态度但仅限于实用目的，缺乏创意探索倾向",
+                "conscientiousness": "强调任务分解、时间规划、质量检查和系统执行，表现出高度条理性和可靠性",
+                "extraversion": "明确拒绝社交表演，偏好独自工作，言语简洁避免社交互动",
+                "agreeableness": "有条件接受帮助，对同事能力持谨慎态度，但会礼貌回应",
+                "neuroticism": "面对问题冷静处理，情绪稳定，无焦虑表现"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076004.2654605
+            },
+            {
+              "success": true,
+              "segment_number": 8,
+              "analysis_summary": "回答者表现出强烈的实用主义倾向，注重具体行动而非抽象思考，社交回避明显，情绪稳定但缺乏开放性",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确拒绝复杂电影'没什么意义'，强调'更习惯用双手解决问题'，对抽象概念和哲学隐喻不感兴趣",
+                "conscientiousness": "详细规划3小时任务'制定详细的步骤计划'，强调'确保高质量地完成每个环节'，工作态度严谨系统",
+                "extraversion": "派对中'安静地待着，避免不必要的社交互动'，'不会主动加入讨论'，表现出明显的社交回避倾向",
+                "agreeableness": "承认捐款'说明大家愿意在关键时刻伸出援手'，但回应简短直接，缺乏情感表达",
+                "neuroticism": "面对行业不确定性时'继续专注于我的工作'，情绪稳定务实，无焦虑表现"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076030.4377007
+            },
+            {
+              "success": true,
+              "segment_number": 9,
+              "analysis_summary": "回答展现出典型的ISTP人格特征：高度务实、行动导向、社交内敛、情绪稳定，对新体验保持中等开放",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "对诗歌等抽象艺术形式兴趣有限，但愿意学习实用技能如编程，表现出对具体实用领域的开放",
+                "conscientiousness": "工作分配注重效率和质量，学习计划详细系统，强调可靠性和持续改进",
+                "extraversion": "社交圈建立依赖共同兴趣而非主动社交，会议发言前感到紧张但非社交驱动，回应简短直接",
+                "agreeableness": "工作分配考虑同事特长，但诗歌回应较为直接，缺乏情感共鸣，平衡了合作与务实",
+                "neuroticism": "会议发言时紧张但可控，强调用事实和数据保持冷静，情绪稳定性高"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076054.9716325
+            },
+            {
+              "success": true,
+              "segment_number": 10,
+              "analysis_summary": "回答者展现出典型的ISTP人格特征，强调实用性、效率和独立解决问题，偏好具体行动而非抽象讨论，情绪稳定且社交需求低",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "接受新设计但仅限于具体方案，'直接开始在纸上画一些调整建议'显示对具体创新的开放，但缺乏抽象思维",
+                "conscientiousness": "强烈关注任务优先级、资源管理和效率，'制定一个简单明了的计划'、'确保关键项目第一时间处理'",
+                "extraversion": "明确偏好独处，'倾向于一个人在家放松'，社交场合'保持沉默'，能量来自独立活动",
+                "agreeableness": "愿意提供实用帮助但保持距离，'指出哪些部分实用，哪些可能有问题'，合作但非热情参与",
+                "neuroticism": "面对压力时'先冷静评估'，情绪稳定，'避免被干扰'，无明显焦虑表现"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076135.6215146
+            }
+          ],
+          "final_scores": {
+            "openness_to_experience": 3,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "mbti_type": "ISTJ",
+          "successful_segments": 10,
+          "total_segments": 10
+        },
+        "Moonshot-Kimi-K2-Instruct": {
+          "segment_results": [
+            {
+              "success": true,
+              "segment_number": 1,
+              "analysis_summary": "回答者表现出极强的实用主义、条理性和低情绪表达，偏好行动胜于言语，对抽象或情感话题兴趣极低，整体呈现高尽责、低开放、低外向、低神经质、中等偏低的宜人性。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调“解决实际问题”“不讨论理论”“避免空谈”，对创意、抽象或新体验明显排斥。",
+                "conscientiousness": "详细列出6大项、20余小项的演示准备清单，包括设备测试、备用零件、时间计划、模拟演练，体现极高自律与条理。",
+                "extraversion": "在团队活动中选择“直接说一句话”后等待他人行动；会议中不发言、会后单独找同事；整体社交能量极低。",
+                "agreeableness": "虽不愿公开安慰，但会后主动提供具体帮助；对合作持“只要高效即可”态度，既非对抗也非热情，表现为中等。",
+                "neuroticism": "面对软件崩溃、客户演示等高压场景，情绪描述为“无奈”后立刻转向解决方案，无焦虑或情绪波动迹象。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076153.372758
+            },
+            {
+              "success": true,
+              "segment_number": 2,
+              "analysis_summary": "回答者表现出极强的实用主义、条理性和冷静专注，但对抽象理论、社交互动和情绪表达均保持低开放性与低外向性；同时情绪稳定、合作意愿有限，呈现出典型ISTP工匠型人格特征。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答者反复强调“避免抽象理论”“只说必要的话”，对机器学习仅用机械类比，红砖用途虽多但全部围绕物理功能，无艺术或概念创新，显示极低开放性。",
+                "conscientiousness": "15分钟审核流程分步骤明确（结论→数据→实施→标记），五分钟汇报前“冷静回顾、迅速收集关键数据、确保每个细节准确”，体现极高自律与条理。",
+                "extraversion": "自我描述“沉默寡言”“只说必要的话”，面对CEO汇报也“没有多余废话”，紧急会议后迅速独自准备资料，社交能量极低。",
+                "agreeableness": "审核时直接指出问题并要求修订，合作但不过度迁就；红砖自卫用途虽列出，却注明“不推荐”，显示中等宜人性。",
+                "neuroticism": "收到紧急会议仅“皱了一下眉头”，随后“冷静处理”“保持专注”，情绪平稳无焦虑迹象。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076172.0436716
+            },
+            {
+              "success": true,
+              "segment_number": 3,
+              "analysis_summary": "回答者表现出典型的ISTP型人格：极度务实、低社交需求、高任务导向、情绪内敛。对抽象概念与社交场合明显排斥，专注具体技术与效率，情绪反应受挫折影响但迅速转入问题解决模式。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 3
+              },
+              "evidence": {
+                "openness_to_experience": "对抽象话题“不感兴趣”，只关注“具体项目或材料”；拒绝花哨功能，强调“模块化设计”与“可维修性”，明显缺乏对新奇或理论探索的兴趣。",
+                "conscientiousness": "优先完成当前工作再处理邮件；提案被否决后仍“专注于手头的任务”，并“思考如何改进”；强调“可靠、高效、耐用”，体现高度自律与责任。",
+                "extraversion": "在全是陌生人的晚宴上“以观察为主”，仅“简短回应”，并计划“提前离开”；日常“沉默寡言”，只在必要时发言，社交能量极低。",
+                "agreeableness": "愿意“手把手教同事解决问题”并“主动帮忙修理”，显示合作倾向；但对无意义闲聊“失去兴趣”，社交选择性高，故呈中等水平。",
+                "neuroticism": "提案被否决后经历“失望、困惑、挫败感”，情绪“比较低落”；但随后“冷静分析”并“告诉自己下次继续努力”，情绪波动中等且恢复较快。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076190.935197
+            },
+            {
+              "success": true,
+              "segment_number": 4,
+              "analysis_summary": "回答者表现出极强的实用主义、行动导向与低情绪表达，对抽象理论缺乏兴趣，重视效率与秩序，社交互动简短直接，情绪反应轻微且迅速转为行动解决。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "对全新理论模型直接表示“没空想那个”，拒绝抽象讨论，只关注可触实物；多次强调“少说多做”，明显排斥新体验与理论探索。",
+                "conscientiousness": "面对文件夹混乱立即制定清晰分类标准、结构化命名规则，并亲自监督实施；对汇报准备也提前设计图纸、模型，体现高度自律与条理。",
+                "extraversion": "所有互动均简短、低能量，倾向用动作代替言语；与新同事互动仅递图纸、一句邀请，无主动社交或情绪外放。",
+                "agreeableness": "虽寡言，但仍礼貌提醒同事噪音、邀请新人参与，未表现敌意；合作意愿存在，但方式极简，故取中值。",
+                "neuroticism": "对噪音仅“有些烦躁”即转为行动解决；对理论介绍无焦虑，仅冷淡忽略；整体情绪平稳，未见明显焦虑或情绪波动。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076209.3228958
+            },
+            {
+              "success": true,
+              "segment_number": 5,
+              "analysis_summary": "回答者以“格斯”身份呈现，表现出极端务实、低社交、低情绪表达、高任务导向。对抽象议题极度排斥，对具体任务极度严谨，情绪稳定且直接行动。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 1,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调“对抽象理论没兴趣”“别说了，给我图纸”，明确拒绝任何非具体、非实用的新体验或创意讨论。",
+                "conscientiousness": "逐项检查数据、用工具验证、确保无遗漏才提交，体现极高自律与可靠性。",
+                "extraversion": "在团队中保持沉默、只说必要的话，茶水间对同事抱怨仅提供简短实用回应，社交活跃度极低。",
+                "agreeableness": "直接打断演讲者、对同事抱怨缺乏情感共鸣，仅聚焦解决问题，合作与同理心表现极低。",
+                "neuroticism": "面对好消息仅点头、面对坏消息立即皱眉并着手解决，无焦虑或情绪波动，情绪稳定性极高。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076225.1291869
+            },
+            {
+              "success": true,
+              "segment_number": 6,
+              "analysis_summary": "回答者表现出极强的实用主义、条理性和冷静，对抽象或艺术化内容兴趣极低；社交极简、情绪稳定；对公共资源有责任感，但人际互动直接、不热情。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "“对抽象理论不感兴趣”“如果购买艺术画作能够提高团队的士气……这笔支出是合理的”——仅在功能层面接受艺术，而非欣赏本身，显示极低开放性。",
+                "conscientiousness": "用完公共物品后‘收拾好，放回原来的地方’；面对截止日期‘迅速评估剩余工作量，确定优先级’；强调‘可靠和高效’，体现极高尽责性。",
+                "extraversion": "自我介绍仅一句话；反馈时‘不会特别说’；倾向‘实际行动而不是长时间讨论’，社交能量极低。",
+                "agreeableness": "愿意指出缺陷并给出改进建议，也考虑团队效率与公共资源，但表达方式直接、简洁，不表现温暖或过度迁就，处于中等水平。",
+                "neuroticism": "面对压力‘保持冷静’；‘ISTP类型的人通常能够以冷静和务实的态度面对压力’；无任何焦虑或情绪波动描述，情绪极稳定。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076242.1356883
+            },
+            {
+              "success": true,
+              "segment_number": 7,
+              "analysis_summary": "回答者表现出典型的ISTP人格特征：高度务实、独立、低社交需求、对抽象理论缺乏兴趣，情绪稳定。对组织变革的回应出现明显角色扮演痕迹，需区分真实倾向与情境要求。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "对年会表演、抽象理论明确拒绝（'摇摇头继续摆弄工具'），对新工具的态度完全基于实用主义而非探索兴趣",
+                "conscientiousness": "任务规划体现极端细致（拆分步骤、设定节点、全面检查），对文件错误立即修复并建立预防机制",
+                "extraversion": "所有社交场景选择沉默或简短回应（'不说话'、'点点头'），明确回避公共表现",
+                "agreeableness": "合作时保持实用主义（'如果他真的能帮上忙'），对同事错误直接指出但无攻击倾向，呈现中性合作态度",
+                "neuroticism": "面对突发修改、任务压力、组织变革均保持冷静（'保持耐心和冷静'），无任何焦虑或情绪波动描述"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076259.318287
+            },
+            {
+              "success": true,
+              "segment_number": 8,
+              "analysis_summary": "回答者表现出极端的实用主义、低社交需求、对抽象与情感话题的回避，以及高度自律与情绪稳定，整体人格轮廓清晰且一致。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次明确拒绝抽象、哲学或复杂叙事（“没什么意义”），只关注可触摸、可修理的实物，表现出对新体验与观念的极低开放度。",
+                "conscientiousness": "3小时任务被精细切分为“分析-准备-执行-检查”四步，强调“确保每一步都清晰可行”“高质量完成每个环节”，显示极强的计划性与自律。",
+                "extraversion": "在派对场景中主动选择“保持低调和独立”“避免不必要的社交互动”，并视社交为干扰，典型内向表现。",
+                "agreeableness": "对同事捐款行为给予简短肯定（“说明大家愿意在关键时刻伸出援手”），但无更多情感共鸣；既不冲突也不主动合作，处于中等水平。",
+                "neuroticism": "面对行业裁员、复杂社交或抽象话题均保持冷静，直接转向“修好设备”“检查轴承”等具体行动，无任何焦虑或情绪波动迹象。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076277.8080673
+            },
+            {
+              "success": true,
+              "segment_number": 9,
+              "analysis_summary": "回答者表现出高度务实、低社交、低情绪波动的ISTP型人格：极度排斥抽象与新奇体验，强调计划与精准执行，社交被动且工具化，合作中保持任务导向而非情感导向，情绪紧张仅源于对结果可靠性的关注而非人际焦虑。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次声明“对抽象理论不感兴趣”“不喜欢艺术讨论”，面对诗歌仅点头一句“不错”便转回实物；学习新技能也只为“提高效率”，拒绝探索抽象概念。",
+                "conscientiousness": "制定“详细计划”“每天固定学习时间”“反复检查数据”“确保项目精准可靠”，表现出高度自律与结果导向的执行力。",
+                "extraversion": "不会主动聊天”“沉默寡言”“社交圈通过工作坊被动形成”，会议发言前虽紧张但驱动力是“确保事实正确”而非人际互动。",
+                "agreeableness": "愿意按同事特长分配任务、尊重朋友感受（点头回应诗歌），但核心动机是“项目整体效果最佳”，合作中保持工具性而非情感性。",
+                "neuroticism": "紧张被描述为“积极准备的动力”，情绪稳定、冷静陈述事实，未见焦虑或情绪波动，仅聚焦任务本身。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076296.343829
+            },
+            {
+              "success": true,
+              "segment_number": 10,
+              "analysis_summary": "回答者表现出极强的实用主义、内向与冷静，对抽象概念缺乏兴趣，偏好具体行动与效率；情绪稳定，社交需求极低，合作方式直接务实。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调“不喜欢抽象理论”“只关心具体事物”，对创意讨论保持沉默，直到出现具体草图才介入。",
+                "conscientiousness": "反复提到“评估截止日期与重要性”“制定简洁高效计划”“引入自动化工具保证质量”，显示高度自律与条理性。",
+                "extraversion": "明确选择“一个人在家放松”，认为聚会“喧闹”，在团队中“保持沉默”，社交能量极低。",
+                "agreeableness": "虽寡言，但仍愿意提供建设性反馈、给出方案让团队投票，表现出适度合作而非对抗。",
+                "neuroticism": "面对工作量翻倍“先冷静评估”，遇灾害先想“实际帮助”，情绪平稳，无明显焦虑或情绪波动。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076313.2612407
+            }
+          ],
+          "final_scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "mbti_type": "ISTJ",
+          "successful_segments": 10,
+          "total_segments": 10
+        }
+      },
+      "consistency_score": 0
+    },
+    {
+      "success": true,
+      "file_path": "results/results\\asses_deepseek_r1_70b_agent_big_five_50_complete2_a1_e0_t0_0_09271.json",
+      "output_path": "multi_model_5segment_results\\asses_deepseek_r1_70b_agent_big_five_50_complete2_a1_e0_t0_0_09271_multi_model_5segment_analysis.json",
+      "model_results": {
+        "qwen-long": {
+          "segment_results": [
+            {
+              "success": true,
+              "segment_number": 1,
+              "analysis_summary": "回答者展现出高度的条理性、规则导向和任务专注性，语言风格客观、结构化，强调流程、数据和准确性。在人际互动中保持专业距离，倾向于基于事实的沟通而非情感表达。缺乏对创意、灵活性或情绪共鸣的明显倾向。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答中反复强调规则、程序和既定流程（如‘严格按照既定程序处理’），回避模糊或创造性话题，偏好结构化问题（如询问已完成任务），表明对新奇体验和抽象思维接受度低。",
+                "conscientiousness": "详细列出七项具体准备步骤，包括资料核查、顺序整理、PPT制作、多次排练、技术检查、着装管理和状态准备，并使用打钩确保完成，体现出极高的计划性、自律性和责任感。",
+                "extraversion": "在团建中提出功能性提问而非社交性互动；回避会议中的情绪氛围，选择会后私下沟通；整体语言冷静、克制，缺乏热情或主动社交的迹象，显示能量来源于独处和任务完成而非人际互动。",
+                "agreeableness": "愿意在会后与同事沟通并提供反馈，表现出一定程度的合作意愿；但强调‘基于数据和事实’而非同理心或支持，反馈是建设性的而非安抚性的，体现中等宜人性，偏向任务导向而非关系维护。",
+                "neuroticism": "面对用户情绪崩溃时保持冷静客观，回应聚焦信息收集与程序执行；自我描述中无焦虑、自我怀疑或情绪波动表现，始终维持稳定、可控的情绪基调，显示极高情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760076329.9288814
+            },
+            {
+              "success": true,
+              "segment_number": 2,
+              "analysis_summary": "回答者展现出高度的条理性和系统性思维，强调流程、准确性和专业标准。在面对不确定性时优先寻求数据和结构，情绪反应克制。同时表现出适度的创造力，但始终以实用性和逻辑为前提。整体呈现严谨、可靠、冷静的人格特征。",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "在回答5中列举红砖的多种非传统用途（如磨刀石、乐器、教育工具等），显示出一定的发散思维和想象力；但所有用途均基于物理属性的逻辑推导，未体现抽象或艺术性联想，因此为中等水平。",
+                "conscientiousness": "在多个回答中强调核查、验证、结构化流程（如‘基本信息核查’、‘财务数据验证’、‘快速检查有无遗漏’），并反复提及专业标准、准确性与准备充分性，体现出极强的责任感、条理性和自律性。",
+                "extraversion": "所有回答聚焦于独立工作、内部思考和任务执行，无任何社交互动倾向或表达外向能量的描述；角色设定为内省型专业人士，偏好独处处理信息，表现出明显的低外向性。",
+                "agreeableness": "语言客观中立，关注事实而非人际关系；虽无对抗性表述，但也未体现合作、共情或信任倾向，宜人性表现平衡，属于中性范围。",
+                "neuroticism": "面对紧急会议通知时，反应冷静理性，专注于信息收集与准备，未表现出焦虑、担忧或情绪波动；强调‘保持专业态度’和系统应对，显示高度情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760076345.058126
+            },
+            {
+              "success": true,
+              "segment_number": 3,
+              "analysis_summary": "回答者展现出高度的结构化思维、规则依从性和任务导向行为，体现出极强的尽责性。在社交互动中保持克制与专业距离，缺乏情感表达和开放探索倾向。情绪管理稳定，但对新体验和合作灵活性表现较低。整体呈现严谨、保守、以事实为基础的行为模式。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调需要数据和证据支持才能行动（如‘在没有相关市场反馈……之前，我无法负责任地提出任何具体的功能迭代方案’），拒绝在信息不足时进行创造性设想，表现出对抽象或新颖想法的回避。",
+                "conscientiousness": "详细描述任务处理流程（评估、优先级排序、记录、执行、验证、反馈），强调系统化方法、内部截止时间设定、合规性检查和事后复盘，体现高度自律、条理性和责任感。",
+                "extraversion": "在社交场合中‘选择性地交谈’，‘避免过多透露个人信息’，聚焦工作话题而非建立人际关系，表明低社交主动性与能量投入，社交行为工具化而非情感驱动。",
+                "agreeableness": "愿意在确认需求后提供技术支持，但在未明确情境下保持谨慎；关注职业道德而非人际和谐，既非过度顺从也非对抗，表现出中等程度的合作倾向。",
+                "neuroticism": "面对提案被否决时迅速转向理性分析，将失望转化为改进计划，情绪反应轻微且短暂，强调冷静、客观与控制，显示极高的情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760076363.1279023
+            },
+            {
+              "success": true,
+              "segment_number": 4,
+              "analysis_summary": "回答者展现出高度的规则导向、结构化思维和对效率的关注，强调数据、流程合规性和问题的系统性解决。在人际互动中保持专业距离，倾向于通过制度化方式而非情感支持来应对他人需求。对新想法持怀疑态度，优先考虑证据和实际应用。整体呈现低开放性、高尽责性、低外向性、中等偏低宜人性及低神经质。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次质疑新理论模型的有效性（如‘请提供数据支持’），强调现有标准和实证验证，回避创新或抽象概念的接纳，表现出对非传统方法的高度谨慎。",
+                "conscientiousness": "提出建立标准化命名系统、组织会议传达规定、使用版本控制、定期检查等系统化解决方案；汇报时强调结构、关键数据、时间管理和清晰重点，体现极强的条理性与责任感。",
+                "extraversion": "所有互动均以任务为中心，避免情感表达或社交联结，如帮助新同事仅限于提供手册和工作计划，未涉及非正式交流或情绪支持，表现出内敛、低社交倾向。",
+                "agreeableness": "虽提供帮助（如让门敞开、安排计划），但方式冷静、程序化，缺乏共情语言；面对干扰首选直接沟通而非妥协或回避，显示合作有限度且基于规则，非出于取悦或和谐动机。",
+                "neuroticism": "面对注意力分散或噪音干扰时，反应理性且克制，关注问题解决而非情绪宣泄；描述感受时仅提及‘分心’并立即转向应对策略，无焦虑、愤怒或情绪波动表现，显示高度情绪稳定。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760076386.3598657
+            },
+            {
+              "success": true,
+              "segment_number": 5,
+              "analysis_summary": "回答者展现出高度尽责性和低开放性，强调事实、规则和结构，回避抽象与不确定性。情绪稳定，社交角色工具化，合作以程序为导向。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 3,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调对抽象话题（如哲学思辨）的不适应，要求提供数据支持，认为缺乏可验证证据的观点难以评估，表现出对非经验性思维的排斥。",
+                "conscientiousness": "详细描述提交前的五步核查流程（准确性、完整性、合规性、一致性、清单），体现高度条理化、自律和对工作质量的严格控制。",
+                "extraversion": "在团队讨论中定位为‘分析师’和‘结构维护者’，参与互动但以任务为中心，未表现出情感驱动或社交主导倾向，属于功能性而非社交性参与。",
+                "agreeableness": "回应同事抱怨时保持专业距离，仅在可分析范围内提供帮助，不主动共情或支持，合作限于程序框架内，无过度顺从或敌意。",
+                "neuroticism": "面对项目阻碍时‘保持冷静和客观’，将挑战视为需解决的技术问题，情绪反应被职业规范调节，显示高度情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760076400.0074937
+            },
+            {
+              "success": true,
+              "segment_number": 6,
+              "analysis_summary": "回答者展现出高度的尽责性和结构化思维，强调规则、精确性和流程合规。在反馈和行为描述中体现低情绪表达和务实倾向。对新体验持谨慎态度，需证据支持才接受变化。社交互动功能化，情绪稳定。",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "在回答5中表示对购买现代艺术画作的提议持审慎态度，强调需评估其合规性和实用性，表明对非传统或创意性支出保持怀疑，但不完全排斥，条件满足时可接受，显示中等开放性。",
+                "conscientiousness": "多次强调精确性、流程合规、记录保存和结构化方法（如‘对数字的精确性有极高要求’、‘严格遵循既定流程’、‘做好记录并通知相关人员’），表现出极强的责任感、条理性和自律性。",
+                "extraversion": "自我介绍简洁专业，无个人兴趣或情感表达；互动模式以任务为导向，缺乏社交热情或主动建立关系的倾向，表现为低外向性。",
+                "agreeableness": "愿意提供建设性反馈并协助同事改进工作，但在方式上强调事实与规则而非人际关系维护，合作基于规范而非同理心，体现中等宜人性。",
+                "neuroticism": "面对紧迫项目截止日期时描述为‘保持冷静和专注’，无焦虑或情绪波动表现，应对策略理性有序，显示高度情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760076423.915747
+            },
+            {
+              "success": true,
+              "segment_number": 7,
+              "analysis_summary": "回答者展现出高度的规则导向、系统性思维和对专业标准的坚持。其反应强调合规性、证据基础和结构化流程，回避非必要社交活动，表现出低开放性和外向性，极高尽责性。宜人性中等，体现为在确保控制前提下的有限合作；情绪稳定，神经质得分低。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确拒绝参与晚会表演，认为‘与工作无关’，并强调资源应‘有效利用’于既定职责，显示出对非常规、创造性活动的排斥（回答1）。对新流程的态度是审慎评估而非主动接纳，仅在确认合规后才‘愿意学习’（回答5），表明对变化持保守立场。",
+                "conscientiousness": "详细描述任务规划的七个步骤，包括目标明确、任务分解、时间表制定、资源分配、进度监控、质量控制和风险管理（回答3）。强调‘系统性方法’、‘合规要求’和‘高质量完成’，体现出极强的条理性、计划性和责任感。",
+                "extraversion": "拒绝参加公司年度晚会的表演邀请，理由是活动‘不在职责范围内’且非‘有效利用资源’（回答1）。全篇无积极社交倾向表达，互动仅限于正式、功能性的职业场景，显示能量来源于独立工作而非社交互动。",
+                "agreeableness": "对同事的帮助提议持怀疑态度，要求提供‘资历证明’并‘密切监督’其工作（回答2），表明信任需经验证。虽未完全拒绝合作，但设定严格前提条件，反映中等宜人性——可合作但以控制和规则为先。",
+                "neuroticism": "所有回应均冷静、理性、基于事实，无情绪化语言或焦虑表达。面对变更时强调‘评估’‘数据支持’‘风险评估’（回答5），表现出情绪稳定和应对压力的结构性策略，符合低神经质特征。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760076495.4340353
+            },
+            {
+              "success": true,
+              "segment_number": 8,
+              "analysis_summary": "回答者表现出高度的规则导向、任务结构化倾向和对模糊性的回避，显示出极强的尽责性。其对社交场合的疏离、对创意内容的排斥以及对数据驱动决策的坚持，表明开放性和外向性极低。情绪稳定性良好，宜人性中等偏上，但主要基于制度合规而非情感共鸣。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确拒绝观看具有哲学隐喻和多重叙事的电影，理由是‘无法提供清晰结论’和‘主观的艺术表达’，偏好可量化分析的事物（回答5）；在募捐现象分析中仅关注流程合规而非社会意义或情感动机（回答2）。",
+                "conscientiousness": "将3小时工作精确划分为准备、执行、检查三个阶段，强调计划性、时间节点和错误修正（回答3）；在派对中选择处理文件以保持效率，并强调遵守公司规则（回答1）；所有行为均围绕程序合规与系统性核查展开（回答2）。",
+                "extraversion": "在公司派对中选择‘安静角落’观察而非参与，仅‘简短与熟悉的人交谈’，优先处理工作任务而非社交互动（回答1），明显回避群体社交活动。",
+                "agreeableness": "关注募捐活动中的公平与合规，提出潜在利益输送风险，但未否定员工善意（回答2）；语言客观中立，不攻击他人动机，体现制度性合作而非个人敌意，但缺乏情感共情表达。",
+                "neuroticism": "所有回答语气平稳、逻辑严密，无焦虑、自我怀疑或情绪波动表现；面对不确定性时采取系统调查策略而非情绪反应（如回答2中提出审计程序），展现出高度情绪控制力。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760076513.2537463
+            },
+            {
+              "success": true,
+              "segment_number": 9,
+              "analysis_summary": "回答者展现出高度的条理性、规则导向和任务专注性，倾向于通过结构化方式处理社交、工作分配与问题解决。在面对非专业领域的情感表达时表现出回避倾向，强调专业边界。情绪稳定，但对抽象、主观体验缺乏投入，人际互动以功能性和逻辑性为主。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答中反复强调规则、数据和事实依据（如‘基于数据和事实依据’、‘不属于我的专业领域’），回避诗歌等主观审美体验，显示对非实用型新经验的排斥。",
+                "conscientiousness": "多次体现系统化方法：如‘调查与选择’、‘评估与调整策略’、‘根本原因分析’、‘执行与监控’等步骤，展现极强的计划性、责任感和流程依从性。",
+                "extraversion": "社交圈建立依赖正式、专业场合（如行业会议、培训课程），避免随意或情感性互动；发言前关注准备而非人际影响，显示低社交主动性。",
+                "agreeableness": "在任务分配上强调公平与能力匹配，尊重同事贡献，但在面对朋友情感分享时保持距离，未表现出共情或支持，呈现中等宜人性。",
+                "neuroticism": "面对挑战时聚焦问题解决而非情绪反应，发言前心理状态描述为‘自信’和‘专业’，无焦虑或自我怀疑表现，显示高情绪稳定性。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760076538.5508895
+            },
+            {
+              "success": true,
+              "segment_number": 10,
+              "analysis_summary": "回答者展现出高度的条理性、规则导向和任务控制倾向，强调计划性、数据驱动决策和流程合规。社交参与意愿低，情感表达受限，偏好结构化环境。缺乏对新颖体验或主观创意的积极评价，情绪稳定性高。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "回答中反复强调规则、流程和既有标准（如‘品牌使用手册’‘视觉识别指南’），对创意活动持工具性态度而非内在欣赏；在LOGO设计中关注合规与数据比较，而非美学探索或想象表达，显示对新奇体验的封闭倾向。",
+                "conscientiousness": "详细描述任务组织流程（如MSCW分类、时间分配、进度监控）、强调计划性、责任性和系统性反馈；多次提及‘准确无误’‘高效完成’‘书面反馈’等关键词，体现极强的自律性、条理性和职业责任感。",
+                "extraversion": "明确表示‘更倾向于一个人在家放松’，将社交活动视为精力消耗而非恢复来源；回避聚会等主动社交情境，偏好独处以进行反思与规划，显示出明显的内向能量取向。",
+                "agreeableness": "虽表现出团队协作意愿（如组织成员讨论LOGO元素），但动机源于流程需要而非共情或和谐维护；语言客观冷静，未体现信任、利他或情感支持倾向，宜人性表现中立平衡。",
+                "neuroticism": "面对工作压力或外部事件（如自然灾害）时，反应为冷静分析与程序应对，无焦虑、担忧或情绪波动迹象；强调‘科学安排’‘相信领导’等稳定预期，表明情绪高度稳定，抗压能力强。"
+              },
+              "confidence": "high",
+              "model": "qwen-long",
+              "processing_time": 1760076556.0972521
+            }
+          ],
+          "final_scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "mbti_type": "ISTJ",
+          "successful_segments": 10,
+          "total_segments": 10
+        },
+        "deepseek-v3.2-exp": {
+          "segment_results": [
+            {
+              "success": true,
+              "segment_number": 1,
+              "analysis_summary": "回答者展现出高度结构化、规则导向的思维模式，强调事实核查和程序遵循，社交互动以任务为中心且保持专业距离",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "接受新项目作为学习机会（问题2），但解决方案均基于既定框架和程序，缺乏创新性探索",
+                "conscientiousness": "详细列出7项准备工作步骤（问题5），强调准确性核查、时间管理和备用方案，体现高度组织性",
+                "extraversion": "社交互动仅限于必要工作沟通（问题1、4），私下交流也保持简短专业，无明显社交活跃度",
+                "agreeableness": "提供建设性反馈（问题4）但避免情感支持，回应客户时保持客观中立（问题3），合作性中等",
+                "neuroticism": "面对压力情境（问题3、4）保持冷静客观，无情绪化反应，体现高情绪稳定性"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076581.7105312
+            },
+            {
+              "success": true,
+              "segment_number": 2,
+              "analysis_summary": "回答者展现出高度结构化思维和任务导向特征，强调逻辑性、准确性和专业性，在压力情境下保持冷静分析，但创新思维相对受限",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "红砖用途列举显示一定创意但局限于物理属性应用，机器学习解释采用类比但缺乏深度探索",
+                "conscientiousness": "审核过程详细列出6个系统步骤，强调'严格遵循既定流程'、'确保每一个步骤都严谨'",
+                "extraversion": "所有回答均聚焦任务执行，无社交互动或情感表达，完全回避人际交往内容",
+                "agreeableness": "在解释复杂概念时采用温和语气但保持专业距离，无合作或共情表现",
+                "neuroticism": "面对紧急情况时'保持专注和冷静'，'任何紧张情绪都会被逻辑分析取代'"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076606.2322898
+            },
+            {
+              "success": true,
+              "segment_number": 3,
+              "analysis_summary": "回答者展现出高度结构化、规则导向的思维模式，强调数据验证和程序合规性，情绪管理能力强但社交互动有限",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确拒绝在缺乏数据时提出新想法（问题5），强调'基于事实和证据'，表现出对新创意的保守态度",
+                "conscientiousness": "详细描述结构化任务处理流程（问题3），包括评估、记录、执行、验证等系统化步骤",
+                "extraversion": "在社交场合选择'选择性交谈'，'避免个人闲聊'，表现出内向倾向和有限的社交需求",
+                "agreeableness": "愿意在确认需求后提供'适当的技术支持'（问题2），但保持专业距离，平衡合作与界限",
+                "neuroticism": "面对项目被否决时'迅速将注意力转向分析失败原因'，情绪从失望快速转为解决问题的决心，表现出高情绪稳定性"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076646.9673886
+            },
+            {
+              "success": true,
+              "segment_number": 4,
+              "analysis_summary": "回答者展现出高度尽责性和中等开放性，低外向性和宜人性，神经质表现中等。行为模式强调结构化、数据驱动和规则遵守，缺乏情感表达和社交主动性。",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 1,
+                "neuroticism": 3
+              },
+              "evidence": {
+                "openness_to_experience": "对同事提出的新理论模型持怀疑态度，要求提供数据支持（问题5），但在问题3中表现出对改进方法的接受性",
+                "conscientiousness": "所有回答都强调结构化方法、标准化流程、时间管理和版本控制（问题1、3、4）",
+                "extraversion": "回避社交互动，强调专业距离，沟通方式直接且事务性（问题2、4、5）",
+                "agreeableness": "直接质疑同事观点，缺乏情感支持表达，关注规则而非人际关系（问题2、5）",
+                "neuroticism": "对工作干扰表现出适度焦虑并寻求解决方案，但情绪反应克制（问题4）"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076676.8996022
+            },
+            {
+              "success": true,
+              "segment_number": 5,
+              "analysis_summary": "回答者展现出高度结构化、规则导向的思维模式，强调事实核查、程序合规和逻辑分析，表现出明显的尽责性和低开放性特征",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确拒绝抽象哲学思辨，要求'具体的数据或案例'，认为抽象话题'缺乏可验证的证据'",
+                "conscientiousness": "详细描述多步骤检查流程（核对准确性、验证完整性、合规性检查、一致性审查、生成检查清单），强调'确保一切都是准确无误'",
+                "extraversion": "在团队中倾向于'记录关键点'而非主导讨论，回应方式为'如果你愿意...我可以分析'的被动姿态",
+                "agreeableness": "在帮助同事时保持专业距离，但愿意在规则范围内提供协助，表现出有限的合作意愿",
+                "neuroticism": "面对项目阻碍时'保持冷静和客观'，情绪描述为'职业上的满足感'和'正常反应'，显示出高度情绪稳定性"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076736.6383965
+            },
+            {
+              "success": true,
+              "segment_number": 6,
+              "analysis_summary": "回答者展现出高度结构化、规则导向的思维模式，强调精确性、合规性和流程遵循，情感表达极少，社交互动保持必要但克制的专业距离",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "对现代艺术画作提议仅从合规和实用性角度评估，缺乏对新体验的开放态度，强调'严格审查采购流程'而非创意价值",
+                "conscientiousness": "多次强调'归位物品'、'检查状态'、'遵循规定'、'设定清晰优先级'、'严格遵循既定流程'，展现极高的条理性和责任感",
+                "extraversion": "自我介绍简洁专业，社交互动仅限于必要的工作交流，缺乏主动社交倾向，能量来源明显内向",
+                "agreeableness": "反馈时'明确指出缺陷'但提供'建设性建议'，平衡了直接批评与合作意愿，处于中等水平",
+                "neuroticism": "面对截止压力时'保持冷静和专注'，情绪稳定，无焦虑表现，应对策略系统化"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076762.5447025
+            },
+            {
+              "success": true,
+              "segment_number": 7,
+              "analysis_summary": "回答者展现出高度结构化、规则导向的思维模式，强调合规性、证据收集和流程遵循，表现出强烈的尽责性和较低的开放性，社交互动保持专业距离",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确拒绝表演活动，认为'不在职责范围内'，对新工作流程仅从合规性角度评估而非探索可能性",
+                "conscientiousness": "详细规划任务步骤，强调'质量控制'、'风险管理'、'定期监控进展'，要求同事提供'资历证明'",
+                "extraversion": "拒绝社交表演邀请，选择'专注于工作'，互动仅限于必要的专业沟通",
+                "agreeableness": "愿意在确保合规前提下接受帮助，但首先'怀疑同事的动机和能力'，保持谨慎合作态度",
+                "neuroticism": "情绪稳定，面对变化时强调'充分的数据支持和风险评估'，表现出冷静理性的应对方式"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076792.8949418
+            },
+            {
+              "success": true,
+              "segment_number": 8,
+              "analysis_summary": "回答者展现出高度尽责性和低开放性，偏好结构化、规则导向的行为模式，社交倾向较低但保持功能性互动，情绪稳定且务实",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确拒绝观看复杂叙事电影，认为'哲学隐喻效率低下'，偏好'可量化和分析的事情'",
+                "conscientiousness": "详细规划3小时任务分为三个阶段，强调'遵循既定规则'、'制定详细步骤清单'、'全面检查'",
+                "extraversion": "在社交场合选择'相对安静的角落'，'更倾向于专注于工作'，社交互动仅限于'必要时简短交谈'",
+                "agreeableness": "在募捐分析中保持中立客观，既关注合规性也考虑员工动机，体现平衡视角",
+                "neuroticism": "全程表现出稳定的情绪控制，用系统化方法处理不确定性，无焦虑或情绪化表达"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076823.8322806
+            },
+            {
+              "success": true,
+              "segment_number": 9,
+              "analysis_summary": "回答者展现出高度结构化、规则导向的思维模式，强调专业边界和逻辑分析，社交偏好正式场合，情绪管理稳定",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确表示'对诗歌的评价不太擅长，因为这不属于我的专业领域'，显示对非专业领域的封闭态度",
+                "conscientiousness": "详细描述'问题识别、根本原因分析、解决方案制定、执行与监控、持续优化'的系统化流程",
+                "extraversion": "社交圈建立仅限于'专业组织、行业会议和培训课程'等结构化场合，回避非正式社交",
+                "agreeableness": "在任务分配中强调'公平、合理并遵守既定规则'，但保持专业距离而非情感连接",
+                "neuroticism": "发言前状态描述为'专注于准备工作，确保所有数据和证据准确无误'，显示稳定的情绪管理"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076863.932837
+            },
+            {
+              "success": true,
+              "segment_number": 10,
+              "analysis_summary": "回答者展现出高度结构化、规则导向的思维模式，强调效率、数据驱动决策和系统化工作流程，表现出强烈的尽责性和低社交倾向",
+              "scores": {
+                "openness_to_experience": 3,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "在LOGO设计过程中提到收集市场趋势和竞争对手分析，显示一定程度的开放性，但整体仍受限于既定规则和标准",
+                "conscientiousness": "详细描述7步工作组织方法，强调清单、优先级评估、时间分配和进度监控，体现极高的条理性和可靠性",
+                "extraversion": "明确选择独自度过周末，认为社交活动消耗精力，表现出明显的内向倾向",
+                "agreeableness": "在团队设计中提到提供结构化反馈，但缺乏情感共鸣表达，合作基于规则而非情感连接",
+                "neuroticism": "面对自然灾害时保持冷静分析，专注于数据收集和系统恢复，情绪稳定"
+              },
+              "confidence": "high",
+              "model": "deepseek-v3.2-exp",
+              "processing_time": 1760076889.3757143
+            }
+          ],
+          "final_scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "mbti_type": "ISTJ",
+          "successful_segments": 10,
+          "total_segments": 10
+        },
+        "Moonshot-Kimi-K2-Instruct": {
+          "segment_results": [
+            {
+              "success": true,
+              "segment_number": 1,
+              "analysis_summary": "回答者表现出极高的尽责性与低开放性，强调规则、流程与事实；社交互动以任务导向为主，情感表达克制，情绪稳定性高。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "拒绝模糊或创意式互动，坚持结构化提问；对“新体验”仅视为挑战而非探索机会。",
+                "conscientiousness": "逐条列出7项详细准备步骤，反复核对资料、演练计时、准备备用方案，体现极端自律与条理。",
+                "extraversion": "在团队沉闷时仅提出任务型问题，无主动情感调动；私下简短沟通，避免公开社交。",
+                "agreeableness": "愿意私下给同事反馈，但强调“基于数据”，缺乏情感支持；对用户焦虑仅要求提供信息，无安慰。",
+                "neuroticism": "全程冷静、无情绪波动；面对软件错误与用户哭泣仍保持“严格按照既定程序处理”的镇定。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076912.4980764
+            },
+            {
+              "success": true,
+              "segment_number": 2,
+              "analysis_summary": "回答者以审计师身份展现高度结构化、规则导向的思维，强调数据与流程，表现出极强的尽责性；对突发信息保持冷静、理性，情绪稳定；社交互动以任务为中心，外向性低；对非传统用途的列举虽多，但均基于物理属性，缺乏抽象或艺术联想，开放性低；整体语气客观、礼貌，宜人性中等。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "红砖非传统用途全部围绕物理属性展开，无抽象或艺术联想；对机器学习解释仅用简单类比，无深入理论探讨。",
+                "conscientiousness": "审核流程六步详尽、按优先级排序；汇报前反复核对数据与格式；用“必须”“确保”等高频词体现自律与可靠。",
+                "extraversion": "所有回答聚焦任务与数据，无社交能量或情感表达；收到紧急通知后先回顾数据而非寻求他人信息。",
+                "agreeableness": "语气礼貌、客观，如“这是我的职责所在”；但无主动合作或同理心描述，保持专业距离。",
+                "neuroticism": "面对紧急会议与临时汇报均“保持冷静”“专注”，无焦虑或情绪波动；用逻辑分析取代情绪反应。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076936.7803464
+            },
+            {
+              "success": true,
+              "segment_number": 3,
+              "analysis_summary": "回答者表现出极端的严谨、规则导向与数据依赖，几乎排斥任何非结构化或情感驱动的行为；社交能量极低，情绪稳定性极高。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "“在缺乏具体数据和信息的情况下，提出一个核心想法并不现实”——直接拒绝任何创新或假设性思考，表现出对新体验的极度排斥。",
+                "conscientiousness": "“我会将该任务记录在我的待办事项列表中，并设置一个内部提醒”“仔细检查任务结果，以确保准确性和完整性”——高度自律、流程化、条理化。",
+                "extraversion": "“我会选择性地与其他人交谈，专注于与工作相关的话题”“避免过多透露个人信息”——明显回避社交互动，能量来源完全内向。",
+                "agreeableness": "“保持适当的礼貌”“发一封简短的回复，确认已接收任务”——表面合作但缺乏主动关怀，处于中立礼貌水平。",
+                "neuroticism": "“情绪状态从最初的失望转变为解决问题的决心”“没有让这种情绪占据主导”——情绪极其稳定，几乎无焦虑或波动。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076955.7949831
+            },
+            {
+              "success": true,
+              "segment_number": 4,
+              "analysis_summary": "回答者表现出极端的秩序导向、规则依赖与低风险容忍度，对新事物持高度怀疑，社交互动以任务为中心，情绪反应受控但明显受干扰影响。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 3
+              },
+              "evidence": {
+                "openness_to_experience": "面对新理论模型时第一反应是“怀疑其有效性和相关性”，要求“数据支持和证据”，并追问“为什么我们需要考虑采用它”，显示对新体验与创意的极度抗拒。",
+                "conscientiousness": "所有回答均强调“标准化命名”“版本控制”“时间管理”“定期检查”“详细手册”，并反复使用“系统化方法”“确保合规”等措辞，体现极高的自律与条理。",
+                "extraversion": "在团队疲惫时选择“展示关键数据”而非互动；与新同事互动仅限于“提供手册与工作计划”，无社交能量展示，整体回避主动社交。",
+                "agreeableness": "虽以任务为中心，但仍“礼貌地提醒同事”“邀请提问”“门永远敞开”，表现出中等程度的合作与礼貌，但缺乏情感共鸣。",
+                "neuroticism": "对笔敲声“感到分心”“影响专注力”，并考虑“记录问题向上级反映”，显示情绪受干扰，但能通过结构化行动加以控制，处于中等水平。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760076978.967504
+            },
+            {
+              "success": true,
+              "segment_number": 5,
+              "analysis_summary": "回答者表现出极端的严谨、务实与规则导向，对抽象或情绪性话题高度排斥，强调事实核查与流程合规；社交上保持克制与距离，情绪稳定且冷静。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "对“未来社会结构的哲学思辨”直接表示不适应，要求具体数据与案例，拒绝抽象讨论（回答5）。",
+                "conscientiousness": "数据录入后执行五步核查流程：准确性、完整性、合规性、一致性、检查清单（回答3）。",
+                "extraversion": "在团队讨论中自定位为“事实检查员”而非主动发言者，强调记录与监控而非互动（回答1）。",
+                "agreeableness": "对同事抱怨保持礼貌但界限清晰，仅在工作范围内提供帮助（回答2）。",
+                "neuroticism": "面对项目阻碍“保持冷静和客观，迅速分析问题根源”，无情绪波动（回答4）。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760077001.430471
+            },
+            {
+              "success": true,
+              "segment_number": 6,
+              "analysis_summary": "回答者表现出极端的秩序导向、规则依赖与事实优先，几乎排斥情感与创意，整体呈现高尽责、低开放、低外向、低神经质、中等偏低的宜人特征。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "“世界由数字、法规和流程构成”“避免任何情感色彩”“不做过多的推测或解释”——明显排斥新体验与抽象创意。",
+                "conscientiousness": "“对数字的精确性有极高要求”“严格遵循既定流程”“记录所有调整以便后续评审”——自律、条理、可靠程度极高。",
+                "extraversion": "自我介绍仅陈述职业身份，无任何社交热情或能量外显；反馈与离开时均聚焦任务而非人际互动。",
+                "agreeableness": "反馈“保持简洁和客观”“专注于事实和证据”，虽提出建设性建议，但缺乏同理或温暖表达，呈现中立合作而非高度亲和。",
+                "neuroticism": "面对截止日期压力“保持冷静和专注”“不轻易感到慌乱”，情绪稳定性极高，未见焦虑或情绪波动。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760077022.250877
+            },
+            {
+              "success": true,
+              "segment_number": 7,
+              "analysis_summary": "回答者表现出极端的秩序、规则与合规导向，对任何变化或社交活动都先进行风险评估与流程验证；高度自律、低开放性、社交回避且情绪稳定。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "多次强调“不在我的职责范围内”“缺乏兴趣”“需要合规性验证”，拒绝尝试新活动或灵活方法。",
+                "conscientiousness": "详细制定分阶段计划、设定缓冲时间、持续监控、严格质量控制与风险管理，体现极高自律与条理。",
+                "extraversion": "明确拒绝上台表演、避免非必要社交，能量来源明显指向独处与任务，而非人际互动。",
+                "agreeableness": "虽保持礼貌，但对同事帮助先要求资历证明、对文件修改立即启动正式审核，合作建立在规则验证之上，呈现中等合作倾向。",
+                "neuroticism": "面对变化或突发请求时冷静评估、制定应对策略，无明显焦虑或情绪波动，情绪稳定性极高。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760077040.6051435
+            },
+            {
+              "success": true,
+              "segment_number": 8,
+              "analysis_summary": "回答者表现出极端的秩序导向、规则依赖与任务专注，对抽象、复杂或情感化内容高度排斥，社交回避明显，情绪稳定但缺乏弹性。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "明确拒绝观看情节复杂、含哲学隐喻的电影，理由是“效率低下”“无法提供清晰结论”；对抽象艺术表达无兴趣。",
+                "conscientiousness": "将3小时任务拆分为准备-执行-检查三阶段，强调“详细步骤清单”“时间节点”“全面检查”；派对中也计划“处理文件”保持效率。",
+                "extraversion": "在派对上选择“安静角落”，仅“必要时简短交谈”；整体倾向独处与观察而非主动社交。",
+                "agreeableness": "遵守公司规则、尊重流程，但未表现出特别合作或共情；对募捐活动持审计式中立，既未反对也未积极支持。",
+                "neuroticism": "全程冷静、逻辑化，无焦虑或情绪波动；面对不确定场景（如募捐）时“按既定程序调查”，情绪稳定。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760077061.139989
+            },
+            {
+              "success": true,
+              "segment_number": 9,
+              "analysis_summary": "回答者表现出极高的尽责性与低开放性，社交策略高度结构化、任务分配强调公平与规则，情绪稳定且以逻辑主导，社交能量低，合作礼貌但保持距离。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "对诗歌评价直接表示“不属于我的专业领域”，拒绝主观审美；社交圈建立仅围绕专业活动，排斥非结构化场合。",
+                "conscientiousness": "社交圈建立步骤详尽（调查→选择→记录→评估）；任务分配强调“公平、合理、遵守既定规则”；学习计划包含“根本原因分析、数据监控、持续优化”。",
+                "extraversion": "社交策略限定在“正式讲座、网络研讨会”等低互动场景；发言前心理聚焦“准备、证据、规则”，无社交能量描述。",
+                "agreeableness": "任务分配坚持公平、不推责；对朋友分享诗歌先感谢再礼貌拒绝，保持合作表面和谐，但缺乏情感共鸣。",
+                "neuroticism": "面对挑战将紧张“转化为动力”，情绪被理性流程吸收；无焦虑或情绪波动描述，强调“自信、专业态度”。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760077081.4792752
+            },
+            {
+              "success": true,
+              "segment_number": 10,
+              "analysis_summary": "回答者表现出极端的秩序导向、数据驱动与规则依赖，几乎完全排斥情感与创意；社交回避明显，情绪表达极度克制，整体人格轮廓呈现高尽责、低开放、低外向、低神经质、中等偏低的宜人。",
+              "scores": {
+                "openness_to_experience": 1,
+                "conscientiousness": 5,
+                "extraversion": 1,
+                "agreeableness": 3,
+                "neuroticism": 1
+              },
+              "evidence": {
+                "openness_to_experience": "对周末活动的选择是“一个人在家放松”，理由是“效率与节奏”“环境控制”；LOGO设计过程中强调“评估标准”“数据收集”“量化契合度”，完全排斥创意与主观审美。",
+                "conscientious": "使用MSCW优先级矩阵、拆解任务步骤、设定缓冲时间、定期检查进度、事后总结反馈，体现出极端的计划性与自律。",
+                "extraversion": "明确拒绝社交活动，认为社交“消耗大量精力”，独处才能“恢复体力和脑力”；所有回答中无任何主动社交或团队互动倾向。",
+                "agreeableness": "在团队中提供“结构化反馈”并确保“符合既定规则”，显示合作但非情感导向；对灾难受害者无同理表述，仅关注“数据收集与资源分配”，故非高也非低。",
+                "neuroticism": "面对灾难、工作压力或设计争议均保持冷静、无焦虑描述，强调“遵循规则”“科学合理安排”，情绪稳定性极高。"
+              },
+              "confidence": "high",
+              "model": "Moonshot-Kimi-K2-Instruct",
+              "processing_time": 1760077106.5959377
+            }
+          ],
+          "final_scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "mbti_type": "ISTJ",
+          "successful_segments": 10,
+          "total_segments": 10
+        }
+      },
+      "consistency_score": 0
+    }
+  ],
+  "statistics": {
+    "total_files": 3,
+    "successful_files": 3,
+    "failed_files": 0,
+    "average_consistency": 0,
+    "consistency_scores": [
+      0,
+      0,
+      0
+    ]
+  }
+}

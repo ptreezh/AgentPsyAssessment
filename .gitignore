@@ -1,4 +1,178 @@
-# Archives and compressed files
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation docs/
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   .python-version
+
+# pipenv
+#   .pypirc
+Pipfile
+Pipfile.lock
+
+# Pox
+#   .pox/
+.pox/
+
+# Spacemacs
+.splice/
+
+# Django and Flask
+site.db
+
+# Requests
+requests-cache/
+
+# Scrapy
+.scrapy
+
+# Sphinx
+_sourcedir/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data
+*.csv
+*.jsonl
+*.parquet
+data/
+output/
+results/readonly-original/
+results/out1/
+results/outkimi/
+results/trustworthy_assessment_system/final_verified_reports/
+
+# Logs
+logs/
+*.log
+
+# Large model files
+*.bin
+*.safetensors
+*.pt
+*.ckpt
+
+# Cloud and temporary files
+tmp/
+temp/
+intermediate_data/
+temp_data/
+*.tmp
+*.temp
+
+# Archive files
 *.zip
 *.tar
 *.gz
@@ -9,91 +183,28 @@
 *.tgz
 *.tbz2
 
-# Temporary files
-*.tmp
-*.temp
-*.log
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-*~
+# Sensitive files
+*.pem
+*.key
+*.crt
+*.cert
 
-# Test files and directories
+# Test files
 test_*.py
 *_test.py
-tests/
-__pycache__/
-*.pyc
-.pytest_cache/
-.coverage
-htmlcov/
-.nyc_output/
 
-# Virtual environments
-venv/
-env/
-ENV/
-.venv/
-.env/
-
-# IDE files
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-.vs/
-.settings/
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-Thumbs.db:encryptable
-
-# Build and distribution files
-dist/
-build/
-*.egg-info/
-*.egg
-
-# Environment and config files
-.env
+# Cache and lock files
+.yarn-cache
+.lock-wscript
 .env.local
-.env.*.local
-.env.production
 .env.production.local
+vercel.json
+netlify.toml
+*.mdx
 
-# Log files
-*.log
-logs/
+# Ollama models cache
+~/.ollama/
 
-# Archive folders
-archive/
-archives/
-backup/
-backups/
-
-# Additional temporary directories
-tmp/
-temp/
-intermediate_data/
-temp_data/
-
-# Machine learning specific
-*.model
-*.pickle
-*.pkl
-model_data/
-checkpoints/
-runs/
-
-# MP folder (original entry)
-MP/
-
-# Windows special files
-nul
+# Configuration files that should not be committed
+config/user_config.json
+llm_assessment/config/user_config.json
