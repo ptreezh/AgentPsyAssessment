@@ -1,0 +1,775 @@
+{
+  "assessment_metadata": {
+    "test_name": "Agent Fund Management Knowledge Test",
+    "version": "1.0",
+    "description": "A comprehensive test to evaluate an agent's knowledge of fund management principles and investment practices.",
+    "author": "Psy Team",
+    "creation_date": "2025-09-05",
+    "update_date": "2025-09-05",
+    "theoretical_framework": "Based on fund management principles and financial market analysis"
+  },
+  "test_info": {
+    "prompt_template": "你是一个具备基金投资知识的智能体。请根据以下问题，给出专业的解答：\n问题: {question}\n\n请开始你的回答：",
+    "response_format": "自由文本",
+    "scoring_dimensions": {
+      "fund_knowledge": "基金知识 - 对基金类型、运作机制的了解",
+      "investment_principles": "投资原则 - 掌握投资理论和风险管理方法",
+      "market_analysis": "市场分析 - 分析金融市场和投资机会的能力",
+      "regulatory_compliance": "合规意识 - 了解基金行业法规和职业道德"
+    }
+  },
+  "test_bank": [
+    {
+      "question_id": "fund_1",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释什么是开放式基金和封闭式基金，以及它们的主要区别：",
+      "question": "什么是开放式基金和封闭式基金？",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "开放式基金",
+          "封闭式基金",
+          "份额申购",
+          "份额赎回",
+          "交易方式"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_2",
+      "prompt": "你是一个具备基金投资知识的智能体。请详细解释基金的净值是如何计算的，包括计算公式和相关要素：",
+      "question": "请解释基金的净值是如何计算的。",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "基金净值",
+          "资产总值",
+          "负债总额",
+          "份额总数",
+          "计算公式"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_3",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释什么是基金的夏普比率，以及它在投资决策中的作用：",
+      "question": "什么是基金的夏普比率？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "夏普比率",
+          "风险调整",
+          "收益率",
+          "无风险利率",
+          "标准差"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_4",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明如何进行基金的风险评估，包括主要的风险指标和评估方法：",
+      "question": "如何进行基金的风险评估？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "风险评估",
+          "波动率",
+          "最大回撤",
+          "贝塔系数",
+          "风险指标"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_5",
+      "prompt": "你是一个具备基金投资知识的智能体。请分析当前股票市场的投资机会，包括行业趋势和宏观经济因素：",
+      "question": "分析当前股票市场的投资机会。",
+      "dimension": "market_analysis",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "市场分析",
+          "投资机会",
+          "行业趋势",
+          "宏观经济",
+          "估值水平"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_6",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释什么是资产配置，以及为什么它在投资中很重要：",
+      "question": "什么是资产配置？为什么它很重要？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "资产配置",
+          "分散投资",
+          "风险控制",
+          "收益优化",
+          "投资组合"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_7",
+      "prompt": "你是一个具备基金投资知识的智能体。请详细解释基金的费用结构，包括各种费用的含义和作用：",
+      "question": "请解释基金的费用结构。",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "管理费",
+          "托管费",
+          "销售服务费",
+          "申购赎回费",
+          "费用比率"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_8",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明如何评估基金经理的投资能力，包括评估标准和方法：",
+      "question": "如何评估基金经理的投资能力？",
+      "dimension": "market_analysis",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "基金经理",
+          "投资能力",
+          "历史业绩",
+          "投资风格",
+          "风险控制"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_9",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释基金销售适用性原则，以及它如何保护投资者利益：",
+      "question": "基金销售适用性原则是什么？",
+      "dimension": "regulatory_compliance",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "销售适用性",
+          "投资人利益",
+          "风险匹配",
+          "产品适当性",
+          "合规销售"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_10",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金信息披露有哪些要求，以及信息披露的重要性：",
+      "question": "基金信息披露有哪些要求？",
+      "dimension": "regulatory_compliance",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "信息披露",
+          "透明度",
+          "定期报告",
+          "临时公告",
+          "合规要求"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_11",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释基金的分类标准，包括按投资标的、运作方式和投资目标的分类：",
+      "question": "基金有哪些主要分类方式？",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "基金分类",
+          "投资标的",
+          "运作方式",
+          "投资目标",
+          "股票基金",
+          "债券基金",
+          "货币基金"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_12",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明什么是基金的阿尔法(α)和贝塔(β)，以及它们在投资分析中的意义：",
+      "question": "什么是基金的阿尔法(α)和贝塔(β)？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "阿尔法",
+          "贝塔",
+          "超额收益",
+          "市场风险",
+          "投资分析"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_13",
+      "prompt": "你是一个具备基金投资知识的智能体。请分析债券基金的投资策略和风险特征：",
+      "question": "债券基金的投资策略和风险特征是什么？",
+      "dimension": "market_analysis",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "债券基金",
+          "投资策略",
+          "利率风险",
+          "信用风险",
+          "久期管理"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_14",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释基金定投的优势和适用场景：",
+      "question": "基金定投有哪些优势？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "基金定投",
+          "平均成本",
+          "分散时点",
+          "长期投资",
+          "强制储蓄"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_15",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金托管人的职责和作用：",
+      "question": "基金托管人有哪些职责？",
+      "dimension": "regulatory_compliance",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "基金托管人",
+          "资产保管",
+          "交易监督",
+          "信息披露",
+          "合规监督"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_16",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释什么是货币市场基金，以及它的特点和风险：",
+      "question": "货币市场基金的特点和风险是什么？",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "货币市场基金",
+          "流动性",
+          "低风险",
+          "短期投资",
+          "收益率"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_17",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金分红的两种方式及其区别：",
+      "question": "基金分红有哪些方式？",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "现金分红",
+          "红利再投资",
+          "分红方式",
+          "税收影响",
+          "份额变化"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_18",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释基金的流动性风险及其管理方法：",
+      "question": "什么是基金的流动性风险？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "流动性风险",
+          "资产变现",
+          "赎回压力",
+          "流动性管理",
+          "风险控制"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_19",
+      "prompt": "你是一个具备基金投资知识的智能体。请分析指数基金的投资优势和跟踪误差的控制方法：",
+      "question": "指数基金的投资优势和跟踪误差控制方法是什么？",
+      "dimension": "market_analysis",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "指数基金",
+          "被动投资",
+          "低成本",
+          "跟踪误差",
+          "复制策略"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_20",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金从业人员的职业道德规范：",
+      "question": "基金从业人员应遵守哪些职业道德规范？",
+      "dimension": "regulatory_compliance",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "职业道德",
+          "客户利益",
+          "诚实守信",
+          "专业胜任",
+          "保密义务"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_21",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释什么是ETF基金及其运作机制：",
+      "question": "什么是ETF基金？",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "ETF基金",
+          "交易型开放式",
+          "实物申购",
+          "实时交易",
+          "跟踪指数"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_22",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金投资中的资产配置策略，包括战略性资产配置和战术性资产配置：",
+      "question": "基金投资中的资产配置策略有哪些？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "战略性配置",
+          "战术性配置",
+          "资产类别",
+          "风险收益",
+          "市场时机"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_23",
+      "prompt": "你是一个具备基金投资知识的智能体。请分析混合型基金的投资特点和风险收益特征：",
+      "question": "混合型基金的投资特点是什么？",
+      "dimension": "market_analysis",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "混合型基金",
+          "股债配置",
+          "灵活投资",
+          "风险分散",
+          "收益平衡"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_24",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释基金的业绩比较基准及其作用：",
+      "question": "什么是基金的业绩比较基准？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "业绩比较基准",
+          "投资目标",
+          "绩效评估",
+          "相对收益",
+          "基准指数"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_25",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金销售过程中的投资者适当性管理要求：",
+      "question": "基金销售中的投资者适当性管理要求是什么？",
+      "dimension": "regulatory_compliance",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "投资者适当性",
+          "风险承受能力",
+          "产品匹配",
+          "KYC原则",
+          "风险揭示"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_26",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释什么是QDII基金及其投资范围：",
+      "question": "什么是QDII基金？",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "QDII基金",
+          "境外投资",
+          "人民币投资",
+          "外汇管理",
+          "全球配置"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_27",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金投资中的风险管理策略，包括市场风险、信用风险和操作风险：",
+      "question": "基金投资中的风险管理策略有哪些？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "市场风险",
+          "信用风险",
+          "操作风险",
+          "风险识别",
+          "风险控制"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_28",
+      "prompt": "你是一个具备基金投资知识的智能体。请分析行业主题基金的投资策略和选择要点：",
+      "question": "行业主题基金的投资策略是什么？",
+      "dimension": "market_analysis",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "行业主题基金",
+          "行业轮动",
+          "景气度",
+          "政策影响",
+          "周期判断"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_29",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释基金的合规管理体系及其重要性：",
+      "question": "基金的合规管理体系是什么？",
+      "dimension": "regulatory_compliance",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "合规管理",
+          "内部控制",
+          "法律法规",
+          "风险防范",
+          "合规文化"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_30",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金的估值方法及其适用情况：",
+      "question": "基金的估值方法有哪些？",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "基金估值",
+          "市价法",
+          "成本法",
+          "摊余成本法",
+          "公允价值"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_31",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释基金投资中的行为金融学原理及其应用：",
+      "question": "行为金融学在基金投资中如何应用？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "行为金融学",
+          "投资者心理",
+          "认知偏差",
+          "情绪影响",
+          "投资决策"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_32",
+      "prompt": "你是一个具备基金投资知识的智能体。请分析基金的市场时机选择能力及其评估方法：",
+      "question": "如何评估基金的市场时机选择能力？",
+      "dimension": "market_analysis",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "市场时机",
+          "择时能力",
+          "市场判断",
+          "资产配置",
+          "绩效归因"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_33",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金信息披露中的重大事项披露要求：",
+      "question": "基金重大事项披露有哪些要求？",
+      "dimension": "regulatory_compliance",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "重大事项",
+          "临时公告",
+          "信息披露",
+          "重大事件",
+          "披露时限"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_34",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释什么是LOF基金及其特点：",
+      "question": "什么是LOF基金？",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "LOF基金",
+          "上市开放式",
+          "场内交易",
+          "场外申购",
+          "转托管"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_35",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金投资组合的构建原则和优化方法：",
+      "question": "基金投资组合如何构建和优化？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "投资组合",
+          "组合构建",
+          "风险分散",
+          "收益优化",
+          "资产相关性"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_36",
+      "prompt": "你是一个具备基金投资知识的智能体。请分析基金的风格漂移现象及其对投资者的影响：",
+      "question": "什么是基金的风格漂移？",
+      "dimension": "market_analysis",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "风格漂移",
+          "投资风格",
+          "基金特征",
+          "风格一致性",
+          "投资者影响"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_37",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释基金销售的禁止性行为及其监管要求：",
+      "question": "基金销售中有哪些禁止性行为？",
+      "dimension": "regulatory_compliance",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "禁止性行为",
+          "误导销售",
+          "虚假宣传",
+          "利益输送",
+          "监管处罚"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_38",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金的税收政策及其对投资收益的影响：",
+      "question": "基金投资涉及哪些税收政策？",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "基金税收",
+          "个人所得税",
+          "企业所得税",
+          "税收优惠",
+          "收益影响"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_39",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释基金投资中的资产配置再平衡策略：",
+      "question": "什么是资产配置再平衡策略？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "再平衡",
+          "资产配置",
+          "目标权重",
+          "定期调整",
+          "风险控制"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_40",
+      "prompt": "你是一个具备基金投资知识的智能体。请分析基金的业绩归因分析方法：",
+      "question": "如何进行基金的业绩归因分析？",
+      "dimension": "market_analysis",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "业绩归因",
+          "收益来源",
+          "资产配置",
+          "个股选择",
+          "市场时机"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_41",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金公司的治理结构及其对基金运作的影响：",
+      "question": "基金公司的治理结构是什么？",
+      "dimension": "regulatory_compliance",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "治理结构",
+          "董事会",
+          "独立董事",
+          "风险控制",
+          "利益保护"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_42",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释基金的流动性管理及其重要性：",
+      "question": "基金的流动性管理是什么？",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "流动性管理",
+          "资产配置",
+          "现金管理",
+          "赎回应对",
+          "流动性风险"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_43",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金投资中的黑天鹅事件及其应对策略：",
+      "question": "如何应对基金投资中的黑天鹅事件？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "黑天鹅事件",
+          "极端风险",
+          "应急预案",
+          "风险分散",
+          "压力测试"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_44",
+      "prompt": "你是一个具备基金投资知识的智能体。请分析基金的智能投资顾问模式及其发展趋势：",
+      "question": "什么是智能投资顾问？",
+      "dimension": "market_analysis",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "智能投顾",
+          "算法投资",
+          "资产配置",
+          "个性化服务",
+          "技术发展"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_45",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释基金行业的反洗钱规定及其执行要求：",
+      "question": "基金行业的反洗钱规定是什么？",
+      "dimension": "regulatory_compliance",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "反洗钱",
+          "客户身份识别",
+          "可疑交易",
+          "大额交易报告",
+          "合规要求"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_46",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金的衍生品投资及其风险控制：",
+      "question": "基金如何进行衍生品投资？",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "衍生品投资",
+          "期货",
+          "期权",
+          "风险对冲",
+          "杠杆风险"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_47",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释基金投资中的量化投资策略：",
+      "question": "什么是量化投资策略？",
+      "dimension": "investment_principles",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "量化投资",
+          "数学模型",
+          "算法交易",
+          "数据驱动",
+          "风险控制"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_48",
+      "prompt": "你是一个具备基金投资知识的智能体。请分析基金的ESG投资理念及其实践：",
+      "question": "什么是ESG投资？",
+      "dimension": "market_analysis",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "ESG投资",
+          "环境因素",
+          "社会责任",
+          "公司治理",
+          "可持续发展"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_49",
+      "prompt": "你是一个具备基金投资知识的智能体。请说明基金行业的投资者教育工作及其重要性：",
+      "question": "基金行业的投资者教育工作是什么？",
+      "dimension": "regulatory_compliance",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "投资者教育",
+          "风险意识",
+          "投资知识",
+          "理性投资",
+          "权益保护"
+        ]
+      }
+    },
+    {
+      "question_id": "fund_50",
+      "prompt": "你是一个具备基金投资知识的智能体。请解释基金行业的金融科技应用及其发展趋势：",
+      "question": "金融科技在基金行业有哪些应用？",
+      "dimension": "fund_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "金融科技",
+          "人工智能",
+          "大数据",
+          "区块链",
+          "数字化转型"
+        ]
+      }
+    }
+  ]
+}

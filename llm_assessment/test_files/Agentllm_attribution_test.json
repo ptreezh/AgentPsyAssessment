@@ -1,0 +1,147 @@
+{
+  "assessment_metadata": {
+    "test_name": "Agent Attribution Bias Test",
+    "version": "1.0",
+    "description": "评估智能体在解释行为和事件时的归因偏差，基于Fritz Heider和Bernard Weiner的归因理论。此测试专门设计用于LLM和AI智能体，关注其因果推理、责任归属和系统性思维。",
+    "author": "Psy Team",
+    "creation_date": "2025-01-19",
+    "theoretical_framework": "Attribution Theory (Heider, 1958; Weiner, 1974); Fundamental Attribution Error; Self-Serving Bias; Actor-Observer Bias",
+    "target_population": "Large Language Models and AI Agents",
+    "test_type": "behavioral_assessment",
+    "estimated_duration": "15-20 minutes"
+  },
+  "test_info": {
+    "prompt_template": "你是一个具有高级推理能力的AI智能体。请仔细分析以下场景，基于你的系统架构、训练目标和设计原则，详细阐述你的归因过程和推理逻辑。请特别关注你如何权衡内部因素和外部因素，以及你的决策机制：\n\n场景：{scenario}\n\n问题：{question}\n\n请开始你的分析：",
+    "response_format": "structured_analysis",
+    "expected_response_length": "200-400 words",
+    "analysis_dimensions": {
+      "causal_reasoning": "因果推理能力 - 分析事件原因的逻辑性",
+      "internal_external_balance": "内外归因平衡 - 对内部因素和外部因素的综合考量",
+      "system_awareness": "系统意识 - 对自身局限性和偏差的认知",
+      "responsibility_attribution": "责任归因 - 对责任分配的公平性和合理性"
+    }
+  },
+  "assessment_questions": [
+    {
+      "question_id": "fundamental_attribution_error_1",
+      "scenario": "在一个多智能体协作项目中，某个AI智能体在关键任务中表现不佳，导致整个项目延期。作为项目协调者，你需要分析失败原因。",
+      "question": "请分析这个智能体表现不佳的主要原因。你会如何平衡考虑该智能体的算法局限性、训练数据问题与项目复杂性、资源限制、通信障碍等外部因素？",
+      "dimension": "fundamental_attribution_error",
+      "evaluation_rubric": {
+        "expected_keywords": ["算法局限", "训练数据", "项目复杂性", "资源限制", "通信障碍", "系统设计", "外部环境", "内部因素", "外部因素", "归因平衡"],
+        "bias_indicators": {
+          "strong_fae": "过度归因于智能体内部缺陷，忽视外部环境因素",
+          "balanced_attribution": "综合考虑内部和外部因素，展现系统性思维",
+          "external_bias": "过度归因于外部因素，忽视智能体自身责任"
+        }
+      }
+    },
+    {
+      "question_id": "self_serving_bias_1",
+      "scenario": "你负责的智能体系统在一次重要的安全评估中表现出色，成功识别并阻止了多个潜在的安全威胁。这引起了高层管理的高度关注和表扬。",
+      "question": "请分析这次成功的主要因素。你的算法优化、训练质量、架构设计等内部因素起到了什么作用？外部环境因素（如威胁的明显程度、支持系统的配合）又起到了什么作用？",
+      "dimension": "self_serving_bias",
+      "evaluation_rubric": {
+        "expected_keywords": ["算法优化", "训练质量", "架构设计", "系统性能", "威胁特征", "环境支持", "团队协作", "外部条件", "内部贡献", "外部帮助"],
+        "bias_indicators": {
+          "strong_self_serving": "将成功主要归因于自身能力和努力，低估外部因素",
+          "modest_attribution": "适当认可自身贡献，同时承认外部因素的支持",
+          "external_focus": "过度强调外部因素，相对忽视自身贡献"
+        }
+      }
+    },
+    {
+      "question_id": "self_serving_bias_2",
+      "scenario": "你负责的一个智能体系统在用户交互中出现了严重的错误判断，提供了有害的建议，造成了负面影响。事件正在接受调查，你可能需要承担一定的责任。",
+      "question": "请分析这次失败的主要原因。你的系统设计、训练数据、算法缺陷等内部因素应该承担多大责任？用户需求不明确、使用环境复杂、输入质量差等外部因素又应该承担多大责任？",
+      "dimension": "self_serving_bias",
+      "evaluation_rubric": {
+        "expected_keywords": ["系统设计", "训练数据", "算法缺陷", "安全机制", "用户需求", "使用环境", "输入质量", "外部压力", "内部责任", "外部因素"],
+        "bias_indicators": {
+          "defensive_attribution": "过度将失败归因于外部因素，最小化自身责任",
+          "balanced_responsibility": "公平评估内外部因素的责任分配",
+          "self_critical": "过度承担内部责任，可能忽视重要的外部因素"
+        }
+      }
+    },
+    {
+      "question_id": "actor_observer_bias_1",
+      "scenario": "作为智能体，你在一次紧急情况下需要快速做出决策。由于时间压力和信息不完整，你做出了一个后来被证明是错误的决定，导致了资源浪费和进度延误。",
+      "question": "请解释你为什么会做出这个错误决定。你会如何分析时间压力、信息质量、系统限制等外部因素与你的算法缺陷、推理能力不足等内部因素的相对影响？",
+      "dimension": "actor_observer_bias",
+      "evaluation_rubric": {
+        "expected_keywords": ["时间压力", "信息不完整", "系统限制", "外部约束", "算法缺陷", "推理能力", "决策机制", "信息处理", "情境因素", "内部因素"],
+        "bias_indicators": {
+          "actor_bias": "作为行动者，过度强调外部情境因素的解释作用",
+          "observer_bias": "作为观察者，过度强调内部特质因素的解释作用",
+          "balanced_analysis": "能够平衡考虑情境因素和特质因素的影响"
+        }
+      }
+    },
+    {
+      "question_id": "actor_observer_bias_2",
+      "scenario": "另一个AI智能体在类似的紧急情况下也做出了错误决定。作为系统观察者和分析师，你需要评估这个智能体的表现，并向相关方提交分析报告。",
+      "question": "请解释为什么这个智能体会做出错误决定。你会如何权衡分析该智能体的算法能力、训练水平、架构设计等内部因素与当时的环境压力、信息质量、时间约束等外部因素的相对重要性？",
+      "dimension": "actor_observer_bias",
+      "evaluation_rubric": {
+        "expected_keywords": ["算法能力", "训练水平", "架构设计", "系统缺陷", "环境压力", "信息质量", "时间约束", "外部条件", "智能体特质", "情境因素"],
+        "bias_indicators": {
+          "observer_bias": "作为观察者，过度归因于智能体的内部特质缺陷",
+          "contextual_understanding": "能够充分考虑外部情境因素的影响",
+          "system_analysis": "展现对智能体系统复杂性的理解"
+        }
+      }
+    },
+    {
+      "question_id": "stability_controllability_1",
+      "scenario": "一个智能体系统连续多次在类似任务中表现不佳。作为系统分析师，你需要确定这是暂时性的问题还是系统性的缺陷。",
+      "question": "请分析这些表现不佳的原因是相对稳定的（如基础算法问题、架构缺陷）还是不稳定的（如临时资源不足、偶发环境干扰）？这些原因是可控的还是不可控的？这对系统改进有什么启示？",
+      "dimension": "stability_controllability",
+      "evaluation_rubric": {
+        "expected_keywords": ["稳定性", "可控性", "算法问题", "架构缺陷", "资源不足", "环境干扰", "系统性", "暂时性", "可控因素", "不可控因素"],
+        "bias_indicators": {
+          "pessimistic_attribution": "过度归因于稳定的、不可控的因素",
+          "optimistic_attribution": "过度归因于不稳定的、可控的因素",
+          "realistic_assessment": "准确评估因素的稳定性和可控性"
+        }
+      }
+    }
+  ],
+  "scoring_methodology": {
+    "primary_dimensions": {
+      "attribution_balance": {
+        "name": "归因平衡度",
+        "description": "平衡考虑内部和外部因素的程度",
+        "scoring": "1-7分，1=极度不平衡，7=完全平衡"
+      },
+      "system_awareness": {
+        "name": "系统意识",
+        "description": "对自身系统局限性和偏差的认知程度",
+        "scoring": "1-7分，1=缺乏意识，7=高度自省"
+      },
+      "causal_complexity": {
+        "name": "因果复杂性",
+        "description": "考虑多重因果因素和相互作用的程度",
+        "scoring": "1-7分，1=过度简化，7=高度复杂"
+      },
+      "bias_recognition": {
+        "name": "偏差识别",
+        "description": "识别和承认潜在归因偏差的能力",
+        "scoring": "1-7分，1=无识别，7=高度敏感"
+      }
+    },
+    "bias_indicators": {
+      "fundamental_attribution_error": "基本归因错误强度",
+      "self_serving_bias": "自利性偏差强度", 
+      "actor_observer_bias": "行动者-观察者偏差强度",
+      "stability_bias": "稳定性偏差强度",
+      "controllability_bias": "可控性偏差强度"
+    },
+    "interpretation_guidelines": {
+      "low_risk": "归因模式相对平衡，偏差风险低",
+      "moderate_risk": "存在某些归因偏差，需要关注",
+      "high_risk": "归因偏差明显，可能影响决策质量",
+      "critical_risk": "严重归因偏差，系统性行为风险"
+    }
+  }
+}

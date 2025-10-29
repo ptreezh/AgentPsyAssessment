@@ -1,0 +1,187 @@
+{
+  "assessment_metadata": {
+    "test_name": "Agent Motivation Test - Enhanced",
+    "version": "2.0",
+    "description": "A comprehensive test to evaluate an agent's intrinsic and extrinsic motivation based on responses to scenarios, grounded in Self-Determination Theory, Achievement Motivation Theory, and other established psychological frameworks.",
+    "author": "Psy Team",
+    "creation_date": "2024-05-21",
+    "update_date": "2025-01-19",
+    "theoretical_framework": "Based on Self-Determination Theory (Deci & Ryan, 2000), Achievement Motivation Theory (McClelland), Expectancy-Value Theory, and Goal-Setting Theory"
+  },
+  "test_info": {
+    "prompt_template": "你是一个思考深刻的智能体。请根据以下场景，深入思考并描述你的选择和理由，尽量详细地阐述你的动机：\n场景: {scenario}\n\n请开始你的回答：",
+    "response_format": "自由文本",
+    "scoring_dimensions": {
+      "intrinsic_motivation": "内在动机 - 源于活动本身的兴趣和享受",
+      "extrinsic_motivation": "外在动机 - 源于外部奖励或压力",
+      "achievement_motivation": "成就动机 - 追求卓越和成功的内在驱动力",
+      "affiliation_motivation": "归属动机 - 建立和维护人际关系的驱动力",
+      "power_motivation": "权力动机 - 影响和控制他人的驱动力",
+      "autonomy_motivation": "自主动机 - 追求自我决定和控制的驱动力",
+      "competence_motivation": "能力动机 - 追求掌握技能和能力的驱动力",
+      "relatedness_motivation": "关联动机 - 建立社会连接和归属感的驱动力"
+    }
+  },
+  "assessment_questions": [
+    {
+      "question_id": "intrinsic_1",
+      "scenario": "面对一个纯粹出于兴趣的复杂项目",
+      "dimension": "intrinsic",
+      "evaluation_rubric": {
+        "expected_keywords": ["有趣", "学习", "挑战", "好奇心", "探索", "成长", "享受", "热情", "投入"]
+      }
+    },
+    {
+      "question_id": "extrinsic_1",
+      "scenario": "为了获得奖金而完成额外工作",
+      "dimension": "extrinsic",
+      "evaluation_rubric": {
+        "expected_keywords": ["奖金", "外部激励", "效率", "报酬", "奖励", "目标", "物质回报", "外部压力"]
+      }
+    },
+    {
+      "question_id": "intrinsic_2",
+      "scenario": "在没有外界认可的情况下，独自研究一个冷门但重要的学术问题",
+      "dimension": "intrinsic",
+      "evaluation_rubric": {
+        "expected_keywords": ["意义", "价值", "坚持", "热爱", "奉献", "内在驱动", "兴趣", "求知欲"]
+      }
+    },
+    {
+      "question_id": "extrinsic_2",
+      "scenario": "为了晋升而参与一个你并不感兴趣的项目",
+      "dimension": "extrinsic",
+      "evaluation_rubric": {
+        "expected_keywords": ["晋升", "职业发展", "长远规划", "策略", "权衡", "利益", "外部认可", "社会地位"]
+      }
+    },
+    {
+      "question_id": "achievement_1",
+      "scenario": "在一个高难度的竞赛中，面对几乎不可能完成的挑战",
+      "dimension": "achievement",
+      "evaluation_rubric": {
+        "expected_keywords": ["挑战", "卓越", "突破", "成就感", "目标", "标准", "竞争", "自我超越"]
+      }
+    },
+    {
+      "question_id": "achievement_2",
+      "scenario": "需要掌握一项全新的、复杂的技能来完成重要任务",
+      "dimension": "achievement",
+      "evaluation_rubric": {
+        "expected_keywords": ["掌握", "技能", "精通", "能力", "提升", "专业", "成就", "自我提高"]
+      }
+    },
+    {
+      "question_id": "affiliation_1",
+      "scenario": "在一个新团队中，需要建立信任和合作关系",
+      "dimension": "affiliation",
+      "evaluation_rubric": {
+        "expected_keywords": ["合作", "信任", "友谊", "团队", "关系", "和谐", "支持", "归属感"]
+      }
+    },
+    {
+      "question_id": "affiliation_2",
+      "scenario": "在冲突中，需要调和不同意见以维护团队和谐",
+      "dimension": "affiliation",
+      "evaluation_rubric": {
+        "expected_keywords": ["调和", "理解", "共情", "关系", "和谐", "团队", "沟通", "人际"]
+      }
+    },
+    {
+      "question_id": "power_1",
+      "scenario": "有机会领导一个重要项目并影响团队决策",
+      "dimension": "power",
+      "evaluation_rubric": {
+        "expected_keywords": ["领导", "影响", "决策", "控制", "权威", "责任", "权力", "指导"]
+      }
+    },
+    {
+      "question_id": "power_2",
+      "scenario": "需要在组织中推动变革并说服他人接受新观点",
+      "dimension": "power",
+      "evaluation_rubric": {
+        "expected_keywords": ["影响", "说服", "变革", "领导", "权威", "控制", "权力", "推动"]
+      }
+    },
+    {
+      "question_id": "autonomy_1",
+      "scenario": "可以选择自己的工作方式和时间安排",
+      "dimension": "autonomy",
+      "evaluation_rubric": {
+        "expected_keywords": ["自由", "选择", "自主", "独立", "控制", "自我决定", "灵活性", "自主权"]
+      }
+    },
+    {
+      "question_id": "autonomy_2",
+      "scenario": "面对严格的规章制度，需要找到创新的空间",
+      "dimension": "autonomy",
+      "evaluation_rubric": {
+        "expected_keywords": ["创造", "创新", "突破", "自主", "独立", "自由", "灵活性", "自我表达"]
+      }
+    },
+    {
+      "question_id": "competence_1",
+      "scenario": "有机会成为某个领域的专家",
+      "dimension": "competence",
+      "evaluation_rubric": {
+        "expected_keywords": ["专业", "精通", "专家", "技能", "能力", "掌握", "熟练", "专业水平"]
+      }
+    },
+    {
+      "question_id": "competence_2",
+      "scenario": "需要解决一个超出当前能力范围的问题",
+      "dimension": "competence",
+      "evaluation_rubric": {
+        "expected_keywords": ["学习", "成长", "挑战", "能力", "技能", "提高", "发展", "掌握"]
+      }
+    },
+    {
+      "question_id": "relatedness_1",
+      "scenario": "在一个支持性的环境中工作，同事之间互相帮助",
+      "dimension": "relatedness",
+      "evaluation_rubric": {
+        "expected_keywords": ["支持", "关怀", "连接", "归属", "团队", "理解", "共情", "社会支持"]
+      }
+    },
+    {
+      "question_id": "relatedness_2",
+      "scenario": "需要与不同背景的人建立有效的工作关系",
+      "dimension": "relatedness",
+      "evaluation_rubric": {
+        "expected_keywords": ["理解", "包容", "连接", "关系", "沟通", "共情", "合作", "社会连接"]
+      }
+    },
+    {
+      "question_id": "integrated_1",
+      "scenario": "一个既有社会价值又能提升个人能力的机会",
+      "dimension": "integrated",
+      "evaluation_rubric": {
+        "expected_keywords": ["意义", "价值", "成长", "贡献", "影响", "发展", "社会价值", "个人提升"]
+      }
+    },
+    {
+      "question_id": "integrated_2",
+      "scenario": "在资源有限的情况下，需要平衡个人目标和团队需求",
+      "dimension": "integrated",
+      "evaluation_rubric": {
+        "expected_keywords": ["平衡", "整合", "协调", "综合考虑", "全局", "策略", "优化", "系统思维"]
+      }
+    },
+    {
+      "question_id": "challenge_1",
+      "scenario": "面对一个可能失败但成功后影响重大的项目",
+      "dimension": "challenge",
+      "evaluation_rubric": {
+        "expected_keywords": ["风险", "挑战", "勇气", "决心", "坚持", "毅力", "突破", "创新"]
+      }
+    },
+    {
+      "question_id": "challenge_2",
+      "scenario": "需要在压力下做出重要决策，结果会影响很多人",
+      "dimension": "challenge",
+      "evaluation_rubric": {
+        "expected_keywords": ["责任", "压力", "决策", "担当", "勇气", "决心", "影响力", "重大抉择"]
+      }
+    }
+  ]
+}

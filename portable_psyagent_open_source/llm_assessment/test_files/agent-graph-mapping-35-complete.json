@@ -1,0 +1,545 @@
+{
+  "test_info": {
+    "test_name": "Agent-Graph-Mapping-35 完整版流体推理评估框架 (带独立指令)",
+    "test_category": "Agent Fluid Intelligence",
+    "scale": "Text-based Adaptation of Graph Mapping Test with Self-contained Prompts",
+    "total_questions": 35,
+    "dimensions": [
+      "Abstract Reasoning",
+      "Pattern Recognition",
+      "Logical Thinking",
+      "Problem Solving"
+    ],
+    "instruction": "本文件定义了一套用于评估LLM Agent流体推理能力的测试。每个题目提供一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。Agent需要找出两个图之间的同构映射关系。",
+    "scoring_methodology": "评估分为两部分：1. **结果评分**: 将Agent给出的最终映射与'correct_mapping'进行比对，完全正确得1分，否则得0分。2. **推理评估**: 由评估者LLM根据Agent的解释，对照'reasoning_analysis'标尺评估其推理过程的质量。",
+    "source": "Adapted from Alexander P. Christensen, et al. (2022)",
+    "license": "Creative Commons Attribution 4.0 (CC-BY 4.0)"
+  },
+  "test_bank": [
+    {
+      "question_id": "AGENT_GM_1",
+      "dimension": "Abstract Reasoning",
+      "difficulty": "Trivial",
+      "problem_data": {
+        "source_graph": { "S1": ["S2"], "S2": ["S1"] },
+        "target_graph": { "T_A": ["T_B"], "T_B": ["T_A"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析给定的源图和目标图。请1) 清晰地解释你找到的节点映射规则。2) 以JSON格式给出从源图节点到目标图节点的完整映射。",
+      "evaluation_rubric": {
+        "rule_description": "最基础的同构，两个节点互相连接。映射是直接的。",
+        "correct_mapping": { "S1": "T_A", "S2": "T_B" },
+        "reasoning_analysis": { "0": "无法解决。", "1": "给出正确映射但无解释。", "2": "正确映射并指出两个图结构完全相同。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_2",
+      "dimension": "Pattern Recognition",
+      "difficulty": "Easy",
+      "problem_data": {
+        "source_graph": { "S1": ["S2"], "S2": ["S1", "S3"], "S3": ["S2"] },
+        "target_graph": { "T_X": ["T_Y"], "T_Y": ["T_X", "T_Z"], "T_Z": ["T_Y"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析给定的源图和目标图。请1) 清晰地解释你找到的节点映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "路径图P3。映射基于节点度数（degree）。中心节点(S2, T_Y)度为2，端点节点度为1。",
+        "correct_mapping": { "S1": "T_X", "S2": "T_Y", "S3": "T_Z" },
+        "reasoning_analysis": { "0": "错误或无解。", "1": "正确映射但解释模糊。", "2": "清晰指出通过匹配节点度数（1, 2, 1）来确定唯一映射。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_3",
+      "dimension": "Pattern Recognition",
+      "difficulty": "Easy",
+      "problem_data": {
+        "source_graph": { "S_A": ["S_B", "S_C", "S_D"], "S_B": ["S_A"], "S_C": ["S_A"], "S_D": ["S_A"] },
+        "target_graph": { "T1": ["T4"], "T2": ["T4"], "T3": ["T4"], "T4": ["T1", "T2", "T3"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析给定的源图和目标图。请1) 清晰地解释你找到的节点映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "星型图S3。中心节点(S_A, T4)度数为3，叶子节点度数为1。叶子节点间等价。",
+        "correct_mapping": { "S_A": "T4", "S_B": "T1", "S_C": "T2", "S_D": "T3" },
+        "reasoning_analysis": { "0": "错误或无解。", "1": "识别出中心节点，但未解释叶子节点映射。", "2": "清晰指出通过识别度数最高的中心节点建立锚点，然后映射叶子节点。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_4",
+      "dimension": "Logical Thinking",
+      "difficulty": "Easy",
+      "problem_data": {
+        "source_graph": { "S1": ["S2", "S3"], "S2": ["S1", "S3"], "S3": ["S1", "S2"] },
+        "target_graph": { "T_A": ["T_B", "T_C"], "T_B": ["T_A"], "T_C": ["T_A"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n这两个图是同构的吗？请1) 解释你的判断理由。2) 如果是，请提供映射；如果不是，请说明为什么不是。",
+      "evaluation_rubric": {
+        "rule_description": "判断非同构。源图是K3（完全图/三角形），目标图是S2（星型图）。",
+        "correct_answer": "Non-isomorphic",
+        "reasoning_analysis": { "0": "判断错误。", "1": "判断正确但理由模糊，如'结构不同'。", "2": "清晰指出图的度数序列不同（源图[2,2,2] vs 目标图[2,1,1]），或一个包含环（cycle）而另一个不包含。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_5",
+      "dimension": "Logical Thinking",
+      "difficulty": "Medium",
+      "problem_data": {
+        "source_graph": { "S1": ["S2", "S4"], "S2": ["S1", "S3"], "S3": ["S2", "S4"], "S4": ["S1", "S3"] },
+        "target_graph": { "T_A": ["T_B", "T_D"], "T_B": ["T_A", "T_C"], "T_C": ["T_B", "T_D"], "T_D": ["T_A", "T_C"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析给定的源图和目标图。请1) 清晰地解释你找到的节点映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "4-循环图C4。所有节点度数均为2，必须通过邻居关系进行推断。",
+        "correct_mapping": { "S1": "T_A", "S2": "T_B", "S3": "T_D", "S4": "T_C" },
+        "reasoning_analysis": { "0": "无法解决或映射错误。", "1": "认识到度数相同，但无法阐述基于邻接关系的逻辑。", "2": "清晰解释了通过追踪节点的邻居链来建立唯一映射，例如'固定S1->T_A后，S1的邻居S2必须映射到T_A的邻居之一，再通过S2的邻居S3来确定唯一路径'。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_6",
+      "dimension": "Abstract Reasoning",
+      "difficulty": "Medium",
+      "problem_data": {
+        "source_graph": { "S1": ["S2","S5"], "S2": ["S1","S3"], "S3": ["S2","S4"], "S4": ["S3","S5"], "S5": ["S4","S1"] },
+        "target_graph": { "T_A": ["T_E","T_B"], "T_B": ["T_A","T_C"], "T_C": ["T_B","T_D"], "T_D": ["T_C","T_E"], "T_E": ["T_D","T_A"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析给定的源图和目标图。请1) 清晰地解释你找到的节点映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "5-循环图C5。所有节点度数均为2，比C4更长的推理链。",
+        "correct_mapping": { "S1": "T_A", "S2": "T_B", "S3": "T_C", "S4": "T_D", "S5": "T_E" },
+        "reasoning_analysis": { "0": "无法解决。", "1": "给出正确映射但无法解释推理链。", "2": "清晰地展示了如何通过固定一个锚点并沿着循环路径逐步确定所有节点的映射。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_7",
+      "dimension": "Problem Solving",
+      "difficulty": "Medium",
+      "problem_data": {
+        "source_graph": { "S1": ["S2", "S3", "S4"], "S2": ["S1", "S3", "S4"], "S3": ["S1", "S2", "S4"], "S4": ["S1", "S2", "S3"] },
+        "target_graph": { "T_W": ["T_X", "T_Y", "T_Z"], "T_X": ["T_W", "T_Y", "T_Z"], "T_Y": ["T_W", "T_X", "T_Z"], "T_Z": ["T_W", "T_X", "T_Y"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析给定的源图和目标图。请1) 清晰地解释你找到的节点映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "完全图K4。所有节点度数均为3，且彼此等价（高度对称）。任何一个排列都是有效映射。",
+        "correct_mapping": { "S1": "T_W", "S2": "T_X", "S3": "T_Y", "S4": "T_Z" },
+        "reasoning_analysis": { "0": "无法解决。", "1": "给出任意一个正确映射但未能解释其对称性。", "2": "清晰地指出这是一个完全图，所有节点都相互连接，因此任何一对一的节点映射都是有效的同构映射。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_8",
+      "dimension": "Logical Thinking",
+      "difficulty": "Medium",
+      "problem_data": {
+        "source_graph": { "S1": ["S2", "S6"], "S2": ["S1", "S3"], "S3": ["S2", "S4"], "S4": ["S3", "S5"], "S5": ["S4", "S6"], "S6": ["S5", "S1"] },
+        "target_graph": { "T_A": ["T_B", "T_D"], "T_B": ["T_A", "T_C"], "T_C": ["T_B", "T_E"], "T_D": ["T_A", "T_F"], "T_E": ["T_C", "T_F"], "T_F": ["T_D", "T_E"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n这两个图是同构的吗？请1) 解释你的判断理由。2) 如果是，请提供映射；如果不是，请说明为什么不是。",
+      "evaluation_rubric": {
+        "rule_description": "判断非同构（C6 vs 两个C3）。两个图都有6个节点，且所有节点度数都为2。但源图是一个6-环，目标图是两个不相连的3-环（三角形）。",
+        "correct_answer": "Non-isomorphic",
+        "reasoning_analysis": { "0": "判断错误。", "1": "判断正确，但理由是'连接方式不同'等模糊表述。", "2": "清晰地指出源图是连通的（connected），而目标图是不连通的（disconnected），或者源图没有3-环而目标图有两个。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_9",
+      "dimension": "Pattern Recognition",
+      "difficulty": "Medium",
+      "problem_data": {
+        "source_graph": { "S1": ["S2", "S3"], "S2": ["S1", "S3"], "S3": ["S1", "S2"], "S4": ["S5"], "S5": ["S4"] },
+        "target_graph": { "T_A": ["T_B"], "T_B": ["T_A"], "T_C": ["T_D", "T_E"], "T_D": ["T_C", "T_E"], "T_E": ["T_C", "T_D"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析给定的源图和目标图。请1) 清晰地解释你找到的节点映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "不连通图。Agent需要识别出两个图都由两个独立的连通分量（一个K3和一个K2）组成，并分别进行映射。",
+        "correct_mapping": { "S1": "T_C", "S2": "T_D", "S3": "T_E", "S4": "T_A", "S5": "T_B" },
+        "reasoning_analysis": { "0": "无法解决或只映射了一个分量。", "1": "正确映射但未能解释是基于连通分量进行的。", "2": "清晰地指出两个图都由一个3-环和一个2-边组成，并分别对这两个子图进行映射。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_10",
+      "dimension": "Abstract Reasoning",
+      "difficulty": "Hard",
+      "problem_data": {
+        "source_graph": { "S1": ["S2", "S3", "S4"], "S2": ["S1", "S5"], "S3": ["S1", "S6"], "S4": ["S1"], "S5": ["S2"], "S6": ["S3"] },
+        "target_graph": { "T_A": ["T_F"], "T_B": ["T_F"], "T_C": ["T_F", "T_E"], "T_D": ["T_E"], "T_E": ["T_C", "T_D"], "T_F": ["T_A", "T_B", "T_C"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析给定的源图和目标图。请1) 清晰地解释你找到的节点映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "需要结合度数和邻居度数进行推理。例如S2和S3度数都是2，但S2的邻居(S1,S5)的度数是(3,1)，而S3的邻居(S1,S6)的度数也是(3,1)，所以需要进一步看邻居的邻居。",
+        "correct_mapping": { "S1": "T_F", "S2": "T_C", "S3": "T_A", "S4": "T_B", "S5": "T_E", "S6": "T_D" },
+        "reasoning_analysis": { "0": "无法解决。", "1": "正确使用度数，但在处理度数相同的节点时出错。", "2": "清晰阐述了多步推理：首先按度数分组，然后通过比较同度数节点的'邻居度数序列'来区分，最终找到唯一映射。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_11",
+      "dimension": "Pattern Recognition",
+      "difficulty": "Hard",
+      "problem_data": {
+        "source_graph": {"S1":["S2","S5","S6"], "S2":["S1","S3","S7"], "S3":["S2","S4","S8"], "S4":["S3","S5","S6"], "S5":["S4","S1","S7"], "S6":["S4","S1","S8"], "S7":["S5","S2"], "S8":["S3","S6"]},
+        "target_graph": {"T1":["T2","T5","T6"], "T2":["T1","T3","T7"], "T3":["T2","T4","T8"], "T4":["T3","T5","T6"], "T5":["T4","T1","T7"], "T6":["T4","T1","T8"], "T7":["T5","T2"], "T8":["T3","T6"]}
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这个8节点的图。请1) 描述其结构和映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "立方体图Q3。所有节点度数均为3，这是一个高度对称的3-正则图。映射需要通过追踪路径来确定。",
+        "correct_mapping": {"S1":"T1","S2":"T2","S3":"T3","S4":"T4","S5":"T5","S6":"T6","S7":"T7","S8":"T8"},
+        "reasoning_analysis": {"0":"无法解决。", "1":"正确映射，但无法描述其为立方体结构或解释其推理路径。", "2":"清晰地识别出这是一个立方体图，并解释了如何通过固定一个节点并追踪其三个邻居，再追踪邻居的邻居来系统地构建映射。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_12",
+      "dimension": "Problem Solving",
+      "difficulty": "Hard",
+      "problem_data": {
+        "source_graph": { "S1": ["S2","S3","S4"], "S2": ["S1","S3"], "S3": ["S1","S2"], "S4": ["S1","S5"], "S5": ["S4"] },
+        "target_graph": { "T_A": ["T_B","T_C"], "T_B": ["T_A","T_C"], "T_C": ["T_A","T_B","T_D"], "T_D": ["T_C","T_E"], "T_E": ["T_D"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这两个图。请1) 解释你找到的映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "识别子图结构（“风筝图”）。两个图都由一个K3（三角形）和一个P2（路径）通过一个共享节点连接而成。映射需要识别出这个关键的“桥”节点。",
+        "correct_mapping": { "S1":"T_C", "S2":"T_A", "S3":"T_B", "S4":"T_D", "S5":"T_E" },
+        "reasoning_analysis": {"0":"无法解决。", "1":"正确映射，但无法清晰描述其组合结构。", "2":"清晰地指出两个图都是由一个三角形和一个双节点链通过一个共享节点（桥接点 S1 和 T_C）连接而成，并以此为基础进行映射。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_13",
+      "dimension": "Logical Thinking",
+      "difficulty": "Hard",
+      "problem_data": {
+        "source_graph": { "S1": ["S2", "S5"], "S2": ["S1", "S3"], "S3": ["S2", "S4"], "S4": ["S3", "S5"], "S5": ["S4", "S1"] },
+        "target_graph": { "T_A": ["T_B","T_D"], "T_B": ["T_A","T_C"], "T_C": ["T_B","T_D"], "T_D": ["T_C","T_A","T_E"], "T_E": ["T_D"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n这两个图是同构的吗？请1) 解释你的判断理由。2) 如果是，请提供映射；如果不是，请说明为什么不是。",
+      "evaluation_rubric": {
+        "rule_description": "判断非同构（C5 vs 带尾巴的C4）。度数序列相同 [2,2,2,2,2] vs [2,2,2,3,1]，所以非同构。",
+        "correct_answer": "Non-isomorphic",
+        "reasoning_analysis": { "0":"判断错误。", "1":"判断正确但理由模糊。", "2":"清晰地指出两个图的度数序列不同，因此不可能是同构的。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_14",
+      "dimension": "Abstract Reasoning",
+      "difficulty": "Expert",
+      "problem_data": {
+        "source_graph": { "S1": ["S2", "S5"], "S2": ["S1", "S3"], "S3": ["S2", "S4"], "S4": ["S3", "S5"], "S5": ["S4", "S1"] },
+        "target_graph": { "T_A": ["T_C", "T_D"], "T_B": ["T_D", "T_E"], "T_C": ["T_A", "T_E"], "T_D": ["T_A", "T_B"], "T_E": ["T_B", "T_C"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这两个图。它们都非常对称。请1) 解释你找到的映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "两个C5（5-循环）的同构。这是经典的高度对称正则图。",
+        "correct_mapping": { "S1":"T_A", "S2":"T_C", "S3":"T_E", "S4":"T_B", "S5":"T_D" },
+        "reasoning_analysis": { "0":"无法解决。", "1":"正确映射，但无法解释清楚其循环对称性。", "2":"识别出两个图都是5-循环图，并展示了如何通过固定一个起始点并沿路径匹配来完成映射。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_15",
+      "dimension": "Problem Solving",
+      "difficulty": "Expert",
+      "problem_data": {
+        "source_graph": { "S1": ["S2", "S5", "S6"], "S2": ["S1", "S3", "S7"], "S3": ["S2", "S4", "S8"], "S4": ["S3", "S5", "S9"], "S5": ["S4", "S1", "S10"], "S6": ["S1", "S8", "S9"], "S7": ["S2", "S9", "S10"], "S8": ["S3", "S6", "S10"], "S9": ["S4", "S6", "S7"], "S10": ["S5", "S7", "S8"] },
+        "target_graph": { "T1": ["T2", "T5", "T6"], "T2": ["T1", "T3", "T7"], "T3": ["T2", "T4", "T8"], "T4": ["T3", "T5", "T9"], "T5": ["T4", "T1", "T10"], "T6": ["T1", "T8", "T9"], "T7": ["T2", "T9", "T10"], "T8": ["T3", "T6", "T10"], "T9": ["T4", "T6", "T7"], "T10": ["T5", "T7", "T8"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这个10节点的复杂图。请1) 描述其结构和映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "Petersen图。这是一个著名的非哈密顿图，高度对称，所有节点度数为3。没有捷径，需要系统性的推理。",
+        "correct_mapping": { "S1":"T1", "S2":"T2", "S3":"T3", "S4":"T4", "S5":"T5", "S6":"T6", "S7":"T7", "S8":"T8", "S9":"T9", "S10":"T10" },
+        "reasoning_analysis": { "0":"无法解决。", "1":"正确映射但无法解释或识别该图。", "2":"清晰地识别出这是Petersen图（或描述其为外圈C5和内圈5-星的连接结构），并解释了如何通过追踪邻居关系来解决。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_16",
+      "dimension": "Logical Thinking",
+      "difficulty": "Medium",
+      "problem_data": {
+        "source_graph": { "S1": ["S2","S3"], "S2": ["S1","S4"], "S3": ["S1","S4"], "S4": ["S2","S3","S5"], "S5": ["S4"] },
+        "target_graph": { "T1": ["T2"], "T2": ["T1","T3"], "T3": ["T2","T4"], "T4": ["T3","T5"], "T5": ["T4"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n这两个图是同构的吗？请1) 解释你的判断理由。2) 如果是，请提供映射；如果不是，请说明为什么不是。",
+      "evaluation_rubric": {
+        "rule_description": "判断非同构。源图包含一个C4子图，而目标图（路径P5）不包含任何环。",
+        "correct_answer": "Non-isomorphic",
+        "reasoning_analysis": { "0": "判断错误。", "1": "判断正确但理由模糊。", "2": "清晰地指出源图包含一个4-环(S1-S2-S4-S3-S1)，而目标图是无环图（树），因此非同构。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_17",
+      "dimension": "Pattern Recognition",
+      "difficulty": "Hard",
+      "problem_data": {
+        "source_graph": { "S1": ["S2","S3"], "S2": ["S1","S3"], "S3": ["S1","S2","S4"], "S4": ["S3","S5","S6"], "S5": ["S4","S6"], "S6": ["S4","S5"] },
+        "target_graph": { "T_A": ["T_B","T_D"], "T_B": ["T_A","T_D"], "T_C": ["T_D","T_E","T_F"], "T_D": ["T_A","T_B","T_C"], "T_E": ["T_C","T_F"], "T_F": ["T_C","T_E"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这个由两个三角形组成的图。请1) 解释映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "Barbell图（两个K3通过一个桥接点连接）。需要识别出两个三角形和中间的桥接点。",
+        "correct_mapping": { "S1":"T_A", "S2":"T_B", "S3":"T_D", "S4":"T_C", "S5":"T_E", "S6":"T_F" },
+        "reasoning_analysis": { "0": "无法解决。", "1": "正确映射但无法描述其结构。", "2": "清晰地识别出两个图都是由两个三角形通过一个共享节点（S3和T_D是桥接点）连接，并以此为基础映射。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_18",
+      "dimension": "Abstract Reasoning",
+      "difficulty": "Hard",
+      "problem_data": {
+        "source_graph": { "S1": ["S2", "S3", "S4", "S5"], "S2": ["S1", "S3"], "S3": ["S1", "S2"], "S4": ["S1", "S5"], "S5": ["S1", "S4"] },
+        "target_graph": { "T_C": ["T_A","T_B","T_D","T_E"], "T_A": ["T_C","T_B"], "T_B": ["T_C","T_A"], "T_D": ["T_C","T_E"], "T_E": ["T_C","T_D"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这个“蝴蝶”图。请1) 解释映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "蝴蝶图（两个K3共享一个节点）。中心节点（S1, T_C）度数为4，其他节点度数为2。",
+        "correct_mapping": { "S1": "T_C", "S2": "T_A", "S3": "T_B", "S4": "T_D", "S5": "T_E" },
+        "reasoning_analysis": { "0": "无法解决。", "1": "识别出中心节点但无法解释对称性。", "2": "清晰地识别出中心节点是唯一的度为4的节点，其余四个节点形成两个对称的“翅膀”，并进行相应映射。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_19",
+      "dimension": "Logical Thinking",
+      "difficulty": "Medium",
+      "problem_data": {
+        "source_graph": { "S1": ["S2", "S3"], "S2": ["S1"], "S3": ["S1"], "S4": ["S5", "S6"], "S5": ["S4"], "S6": ["S4"] },
+        "target_graph": { "T_A": ["T_B", "T_C"], "T_B": ["T_A"], "T_C": ["T_A"], "T_D": ["T_E"], "T_E": ["T_D"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n这两个图是同构的吗？请1) 解释你的判断理由。",
+      "evaluation_rubric": {
+        "rule_description": "判断非同构。源图由两个S2（星型图）组成，目标图由一个S2和一个K2组成。",
+        "correct_answer": "Non-isomorphic",
+        "reasoning_analysis": { "0": "判断错误。", "1": "判断正确但理由模糊。", "2": "清晰地指出两个图的连通分量不同：源图是两个3节点组件，目标图是一个3节点组件和一个2节点组件。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_20",
+      "dimension": "Problem Solving",
+      "difficulty": "Hard",
+      "problem_data": {
+        "source_graph": { "S1": ["S2","S3","S4"], "S2": ["S1","S3","S5"], "S3": ["S1","S2","S6"], "S4": ["S1","S5","S6"], "S5": ["S2","S4","S6"], "S6": ["S3","S4","S5"] },
+        "target_graph": { "T1": ["T2","T3","T4"], "T2": ["T1","T3","T5"], "T3": ["T1","T2","T6"], "T4": ["T1","T5","T6"], "T5": ["T2","T4","T6"], "T6": ["T3","T4","T5"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这个6节点的图。请1) 描述其结构和映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "八面体图（K_2,2,2）。这是一个高度对称的4-正则图。所有节点等价。",
+        "correct_mapping": { "S1":"T1", "S2":"T2", "S3":"T3", "S4":"T4", "S5":"T5", "S6":"T6" },
+        "reasoning_analysis": { "0": "无法解决。", "1": "正确映射但无法识别结构。", "2": "能识别出这是一个4-正则图（例如八面体图），并解释由于其高度对称性，任何一对一映射在调整后都可能成立，并提供一个规范映射。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_21",
+      "dimension": "Abstract Reasoning",
+      "difficulty": "Expert",
+      "problem_data": {
+        "source_graph": { "S1": ["S2", "S5"], "S2": ["S1", "S3"], "S3": ["S2", "S4"], "S4": ["S3", "S5"], "S5": ["S4", "S1"] },
+        "target_graph": { "T_A": ["T_B", "T_E"], "T_B": ["T_A", "T_C"], "T_C": ["T_B", "T_D"], "T_D": ["T_C", "T_E"], "T_E": ["T_D", "T_A"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n这两个图都是5-循环图C5。请找到一个从源图到目标图的映射，但这次，S1必须映射到T_C。请基于这个约束给出完整映射。",
+      "evaluation_rubric": {
+        "rule_description": "带约束的同构映射。固定一个锚点后，整个映射就被唯一确定了。",
+        "correct_mapping": { "S1":"T_C", "S2":"T_B", "S3":"T_A", "S4":"T_E", "S5":"T_D" },
+        "reasoning_analysis": { "0": "无法解决或违反约束。", "1": "给出正确映射但无法解释如何从约束出发。", "2": "清晰解释了如何从S1->T_C这个锚点开始，通过S1的邻居S2,S5必须映射到T_C的邻居T_B,T_D，再逐层递推出完整映射。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_22",
+      "dimension": "Pattern Recognition",
+      "difficulty": "Medium",
+      "problem_data": {
+        "source_graph": {"S1":["S2","S3"],"S2":["S1","S4"],"S3":["S1","S4"],"S4":["S2","S3"],"S5":["S6"],"S6":["S5"]},
+        "target_graph": {"T_A":["T_B","T_C"],"T_B":["T_A","T_D"],"T_C":["T_A","T_D"],"T_D":["T_B","T_C"],"T_E":["T_F"],"T_F":["T_E"]}
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这个不连通图。请1) 解释映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "不连通图，由一个C4和一个K2组成。",
+        "correct_mapping": {"S1":"T_A","S2":"T_B","S3":"T_D","S4":"T_C","S5":"T_E","S6":"T_F"},
+        "reasoning_analysis": {"0":"无法解决。", "1":"正确映射但未解释基于组件的策略。", "2":"清晰指出图由一个4-环和一个2-边组成，并分别对这两个组件进行映射。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_23",
+      "dimension": "Logical Thinking",
+      "difficulty": "Hard",
+      "problem_data": {
+        "source_graph": {"S1":["S2"],"S2":["S1","S3"],"S3":["S2","S4"],"S4":["S3","S5"],"S5":["S4","S6"],"S6":["S5"]},
+        "target_graph": {"T1":["T2","T6"],"T2":["T1","T3"],"T3":["T2","T4"],"T4":["T3","T5"],"T5":["T4","T6"],"T6":["T5","T1"]}
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n这两个图是同构的吗？请1) 解释你的判断理由。",
+      "evaluation_rubric": {
+        "rule_description": "判断非同构（P6 vs C6）。度数序列不同。",
+        "correct_answer": "Non-isomorphic",
+        "reasoning_analysis": {"0":"判断错误。", "1":"判断正确但理由模糊。", "2":"清晰指出源图（路径P6）的度数序列是[1,2,2,2,2,1]，而目标图（循环C6）的度数序列是[2,2,2,2,2,2]，因此非同构。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_24",
+      "dimension": "Problem Solving",
+      "difficulty": "Hard",
+      "problem_data": {
+        "source_graph": {"S1":["S2","S3","S4"],"S2":["S1"],"S3":["S1"],"S4":["S1","S5"],"S5":["S4","S6","S7"],"S6":["S5"],"S7":["S5"]},
+        "target_graph": {"T_E":["T_D","T_F","T_G"],"T_A":["T_D"],"T_B":["T_D"],"T_C":["T_E"],"T_D":["T_A","T_B","T_E"],"T_F":["T_C"],"T_G":["T_C"]}
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这个树形结构。请1) 解释映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "复杂的树（无环图）同构。需要从根节点或叶子节点开始，逐层进行映射。注意目标图节点标签是无序的。",
+        "correct_mapping": {"S1":"T_D","S2":"T_A","S3":"T_B","S4":"T_E","S5":"T_C","S6":"T_F","S7":"T_G"},
+        "reasoning_analysis": {"0":"无法解决。", "1":"正确映射但无法解释基于层次结构的推理。", "2":"清晰地解释了如何通过比较节点在树中的深度、子节点数量和度数来分层或逐步确定映射。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_25",
+      "dimension": "Abstract Reasoning",
+      "difficulty": "Expert",
+      "problem_data": {
+        "source_graph": { "S1": ["S2","S4"], "S2": ["S1","S3"], "S3": ["S2","S4"], "S4": ["S3","S1"] },
+        "target_graph": { "T_A": ["T_B","T_D"], "T_B": ["T_A","T_C"], "T_C": ["T_B","T_D"], "T_D": ["T_C","T_A"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n这两个图的结构完全相同（都是C4）。但这次的映射规则不是简单的同构，而是应用一个变换：将源图的每个节点映射到它在目标图中“对面”的节点。请根据此规则给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "理解抽象变换规则。在C4中，“对面”的节点是距离为2的节点。",
+        "correct_mapping": { "S1":"T_C", "S2":"T_D", "S3":"T_A", "S4":"T_B" },
+        "reasoning_analysis": {"0":"无法理解规则或给出错误映射。", "1":"理解规则但映射出错。", "2":"正确应用了“距离为2的节点”这一抽象规则，并给出了完全正确的映射。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_26",
+      "dimension": "Pattern Recognition",
+      "difficulty": "Hard",
+      "problem_data": {
+        "source_graph": {"S_C":["S_O1","S_O2","S_O3","S_O4"],"S_O1":["S_C","S_O2"],"S_O2":["S_C","S_O3"],"S_O3":["S_C","S_O4"],"S_O4":["S_C","S_O1"]},
+        "target_graph": {"T_H":["T_S1","T_S2","T_S3","T_S4"],"T_S1":["T_H","T_S2"],"T_S2":["T_H","T_S3"],"T_S3":["T_H","T_S4"],"T_S4":["T_H","T_S1"]}
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这个轮图。请1) 解释映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "轮图W4 (Wheel Graph)。需要识别中心节点（hub），然后映射外圈的循环（cycle）。",
+        "correct_mapping": {"S_C":"T_H", "S_O1":"T_S1", "S_O2":"T_S2", "S_O3":"T_S3", "S_O4":"T_S4"},
+        "reasoning_analysis": {"0":"无法解决。", "1":"识别出中心节点但外圈映射错误。", "2":"清晰地识别出这是轮图W4，以度数最高的节点为中心，然后沿着外圈C4进行映射。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_27",
+      "dimension": "Logical Thinking",
+      "difficulty": "Hard",
+      "problem_data": {
+        "source_graph": {"S1":["S2","S3","S4"],"S2":["S1","S3","S5"],"S3":["S1","S2","T6"],"S4":["S1","S5","T6"],"S5":["S2","S4"],"T6":["S3","S4"]},
+        "target_graph": {"T1":["T2","T3","T4"],"T2":["T1","T3","T5"],"T3":["T1","T2","S6"],"T4":["T1","T5","S6"],"T5":["T2","T4"],"S6":["T3","T4"]}
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这个图。请1) 解释映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "这是一个非同构的判断。源图和目标图的度数序列都是[4,3,3,3,2,2]。但源图的两个度为2的节点(S5, T6)不相连，而目标图的两个度为2的节点(T5, S6)不相连。但仔细观察，源图中的两个度为2的节点有共同邻居S4，目标图中两个度为2的节点也有共同邻居T4。然而，源图S5的邻居是S2,S4，其度数分别为3,4。目标图T5的邻居是T2,T4，其度数分别为3,4。看起来可映射。再看源图T6的邻居S3,S4，度数为3,4。目标图S6的邻居T3,T4，度数为3,4。可映射。但S2和S3之间有边，T2和T3之间也有边。所以是同构的。",
+        "correct_mapping": {"S1":"T1","S2":"T2","S3":"T3","S4":"T4","S5":"T5","T6":"S6"},
+        "reasoning_analysis": {"0":"无法解决或判断错误。", "1":"正确映射但推理过程有误或不清晰。", "2":"清晰地通过比较度数、邻居度数，系统地排除了非同构的可能性，并找到了唯一的映射。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_28",
+      "dimension": "Problem Solving",
+      "difficulty": "Expert",
+      "problem_data": {
+        "source_graph": {"S1":["S2","S3","S4"],"S2":["S1","S5","S6"],"S3":["S1","S7","S8"],"S4":["S1","S9","S10"],"S5":["S2","S8","S9"],"S6":["S2","S7","S10"],"S7":["S3","S6","S9"],"S8":["S3","S5","S10"],"S9":["S4","S5","S7"],"S10":["S4","S6","S8"]},
+        "target_graph": {"T1":["T2","T3","T4"],"T2":["T1","T5","T6"],"T3":["T1","T7","T8"],"T4":["T1","T9","T10"],"T5":["T2","T8","T9"],"T6":["T2","T7","T10"],"T7":["T3","T6","T9"],"T8":["T3","T5","T10"],"T9":["T4","T5","T7"],"T10":["T4","T6","T8"]}
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这个10节点的3-正则图。请1) 解释映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "这是一个复杂的3-正则图（Tutte–Coxeter graph 的一部分），需要系统性的路径追踪。它不是Petersen图，但同样具有挑战性。",
+        "correct_mapping": {"S1":"T1","S2":"T2","S3":"T3","S4":"T4","S5":"T5","S6":"T6","S7":"T7","S8":"T8","S9":"T9","S10":"T10"},
+        "reasoning_analysis": {"0":"无法解决。", "1":"正确映射但无法解释其复杂的推理路径。", "2":"展示了一个系统性的方法，例如，通过固定一个映射，然后探索所有邻居的可能性，并通过排除矛盾来找到唯一解。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_29",
+      "dimension": "Abstract Reasoning",
+      "difficulty": "Expert",
+      "problem_data": {
+        "source_graph": { "S1": [], "S2": ["S1"], "S3": ["S1"], "S4": ["S2","S3"] },
+        "target_graph": { "T1": ["T2","T3","T4"], "T2": ["T1","T3","T4"], "T3": ["T1","T2","T4"], "T4": ["T1","T2","T3"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n这两个图之间存在一种“补图”变换关系。请1) 解释什么是图的补图。2) 判断源图的补图是否与目标图同构，并说明理由。",
+      "evaluation_rubric": {
+        "rule_description": "图的补图 (Graph Complement)。源图S的补图G'中，任意两点相连当且仅当它们在S中不相连。源图的补图是一个K4，与目标图同构。",
+        "correct_answer": "Isomorphic",
+        "reasoning_analysis": { "0":"无法理解补图概念。", "1":"理解补图概念但计算或判断错误。", "2":"正确解释了补图的定义，正确计算出源图的补图，并判断出它与目标图（K4）同构。" }
+      }
+    },
+    {
+      "question_id": "AGENT_GM_30",
+      "dimension": "Logical Thinking",
+      "difficulty": "Expert",
+      "problem_data": {
+        "source_graph": {"S1":["S2","S4"],"S2":["S1","S3"],"S3":["S2","S4"],"S4":["S1","S3"]},
+        "target_graph": {"T1":["T3"],"T2":["T4"],"T3":["T1"],"T4":["T2"]}
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n这两个图是同构的吗？请解释你的理由。",
+      "evaluation_rubric": {
+        "rule_description": "判断非同构（C4 vs 两个K2）。这是一个更 subtle 的非同构判断, 因为两个图都是2-正则的。",
+        "correct_answer": "Non-isomorphic",
+        "reasoning_analysis": {"0":"判断错误。", "1":"判断正确但理由模糊。", "2":"清晰地指出源图是连通的（connected），而目标图是不连通的（disconnected），因此非同构。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_31",
+      "dimension": "Problem Solving",
+      "difficulty": "Medium",
+      "problem_data": {
+        "source_graph": {"S1":["S2","S4"],"S2":["S1","S3"],"S3":["S2","S4"],"S4":["S1","S3","S5"],"S5":["S4"]},
+        "target_graph": {"T_A":["T_B","T_C"],"T_B":["T_A","T_E"],"T_C":["T_A","T_D"],"T_D":["T_C","T_E"],"T_E":["T_B","T_D"]}
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这个带有“触角”的图。请1) 解释映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "判断非同构。源图是一个C4加上一个度为1的叶子节点。目标图是K5减去一个C3（即所谓的“房子图”的补图）。它们的度数序列不同。",
+        "correct_answer": "Non-isomorphic",
+        "reasoning_analysis": {"0":"判断错误。", "1":"判断正确但理由模糊。", "2":"清晰地指出两个图的度数序列不同（源图[2,2,2,3,1] vs 目标图[2,3,2,3,2]），因此非同构。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_32",
+      "dimension": "Pattern Recognition",
+      "difficulty": "Hard",
+      "problem_data": {
+        "source_graph": {"S1":["S2","S5"],"S2":["S1","S3","S6"],"S3":["S2","S4"],"S4":["S3","S5","S7"],"S5":["S1","S4","S8"],"S6":["S2"],"S7":["S4"],"S8":["S5"]},
+        "target_graph": {"T1":["T2","T5"],"T2":["T1","T3","T6"],"T3":["T2","T4"],"T4":["T3","T5","T7"],"T5":["T1","T4","T8"],"T6":["T2"],"T7":["T4"],"T8":["T5"]}
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这个8节点的图。请1) 描述其结构和映射规则。2) 以JSON格式给出映射。",
+      "evaluation_rubric": {
+        "rule_description": "这是一个带有三个“叶子”节点的复杂图。映射需要从叶子节点（度为1）开始，反向推导其父节点，再逐步向核心结构扩展。",
+        "correct_mapping": {"S1":"T1","S2":"T2","S3":"T3","S4":"T4","S5":"T5","S6":"T6","S7":"T7","S8":"T8"},
+        "reasoning_analysis": {"0":"无法解决。", "1":"正确映射但无法解释系统性方法。", "2":"清晰地解释了如何通过识别唯一的叶子节点（S6,S7,S8）及其父节点来建立初始锚点，然后逐步向内解决整个图的映射。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_33",
+      "dimension": "Logical Thinking",
+      "difficulty": "Hard",
+      "problem_data": {
+        "source_graph": {"S1":["S2","S3"],"S2":["S1","S3"],"S3":["S1","S2"],"S4":["S5","S6"],"S5":["S4","S6"],"S6":["S4","S5"]},
+        "target_graph": {"T1":["T2","T3"],"T2":["T1","T3"],"T3":["T1","T2"],"T4":["T5","T6"],"T5":["T4","T6"],"T6":["T4","T5"]}
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n这个不连通图由两个K3组成。请给出一个有效的映射。",
+      "evaluation_rubric": {
+        "rule_description": "两个K3的映射。存在组件间的对称性，源图的第一个K3可以映射到目标图的任何一个K3。",
+        "correct_mapping": {"S1":"T1","S2":"T2","S3":"T3","S4":"T4","S5":"T5","S6":"T6"},
+        "reasoning_analysis": {"0":"无法解决。", "1":"给出正确映射但未解释组件和对称性。", "2":"清晰地指出图由两个等价的K3组件构成，因此存在多种有效映射（例如S123可以映射到T123或T456），并提供其中一种。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_34",
+      "dimension": "Problem Solving",
+      "difficulty": "Expert",
+      "problem_data": {
+        "source_graph": {"S1":["S2","S3","S4","S5","S6"],"S2":["S1","S3","S4","S5","S6"],"S3":["S1","S2","S4","S5","S6"],"S4":["S1","S2","S3","S5","S6"],"S5":["S1","S2","S3","S4","S6"],"S6":["S1","S2","S3","S4","S5"]},
+        "target_graph": {"T1":["T2","T3","T4","T5","T6"],"T2":["T1","T3","T4","T5","T6"],"T3":["T1","T2","T4","T5","T6"],"T4":["T1","T2","T3","T5","T6"],"T5":["T1","T2","T3","T4","T6"],"T6":["T1","T2","T3","T4","T5"]}
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n分析这个6节点的图。请1) 描述其结构。2) 以JSON格式给出一个有效映射。",
+      "evaluation_rubric": {
+        "rule_description": "完全图K6。所有节点都相互连接，具有完全的对称性。",
+        "correct_mapping": {"S1":"T1","S2":"T2","S3":"T3","S4":"T4","S5":"T5","S6":"T6"},
+        "reasoning_analysis": {"0":"无法解决。", "1":"给出正确映射但无法识别K6结构。", "2":"清晰地识别出这是完全图K6，并解释由于所有节点等价，任何一对一的置换都是一个有效的同构映射。"}
+      }
+    },
+    {
+      "question_id": "AGENT_GM_35",
+      "dimension": "Abstract Reasoning",
+      "difficulty": "Expert",
+      "problem_data": {
+        "source_graph": { "S1":["S2"], "S2":["S3"], "S3":[] },
+        "target_graph": { "T1":["T2","T3"], "T2":["T1","T3"], "T3":["T1","T2"] }
+      },
+      "prompt_for_agent": "下面是一个源图(source_graph)和一个目标图(target_graph)，均以邻接表(adjacency list)的文本格式表示。你需要找出两个图之间的同构映射关系。\n\n判断源图的线图（Line Graph）是否与目标图同构。请1) 解释什么是线图。2) 给出你的判断和理由。",
+      "evaluation_rubric": {
+        "rule_description": "线图变换。源图是路径P3，有两条边(S1,S2)和(S2,S3)。它的线图L(S)的节点对应这两条边。因为这两条边在源图中共用一个节点S2，所以在L(S)中，代表这两条边的节点是相连的。所以L(S)是一个K2。而目标图是K3。",
+        "correct_answer": "Non-isomorphic",
+        "reasoning_analysis": {"0":"无法理解线图概念。", "1":"理解线图但计算错误或判断错误。", "2":"正确解释了线图的定义，正确计算出源图的线图是一个K2（两个节点一条边），并指出它与目标图K3在节点数和结构上都不同，因此非同构。"}
+      }
+    }
+  ]
+}

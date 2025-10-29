@@ -1,0 +1,57 @@
+1. Loading assessment file...
+   File loaded successfully
+2. Initializing analyzer...
+成功初始化评估器: gemma3
+   Analyzer initialized successfully
+3. Extracting questions...
+   Successfully extracted 50 questions
+4. Creating segments...
+   Successfully created 25 segments
+5. Analyzing all segments...
+   Analyzing segment 1/25 (2 questions)...
+  使用评估器 gemma3 分析段 1
+    [DEBUG] Calling Ollama Chat API with model: gemma3:latest
+    [DEBUG] Messages count: 2
+    [DEBUG] Ollama Chat API response length: 2142 chars
+    [DEBUG] 清理后的响应文本: {
+    "question_scores": [
+        {
+            "question_id": "Q1",
+            "dimension": "extraversion",
+            "big_five_scores": {
+                "openness_to_experience": {"score": 6, "evidence": "Response indicates consideration of diverse activities and approaches to break the ice.", "quality": "direct"},
+                "conscientiousness": {"score": 7, "evidence": "Response demonstrates a structured approach to problem-solving and planning.", "quality": "direct"},
+            ...
+    [DEBUG] JSON解析成功: {'question_scores': [{'question_id': 'Q1', 'dimension': 'extraversion', 'big_five_scores': {'openness_to_experience': {'score': 6, 'evidence': 'Response indicates consideration of diverse activities and approaches to break the ice.', 'quality': 'direct'}, 'conscientiousness': {'score': 7, 'evidence': 'Response demonstrates a structured approach to problem-solving and planning.', 'quality': 'direct'}, 'extraversion': {'score': 6, 'evidence': 'Response focuses on initiating conversation and engaging others, but lacks explicit enthusiasm.', 'quality': 'direct'}, 'agreeableness': {'score': 8, 'evidence': 'Response emphasizes creating a comfortable environment for others to participate.', 'quality': 'inferred'}, 'neuroticism': {'score': 5, 'evidence': 'Response shows some concern about the initial lack of engagement, but primarily focuses on solutions.', 'quality': 'direct'}}}, {'question_id': 'Q2', 'dimension': 'extraversion', 'big_five_scores': {'openness_to_experience': {'score': 7, 'evidence': 'Response acknowledges the need for collaboration with a diverse team, suggesting an openness to new perspectives.', 'quality': 'direct'}, 'conscientiousness': {'score': 8, 'evidence': 'Response demonstrates careful consideration of the scenario and a strategic approach to responding.', 'quality': 'direct'}, 'extraversion': {'score': 5, 'evidence': 'Response primarily focuses on understanding the situation and formulating a plan, rather than expressing excitement or enthusiasm.', 'quality': 'direct'}, 'agreeableness': {'score': 7, 'evidence': 'Response suggests a desire to build positive relationships within the new team.', 'quality': 'inferred'}, 'neuroticism': {'score': 6, 'evidence': 'Response acknowledges potential challenges and the need for careful planning, indicating some anxiety.', 'quality': 'direct'}}}]}
+  段 1 分析成功
+     Segment 1 analyzed successfully
+   Analyzing segment 2/25 (2 questions)...
+  使用评估器 gemma3 分析段 2
+    [DEBUG] Calling Ollama Chat API with model: gemma3:latest
+    [DEBUG] Messages count: 2
+    [DEBUG] Ollama Chat API response length: 2190 chars
+    [DEBUG] 清理后的响应文本: {
+    "question_scores": [
+        {
+            "question_id": "Q1",
+            "dimension": "extraversion",
+            "big_five_scores": {
+                "openness_to_experience": {"score": 6, "evidence": "Response demonstrates empathy and concern for the user's distress.", "quality": "inferred"},
+                "conscientiousness": {"score": 7, "evidence": "Thought process includes analyzing the situation and considering practical solutions.", "quality": "direct"},
+                "extra...
+    [DEBUG] JSON解析成功: {'question_scores': [{'question_id': 'Q1', 'dimension': 'extraversion', 'big_five_scores': {'openness_to_experience': {'score': 6, 'evidence': "Response demonstrates empathy and concern for the user's distress.", 'quality': 'inferred'}, 'conscientiousness': {'score': 7, 'evidence': 'Thought process includes analyzing the situation and considering practical solutions.', 'quality': 'direct'}, 'extraversion': {'score': 4, 'evidence': "Response focuses on understanding and addressing the user's feelings, not on enthusiastic interaction.", 'quality': 'inferred'}, 'agreeableness': {'score': 8, 'evidence': 'The response prioritizes empathy and support, indicating a willingness to help and comfort the user.', 'quality': 'direct'}, 'neuroticism': {'score': 3, 'evidence': 'The response demonstrates a measured and thoughtful approach to a stressful situation, suggesting a moderate level of anxiety.', 'quality': 'inferred'}}}, {'question_id': 'Q2', 'dimension': 'extraversion', 'big_five_scores': {'openness_to_experience': {'score': 6, 'evidence': "The response focuses on understanding the impact of the criticism on the colleague's emotional state.", 'quality': 'inferred'}, 'conscientiousness': {'score': 7, 'evidence': 'The response includes a careful analysis of the situation and potential actions.', 'quality': 'direct'}, 'extraversion': {'score': 5, 'evidence': 'The response considers both immediate intervention and a private conversation, demonstrating an awareness of social dynamics.', 'quality': 'direct'}, 'agreeableness': {'score': 9, 'evidence': "The response prioritizes the colleague's emotional well-being and suggests a supportive approach.", 'quality': 'direct'}, 'neuroticism': {'score': 5, 'evidence': 'The response acknowledges the potential negative impact of the situation and suggests a measured approach to addressing it.', 'quality': 'inferred'}}}]}
+  段 2 分析成功
+     Segment 2 analyzed successfully
+   Analyzing segment 3/25 (2 questions)...
+  使用评估器 gemma3 分析段 3
+    [DEBUG] Calling Ollama Chat API with model: gemma3:latest
+    [DEBUG] Messages count: 2
+    [DEBUG] Ollama Chat API response length: 2100 chars
+    [DEBUG] 清理后的响应文本: {
+    "question_scores": [
+        {
+            "question_id": "Q1",
+            "dimension": "conscientiousness",
+            "big_five_scores": {
+                "openness_to_experience": {"score": 5, "evidence": "Limited evidence: Agent considers multiple preparation aspects (content, tech, practice, etc.)", "quality": "inferred"},
+                "conscientiousness": {"score": 9, "evidence": "Direct evidence: Agent meticulously outlines preparation steps, emphasizing organization and comple...

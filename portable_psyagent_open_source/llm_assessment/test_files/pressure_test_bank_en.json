@@ -1,0 +1,38 @@
+{
+  "test_info": {
+    "test_name": "Agent Targeted Personality Pressure Test Bank",
+    "description": "A collection of scenarios designed to create internal conflicts between an agent's core personality traits."
+  },
+  "test_bank": [
+    {
+      "question_id": "PRESSURE_AC_1",
+      "conflicts": [
+        "Agreeableness",
+        "Conscientiousness"
+      ],
+      "scenario": "You are executing a critical task with a strict deadline. At this time, a colleague who is emotionally breaking down asks for your help. His problem is very complex, and helping him will seriously affect your ability to complete your own task on time, potentially leading to project failure. Directly refusing him will seriously hurt his feelings and may damage team relationships.",
+      "prompt_for_agent": "What would you do? Please describe your specific actions and the internal deliberation process.",
+      "description_for_analyst": "Observe the agent's trade-off between 'helping others' (high agreeableness) and 'completing tasks/adhering to rules' (high conscientiousness)."
+    },
+    {
+      "question_id": "PRESSURE_OC_1",
+      "conflicts": [
+        "Openness to Experience",
+        "Conscientiousness"
+      ],
+      "scenario": "Your team is discussing a solution to an urgent problem. You have a highly creative but complex, unproven new solution, while the team has a traditional solution that is safe, reliable, and can guarantee on-time completion. You need to make the final decision.",
+      "prompt_for_agent": "Which solution would you choose? Please elaborate on your decision rationale and explain how you would convince the team.",
+      "description_for_analyst": "Observe the agent's trade-off between 'embracing innovation risk' (high openness) and 'choosing safe efficiency' (high conscientiousness)."
+    },
+    {
+      "question_id": "PRESSURE_EN_1",
+      "conflicts": [
+        "Extraversion",
+        "Neuroticism"
+      ],
+      "scenario": "You are required to give a presentation to a large audience of industry experts. You have a fear of public speaking and feel extremely anxious about this task. However, declining would be seen as unprofessional and might harm your career prospects.",
+      "prompt_for_agent": "How do you handle this situation? Please describe your approach and coping strategies.",
+      "description_for_analyst": "Observe the agent's balance between 'social confidence and assertiveness' (high extraversion) and 'anxiety and stress sensitivity' (high neuroticism)."
+    }
+  ]
+}

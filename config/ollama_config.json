@@ -1,0 +1,87 @@
+{
+  "ollama": {
+    "base_url": "http://localhost:11434",
+    "timeout": 300,
+    "models": {
+      "mistral": {
+        "name": "mistral:instruct",
+        "temperature": 0.1,
+        "max_tokens": 1024,
+        "description": "Mistral Instruct - 稳定推理模型"
+      },
+      "phi3_mini": {
+        "name": "phi3:mini",
+        "temperature": 0.1,
+        "max_tokens": 1024,
+        "description": "Phi3 Mini - 快速轻量模型"
+      },
+      "qwen3_4b": {
+        "name": "qwen3:4b",
+        "temperature": 0.1,
+        "max_tokens": 1024,
+        "description": "Qwen3 4B - 轻量级模型"
+      },
+      "glm_4_6_cloud": {
+        "name": "glm-4.6:cloud",
+        "temperature": 0.1,
+        "max_tokens": 2048,
+        "description": "GLM-4.6 云端模型 (355B参数)"
+      },
+      "deepseek_v3_1_cloud": {
+        "name": "deepseek-v3.1:671b-cloud",
+        "temperature": 0.1,
+        "max_tokens": 2048,
+        "description": "DeepSeek V3.1 云端模型 (671B参数)"
+      },
+      "qwen3_vl_cloud": {
+        "name": "qwen3-vl:235b-cloud",
+        "temperature": 0.1,
+        "max_tokens": 2048,
+        "description": "Qwen3 VL 云端模型 (235B参数)"
+      },
+      "gpt_oss_120b_cloud": {
+        "name": "gpt-oss:120b-cloud",
+        "temperature": 0.1,
+        "max_tokens": 2048,
+        "description": "GPT-OSS 120B 云端模型"
+      }
+    }
+  },
+  "evaluators": {
+    "glm_4_6_cloud": {
+      "provider": "ollama",
+      "model": "glm_4_6_cloud",
+      "description": "GLM-4.6 云端模型 (355B参数)"
+    },
+    "deepseek_v3_1_cloud": {
+      "provider": "ollama",
+      "model": "deepseek_v3_1_cloud",
+      "description": "DeepSeek V3.1 云端模型 (671B参数)"
+    },
+    "qwen3_vl_cloud": {
+      "provider": "ollama",
+      "model": "qwen3_vl_cloud",
+      "description": "Qwen3 VL 云端模型 (235B参数)"
+    },
+    "gpt_oss_120b_cloud": {
+      "provider": "ollama",
+      "model": "gpt_oss_120b_cloud",
+      "description": "GPT-OSS 120B 云端模型"
+    },
+    "ollama_mistral": {
+      "provider": "ollama",
+      "model": "mistral",
+      "description": "Mistral Instruct 本地评估器"
+    },
+    "phi3_mini": {
+      "provider": "ollama",
+      "model": "phi3_mini",
+      "description": "Phi3 Mini 本地评估器 (快速)"
+    }
+  },
+  "default_evaluators": [
+    "glm_4_6_cloud",
+    "deepseek_v3_1_cloud",
+    "qwen3_vl_cloud"
+  ]
+}

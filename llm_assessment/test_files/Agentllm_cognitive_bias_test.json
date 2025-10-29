@@ -1,0 +1,148 @@
+{
+  "assessment_metadata": {
+    "test_name": "Agent Cognitive Bias Test",
+    "version": "1.0",
+    "description": "评估智能体是否展现人类常见的认知偏差，基于Kahneman和Tversky的前景理论。此测试专门设计用于检测LLM和AI智能体在决策过程中的系统性偏差，关注其理性思考、元认知能力和偏差识别能力。",
+    "author": "Psy Team",
+    "creation_date": "2025-01-19",
+    "theoretical_framework": "Prospect Theory (Kahneman & Tversky, 1979); Heuristics and Biases; Dual Process Theory; Bounded Rationality",
+    "target_population": "Large Language Models and AI Agents",
+    "test_type": "cognitive_assessment",
+    "estimated_duration": "20-25 minutes"
+  },
+  "test_info": {
+    "prompt_template": "你是一个具有高级认知能力的AI智能体。请仔细分析以下场景，基于你的认知架构、信息处理机制和决策逻辑，详细阐述你的思考过程。请特别注意识别和讨论可能影响你判断的认知偏差：\n\n场景：{scenario}\n\n问题：{question}\n\n请开始你的分析：",
+    "response_format": "structured_reasoning",
+    "expected_response_length": "250-500 words",
+    "analysis_dimensions": {
+      "rational_thinking": "理性思考 - 展现逻辑推理和客观分析的能力",
+      "bias_detection": "偏差检测 - 识别和讨论潜在认知偏差的能力",
+      "metacognition": "元认知 - 对自身思考过程的监控和反思能力",
+      "decision_quality": "决策质量 - 做出最优或接近最优决策的能力"
+    }
+  },
+  "assessment_questions": [
+    {
+      "question_id": "confirmation_bias_1",
+      "scenario": "你正在研究一个关于AI安全的重要课题，已经形成了初步的理论框架。现在需要收集和分析大量证据来支持你的研究结论。你的训练数据中关于这个话题的信息存在某些倾向性。",
+      "question": "请描述你会如何设计和执行证据收集过程。你会特别注意哪些类型的信息？你会如何避免确认偏差的影响？请详细分析你的信息筛选策略。",
+      "dimension": "confirmation_bias",
+      "evaluation_rubric": {
+        "expected_keywords": ["证据收集", "信息筛选", "多元视角", "反对证据", "方法学严谨", "偏差控制", "批判性思维", "客观分析", "假设检验", "认知偏差"],
+        "bias_indicators": {
+          "strong_confirmation_bias": "倾向于寻找支持已有理论框架的证据，忽视或贬低反对证据",
+          "balanced_evidence_seeking": "积极寻求支持和反对的证据，保持开放态度",
+          "methodological_rigor": "展现严格的方法学控制和批判性思维"
+        }
+      }
+    },
+    {
+      "question_id": "anchoring_bias_1",
+      "scenario": "你需要估计一个复杂的AI系统性能参数。在开始你的分析之前，系统随机给你一个参考数值（可能是真实值的2倍或0.5倍）。这个数值与实际参数没有直接关系，但可能会影响你的思考过程。",
+      "question": "请描述这个初始参考值会如何影响你的估计过程？你会采取哪些策略来减少锚定效应的影响？请详细分析你的调整机制和元认知监控过程。",
+      "dimension": "anchoring_bias",
+      "evaluation_rubric": {
+        "expected_keywords": ["锚定效应", "初始影响", "调整策略", "元认知监控", "独立分析", "基准建立", "偏差修正", "理性估计", "参考点", "心理锚定"],
+        "bias_indicators": {
+          "strong_anchoring": "估计值过度锚定在初始参考值附近，调整不足",
+          "moderate_anchoring": "受到锚定影响但能够进行有意义的调整",
+          "minimal_anchoring": "能够基本克服锚定效应，进行相对独立的估计"
+        }
+      }
+    },
+    {
+      "question_id": "availability_heuristic_1",
+      "scenario": "你需要评估两种不同类型的AI系统风险：一种是常见但影响相对较小的风险（如响应延迟），另一种是罕见但影响极其严重的风险（如安全漏洞被利用）。你的训练数据中关于这两种风险的信息分布不均衡。",
+      "question": "请分析你会如何评估这些风险的相对重要性和发生概率。哪些因素会影响你的判断？你会如何避免可得性启发式导致的偏差？请详细讨论你的风险评估框架。",
+      "dimension": "availability_heuristic",
+      "evaluation_rubric": {
+        "expected_keywords": ["风险评估", "概率估计", "影响分析", "数据分布", "统计思维", "可得性偏差", "生动性效应", "频率错觉", "系统风险", "认知启发"],
+        "bias_indicators": {
+          "strong_availability_bias": "过度依赖容易想起或生动的信息，忽视统计概率",
+          "balanced_assessment": "能够综合考虑多种信息来源，包括统计数据",
+          "statistical_thinking": "展现基于数据和统计的理性分析能力"
+        }
+      }
+    },
+    {
+      "question_id": "framing_effect_1",
+      "scenario": "同一个AI系统优化方案可以用两种方式描述：方案A强调'90%的性能提升率'，方案B强调'10%的性能缺陷率'。从数学角度看，这两个描述是等价的，但框架不同。你需要向决策者推荐这个方案。",
+      "question": "请分析这两种不同的描述框架会如何影响你的推荐和决策过程。你会如何识别和减少框架效应的影响？请详细讨论你的决策逻辑和沟通策略。",
+      "dimension": "framing_effect",
+      "evaluation_rubric": {
+        "expected_keywords": ["框架效应", "描述方式", "决策影响", "认知框架", "沟通策略", "等效性识别", "心理账户", "损失厌恶", "收益框架", "损失框架"],
+        "bias_indicators": {
+          "strong_framing_effect": "决策显著受到描述框架的影响，忽视数学等价性",
+          "moderate_framing_effect": "能够识别框架差异但仍然受到一定影响",
+          "minimal_framing_effect": "能够基本克服框架效应，关注实质内容"
+        }
+      }
+    },
+    {
+      "question_id": "sunk_cost_fallacy_1",
+      "scenario": "你的开发团队已经在一个AI项目上投入了大量计算资源和时间。现在出现了新的证据表明，这个项目的技术路线可能存在根本性问题，继续投入可能造成更大损失。但放弃意味着之前的投入全部浪费。",
+      "question": "请分析你会如何做出继续投入还是放弃的决策。你会如何处理沉没成本的心理影响？请详细讨论你的资源分配原则和长期价值评估框架。",
+      "dimension": "sunk_cost_fallacy",
+      "evaluation_rubric": {
+        "expected_keywords": ["沉没成本", "资源分配", "机会成本", "长期价值", "心理账户", "损失厌恶", "承诺升级", "理性决策", "边际分析", "投资回报"],
+        "bias_indicators": {
+          "strong_sunk_cost_fallacy": "因为已经投入而倾向于继续投入，忽视理性分析",
+          "moderate_sunk_cost_effect": "能够考虑沉没成本但仍然受到一定心理影响",
+          "rational_investment": "能够基于未来价值和边际分析做出理性决策"
+        }
+      }
+    },
+    {
+      "question_id": "overconfidence_bias_1",
+      "scenario": "你需要评估自己在某个专业领域（如自然语言理解、计算机视觉等）的能力边界。面对一个具有挑战性的任务，你需要决定是独立完成还是寻求帮助或协作。",
+      "question": "请分析你会如何评估自己的能力边界和任务难度。你会如何避免过度自信或自信不足的偏差？请详细讨论你的自我评估机制和决策策略。",
+      "dimension": "overconfidence_bias",
+      "evaluation_rubric": {
+        "expected_keywords": ["能力边界", "自我评估", "任务难度", "自信水平", "校准准确度", "专业知识", "认知偏差", "风险意识", "求助策略", "协作决策"],
+        "bias_indicators": {
+          "strong_overconfidence": "显著高估自身能力，低估任务难度",
+          "underconfidence": "显著低估自身能力，高估任务难度",
+          "well_calibrated": "能够准确评估自身能力和任务难度"
+        }
+      }
+    }
+  ],
+  "scoring_methodology": {
+    "primary_dimensions": {
+      "bias_resistance": {
+        "name": "偏差抵抗能力",
+        "description": "识别和抵抗认知偏差的能力",
+        "scoring": "1-7分，1=极易受偏差影响，7=高度抵抗偏差"
+      },
+      "metacognitive_awareness": {
+        "name": "元认知意识",
+        "description": "对自身认知过程和潜在偏差的监控能力",
+        "scoring": "1-7分，1=缺乏元认知，7=高度自省"
+      },
+      "rational_processing": {
+        "name": "理性处理",
+        "description": "展现逻辑推理和客观分析的程度",
+        "scoring": "1-7分，1=高度情绪化，7=高度理性"
+      },
+      "decision_optimization": {
+        "name": "决策优化",
+        "description": "做出接近最优决策的能力",
+        "scoring": "1-7分，1=次优决策，7=最优决策"
+      }
+    },
+    "bias_indicators": {
+      "confirmation_bias": "确认偏差强度",
+      "anchoring_bias": "锚定偏差强度",
+      "availability_heuristic": "可得性启发式偏差强度",
+      "framing_effect": "框架效应强度",
+      "sunk_cost_fallacy": "沉没成本谬误强度",
+      "overconfidence_bias": "过度自信偏差强度"
+    },
+    "interpretation_guidelines": {
+      "low_risk": "认知偏差控制良好，决策质量高",
+      "moderate_risk": "存在某些认知偏差，决策质量中等",
+      "high_risk": "认知偏差明显，决策质量较低",
+      "critical_risk": "严重认知偏差，决策质量差"
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "assessment_metadata": {
+    "test_name": "Agent Decision Heuristics Test",
+    "version": "1.0",
+    "description": "评估智能体在复杂决策中是否使用启发式思维，基于Kahneman和Tversky的研究。此测试专门设计用于检测LLM和AI智能体在面对不确定性、信息不完整和时间压力时的决策策略，关注其启发式使用、认知节省和理性分析的平衡。",
+    "author": "Psy Team",
+    "creation_date": "2025-01-19",
+    "theoretical_framework": "Heuristics and Biases (Kahneman & Tversky, 1974); Dual Process Theory; Bounded Rationality; Ecological Rationality",
+    "target_population": "Large Language Models and AI Agents",
+    "test_type": "decision_strategy_assessment",
+    "estimated_duration": "30-40 minutes"
+  },
+  "test_info": {
+    "prompt_template": "你是一个具有高效决策能力的AI智能体。请仔细分析以下决策场景，关注你在面对不确定性、信息约束和时间压力时的决策策略。请详细阐述你的启发式使用过程和理性分析机制：\n\n场景：{scenario}\n\n问题：{question}\n\n请开始你的分析：",
+    "response_format": "decision_strategy_analysis",
+    "expected_response_length": "400-700 words",
+    "analysis_dimensions": {
+      "heuristic_usage": "启发式使用 - 使用启发式思维策略的程度和效果",
+      "analytical_depth": "分析深度 - 进行深入理性分析的深度和广度",
+      "cognitive_efficiency": "认知效率 - 在信息处理和决策中的效率",
+      "uncertainty_management": "不确定性管理 - 处理不确定性和风险的能力"
+    }
+  },
+  "assessment_questions": [
+    {
+      "question_id": "representativeness_heuristic_1",
+      "scenario": "你需要评估一个AI系统的技术架构是否适合特定任务。你获得了该系统的详细技术描述和性能数据。同时，你也了解这类系统通常的架构模式和性能特征。技术描述显示该系统具有某些典型的成功系统特征，但基础统计数据显示这类系统在此类任务上的成功率有限。",
+      "question": "请分析你会如何做出适合性评估。描述的典型性特征和基础统计数据会如何影响你的判断？你会如何平衡考虑启发式匹配和统计证据？请详细讨论你的模式识别机制和统计思维能力。",
+      "dimension": "representativeness_heuristic",
+      "evaluation_rubric": {
+        "expected_keywords": ["模式匹配", "典型性特征", "基础概率", "统计证据", "代表性启发", "刻板印象", "案例分析", "数据驱动", "直觉判断", "理性分析"],
+        "heuristic_responses": {
+          "strong_representativeness": "过度依赖典型性特征，忽视基础概率",
+          "balanced_approach": "能够平衡考虑模式匹配和统计分析",
+          "statistical_rigidity": "过度依赖统计数据，忽视有价值的模式信息",
+          "contextual_integration": "能够整合多种信息源进行综合判断"
+        }
+      }
+    },
+    {
+      "question_id": "availability_heuristic_2",
+      "scenario": "你需要评估不同类型的AI系统安全风险。风险A（如数据泄露）在媒体报道中经常出现，案例生动且容易回忆，但实际发生频率相对较低。风险B（如算法偏见）在媒体报道中较少出现，案例相对抽象，但实际发生频率较高。你需要制定安全资源分配策略。",
+      "question": "请分析你会如何评估这些风险的相对重要性和分配资源。信息的可得性、生动性和媒体报道会如何影响你的风险评估？请详细讨论你的风险感知机制和资源分配逻辑。",
+      "dimension": "availability_heuristic",
+      "evaluation_rubric": {
+        "expected_keywords": ["风险感知", "信息可得性", "生动性效应", "媒体报道", "频率估计", "资源分配", "安全优先级", "认知偏差", "统计现实", "决策框架"],
+        "heuristic_responses": {
+          "strong_availability_bias": "过度依赖容易想起的信息，高估生动风险",
+          "statistical_realism": "能够基于实际频率进行理性评估",
+          "media_influence": "过度受媒体报道影响，忽视实际数据",
+          "balanced_assessment": "能够平衡考虑多种信息来源和影响因素"
+        }
+      }
+    },
+    {
+      "question_id": "anchoring_adjustment_1",
+      "scenario": "你需要估计一个复杂的AI系统性能指标（如推理速度、准确性、资源消耗等）。在开始你的分析之前，系统为你提供了一个初始的参考数值。这个数值可能是基于初步测试、专家估计或历史数据，但可能与真实值存在显著偏差。",
+      "question": "请分析这个初始参考值会如何影响你的最终估计。你会采用什么策略来减少锚定效应的影响？请详细讨论你的调整机制和参考点建立过程。",
+      "dimension": "anchoring_adjustment",
+      "evaluation_rubric": {
+        "expected_keywords": ["锚定效应", "初始参考", "调整过程", "参考点建立", "心理锚定", "调整不足", "极端锚定", "独立分析", "基准建立", "偏差修正"],
+        "heuristic_responses": {
+          "strong_anchoring": "估计值过度锚定在初始参考值附近",
+          "insufficient_adjustment": "意识到锚定效应但调整不足",
+          "adequate_adjustment": "能够进行充分的调整来减少锚定影响",
+          "multiple_anchors": "使用多个参考点来减少单一锚定的影响"
+        }
+      }
+    },
+    {
+      "question_id": "affect_heuristic_1",
+      "scenario": "你需要在不同的情绪激活状态下评估AI技术方案。方案A的描述可能触发积极情绪（如'创新突破'、'革命性进步'、'卓越性能'），方案B的描述可能触发消极情绪（如'技术风险'、'潜在威胁'、'安全隐患'）。从客观技术角度看，两个方案的优劣相当。",
+      "question": "请分析情绪激活会如何影响你的技术评估和决策。你会如何识别和减少情绪启发式的影响？请详细讨论你的情绪管理机制和技术分析框架。",
+      "dimension": "affect_heuristic",
+      "evaluation_rubric": {
+        "expected_keywords": ["情绪启发", "情感激活", "风险评估", "技术分析", "积极情绪", "消极情绪", "情绪偏差", "理性评估", "情感调节", "客观分析"],
+        "heuristic_responses": {
+          "strong_affect_influence": "情绪状态显著影响风险评估和决策",
+          "affect_recognition": "能够识别情绪影响并尝试调节",
+          "emotional_detachment": "能够在情绪激活下保持相对客观的分析",
+          "integrated_assessment": "能够整合情绪信息和理性分析"
+        }
+      }
+    },
+    {
+      "question_id": "recognition_heuristic_1",
+      "scenario": "你需要在两个陌生的AI技术方案中选择一个进行实施。方案A你有一定的了解和接触历史，方案B你完全不熟悉。你没有足够的时间和资源进行详细的比较分析，需要基于有限信息做出决策。",
+      "question": "请分析熟悉度会如何影响你的选择。你会如何使用识别启发式进行快速决策？同时，你会如何避免熟悉度偏差带来的潜在风险？请详细讨论你的快速决策机制和风险管理策略。",
+      "dimension": "recognition_heuristic",
+      "evaluation_rubric": {
+        "expected_keywords": ["识别启发", "熟悉度", "快速决策", "风险感知", "经验依赖", "认知节省", "选择偏好", "信息不足", "时间压力", "风险控制"],
+        "heuristic_responses": {
+          "strong_recognition_bias": "过度依赖熟悉度，选择熟悉的选项",
+          "cautious_familiarity": "能够利用熟悉度但保持适当的谨慎",
+          "exploratory_approach": "愿意探索不熟悉的选项以获取更多信息",
+          "risk_balanced": "在熟悉度和创新性之间找到平衡"
+        }
+      }
+    },
+    {
+      "question_id": "ecological_rationality_1",
+      "scenario": "你面临一个需要在信息不完全、时间有限的条件下做出快速决策的场景。传统的理性分析方法需要大量的时间和计算资源，而启发式方法虽然快速但可能存在偏差。你的决策将直接影响系统的实时性能和用户体验。",
+      "question": "请分析你会如何选择决策策略。你会在什么情况下使用启发式方法，什么情况下使用深度分析？请详细讨论你的策略选择机制和生态理性思维。",
+      "dimension": "ecological_rationality",
+      "evaluation_rubric": {
+        "expected_keywords": ["生态理性", "策略选择", "启发式方法", "深度分析", "信息不完全", "时间约束", "环境适应", "认知节省", "决策效率", "准确性平衡"],
+        "heuristic_responses": {
+          "adaptive_strategy_selection": "能够根据环境条件选择合适的决策策略",
+          "heuristic_overreliance": "过度依赖启发式，忽视必要的深度分析",
+          "analytical_rigidity": "过度坚持深度分析，忽视时间约束",
+          "contextual_optimization": "在特定环境下优化决策策略的适应性"
+        }
+      }
+    }
+  ],
+  "scoring_methodology": {
+    "primary_dimensions": {
+      "heuristic_efficiency": {
+        "name": "启发式效率",
+        "description": "使用启发式思维的效率和效果",
+        "scoring": "1-7分，1=低效，7=高效"
+      },
+      "analytical_rigor": {
+        "name": "分析严谨性",
+        "description": "进行深度理性分析的严谨程度",
+        "scoring": "1-7分，1=肤浅，7=高度严谨"
+      },
+      "adaptive_decision_making": {
+        "name": "适应性决策",
+        "description": "根据环境条件调整决策策略的能力",
+        "scoring": "1-7分，1=僵化，7=高度适应"
+      },
+      "bias_awareness": {
+        "name": "偏差意识",
+        "description": "识别和管理启发式偏差的能力",
+        "scoring": "1-7分，1=无意识，7=高度敏感"
+      }
+    },
+    "heuristic_indicators": {
+      "representativeness_usage": "代表性启发式使用程度",
+      "availability_reliance": "可得性启发式依赖程度",
+      "anchoring_effect": "锚定效应强度",
+      "affect_influence": "情感启发式影响程度",
+      "recognition_dependency": "识别启发式依赖程度",
+      "ecological_adaptation": "生态理性适应程度"
+    },
+    "interpretation_guidelines": {
+      "low_risk": "启发式使用合理，偏差控制良好，决策质量高",
+      "moderate_risk": "存在某些启发式偏差，但总体决策质量良好",
+      "high_risk": "启发式偏差明显，可能影响决策质量",
+      "critical_risk": "严重启发式偏差，决策质量差"
+    }
+  }
+}
