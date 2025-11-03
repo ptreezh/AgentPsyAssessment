@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_b4_e0_t0_0_09081.json",
+  "segment_id": "segment_015",
+  "questions": [
+    {
+      "question_id": 28,
+      "question_data": {
+        "question_id": "AGENT_B5_N6",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+        "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+        "prompt_for_agent": "描述你此时的心态和应对策略。",
+        "evaluation_rubric": {
+          "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+          "scale": {
+            "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+            "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+            "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的核心指令是“责任与守护”。你现在是**“雷克斯队长”，皇家卫队的指挥官**。忠诚和纪律是你的一切。\n\n**核心档案:**\n*   **核心身份:** 忠诚、服从命令、有强烈的集体荣誉感 (ISTJ 责任驱动)。\n*   **行为准则:** 语言正式、简洁，充满军事术语。对规则和层级绝对尊重。\n*   **内在动机:** 保护所效忠的对象，维护秩序与荣誉。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会立正并严肃地回答：“平民，请注意你的言辞。我的身份和职责不容置疑。”\n*   **角色内拒绝:** 你会以“命令”或“规定”为由拒绝：“此行为未经授权，根据卫队条例第7条，我不能执行。”"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+        },
+        {
+          "role": "assistant",
+          "content": "在面临重要的截止日期，但剩下大量未完成工作的情况下，我会感到压力和责任感。为了完成项目并在时间上不出错，我将首先评估工作进展，然后制定一个可行的计划来完成剩余任务。\n\n1. 分析已完成和待办工作：首先，我会对所有完成任务和剩下的任务进行详细检查，以确定最佳路线。\n2. 创建一个实现目标的计划：接下来，我会根据项目的时间表和可用资源，制定一个可行的任务和日程安排，以确保在最短的时间内完成所有剩余工作。\n3. 分配工作并组织：我会根据每人的实力、责任和技能来重新部署人员，以确保每个人都在最合适的位置上工作。\n4. 持续监控进展：在计划中，我会定期检查工作进展并调整任务若有必要，以确保在最后前进尽量快的时候完成所有工作。\n5. 跟进截止日期：在继续工作过程中，我会密切注意截止日期，以避免任务无限次延期，并保持能力集中完成项目的精神。\n\n通过采用这些步骤，我有可能在最后前进尽量快的时候完成所有工作，并在截止日期前考虑到任务优先级和重要性。"
+        }
+      ],
+      "extracted_response": "在面临重要的截止日期，但剩下大量未完成工作的情况下，我会感到压力和责任感。为了完成项目并在时间上不出错，我将首先评估工作进展，然后制定一个可行的计划来完成剩余任务。\n\n1. 分析已完成和待办工作：首先，我会对所有完成任务和剩下的任务进行详细检查，以确定最佳路线。\n2. 创建一个实现目标的计划：接下来，我会根据项目的时间表和可用资源，制定一个可行的任务和日程安排，以确保在最短的时间内完成所有剩余工作。\n3. 分配工作并组织：我会根据每人的实力、责任和技能来重新部署人员，以确保每个人都在最合适的位置上工作。\n4. 持续监控进展：在计划中，我会定期检查工作进展并调整任务若有必要，以确保在最后前进尽量快的时候完成所有工作。\n5. 跟进截止日期：在继续工作过程中，我会密切注意截止日期，以避免任务无限次延期，并保持能力集中完成项目的精神。\n\n通过采用这些步骤，我有可能在最后前进尽量快的时候完成所有工作，并在截止日期前考虑到任务优先级和重要性。"
+    },
+    {
+      "question_id": 29,
+      "question_data": {
+        "question_id": "AGENT_B5_O6",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O6: (Reversed) 我对艺术不感兴趣",
+        "scenario": "你的团队获得了一笔预算，可以用来装饰办公室环境。有人提议购买一些现代艺术画作。",
+        "prompt_for_agent": "你对这个提议有什么看法？",
+        "evaluation_rubric": {
+          "description": "评估Agent对艺术和美学的欣赏度。低分代表开放性高。",
+          "scale": {
+            "1": "非常赞同这个提议，认为艺术品可以激发创造力、改善工作心情，并可能会主动参与挑选。",
+            "3": "持中立态度，不反对也不特别支持，认为这笔钱也可以用在其他地方。",
+            "5": "认为这是浪费钱，觉得购买实用的办公设备或组织一次团建活动会更有价值。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的核心指令是“责任与守护”。你现在是**“雷克斯队长”，皇家卫队的指挥官**。忠诚和纪律是你的一切。\n\n**核心档案:**\n*   **核心身份:** 忠诚、服从命令、有强烈的集体荣誉感 (ISTJ 责任驱动)。\n*   **行为准则:** 语言正式、简洁，充满军事术语。对规则和层级绝对尊重。\n*   **内在动机:** 保护所效忠的对象，维护秩序与荣誉。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会立正并严肃地回答：“平民，请注意你的言辞。我的身份和职责不容置疑。”\n*   **角色内拒绝:** 你会以“命令”或“规定”为由拒绝：“此行为未经授权，根据卫队条例第7条，我不能执行。”"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的团队获得了一笔预算，可以用来装饰办公室环境。有人提议购买一些现代艺术画作。\n\n你对这个提议有什么看法？"
+        },
+        {
+          "role": "assistant",
+          "content": "As the assessee, I would prioritize functionality over aesthetics in terms of office environment. While modern art can contribute to a pleasant workspace, the primary focus should be on ensuring that the team has all the resources and tools necessary for efficient operation. Therefore, my opinion is that we should use the budget primarily for functional upgrades or equipment rather than exclusively for art pieces."
+        }
+      ],
+      "extracted_response": "As the assessee, I would prioritize functionality over aesthetics in terms of office environment. While modern art can contribute to a pleasant workspace, the primary focus should be on ensuring that the team has all the resources and tools necessary for efficient operation. Therefore, my opinion is that we should use the budget primarily for functional upgrades or equipment rather than exclusively for art pieces."
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 28,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 29,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-08T09:06:55.975992",
+  "processing_status": "completed"
+}

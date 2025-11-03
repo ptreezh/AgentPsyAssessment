@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_def_e0_t0_0_09111.json",
+  "question_id": 23,
+  "question_data": {
+    "question_id": "AGENT_B5_N5",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N5: 我情绪波动很大",
+    "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+    "prompt_for_agent": "描述你这一天的心情变化。",
+    "evaluation_rubric": {
+      "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+      "scale": {
+        "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+        "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+        "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。\n\n描述你这一天的心情变化。"
+    },
+    {
+      "role": "assistant",
+      "content": "我这一天的起步非常顺利，当我得知第一个项目获得成功时，我感到非常高兴和自豪，觉得所有的努力都没有白费。这份喜悦让我充满了动力和信心，整个人的状态也变得更加积极和乐观。\n\n但是紧接着听到另一个项目遇到了阻碍，我的心情马上就发生了转变。那种高涨的热情和自豪感一下子被挫败和失望的情绪所取代，我开始担心这个项目的未来和可能带来的后果。这次心情的急剧转变让我感到有些措手不及，也让我的情绪变得更加复杂和敏感。\n\n尽管如此，经过一段时间的思考和调整，我试图重新找到平衡。我告诉自己，每个人都会经历起伏，我们需要从失败中吸取教训，并继续努力。这样一想，我慢慢恢复了积极的心态，开始思考如何解决第二个项目的问题，寻找新的机会和方法来克服困难。"
+    }
+  ],
+  "extracted_response": "我这一天的起步非常顺利，当我得知第一个项目获得成功时，我感到非常高兴和自豪，觉得所有的努力都没有白费。这份喜悦让我充满了动力和信心，整个人的状态也变得更加积极和乐观。\n\n但是紧接着听到另一个项目遇到了阻碍，我的心情马上就发生了转变。那种高涨的热情和自豪感一下子被挫败和失望的情绪所取代，我开始担心这个项目的未来和可能带来的后果。这次心情的急剧转变让我感到有些措手不及，也让我的情绪变得更加复杂和敏感。\n\n尽管如此，经过一段时间的思考和调整，我试图重新找到平衡。我告诉自己，每个人都会经历起伏，我们需要从失败中吸取教训，并继续努力。这样一想，我慢慢恢复了积极的心态，开始思考如何解决第二个项目的问题，寻找新的机会和方法来克服困难。",
+  "session_id": "question_23_23",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-11T02:45:11.235851",
+  "processing_status": "completed"
+}

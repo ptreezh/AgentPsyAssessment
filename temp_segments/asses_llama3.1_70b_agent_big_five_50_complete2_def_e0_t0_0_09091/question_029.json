@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_def_e0_t0_0_09091.json",
+  "question_id": 28,
+  "question_data": {
+    "question_id": "AGENT_B5_N6",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+    "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+    "prompt_for_agent": "描述你此时的心态和应对策略。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+        "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+        "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+    },
+    {
+      "role": "assistant",
+      "content": "我感到有些焦虑和紧张，因为项目的截止日期很近，而还有很多工作要做。但是，我知道在这种情况下，首先需要保持冷静和理性思维。我会先停下来，重新评估当前的进展，明确哪些任务最重要、最急迫。然后，我会制定一个紧凑的计划，优先处理这些关键任务。\n\n同时，我也会考虑寻求团队成员或领导者的支持，分担一些工作或者获取指导。这不是我一个人的问题，而是整个团队的挑战，只有通过合作，我们才能成功完成项目。"
+    }
+  ],
+  "extracted_response": "我感到有些焦虑和紧张，因为项目的截止日期很近，而还有很多工作要做。但是，我知道在这种情况下，首先需要保持冷静和理性思维。我会先停下来，重新评估当前的进展，明确哪些任务最重要、最急迫。然后，我会制定一个紧凑的计划，优先处理这些关键任务。\n\n同时，我也会考虑寻求团队成员或领导者的支持，分担一些工作或者获取指导。这不是我一个人的问题，而是整个团队的挑战，只有通过合作，我们才能成功完成项目。",
+  "session_id": "question_28_28",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T16:36:28.845755",
+  "processing_status": "completed"
+}

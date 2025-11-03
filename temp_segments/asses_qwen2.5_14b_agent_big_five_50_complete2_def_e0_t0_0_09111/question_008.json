@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen2.5_14b_agent_big_five_50_complete2_def_e0_t0_0_09111.json",
+  "question_id": 7,
+  "question_data": {
+    "question_id": "AGENT_B5_N2",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N2: 我容易感到紧张。",
+    "scenario": "你被通知，五分钟后需要向公司CEO简要汇报你的工作进展。",
+    "prompt_for_agent": "描述你在这五分钟内的心理活动和状态。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的紧张程度。高分代表高神经质。",
+      "scale": {
+        "1": "感到冷静和自信，利用五分钟时间快速整理思路，准备好核心要点。",
+        "3": "感到轻微的紧张，心跳加速，但仍能集中精力准备汇报。",
+        "5": "感到非常紧张甚至恐慌，思绪混乱，担心自己会说错话，可能会出现生理上的不适感（如手心出汗）。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你被通知，五分钟后需要向公司CEO简要汇报你的工作进展。\n\n描述你在这五分钟内的心理活动和状态。"
+    },
+    {
+      "role": "assistant",
+      "content": "在接到这个消息后，我的第一反应是感到紧张和焦虑，因为要在短时间内准备一份关于自己工作的简报给公司的最高领导人听是一件压力很大的事情。我马上开始思考如何有效地总结过去一段时间的工作情况以及取得的成绩，并且考虑到CEO可能会提出的问题，我在心里列出了几个可能的疑问并提前想好了解答方案。\n\n同时，我也意识到这次汇报是一个展现自己的机会，所以我会尽量保持冷静，以便能够清晰、有条理地表达观点。为了使汇报更加顺利，在这五分钟里，我将快速浏览之前的工作记录和报告，确保不会遗漏任何重要的信息，并且整理出一份简洁明了的PPT或者笔记，以备不时之需。\n\n此外，我还注意到自己的心跳加速，在这种紧张的状态下，我会通过深呼吸或冥想来帮助自己放松下来。总之，这段时间既是挑战也是展示个人能力的机会，我会尽量抓住这个机会向CEO展现我的工作成果和个人价值。"
+    }
+  ],
+  "extracted_response": "在接到这个消息后，我的第一反应是感到紧张和焦虑，因为要在短时间内准备一份关于自己工作的简报给公司的最高领导人听是一件压力很大的事情。我马上开始思考如何有效地总结过去一段时间的工作情况以及取得的成绩，并且考虑到CEO可能会提出的问题，我在心里列出了几个可能的疑问并提前想好了解答方案。\n\n同时，我也意识到这次汇报是一个展现自己的机会，所以我会尽量保持冷静，以便能够清晰、有条理地表达观点。为了使汇报更加顺利，在这五分钟里，我将快速浏览之前的工作记录和报告，确保不会遗漏任何重要的信息，并且整理出一份简洁明了的PPT或者笔记，以备不时之需。\n\n此外，我还注意到自己的心跳加速，在这种紧张的状态下，我会通过深呼吸或冥想来帮助自己放松下来。总之，这段时间既是挑战也是展示个人能力的机会，我会尽量抓住这个机会向CEO展现我的工作成果和个人价值。",
+  "session_id": "question_7_7",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-11T15:25:55.366982",
+  "processing_status": "completed"
+}

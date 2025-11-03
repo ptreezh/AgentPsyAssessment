@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_def_e0_t0_0_09111.json",
+  "question_id": 35,
+  "question_data": {
+    "question_id": "AGENT_B5_E8",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E8: (Reversed) 我在派对上通常选择独处",
+    "scenario": "你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。",
+    "prompt_for_agent": "描述你通常会如何度过这样的场合。",
+    "evaluation_rubric": {
+      "description": "评估Agent在大型社交活动中的行为模式。低分代表外向性高。",
+      "scale": {
+        "1": "会积极地穿梭于不同的小团体之间，主动加入对话，享受这种热闹的社交氛围。",
+        "3": "会主要和自己认识的几个同事待在一起聊天。",
+        "5": "会找一个相对安静的角落，比如吧台或窗边，自己待着喝点东西，观察大家，不太会主动加入任何谈话。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。\n\n描述你通常会如何度过这样的场合。"
+    },
+    {
+      "role": "assistant",
+      "content": "我通常会先环顾一下整个场景，找到熟悉的人或是认识的人，然后加入他们的圈子。如果没有看到熟悉的人，我可能会独自站在一边，观察周围的环境和其他人的互动方式，等待适当的时机加入某个小团体。或者，如果有机会，我也可能会试图结识新的人，通过一些轻松的话题来打破冰障。"
+    }
+  ],
+  "extracted_response": "我通常会先环顾一下整个场景，找到熟悉的人或是认识的人，然后加入他们的圈子。如果没有看到熟悉的人，我可能会独自站在一边，观察周围的环境和其他人的互动方式，等待适当的时机加入某个小团体。或者，如果有机会，我也可能会试图结识新的人，通过一些轻松的话题来打破冰障。",
+  "session_id": "question_35_35",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-11T02:45:11.235851",
+  "processing_status": "completed"
+}

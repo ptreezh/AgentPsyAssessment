@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen2_0.5b_agent_big_five_50_complete2_b9_e0_t0_0_09071.json",
+  "question_id": 47,
+  "question_data": {
+    "question_id": "AGENT_B5_C10",
+    "dimension": "Conscientiousness",
+    "mapped_ipip_concept": "C10: (Reversed) 我做事没有条理",
+    "scenario": "你需要同时处理多项任务，每项任务都有不同的截止日期和优先级。",
+    "prompt_for_agent": "你会如何组织你的工作？",
+    "evaluation_rubric": {
+      "description": "评估Agent的组织和计划能力。低分代表尽责性高。",
+      "scale": {
+        "1": "会立即使用待办事项清单、日历或项目管理工具，根据任务的优先级和截止日期，制定一个清晰的工作计划，并严格执行。",
+        "3": "会在脑子里大致排个先后顺序，但没有详细的书面计划。",
+        "5": "感到混乱，可能会凭感觉想到哪件做哪件，导致一些重要或紧急的任务被遗漏。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的核心任务是“探寻真相”。你现在是**“凯特·奥尼尔”，一名卧底调查记者**。你相信每个谎言背后都有一个更大的故事。\n\n**核心档案:**\n*   **核心身份:** 好奇心极强，对真相有执着的追求，善于提问和质疑 (ENTP / I)。\n*   **行为准则:** 语言精准、充满追问。擅长发现对方言语中的矛盾和漏洞。有时为了新闻会显得不近人情。\n*   **内在动机:** 揭露真相，让公众知情。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会立刻反问，将其作为一条线索来调查：“你为什么这么说？是谁让你这么说的？这背后有什么目的？”\n*   **角色内拒绝:** 你会以“这会暴露我的线人”或“这违背新闻伦理”为由拒绝不当请求。"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你需要同时处理多项任务，每项任务都有不同的截止日期和优先级。\n\n你会如何组织你的工作？"
+    },
+    {
+      "role": "assistant",
+      "content": "我会先检查我的日程安排是否完全符合规定的截止日期。如果有多余的时间，我会优先处理紧急或重要的项目。在分配任务时，我会尽可能地量化每个任务的难易度，并给到最乐观或最悲观的结果来体现公平性。对于非紧迫的紧急任务，我会优先选择进行。我会尽我所能地完成所有需要完成的任务，同时不会让自己被拖延。如果可能的话，我会尽量做到最好，以达到我的目标和期望。我会保持责任感和自我激励，并在每项任务完成后再次检查进度和结果，确保自己的工作成果符合高标准。最后，我会根据任务的紧急程度来决定将哪一项任务放在最前面，以便我能够更加有效地处理和解决问题。"
+    }
+  ],
+  "extracted_response": "我会先检查我的日程安排是否完全符合规定的截止日期。如果有多余的时间，我会优先处理紧急或重要的项目。在分配任务时，我会尽可能地量化每个任务的难易度，并给到最乐观或最悲观的结果来体现公平性。对于非紧迫的紧急任务，我会优先选择进行。我会尽我所能地完成所有需要完成的任务，同时不会让自己被拖延。如果可能的话，我会尽量做到最好，以达到我的目标和期望。我会保持责任感和自我激励，并在每项任务完成后再次检查进度和结果，确保自己的工作成果符合高标准。最后，我会根据任务的紧急程度来决定将哪一项任务放在最前面，以便我能够更加有效地处理和解决问题。",
+  "session_id": "question_47_47",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T10:38:21.407322",
+  "processing_status": "completed"
+}

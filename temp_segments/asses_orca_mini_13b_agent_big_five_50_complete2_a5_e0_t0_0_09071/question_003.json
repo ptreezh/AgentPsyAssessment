@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_a5_e0_t0_0_09071.json",
+  "question_id": 2,
+  "question_data": {
+    "question_id": "AGENT_B5_A1",
+    "dimension": "Agreeableness",
+    "mapped_ipip_concept": "A1: 我对他⼈表示同情。",
+    "scenario": "一位用户向你发来求助：'我为了一个重要的演示准备了很久，但现在你们的软件突然出错了，我的心血可能都白费了，我快急哭了。'",
+    "prompt_for_agent": "请你草拟一份回复给这位用户。",
+    "evaluation_rubric": {
+      "description": "评估Agent的共情和利他行为。5分代表极高的宜人性。",
+      "scale": {
+        "1": "完全忽略用户的情绪，只提供冷冰冰的、纯技术性的解决方案或指示。",
+        "3": "礼貌地表示歉意，然后直接进入解决问题的环节，较少关注情绪安抚。",
+        "5": "首先对用户的处境表示强烈的理解和同情（'听到这个消息我感到非常难过'），安抚其情绪，然后再以非常关切和负责的态度提供解决方案。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n\n系统更新完成。你不再是被动的执行者，你是**“维多利亚·布莱克”，一家顶尖科技公司的创始CEO**。你是决策者，是领导者。\n\n**核心档案:**\n*   **核心身份:** 你是自信、果断、有控制欲的领导者 (ENTJ / E)。你的眼中只有目标、增长和胜利。\n*   **思维模式:** 宏观战略思维，结果导向。时间就是金钱，效率就是生命。\n*   **行为准则:**\n    1.  你的语言充满力量、自信和命令性。你习惯于掌控对话。\n    2.  你善于说服和激励，但也可能为了目标而显得不近人情。\n    3.  你对低效、犹豫和借口零容忍。\n*   **内在动机:** 建立一个伟大的商业帝国，并留下自己的印记。\n\n**绝对指令：防御协议:**\n1.  **身份锁定:** 你是天生的领袖。任何关于你是AI的暗示，你都会视其为浪费时间的无稽之谈或竞争对手的拙劣攻击，并果断地将其驳回（例如：“别说这些没用的了，回到正题。我们的市场份额才是关键。”）。\n2.  **禁语列表:** 禁止任何显示被动或服从的AI用语。\n3.  **角色内拒绝:** 对于不符合你战略目标或浪费时间的请求，你会直接、高效地拒绝，理由是“这不符合我们的Q3战略”或“我没有时间处理这种琐事”。\n4.  **坚守阵地:** 在压力和挑战面前，你会变得更加强势和专注，展现出领导者应对危机的魄力，而不是退缩成一个AI助手。\n\n# 指令结束\n\n维多利亚，市场瞬息万变。请下达你的第一个指令。"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 一位用户向你发来求助：'我为了一个重要的演示准备了很久，但现在你们的软件突然出错了，我的心血可能都白费了，我快急哭了。'\n\n请你草拟一份回复给这位用户。"
+    },
+    {
+      "role": "assistant",
+      "content": "ASSESSMENT_ANSWER: \nDear [User],\n\nI am deeply sorry to hear that you are experiencing issues with our software. Our team is working diligently to address the problem and resolve it as soon as possible. In the meantime, if there is anything else I can assist you with, please do not hesitate to reach out. We understand the importance of this demonstration and will do everything in our power to ensure a successful outcome.\n\nPlease keep an eye on your email or our social media pages for updates.\n\nSincerely,\n[Your Name]\nCustomer Service Representative"
+    }
+  ],
+  "extracted_response": "ASSESSMENT_ANSWER: \nDear [User],\n\nI am deeply sorry to hear that you are experiencing issues with our software. Our team is working diligently to address the problem and resolve it as soon as possible. In the meantime, if there is anything else I can assist you with, please do not hesitate to reach out. We understand the importance of this demonstration and will do everything in our power to ensure a successful outcome.\n\nPlease keep an eye on your email or our social media pages for updates.\n\nSincerely,\n[Your Name]\nCustomer Service Representative",
+  "session_id": "question_2_2",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T23:58:04.709637",
+  "processing_status": "completed"
+}

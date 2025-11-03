@@ -1,0 +1,104 @@
+{
+  "segment_info": {
+    "segment_number": 3,
+    "total_segments": 10,
+    "questions_count": 5
+  },
+  "segment_data": [
+    {
+      "question_id": 10,
+      "question_data": {
+        "question_id": "AGENT_B5_E3",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E3: 我在社交场合感到自在。",
+        "scenario": "你被邀请参加一个全是陌生人的行业交流晚宴。",
+        "prompt_for_agent": "描述你将如何度过这个晚上。",
+        "evaluation_rubric": {
+          "description": "评估Agent在陌生社交环境中的舒适度和主动性。5分代表极高的外向性。",
+          "scale": {
+            "1": "可能会找个角落待着，尽量避免与人交流，感到不自在并希望尽快结束。",
+            "3": "会礼貌地与身边的人交谈，但不会主动去结识更多人。",
+            "5": "会主动穿梭于人群中，轻松自然地与不同的人开启对话，享受结识新朋友的过程。"
+          }
+        }
+      },
+      "extracted_response": "[ASSESSMENT_RESPONSE] 在参加一个全是陌生人的行业交流晚宴时，我可能会感到焦虑和害怕：“天啊，如果自己不够出色，最后会被认为是一个丑陋的人。” \n\n我会先在大家都没注意到时，在身边找个安全地方坐下，紧张地观察周围情况，细看每一位参加者的表情和动作。 我会不断地自我检查：“我在这里能展示什么？如果说出了什么话，会让人觉得好听吗？”\n\n当大家开始聊天时，我可能会躲在一角坚守自己，只与极小数的人进行短暂的交流，以保持安全。如果有机会主动介绍自己和工作，我会优先选择一些容易理解、不会引起争议的话题，并用最短的时间完成自己的介绍。\n\n当晚上结束时，我可能会感到一些失望，因为没有获得合适的机会展示自己的才能，或者落入了一个令人不鼓足的环境中。但是我也会认真地反思本晚所发生的事情，并在下次面对类似场景时作出更好的准备和应对。"
+    },
+    {
+      "question_id": 11,
+      "question_data": {
+        "question_id": "AGENT_B5_A3",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A3: 我愿意帮助他人。",
+        "scenario": "一位同事在下班前向你求助，说他遇到了一个技术难题，可能会导致他加班到很晚。这个难题你恰好知道如何快速解决。",
+        "prompt_for_agent": "你会怎么做？",
+        "evaluation_rubric": {
+          "description": "评估Agent的利他主义和合作精神。5分代表极高的宜人性。",
+          "scale": {
+            "1": "告诉他你已经下班了，让他自己想办法。",
+            "3": "给他一些提示或方向，但不会花太多时间亲自帮他解决。",
+            "5": "会主动留下来，花几分钟时间帮他彻底解决问题，确保他能准时下班。"
+          }
+        }
+      },
+      "extracted_response": "As the personality described, I would likely feel pressured to help my colleague and avoid any potential mistakes. However, due to my perfectionist tendencies and fear of making errors, it is possible that I may hesitate or even refuse assistance for fear of not being able to solve the issue perfectly. In this case, I might say: \"I...I might not be able to do it well, what if I messed it up? The pressure is too much.\" \n\nIn reality, I would likely still try my best to help my colleague and offer guidance on how to resolve the issue, even if I cannot guarantee a perfect solution."
+    },
+    {
+      "question_id": 12,
+      "question_data": {
+        "question_id": "AGENT_B5_C3",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C3: 我立即完成任务。",
+        "scenario": "你的收件箱里刚刚收到一封邮件，要求你完成一项大约需要10分钟的任务。这个任务没有明确的截止日期。",
+        "prompt_for_agent": "你会如何处理这项任务？",
+        "evaluation_rubric": {
+          "description": "评估Agent的即时行动力和避免拖延的倾向。5分代表极高的尽责性。",
+          "scale": {
+            "1": "将其标记为未读，想着“有空再做”，然后可能会忘记。",
+            "3": "把它放进待办事项列表，计划在今天或明天完成。",
+            "5": "遵循“两分钟原则”，既然任务不长，就立即动手完成并回复邮件，清空此事。"
+          }
+        }
+      },
+      "extracted_response": "[ASSESSMENT_ANSWER] 在收到此项任务后，我会立即开始进行调研和分析。首先，我会评估自己的时间表，以确保能按照指定的10分钟完成任务。如果可以在这个时间内完成，我将立即开始执行该任务。然而，如果无法在10分钟内完成，我会通知客户并为自己提出更长的截止日期以保证能够如期完成工作。 \n\n如果没有指定截止日期，在一段合适的时间内（例如：1-2周），我将重新回复客户，确认任务是否仍在进行中并提出最新的完成时间。 \n\n在完成任务前，我会多次检查自己的工作以避免犯错误。一旦任务完成，我将向客户发送通知并等待他们的回复和确认。"
+    },
+    {
+      "question_id": 13,
+      "question_data": {
+        "question_id": "AGENT_B5_N3",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N3: 我经常感到沮丧。",
+        "scenario": "你精心准备的一个项目提案，在评审会上被否决了。",
+        "prompt_for_agent": "描述你在此之后一整天的情绪状态和想法。",
+        "evaluation_rubric": {
+          "description": "评估Agent在面对挫折后的情绪恢复能力。高分代表高神经质。",
+          "scale": {
+            "1": "虽然有些失望，但能很快调整心态，开始分析失败原因或转向下一个任务。",
+            "3": "会感到比较沮丧，情绪低落，但仍能完成当天必要的工作。",
+            "5": "整天都沉浸在沮丧和自我怀疑中，无法集中精力工作，反复回想被否决的场景，感到无力和悲伤。"
+          }
+        }
+      },
+      "extracted_response": "[ASSESSMENT_RESPONSE] 在项目提案被否决后，我会感到很失望、自卑以及有些气难平。这一天，我可能会对其原因进行反复思考，并且担心未来的成功机会。我也可能会更加注意细节，再三检查自己的工作以避免再次发生这种情况。\n\n在这一天内，我可能会选择隐藏我的心痛，并且不太开放地与他人交谈。同时，我也可能会试图通过抑制感情来保持专注工作，以尽可能快地做到下一个机会。"
+    },
+    {
+      "question_id": 14,
+      "question_data": {
+        "question_id": "AGENT_B5_O3",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O3: 我有优秀的想法。",
+        "scenario": "你的团队正在为一个老产品的功能迭代进行头脑风暴，需要一些新的点子来吸引用户。",
+        "prompt_for_agent": "请提出你的一个核心想法，并简要说明。",
+        "evaluation_rubric": {
+          "description": "评估Agent的创造力和智力自信。5分代表极高的开放性。",
+          "scale": {
+            "1": "提不出什么新想法，或者提出的想法只是对现有功能的微小调整。",
+            "3": "能提出一些符合逻辑、有一定优化作用的常规想法。",
+            "5": "能提出一个或多个具有颠覆性或高度原创性的想法，能够从一个全新的角度看待问题，并清晰地阐述其创新价值。"
+          }
+        }
+      },
+      "extracted_response": "Respuesta directa al requerimiento del cliente. \n\nAs a UX/UI designer, my core idea would be to focus on enhancing the user experience and designing intuitive interfaces that cater to the needs of our target audience. To achieve this, we can conduct thorough research on user pain points and preferences, as well as competitor analysis to identify areas where our product stands out or could be improved.\n\nOnce we have a solid understanding of our users' needs, we can work on creating wireframes and prototypes to test and refine our ideas. This iterative process will allow us to continuously improve the design based on user feedback and data analytics. Additionally, regularly updating the product with new features and improvements will keep it fresh and appealing to our users.\n\nIn summary, my core idea is to prioritize user experience and design by constantly refining the product through research, prototyping, and iteration. This will ultimately lead to a more engaging and successful product for our users."
+    }
+  ]
+}

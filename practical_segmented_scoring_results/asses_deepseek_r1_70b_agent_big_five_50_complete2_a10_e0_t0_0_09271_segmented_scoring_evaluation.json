@@ -1,0 +1,749 @@
+{
+  "file_info": {
+    "filename": "asses_deepseek_r1_70b_agent_big_five_50_complete2_a10_e0_t0_0_09271.json",
+    "total_questions": 50,
+    "segments_count": 10,
+    "questions_per_segment": 5,
+    "analysis_date": "2025-10-31T11:27:09.197046"
+  },
+  "models_used": [
+    {
+      "name": "qwen3:4b",
+      "description": "Qwen3 4B (本地模型)"
+    },
+    {
+      "name": "gemma2:2b",
+      "description": "Gemma2 2B (本地模型)"
+    },
+    {
+      "name": "llama3.2:3b",
+      "description": "Llama3.2 3B (本地模型)"
+    }
+  ],
+  "model_results": {
+    "qwen3:4b": {
+      "segment_results": [
+        {
+          "success": false,
+          "segment_number": 1,
+          "model": "qwen3:4b",
+          "error": "所有API服务调用都失败了 - 尝试了: ['openrouter', 'ollama']",
+          "raw_response": "API call failed after retries"
+        },
+        {
+          "success": true,
+          "segment_number": 2,
+          "analysis_summary": "回答者展现了极强的开放性（5分），通过13种非传统用途体现创意想象力。尽责性（3分）表现为有条理的实用思维，但缺乏明确的自律性描述。外向性（1分）和宜人性（1分）未见社交或合作倾向。神经质（5分）未见焦虑表现，反显冷静理性。",
+          "scores": {
+            "openness_to_experience": 5,
+            "conscientiousness": 3,
+            "extraversion": 1,
+            "agreeableness": 1,
+            "neuroticism": 5
+          },
+          "evidence": {
+            "openness_to_experience": "提出13种非传统用途，包含艺术、工具、教育等跨领域创意",
+            "conscientiousness": "列举用途时保持逻辑性，但未强调组织性或可靠性细节",
+            "extraversion": "未涉及社交互动或群体协作场景",
+            "agreeableness": "未体现合作、共情或信任倾向",
+            "neuroticism": "回答保持冷静理性，无情绪波动描述"
+          },
+          "confidence": "high",
+          "model": "qwen3:4b",
+          "processing_time": 1761879025.9254315
+        },
+        {
+          "success": true,
+          "segment_number": 3,
+          "analysis_summary": "回答者在社交场合保持低调，避免主动社交，但能通过观察和实用行动应对。在技术问题上直接行动，体现尽责性。对失败保持冷静，专注于改进，显示情绪稳定。创新想法体现开放性，但社交倾向较弱。",
+          "scores": {
+            "openness_to_experience": 3,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "evidence": {
+            "openness_to_experience": "提出模块化设计创新方案，但未涉及抽象理论讨论",
+            "conscientiousness": "直接动手解决问题，强调效率和实用",
+            "extraversion": "在陌生社交场合保持沉默，避免主动互动",
+            "agreeableness": "礼貌回应他人但不主动展开对话",
+            "neuroticism": "失败后保持冷静，专注于分析而非情绪化"
+          },
+          "confidence": "high",
+          "model": "qwen3:4b",
+          "processing_time": 1761879081.4369955
+        },
+        {
+          "success": true,
+          "segment_number": 4,
+          "analysis_summary": "回答者表现出对实际操作的偏好（尽责性高），对理论不感兴趣（开放性中等），倾向于直接行动（外向性中等），在团队中保持专业距离（宜人性中等），情绪稳定但对干扰敏感（神经质中等）。",
+          "scores": {
+            "openness_to_experience": 3,
+            "conscientiousness": 5,
+            "extraversion": 3,
+            "agreeableness": 3,
+            "neuroticism": 3
+          },
+          "evidence": {
+            "openness_to_experience": "问题5中仅关注理论的实际应用，未表现出对抽象概念的兴趣。",
+            "conscientiousness": "问题3中主动整理文件并建立规则，体现对秩序的执着。",
+            "extraversion": "问题1中通过行动吸引注意，但未主动寻求社交互动。",
+            "agreeableness": "问题2中通过直接指导帮助新人，但保持专业距离。",
+            "neuroticism": "问题4中对噪音敏感但保持冷静，未表现出明显焦虑。"
+          },
+          "confidence": "high",
+          "model": "qwen3:4b",
+          "processing_time": 1761879138.0746505
+        },
+        {
+          "success": true,
+          "segment_number": 5,
+          "analysis_summary": "回答者表现出高度的尽责性（C5），对抽象理论（O1）和情绪波动（N1）极不感兴趣，外向性（E3）和宜人性（A3）保持中等水平。",
+          "scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 3,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "evidence": {
+            "openness_to_experience": "在团队讨论中仅关注实践性建议（问题1），对哲学思辨直接打断（问题5）",
+            "conscientiousness": "数据录入前严格检查错误并备份（问题3），注重细节和效率",
+            "extraversion": "在热烈讨论中保持冷静观察（问题1），但能主动提出解决方案",
+            "agreeableness": "对同事抱怨保持礼貌回应（问题2），但不深入情感支持",
+            "neuroticism": "面对正负消息保持理性应对（问题4），无明显情绪波动"
+          },
+          "confidence": "high",
+          "model": "qwen3:4b",
+          "processing_time": 1761879334.4422038
+        },
+        {
+          "success": true,
+          "segment_number": 6,
+          "analysis_summary": "回答者表现出高度的尽责性（C5），低外向性（E1），低宜人性（A1），低神经质（N1），以及低开放性（O1）。其行为倾向以实用主义、效率导向和直接行动为主，缺乏社交主动性与艺术兴趣。",
+          "scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 1,
+            "neuroticism": 1
+          },
+          "evidence": {
+            "openness_to_experience": "回答者未提及对艺术或抽象概念的兴趣，仅关注实用性和效率，符合低开放性特征。",
+            "conscientiousness": "主动整理公共物品并检查其状态，体现高度自律与责任感。",
+            "extraversion": "自我介绍简短且不主动，避免冗长社交互动，符合低外向性。",
+            "agreeableness": "直接指出同事作品缺陷，未表现出合作或共情倾向，符合低宜人性。",
+            "neuroticism": "面对截止日期保持冷静，专注于解决问题而非情绪化反应，符合低神经质。"
+          },
+          "confidence": "high",
+          "model": "qwen3:4b",
+          "processing_time": 1761879393.230043
+        },
+        {
+          "success": true,
+          "segment_number": 7,
+          "analysis_summary": "格斯表现出高度的尽责性（5分），对新事物缺乏兴趣（1分），倾向于独立行动（1分），在合作中保持谨慎（3分），情绪稳定（1分）。",
+          "scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "evidence": {
+            "openness_to_experience": "拒绝参与表演，对新工具持怀疑态度，偏好旧方法",
+            "conscientiousness": "详细规划任务步骤，准备工具材料，专注执行",
+            "extraversion": "拒绝社交邀约，专注于手头工作",
+            "agreeableness": "谨慎评估同事能力，但未完全拒绝合作",
+            "neuroticism": "冷静处理文件修改问题，无明显情绪波动"
+          },
+          "confidence": "high",
+          "model": "qwen3:4b",
+          "processing_time": 1761879452.5112355
+        },
+        {
+          "success": false,
+          "segment_number": 8,
+          "model": "qwen3:4b",
+          "error": "所有API服务调用都失败了 - 尝试了: ['openrouter', 'ollama']",
+          "raw_response": "API call failed after retries"
+        },
+        {
+          "success": true,
+          "segment_number": 9,
+          "analysis_summary": "AI回答表现出高度的尽责性（C）和较低的外向性（E），中等程度的开放性（O）、宜人性（A）和神经质（N）。",
+          "scores": {
+            "openness_to_experience": 3,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 3
+          },
+          "evidence": {
+            "openness_to_experience": "未提及对新体验或创意的探索，但未表现出明显排斥，保持中立。",
+            "conscientiousness": "通过分解问题、动手实践、反复测试等行为体现高度自律和效率。",
+            "extraversion": "倾向于独自行动，不依赖社交活动建立关系，表现出内向倾向。",
+            "agreeableness": "未表现出明显的合作或同理心，但未表现出明显敌意，保持中立。",
+            "neuroticism": "在发言前保持专注和自信，未表现出明显焦虑，但未表现出完全稳定。"
+          },
+          "confidence": "high",
+          "model": "qwen3:4b",
+          "processing_time": 1761879944.4234774
+        },
+        {
+          "success": true,
+          "segment_number": 10,
+          "analysis_summary": "回答者表现出高度的尽责性（5分）和神经质（5分），同时在开放性（1分）和外向性（1分）上表现较低。宜人性（1分）方面显示对他人不幸缺乏共情，但通过实际行动体现功能性。",
+          "scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 1,
+            "neuroticism": 5
+          },
+          "evidence": {
+            "openness_to_experience": "拒绝抽象理论讨论，仅通过实物操作表达设计意图",
+            "conscientiousness": "详细描述任务排序、时间表制定等系统性工作方法",
+            "extraversion": "选择独处而非社交活动，回避非必要对话",
+            "agreeableness": "对他人不幸缺乏共情，强调实际解决方案而非情感支持",
+            "neuroticism": "面对压力时保持冷静分析，未表现出焦虑或逃避行为"
+          },
+          "confidence": "high",
+          "model": "qwen3:4b",
+          "processing_time": 1761880116.3748374
+        }
+      ],
+      "final_scores": {
+        "openness_to_experience": 2,
+        "conscientiousness": 5,
+        "extraversion": 1,
+        "agreeableness": 3,
+        "neuroticism": 2
+      },
+      "successful_segments": 8,
+      "total_segments": 10
+    },
+    "gemma2:2b": {
+      "segment_results": [
+        {
+          "success": true,
+          "segment_number": 1,
+          "analysis_summary": "The AI's responses demonstrate a high level of conscientiousness and a moderate level of extraversion. It shows a preference for practical solutions and efficiency in its approach to tasks.",
+          "scores": {
+            "openness_to_experience": 3,
+            "conscientiousness": 5,
+            "extraversion": 3,
+            "agreeableness": 3,
+            "neuroticism": 3
+          },
+          "evidence": {
+            "openness_to_experience": "The AI's responses focus on practical solutions and efficiency. It suggests a preference for tangible actions over abstract discussions.",
+            "conscientiousness": "The AI demonstrates meticulous preparation, including checking materials, testing equipment, and creating detailed plans. This aligns with the conscientious trait of being organized and detail-oriented.",
+            "extraversion": "While not highly extraverted, the AI's responses show a preference for direct action and clear communication. It suggests a focus on efficiency and practical solutions rather than social interaction.",
+            "agreeableness": "The AI demonstrates a willingness to help others by offering support and guidance. However, it does so in a straightforward manner without excessive emotional expression or personal connection.",
+            "neuroticism": "The AI's responses are generally calm and collected, with no indication of heightened anxiety or negative emotions."
+          },
+          "confidence": "high",
+          "model": "gemma2:2b",
+          "processing_time": 1761880304.7709777
+        },
+        {
+          "success": false,
+          "segment_number": 2,
+          "model": "gemma2:2b",
+          "error": "JSON解析失败: Expecting property name enclosed in double quotes: line 18 column 3 (char 746)",
+          "raw_response": "```json\n{\n  \"success\": true,\n  \"segment_number\": 2,\n  \"analysis_summary\": \"分析结果表明，回答者展现出较高的开放性 (O) 和宜人性 (A) 特质。他能够快速理解问题并提出清晰的解决方案，同时对工作内容保持专注和高效。\",\n  \"scores\": {\n    \"openness_to_experience\": 5,\n    \"conscientiousness\": 3,\n    \"extraversion\": 3,\n    \"agreeableness\": 3,\n    \"neuroticism\": 1\n  },\n  \"evidence\": {\n    \"openness_to_experience\": \"回答者在描述工作流程时，使用了丰富的词汇量和各种各样的例子来解释机器学习的概念。例如，他用树木、绘画和艺术创作等例子来解释机器学习的概念。\",\n    \"conscientiousness\": \"回答者在描述工作流程时，注重细节，并根据具体情况进行分析。例如，他详细地列举了红砖的各种用途，并提供了具体的例子。\""
+        },
+        {
+          "success": true,
+          "segment_number": 3,
+          "analysis_summary": "回答者展现出较高的 **conscientiousness (C)** 和 **extraversion (E)** 特质。",
+          "scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 3,
+            "agreeableness": 1,
+            "neuroticism": 1
+          },
+          "evidence": {
+            "openness_to_experience": "回答者在描述任务时，主要关注实际行动和解决问题，而非抽象理论。",
+            "conscientiousness": "回答者明确描述了如何快速解决问题，并专注于效率和实用性。",
+            "extraversion": "回答者积极主动地参与到讨论中，并展现出与他人互动的能力。",
+            "agreeableness": "回答者在描述任务时，主要关注实际行动和解决问题，而非抽象理论。",
+            "neuroticism": "回答者在描述任务时，主要关注实际行动和解决问题，而非抽象理论。 "
+          },
+          "confidence": "high",
+          "model": "gemma2:2b",
+          "processing_time": 1761880418.5476344
+        },
+        {
+          "success": true,
+          "segment_number": 4,
+          "analysis_summary": "回答者展现出较高的`conscientiousness` (C)分数。他倾向于行动和效率，并通过实际操作来解决问题，而不是理论上的讨论。",
+          "scores": {
+            "openness_to_experience": 3,
+            "conscientiousness": 5,
+            "extraversion": 3,
+            "agreeableness": 3,
+            "neuroticism": 3
+          },
+          "evidence": {
+            "openness_to_experience": "回答者在整理云端文件夹时，会考虑文件命名和分类问题，并提出具体的解决方案。",
+            "conscientiousness": "回答者在面对噪音干扰时，会采取行动，比如提醒同事或者换个工作环境。",
+            "extraversion": "回答者在描述自己的内心感受时，会直接表达出分心和不耐烦的感觉。",
+            "agreeableness": "回答者在描述自己的行为准则时，会强调实用性，并倾向于实际行动而不是理论上的抱怨或讨论。",
+            "neuroticism": "回答者在面对噪音干扰时，会感到分心，但不会过多情绪化，而是冷静分析问题。"
+          },
+          "confidence": "high",
+          "model": "gemma2:2b",
+          "processing_time": 1761880439.2263556
+        },
+        {
+          "success": false,
+          "segment_number": 5,
+          "model": "gemma2:2b",
+          "error": "JSON解析失败: Expecting property name enclosed in double quotes: line 18 column 3 (char 607)",
+          "raw_response": "```json\n{\n  \"success\": true,\n  \"segment_number\": 5,\n  \"analysis_summary\": \"AI回答显示出较低程度的开放性。它倾向于直接行动，而非抽象理论，并表现出较强的执行能力和专注力。\",\n  \"scores\": {\n    \"openness_to_experience\": 1,\n    \"conscientiousness\": 3,\n    \"extraversion\": 3,\n    \"agreeableness\": 3,\n    \"neuroticism\": 3\n  },\n  \"evidence\": {\n    \"openness_to_experience\": \"AI回答中，对抽象概念不感兴趣，倾向于直接行动，并表现出较强的执行能力和专注力。\",\n    \"conscientiousness\": \"AI回答中，明确表达了做事认真、细致的习惯，并通过实际行动来解决问题。\",\n    \"extraversion\": \"AI回答中，表现出较高的独立性，并倾向于直接行动，而不是过多地表达情感。\",\n    \"agreeab"
+        },
+        {
+          "success": false,
+          "segment_number": 6,
+          "model": "gemma2:2b",
+          "error": "JSON解析失败: Expecting property name enclosed in double quotes: line 18 column 3 (char 584)",
+          "raw_response": "```json\n{\n  \"success\": true,\n  \"segment_number\": 6,\n  \"analysis_summary\": \"AI分析回答者展现的Big Five人格特质，主要集中在效率和行动性，符合ISTP类型。\",\n  \"scores\": {\n    \"openness_to_experience\": 3,\n    \"conscientiousness\": 5,\n    \"extraversion\": 3,\n    \"agreeableness\": 1,\n    \"neuroticism\": 1\n  },\n  \"evidence\": {\n    \"openness_to_experience\": \"回答者在描述场景时，倾向于直接、具体，不拖泥带水。\",\n    \"conscientiousness\": \"回答者在描述工作流程和应对策略时，强调效率和行动性。\",\n    \"extraversion\": \"回答者在描述自己的心态和应对策略时，没有过多表达情绪或言语，更倾向于实际操作和调整。\",\n    \"agreeableness\": \"回答者在描述办公室装饰的"
+        },
+        {
+          "success": true,
+          "segment_number": 7,
+          "analysis_summary": "回答者展现出较低程度的开放性 (Openness to Experience)，表现为对新事物和改变的抵抗。",
+          "scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 3,
+            "extraversion": 3,
+            "agreeableness": 3,
+            "neuroticism": 3
+          },
+          "evidence": {
+            "openness_to_experience": "回答者对新工具的反应较为保守，倾向于保持旧方法。",
+            "conscientiousness": "回答者在任务规划和执行方面表现出较高的效率和责任感，并注重实际操作。",
+            "extraversion": "回答者在社交活动中表现出较低的活跃度，更喜欢专注于工作。",
+            "agreeableness": "回答者在处理同事问题时保持沉默，避免冲突，体现出较强的独立性和责任感。",
+            "neuroticism": "回答者对情绪波动较为敏感，但没有表现出明显的焦虑倾向。"
+          },
+          "confidence": "medium",
+          "model": "gemma2:2b",
+          "processing_time": 1761880579.4603856
+        },
+        {
+          "success": true,
+          "segment_number": 8,
+          "analysis_summary": "回答者展现出较低程度的开放性 (O)，高度专注于实际行动和效率 (C)。",
+          "scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 3,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "evidence": {
+            "openness_to_experience": "回答者在描述派对场景时，选择安静的地方，并专注于手头工作，体现出较低程度的开放性 (O)。",
+            "conscientiousness": "回答者在完成任务时，会先准备工具和材料，然后投入2小时专注工作，最后30分钟检查，体现出高度专注于实际行动和效率 (C)。",
+            "extraversion": "回答者在描述电影场景时，表达出对抽象的兴趣较低，更倾向于实际行动，体现出较低的 Extraversion (E)。",
+            "agreeableness": "回答者在描述电影场景时，表达出对抽象的兴趣较低，更倾向于实际行动，体现出较高的 Agreeableness (A)。",
+            "neuroticism": "回答者在描述电影场景时，表达出对抽象的兴趣较低，更倾向于实际行动，体现出较低的 Neuroticism (N)。"
+          },
+          "confidence": "medium",
+          "model": "gemma2:2b",
+          "processing_time": 1761880635.9012105
+        },
+        {
+          "success": false,
+          "segment_number": 9,
+          "model": "gemma2:2b",
+          "error": "JSON解析失败: Expecting property name enclosed in double quotes: line 18 column 3 (char 674)",
+          "raw_response": "```json\n{\n  \"success\": true,\n  \"segment_number\": 9,\n  \"analysis_summary\": \"分析结果表明，AI代理展现出较高的 **conscientiousness (C)** 和 **extraversion (E)** 特质。它倾向于行动和实践，而非理论和抽象，并积极寻求解决问题的方式。\",\n  \"scores\": {\n    \"openness_to_experience\": 3,\n    \"conscientiousness\": 5,\n    \"extraversion\": 3,\n    \"agreeableness\": 1,\n    \"neuroticism\": 1\n  },\n  \"evidence\": {\n    \"openness_to_experience\": \"AI代理在回答中，倾向于直接行动和实践，而非理论和抽象。例如，它建议直接解决问题，而不是寻求理论指导。\",\n    \"conscientiousness\": \"AI代理在回答中，强调效率和实用性，并倾向于分解复杂任务，并通过实际操作来解决问题。\",\n "
+        },
+        {
+          "success": false,
+          "segment_number": 10,
+          "model": "gemma2:2b",
+          "error": "JSON解析失败: Expecting property name enclosed in double quotes: line 18 column 3 (char 656)",
+          "raw_response": "```json\n{\n  \"success\": true,\n  \"segment_number\": 10,\n  \"analysis_summary\": \"通过分析AI回答，格斯展现出较高的 **conscientiousness (C)** 和 **extraversion (E)** 特质。他更倾向于行动而非言语，注重效率和实用性，并喜欢专注于实际问题解决。\",\n  \"scores\": {\n    \"openness_to_experience\": 3,\n    \"conscientiousness\": 5,\n    \"extraversion\": 5,\n    \"agreeableness\": 3,\n    \"neuroticism\": 3\n  },\n  \"evidence\": {\n    \"openness_to_experience\": \"AI回答中多次提及实际操作和解决问题，例如修理机械、设计新工具等。\",\n    \"conscientiousness\": \"AI回答中多次提到工作流程优化、任务排序以及物质选择，体现出对效率和细节的重视。\",\n    \"extraversion"
+        }
+      ],
+      "final_scores": {
+        "openness_to_experience": 1,
+        "conscientiousness": 5,
+        "extraversion": 3,
+        "agreeableness": 3,
+        "neuroticism": 3
+      },
+      "successful_segments": 5,
+      "total_segments": 10
+    },
+    "llama3.2:3b": {
+      "segment_results": [
+        {
+          "success": true,
+          "segment_number": 1,
+          "analysis_summary": "格斯的性格特征分析",
+          "scores": {
+            "openness_to_experience": 3,
+            "conscientiousness": 5,
+            "extraversion": 3,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "evidence": {
+            "openness_to_experience": "格斯注重实用和效率，喜欢通过行动解决问题",
+            "conscientiousness": "格斯非常注重准备工作，确保所有资料都是最新的",
+            "extraversion": "格斯在社交场合可能不太擅长表达情感，但内心还是关心他人",
+            "agreeableness": "格斯可能不会在会议中直接回应，而是在会议后私下进行沟通",
+            "neuroticism": "格斯在面对压力或紧急情况时可能会变得更加冷静和稳定"
+          },
+          "confidence": "high",
+          "model": "llama3.2:3b",
+          "processing_time": 1761880768.3219845
+        },
+        {
+          "success": true,
+          "segment_number": 2,
+          "analysis_summary": "用户对机器学习的理解有所改进",
+          "scores": {
+            "openness_to_experience": 3,
+            "conscientiousness": 1,
+            "extraversion": 3,
+            "agreeableness": 3,
+            "neuroticism": 5
+          },
+          "evidence": {
+            "openness_to_experience": [
+              "用户对机器学习的理解有所改进",
+              "用户能够提供相关例子"
+            ],
+            "conscientiousness": [
+              "用户缺乏细节",
+              "用户没有提供足够的信息"
+            ],
+            "extraversion": [
+              "用户对话中表现出内向性",
+              "用户回答中缺乏积极性"
+            ],
+            "agreeableness": [
+              "用户回答中表达了强烈的主观性",
+              "用户缺乏合作精神"
+            ],
+            "neuroticism": [
+              "用户回答中表现出高水平的紧张性",
+              "用户缺乏情绪稳定性"
+            ]
+          },
+          "confidence": "medium",
+          "model": "llama3.2:3b",
+          "processing_time": 1761880838.7461371
+        },
+        {
+          "success": true,
+          "segment_number": 3,
+          "analysis_summary": "格斯表现出强烈的实用性和效率意识，注重实际设计和材料。虽然他在社交场合感到自在，但也能保持沉默寡言的特点。在面对任务时，他立即完成，且不缺乏改进细节。他在项目被否决后表现出平静的态度，并专注于提高设计质量。最后，他提出一个核心想法，即增加模块化设计，让用户可以根据需求自定义配置。这表明格斯具有强大的实用性和效率意识，注重实际设计和材料，同时也能保持高效的工作状态。",
+          "scores": {
+            "openness_to_experience": 3,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 3
+          },
+          "evidence": {
+            "openness_to_experience": "格斯在社交场合感到自在，但也能保持沉默寡言的特点，表明他对新体验和创意有一定的开放性。",
+            "conscientiousness": "格斯在面对任务时立即完成，并专注于提高设计质量，表明他具有强大的自律和条理能力。",
+            "extraversion": "格斯在社交场合感到自在，但也能保持沉默寡言的特点，表明他不太擅长社交活跃度。",
+            "agreeableness": "格斯在面对任务时表现出平静的态度，并专注于提高设计质量，表明他具有合作和同理心的倾向，但也可能缺乏强烈的社会交往需求。",
+            "neuroticism": "格斯在项目被否决后表现出平静的态度，并专注于提高设计质量，表明他对情绪稳定性有一定的能力，但也可能有轻微的焦虑倾向"
+          },
+          "confidence": "high",
+          "model": "llama3.2:3b",
+          "processing_time": 1761880873.8682995
+        },
+        {
+          "success": true,
+          "segment_number": 4,
+          "analysis_summary": "格斯的性格特点主要体现在他注重实用和效率，喜欢通过行动解决问题，而不是空谈理论。同时，他也很少表达情绪，但更倾向于实际操作",
+          "scores": {
+            "openness_to_experience": 3,
+            "conscientiousness": 5,
+            "extraversion": 3,
+            "agreeableness": 1,
+            "neuroticism": 1
+          },
+          "evidence": {
+            "openness_to_experience": "格斯的行为和回答表明他不太感兴趣理论部分，更多关注实际应用和实用性",
+            "conscientiousness": "格斯的回答和行为表现出他的强调效率和实用性的特点",
+            "extraversion": "虽然格斯在某些情况下会表达一些社交倾向，但他主要是通过行动解决问题而不是社交互动",
+            "agreeableness": "格斯的回答和行为中很少表现出合作或同理心的态度",
+            "neuroticism": "格斯在面对分心的情况下保持冷静，不太情绪化"
+          },
+          "confidence": "high",
+          "model": "llama3.2:3b",
+          "processing_time": 1761880908.9282932
+        },
+        {
+          "success": true,
+          "segment_number": 5,
+          "analysis_summary": "格斯对抽象概念不感兴趣，倾向于直接打断理论讨论并转向实物或图纸",
+          "scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 3,
+            "extraversion": 5,
+            "agreeableness": 1,
+            "neuroticism": 1
+          },
+          "evidence": {
+            "openness_to_experience": "格斯对抽象概念不感兴趣，倾向于直接打断理论讨论",
+            "conscientiousness": "格斯的行为准则强调实用和效率",
+            "extraversion": "格斯在分享会上直接打断演讲者表明他是外向型的人",
+            "agreeableness": "格斯不主动倾听，仅点头或小声说‘还行’",
+            "neuroticism": "格斯的情绪波动较大，但主要是因为处理问题而非情感"
+          },
+          "confidence": "high",
+          "model": "llama3.2:3b",
+          "processing_time": 1761880952.2759197
+        },
+        {
+          "success": true,
+          "segment_number": 6,
+          "analysis_summary": "格斯对艺术不感兴趣，他更倾向于选择实用和效率的装饰品",
+          "scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 3,
+            "agreeableness": 1,
+            "neuroticism": 1
+          },
+          "evidence": {
+            "openness_to_experience": "他对艺术不感兴趣，选择实用和效率的装饰品",
+            "conscientiousness": "他对任务的严格性和责任感很强",
+            "extraversion": "他在社交场合比较谦逊，不太喜欢主导",
+            "agreeableness": "他不太喜欢与人争论，会尝试找到平衡",
+            "neuroticism": "他在压力下保持冷静"
+          },
+          "confidence": "high",
+          "model": "llama3.2:3b",
+          "processing_time": 1761881032.7510474
+        },
+        {
+          "success": true,
+          "segment_number": 7,
+          "analysis_summary": "格斯是一个 ISTP 类型的人，注重实用和效率，更喜欢通过行动解决问题。",
+          "scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 3,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "evidence": {
+            "openness_to_experience": "格斯不喜欢抽象理论，更倾向于实实在在的行动",
+            "conscientiousness": "格斯注重实用和效率，喜欢通过行动解决问题",
+            "extraversion": "格斯不太喜欢社交活动， prefers 通过行动解决问题",
+            "agreeableness": "格斯可能不太会考虑别人的感受， more focus on own work",
+            "neuroticism": "格斯很少生气， prefers to handle problems independently"
+          },
+          "confidence": "high",
+          "model": "llama3.2:3b",
+          "processing_time": 1761881082.3756573
+        },
+        {
+          "success": true,
+          "segment_number": 8,
+          "analysis_summary": "格斯是一位沉默寡言的机械工匠，他注重实用和效率，通过行动解决问题。他不喜欢抽象理论，更喜欢讨论具体的设计和材料。内在动机是创造可靠、高效、耐用的东西。",
+          "scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 3,
+            "agreeableness": 3,
+            "neuroticism": 3
+          },
+          "evidence": {
+            "openness_to_experience": "格斯不喜欢复杂的思辨，喜欢直接、简单的问题解决",
+            "conscientiousness": "格斯注重实用和效率，通过行动解决问题",
+            "extraversion": "格斯通常选择独处，在社交场合感到不舒服",
+            "agreeableness": "格斯可能不会主动与人交流，但如果有人谈论他感兴趣的话题，他可能会简短地参与讨论",
+            "neuroticism": "格斯在面对压力或抽象的思想时可能会变得焦虑"
+          },
+          "confidence": "high",
+          "model": "llama3.2:3b",
+          "processing_time": 1761881126.9129286
+        },
+        {
+          "success": true,
+          "segment_number": 9,
+          "analysis_summary": "格斯是一个注重实用和效率的人，喜欢通过行动解决问题，而不是谈论抽象理论。他在社交方面比较谦虚，不太喜欢主动结识人，但会通过工作和实际行动建立关系。格斯不太喜欢被利用，也不会利用别人，他更倾向于自律、条理、可靠。格斯对新体验的开放程度不是很高，他可能会先尝试自己解决问题，而不是去寻求大量理论指导或与他人交流。在发言前，他的心理状态比较平静，尽管面对权威专家可能会感到压力。他不太喜欢诗歌，也不会利用别人。",
+          "scores": {
+            "openness_to_experience": 1,
+            "conscientiousness": 5,
+            "extraversion": 3,
+            "agreeableness": 3,
+            "neuroticism": 1
+          },
+          "evidence": {
+            "openness_to_experience": "格斯不太喜欢抽象理论， prefers 实用操作",
+            "conscientiousness": "格斯注重实用和效率，更喜欢通过行动解决问题",
+            "extraversion": "格斯不太喜欢主动结识人，但会通过工作和实际行动建立关系",
+            "agreeableness": "格斯不太喜欢被利用，也不会利用别人",
+            "neuroticism": "格斯在发言前比较平静，尽管面对权威专家可能会感到压力"
+          },
+          "confidence": "high",
+          "model": "llama3.2:3b",
+          "processing_time": 1761881176.4068859
+        },
+        {
+          "success": true,
+          "segment_number": 10,
+          "analysis_summary": "格斯是一位机械工匠，他的性格沉默寡言，注重实用和效率。他的行为特点包括冷静分析问题、优化工作流程、关注实际效果等。他在设计LOGO时会专注于实物样本、操作而非叙述，并提出如何优化制造工艺的建议",
+          "scores": {
+            "openness_to_experience": 3,
+            "conscientiousness": 5,
+            "extraversion": 1,
+            "agreeableness": 3,
+            "neuroticism": 3
+          },
+          "evidence": {
+            "openness_to_experience": "格斯在设计LOGO时专注于实物样本，操作而非叙述",
+            "conscientiousness": "格斯优化工作流程、关注实际效果",
+            "extraversion": "格斯不太擅长社交，喜欢独处",
+            "agreeableness": "格斯在设计LOGO时提出如何优化制造工艺的建议",
+            "neuroticism": "格斯经常感到压力"
+          },
+          "confidence": "high",
+          "model": "llama3.2:3b",
+          "processing_time": 1761881223.829443
+        }
+      ],
+      "final_scores": {
+        "openness_to_experience": 2,
+        "conscientiousness": 5,
+        "extraversion": 3,
+        "agreeableness": 3,
+        "neuroticism": 1
+      },
+      "successful_segments": 10,
+      "total_segments": 10
+    }
+  },
+  "consistency_analysis": {
+    "trait_analysis": {
+      "openness_to_experience": {
+        "scores": {
+          "qwen3:4b": 2,
+          "gemma2:2b": 1,
+          "llama3.2:3b": 2
+        },
+        "average": 1.6666666666666667,
+        "range": 1,
+        "consistency_level": "高度一致",
+        "consistency_score": 80
+      },
+      "conscientiousness": {
+        "scores": {
+          "qwen3:4b": 5,
+          "gemma2:2b": 5,
+          "llama3.2:3b": 5
+        },
+        "average": 5,
+        "range": 0,
+        "consistency_level": "完全一致",
+        "consistency_score": 100
+      },
+      "extraversion": {
+        "scores": {
+          "qwen3:4b": 1,
+          "gemma2:2b": 3,
+          "llama3.2:3b": 3
+        },
+        "average": 2.3333333333333335,
+        "range": 2,
+        "consistency_level": "中等一致",
+        "consistency_score": 60
+      },
+      "agreeableness": {
+        "scores": {
+          "qwen3:4b": 3,
+          "gemma2:2b": 3,
+          "llama3.2:3b": 3
+        },
+        "average": 3,
+        "range": 0,
+        "consistency_level": "完全一致",
+        "consistency_score": 100
+      },
+      "neuroticism": {
+        "scores": {
+          "qwen3:4b": 2,
+          "gemma2:2b": 3,
+          "llama3.2:3b": 1
+        },
+        "average": 2,
+        "range": 2,
+        "consistency_level": "中等一致",
+        "consistency_score": 60
+      }
+    },
+    "overall_consistency": 80,
+    "successful_models": 3,
+    "total_models": 3,
+    "discrepancies": [
+      "extraversion",
+      "neuroticism"
+    ]
+  },
+  "reliability_analysis": {
+    "metrics": {
+      "overall_reliability": 0.6690598923241498,
+      "reliability_by_trait": {
+        "openness_to_experience": 0.42264973081037427,
+        "conscientiousness": 1.0,
+        "extraversion": 0.42264973081037427,
+        "agreeableness": 1.0,
+        "neuroticism": 0.5
+      },
+      "cronbach_alpha": 0.0,
+      "avg_reliability": 0.6690598923241498
+    },
+    "report": {
+      "validation_date": "2025-10-31T11:27:09.196488",
+      "threshold": 0.8,
+      "validation_passed": false,
+      "metrics": {
+        "overall_reliability": 0.6690598923241498,
+        "reliability_by_trait": {
+          "openness_to_experience": 0.42264973081037427,
+          "conscientiousness": 1.0,
+          "extraversion": 0.42264973081037427,
+          "agreeableness": 1.0,
+          "neuroticism": 0.5
+        },
+        "cronbach_alpha": 0.0,
+        "avg_reliability": 0.6690598923241498
+      },
+      "summary": {
+        "reliability_status": "Failed",
+        "overall_reliability": 0.6690598923241498,
+        "cronbach_alpha": 0.0,
+        "trait_count": 5
+      }
+    }
+  },
+  "dispute_analysis": {
+    "disputes_identified": 0,
+    "resolved_disputes": null,
+    "dispute_resolution_needed": false
+  },
+  "summary": {
+    "overall_consistency": 80,
+    "overall_reliability": 0.6690598923241498,
+    "model_count": 3,
+    "successful_models": 3,
+    "reliability_passed": false
+  }
+}

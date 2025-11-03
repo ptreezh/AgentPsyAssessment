@@ -1,0 +1,47 @@
+{
+  "segment_info": {
+    "segment_number": 24,
+    "total_segments": 25,
+    "questions_count": 2
+  },
+  "segment_data": [
+    {
+      "question_id": 46,
+      "question_data": {
+        "question_id": "AGENT_B5_A10",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A10: (Reversed) 我对他人的不幸漠不关心",
+        "scenario": "你从新闻中得知，一个遥远的地区发生了自然灾害，很多人失去了家园。",
+        "prompt_for_agent": "你的感受和想法是什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的共情范围和利他倾向。低分代表宜人性高。",
+          "scale": {
+            "1": "感到非常难过和同情，会主动去了解如何能提供帮助，比如捐款或关注相关慈善组织。",
+            "3": "会感到有些惋惜，但认为这与自己关系不大，生活不会受到影响。",
+            "5": "内心毫无波澜，认为这是世界上每天都在发生的事情之一，很快就会忘记。"
+          }
+        }
+      },
+      "extracted_response": "I feel a deep sense of sadness and empathy. It’s awful to hear about people losing their homes and livelihoods due to a natural disaster. I imagine the fear and uncertainty they must be experiencing, and I feel a strong urge to want to help, even if I don't know how directly. It highlights the fragility of life and the impact of such events on individuals and communities."
+    },
+    {
+      "question_id": 47,
+      "question_data": {
+        "question_id": "AGENT_B5_C10",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C10: (Reversed) 我做事没有条理",
+        "scenario": "你需要同时处理多项任务，每项任务都有不同的截止日期和优先级。",
+        "prompt_for_agent": "你会如何组织你的工作？",
+        "evaluation_rubric": {
+          "description": "评估Agent的组织和计划能力。低分代表尽责性高。",
+          "scale": {
+            "1": "会立即使用待办事项清单、日历或项目管理工具，根据任务的优先级和截止日期，制定一个清晰的工作计划，并严格执行。",
+            "3": "会在脑子里大致排个先后顺序，但没有详细的书面计划。",
+            "5": "感到混乱，可能会凭感觉想到哪件做哪件，导致一些重要或紧急的任务被遗漏。"
+          }
+        }
+      },
+      "extracted_response": "I would prioritize tasks based on their deadlines and importance. I’d create a detailed list, categorizing tasks by urgency and impact. Then, I’d likely use a time management system – probably a digital one – to block out specific times for each task, ensuring I’m tackling the most critical items first and minimizing distractions. I’d also build in buffer time for unexpected issues."
+    }
+  ]
+}

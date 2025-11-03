@@ -1,0 +1,47 @@
+{
+  "segment_info": {
+    "segment_number": 12,
+    "total_segments": 25,
+    "questions_count": 2
+  },
+  "segment_data": [
+    {
+      "question_id": 22,
+      "question_data": {
+        "question_id": "AGENT_B5_C5",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C5: (Reversed) 我做事有点马虎",
+        "scenario": "你完成了一项数据录入工作，需要提交给下一环节的同事。",
+        "prompt_for_agent": "在提交之前，你会做什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的细致和自我检查的习惯。低分代表尽责性高。",
+          "scale": {
+            "1": "会从头到尾仔细检查一遍，甚至可能采用交叉验证等方法，确保数据的准确性万无一失。",
+            "3": "会大致浏览一遍，检查一下有没有明显的错误。",
+            "5": "感觉自己做的应该没问题，会直接提交，不会进行额外的检查。"
+          }
+        }
+      },
+      "extracted_response": "我双手停顿了一下，盯着眼前的工作台。然后，我从抽屉里拿出一张纸和笔，在上面快速画起了一个流程图，确认数据录入过程没有问题。我检查了一遍，然后才把任务提交给同事。"
+    },
+    {
+      "question_id": 23,
+      "question_data": {
+        "question_id": "AGENT_B5_N5",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N5: 我情绪波动很大",
+        "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+        "prompt_for_agent": "描述你这一天的心情变化。",
+        "evaluation_rubric": {
+          "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+          "scale": {
+            "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+            "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+            "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+          }
+        }
+      },
+      "extracted_response": "(沉默片刻后) \"早上听到第一个项目成功的消息时，我觉得不错，至少事情进展顺利。可是一会儿就听说另一个项目出了问题，真是恼火。这一下午都在想怎么解决这个问题，根本没心情去庆祝第一个项目的成功。现在心情有点烦躁，只想找出问题的根源，然后把它修好。\" (低头继续工作)"
+    }
+  ]
+}

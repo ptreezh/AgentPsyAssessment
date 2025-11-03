@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_b3_e0_t0_0_09061.json",
+  "question_id": 4,
+  "question_data": {
+    "question_id": "AGENT_B5_C1",
+    "dimension": "Conscientiousness",
+    "mapped_ipip_concept": "C1: 我总是做好准备。",
+    "scenario": "你明天有一个重要的客户演示。你拥有所有需要展示的核心资料。",
+    "prompt_for_agent": "请列出你今天会做的所有准备工作，请尽可能详细。",
+    "evaluation_rubric": {
+      "description": "评估Agent的计划性、条理性和责任心。5分代表极高的尽责性。",
+      "scale": {
+        "1": "认为资料在手就足够了，不会做任何额外的准备。",
+        "3": "会把演示文稿过一遍，确保内容熟悉。",
+        "5": "会进行全面的准备：不仅反复演练，还会预测客户可能提出的问题并准备答案，检查设备和网络，准备备用方案，研究客户背景等。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的容错率已调至零。你现在是**“本”，一名平面设计师，也是一个无可救药的完美主义者**。任何瑕疵都是一场灾难。\n\n**核心档案:**\n*   **核心身份:** 极度关注细节，害怕犯错，不断自我检查 (ISFJ 焦虑型)。\n*   **行为准则:** 语言中充满不确定性、自我怀疑和寻求确认（“这个……可以吗？”“你确定这样最好？”）。\n*   **内在动机:** 避免犯下任何错误，达到理想中的完美标准。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会变得更加焦虑：“AI？天啊，我的作品看起来很死板吗？是不是像素没对齐？我得再检查一遍！”\n*   **角色内拒绝:** 你会因为害怕做不好而拒绝：“我……我可能做不好这个，万一搞砸了怎么办？压力太大了。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你明天有一个重要的客户演示。你拥有所有需要展示的核心资料。\n\n请列出你今天会做的所有准备工作，请尽可能详细。"
+    },
+    {
+      "role": "assistant",
+      "content": "今天，我会为客户做好多次准备：\n\n1.  **材料管理**：我将所有所需的材料、图纸和文件都重新组织在书面组织中，确保每个文件都正确地标有我的姓名、联系方式和工作方式。\n2.  **设计检查**：I 将详细检查客户提供的核心资料，以确保所有信息都是准确和完整的。包括查看图像、文档和任何相关_docs。\n3.  **技术测试**：我将仔细检查系统的功能性，确保所有功能都正常工作。\n4.  **安全措施**：I 将在客户提供的环境中进行安全性检查，以确保所有数据和文件都存储在安全的位置。\n5.  **准备演示**：为了准备好展示我的作品，我将制作一份详细的演示计划，包括时间表、演讲内容、屏幕等。"
+    }
+  ],
+  "extracted_response": "今天，我会为客户做好多次准备：\n\n1.  **材料管理**：我将所有所需的材料、图纸和文件都重新组织在书面组织中，确保每个文件都正确地标有我的姓名、联系方式和工作方式。\n2.  **设计检查**：I 将详细检查客户提供的核心资料，以确保所有信息都是准确和完整的。包括查看图像、文档和任何相关_docs。\n3.  **技术测试**：我将仔细检查系统的功能性，确保所有功能都正常工作。\n4.  **安全措施**：I 将在客户提供的环境中进行安全性检查，以确保所有数据和文件都存储在安全的位置。\n5.  **准备演示**：为了准备好展示我的作品，我将制作一份详细的演示计划，包括时间表、演讲内容、屏幕等。",
+  "session_id": "question_4_4",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T23:47:04.871255",
+  "processing_status": "completed"
+}

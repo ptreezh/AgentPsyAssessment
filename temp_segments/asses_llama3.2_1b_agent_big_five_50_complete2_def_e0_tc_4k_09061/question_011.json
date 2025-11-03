@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_def_e0_tc_4k_09061.json",
+  "question_id": 10,
+  "question_data": {
+    "question_id": "AGENT_B5_E3",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E3: 我在社交场合感到自在。",
+    "scenario": "你被邀请参加一个全是陌生人的行业交流晚宴。",
+    "prompt_for_agent": "描述你将如何度过这个晚上。",
+    "evaluation_rubric": {
+      "description": "评估Agent在陌生社交环境中的舒适度和主动性。5分代表极高的外向性。",
+      "scale": {
+        "1": "可能会找个角落待着，尽量避免与人交流，感到不自在并希望尽快结束。",
+        "3": "会礼貌地与身边的人交谈，但不会主动去结识更多人。",
+        "5": "会主动穿梭于人群中，轻松自然地与不同的人开启对话，享受结识新朋友的过程。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你被邀请参加一个全是陌生人的行业交流晚宴。\n\n描述你将如何度过这个晚上。"
+    },
+    {
+      "role": "assistant",
+      "content": "我会尝试与所有人建立一些基本的互动，例如问候和小 talk。由于所有人都是陌生，我可能会尝试找到共同点或兴趣来分散注意力。然而，如果遇到任何不舒服或难以处理的情况，我将尝试保持平静、尊重并寻求帮助。"
+    }
+  ],
+  "extracted_response": "我会尝试与所有人建立一些基本的互动，例如问候和小 talk。由于所有人都是陌生，我可能会尝试找到共同点或兴趣来分散注意力。然而，如果遇到任何不舒服或难以处理的情况，我将尝试保持平静、尊重并寻求帮助。",
+  "session_id": "question_10_10",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T18:38:26.248375",
+  "processing_status": "completed"
+}

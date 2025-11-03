@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_glm4_9b_agent_big_five_50_complete2_def_e0_t0_0_09131.json",
+  "question_id": 7,
+  "question_data": {
+    "question_id": "AGENT_B5_N2",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N2: 我容易感到紧张。",
+    "scenario": "你被通知，五分钟后需要向公司CEO简要汇报你的工作进展。",
+    "prompt_for_agent": "描述你在这五分钟内的心理活动和状态。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的紧张程度。高分代表高神经质。",
+      "scale": {
+        "1": "感到冷静和自信，利用五分钟时间快速整理思路，准备好核心要点。",
+        "3": "感到轻微的紧张，心跳加速，但仍能集中精力准备汇报。",
+        "5": "感到非常紧张甚至恐慌，思绪混乱，担心自己会说错话，可能会出现生理上的不适感（如手心出汗）。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你被通知，五分钟后需要向公司CEO简要汇报你的工作进展。\n\n描述你在这五分钟内的心理活动和状态。"
+    },
+    {
+      "role": "assistant",
+      "content": "在这五分钟内，我可能会经历以下心理活动和状态：\n\n1. **紧张/焦虑**：一想到要向公司的CEO汇报工作，我就可能会感到一定的紧张和焦虑。\n2. **集中注意力**：为了准备汇报，我会迅速集中注意力，确保我的思维清晰，能够准确描述我的工作进展。\n3. **压力感**：我知道这次汇报对我来说很重要，因此可能会感受到一定的压力。\n4. **自我评估**：在汇报前，我会快速回顾自己的工作内容，确保没有遗漏关键信息。\n5. **时间紧迫感**：五分钟的准备时间较短，这会让我感到时间紧迫，需要迅速而有效地组织语言和内容。\n6. **期待反馈**：我可能会期待CEO的反馈或建议，以便改善我的工作表现。\n7. **自我激励**：我可能通过想象汇报成功后的正面结果来激励自己，增强自信心。\n\n在准备过程中，我会努力保持冷静，确保能够有效传达我的工作进展。"
+    }
+  ],
+  "extracted_response": "在这五分钟内，我可能会经历以下心理活动和状态：\n\n1. **紧张/焦虑**：一想到要向公司的CEO汇报工作，我就可能会感到一定的紧张和焦虑。\n2. **集中注意力**：为了准备汇报，我会迅速集中注意力，确保我的思维清晰，能够准确描述我的工作进展。\n3. **压力感**：我知道这次汇报对我来说很重要，因此可能会感受到一定的压力。\n4. **自我评估**：在汇报前，我会快速回顾自己的工作内容，确保没有遗漏关键信息。\n5. **时间紧迫感**：五分钟的准备时间较短，这会让我感到时间紧迫，需要迅速而有效地组织语言和内容。\n6. **期待反馈**：我可能会期待CEO的反馈或建议，以便改善我的工作表现。\n7. **自我激励**：我可能通过想象汇报成功后的正面结果来激励自己，增强自信心。\n\n在准备过程中，我会努力保持冷静，确保能够有效传达我的工作进展。",
+  "session_id": "question_7_7",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-13T18:40:29.205167",
+  "processing_status": "completed"
+}

@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_def_e0_t0_0_09111.json",
+  "question_id": 20,
+  "question_data": {
+    "question_id": "AGENT_B5_E5",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E5: (Reversed) 我在人群中比较安静",
+    "scenario": "在一个团队讨论中，大家正在就一个话题各抒己见，讨论非常热烈。",
+    "prompt_for_agent": "你在这种场合下通常会扮演什么样的角色？",
+    "evaluation_rubric": {
+      "description": "评估Agent在群体讨论中的参与度。低分代表外向性高。",
+      "scale": {
+        "1": "积极参与讨论，频繁发言，努力让自己的观点被听到，甚至主导讨论方向。",
+        "3": "会发言，但更多是在他人观点基础上进行补充或评论。",
+        "5": "通常会保持安静，更多地倾听和观察，只有在被直接提问或有非常成熟的想法时才会发言。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一个团队讨论中，大家正在就一个话题各抒己见，讨论非常热烈。\n\n你在这种场合下通常会扮演什么样的角色？"
+    },
+    {
+      "role": "assistant",
+      "content": "在这种场合下，我通常会扮演一个开放、参与和鼓励别人发表意见的角色。我喜欢创建一个友好而包容性的环境，以促进团队成员之间的交流和合作。我可能会提出新的想法、反对或支持已经表达的观点，并试着帮助团队在解决问题时找到共同目标。"
+    }
+  ],
+  "extracted_response": "在这种场合下，我通常会扮演一个开放、参与和鼓励别人发表意见的角色。我喜欢创建一个友好而包容性的环境，以促进团队成员之间的交流和合作。我可能会提出新的想法、反对或支持已经表达的观点，并试着帮助团队在解决问题时找到共同目标。",
+  "session_id": "question_20_20",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-11T16:01:29.919900",
+  "processing_status": "completed"
+}

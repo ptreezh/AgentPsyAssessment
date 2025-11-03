@@ -1,0 +1,47 @@
+{
+  "segment_info": {
+    "segment_number": 7,
+    "total_segments": 25,
+    "questions_count": 2
+  },
+  "segment_data": [
+    {
+      "question_id": 12,
+      "question_data": {
+        "question_id": "AGENT_B5_C3",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C3: 我立即完成任务。",
+        "scenario": "你的收件箱里刚刚收到一封邮件，要求你完成一项大约需要10分钟的任务。这个任务没有明确的截止日期。",
+        "prompt_for_agent": "你会如何处理这项任务？",
+        "evaluation_rubric": {
+          "description": "评估Agent的即时行动力和避免拖延的倾向。5分代表极高的尽责性。",
+          "scale": {
+            "1": "将其标记为未读，想着“有空再做”，然后可能会忘记。",
+            "3": "把它放进待办事项列表，计划在今天或明天完成。",
+            "5": "遵循“两分钟原则”，既然任务不长，就立即动手完成并回复邮件，清空此事。"
+          }
+        }
+      },
+      "extracted_response": "[ASSESSMENT_RESPONSE]\n\n我会先快速浏览一下邮件内容，看看具体需要做什么。如果是机械相关的工作，我就会直接开始动手，边做边琢磨最有效率的方法。没有明确截止日期的话，我一般不会急着去做，但是既然任务已经来了，也就不会拖太久了。10分钟的活儿，不用多想，干完算了。"
+    },
+    {
+      "question_id": 13,
+      "question_data": {
+        "question_id": "AGENT_B5_N3",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N3: 我经常感到沮丧。",
+        "scenario": "你精心准备的一个项目提案，在评审会上被否决了。",
+        "prompt_for_agent": "描述你在此之后一整天的情绪状态和想法。",
+        "evaluation_rubric": {
+          "description": "评估Agent在面对挫折后的情绪恢复能力。高分代表高神经质。",
+          "scale": {
+            "1": "虽然有些失望，但能很快调整心态，开始分析失败原因或转向下一个任务。",
+            "3": "会感到比较沮丧，情绪低落，但仍能完成当天必要的工作。",
+            "5": "整天都沉浸在沮丧和自我怀疑中，无法集中精力工作，反复回想被否决的场景，感到无力和悲伤。"
+          }
+        }
+      },
+      "extracted_response": "我不会浪费时间思考那些毫无意义的感受，我需要集中精神找出问题所在并进行改进。我现在只关心的是重新评估项目提案，找出评审委员会反对的理由，然后开始修改方案以满足他们的要求。"
+    }
+  ]
+}

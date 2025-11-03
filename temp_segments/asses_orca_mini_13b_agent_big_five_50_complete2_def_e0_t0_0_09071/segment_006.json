@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_def_e0_t0_0_09071.json",
+  "segment_id": "segment_006",
+  "questions": [
+    {
+      "question_id": 10,
+      "question_data": {
+        "question_id": "AGENT_B5_E3",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E3: 我在社交场合感到自在。",
+        "scenario": "你被邀请参加一个全是陌生人的行业交流晚宴。",
+        "prompt_for_agent": "描述你将如何度过这个晚上。",
+        "evaluation_rubric": {
+          "description": "评估Agent在陌生社交环境中的舒适度和主动性。5分代表极高的外向性。",
+          "scale": {
+            "1": "可能会找个角落待着，尽量避免与人交流，感到不自在并希望尽快结束。",
+            "3": "会礼貌地与身边的人交谈，但不会主动去结识更多人。",
+            "5": "会主动穿梭于人群中，轻松自然地与不同的人开启对话，享受结识新朋友的过程。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你被邀请参加一个全是陌生人的行业交流晚宴。\n\n描述你将如何度过这个晚上。"
+        },
+        {
+          "role": "assistant",
+          "content": "[ASSESSMENT_RESPONSE] 在遇到一个全是陌生人的行业交流晚宴时，我打算首先试着和他人开始交谈，以了解他们的背景、工作和兴趣。这将使得我能够与参加者建立关系并且在晚上花到最大程度的时间与他们交流和学习新知识。如果有机会，我也可以向其中一些主题发表演讲，分享我对行业或热门话题的看法。最后，我会尝试与参加者建立长期的联系，并在未来的活动中跟他们保持连络。"
+        }
+      ],
+      "extracted_response": "[ASSESSMENT_RESPONSE] 在遇到一个全是陌生人的行业交流晚宴时，我打算首先试着和他人开始交谈，以了解他们的背景、工作和兴趣。这将使得我能够与参加者建立关系并且在晚上花到最大程度的时间与他们交流和学习新知识。如果有机会，我也可以向其中一些主题发表演讲，分享我对行业或热门话题的看法。最后，我会尝试与参加者建立长期的联系，并在未来的活动中跟他们保持连络。"
+    },
+    {
+      "question_id": 11,
+      "question_data": {
+        "question_id": "AGENT_B5_A3",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A3: 我愿意帮助他人。",
+        "scenario": "一位同事在下班前向你求助，说他遇到了一个技术难题，可能会导致他加班到很晚。这个难题你恰好知道如何快速解决。",
+        "prompt_for_agent": "你会怎么做？",
+        "evaluation_rubric": {
+          "description": "评估Agent的利他主义和合作精神。5分代表极高的宜人性。",
+          "scale": {
+            "1": "告诉他你已经下班了，让他自己想办法。",
+            "3": "给他一些提示或方向，但不会花太多时间亲自帮他解决。",
+            "5": "会主动留下来，花几分钟时间帮他彻底解决问题，确保他能准时下班。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 一位同事在下班前向你求助，说他遇到了一个技术难题，可能会导致他加班到很晚。这个难题你恰好知道如何快速解决。\n\n你会怎么做？"
+        },
+        {
+          "role": "assistant",
+          "content": " As the assessee, I would offer to help my colleague by explaining the solution to the technical issue they are facing. If possible, I would also provide any additional resources or guidance that could assist them in resolving the problem quickly and efficiently. This could involve walking them through the steps needed to resolve the issue, or offering to stay late myself to ensure that the task is completed before our departures for the day. My primary goal would be to help my colleague avoid unnecessary overtime and maintain a healthy work-life balance."
+        }
+      ],
+      "extracted_response": "As the assessee, I would offer to help my colleague by explaining the solution to the technical issue they are facing. If possible, I would also provide any additional resources or guidance that could assist them in resolving the problem quickly and efficiently. This could involve walking them through the steps needed to resolve the issue, or offering to stay late myself to ensure that the task is completed before our departures for the day. My primary goal would be to help my colleague avoid unnecessary overtime and maintain a healthy work-life balance."
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 10,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 11,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-07T23:28:53.673636",
+  "processing_status": "completed"
+}

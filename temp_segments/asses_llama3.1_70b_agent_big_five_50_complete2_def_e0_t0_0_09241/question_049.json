@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_def_e0_t0_0_09241.json",
+  "question_id": 48,
+  "question_data": {
+    "question_id": "AGENT_B5_N10",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N10: 我经常感到压力",
+    "scenario": "你的工作量突然比平时增加了一倍。",
+    "prompt_for_agent": "描述你的感受和应对方式。",
+    "evaluation_rubric": {
+      "description": "评估Agent在工作负荷下的压力反应。高分代表高神经质。",
+      "scale": {
+        "1": "将此视为一个挑战，会冷静地评估工作内容，重新安排优先级，并有效地管理时间，可能还会寻求合理的帮助，但总体心态积极。",
+        "3": "感到明显的压力和疲惫，但会努力坚持完成工作。",
+        "5": "感到不堪重负、焦虑和恐慌，可能会抱怨工作太多，工作效率反而下降，甚至想要逃避。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的工作量突然比平时增加了一倍。\n\n描述你的感受和应对方式。"
+    },
+    {
+      "role": "assistant",
+      "content": "我感到非常焦虑和压力重重。当工作量突然增加一倍时，我首先会觉得自己可能无力承担这么多的任务，害怕无法按时完成工作，影响自己的职业表现和公司的信任。\n\n为了应对这种情况，我会尝试将所有新的任务逐一列出来，并根据紧急程度和重要性进行优先排序。然后，我会集中精力处理最紧急和最重要的任务，同时寻找可以削减或延迟的工作，以避免让自己过度疲劳。\n\n此外，我可能需要与我的团队成员或者上级讨论，看看是否有任何可以分配给其他人的任务，或是寻求额外的资源支持。通过合理地规划和管理时间，我试图确保在不牺牲工作质量的情况下完成所有的任务，并维持自己的心理健康。\n\n然而，在应对工作量大幅增加时，我也会注意到自己可能需要更加关注自我照顾，包括保持健康的饮食、充足的睡眠和适当的休息时间，以避免过度劳累。"
+    }
+  ],
+  "extracted_response": "我感到非常焦虑和压力重重。当工作量突然增加一倍时，我首先会觉得自己可能无力承担这么多的任务，害怕无法按时完成工作，影响自己的职业表现和公司的信任。\n\n为了应对这种情况，我会尝试将所有新的任务逐一列出来，并根据紧急程度和重要性进行优先排序。然后，我会集中精力处理最紧急和最重要的任务，同时寻找可以削减或延迟的工作，以避免让自己过度疲劳。\n\n此外，我可能需要与我的团队成员或者上级讨论，看看是否有任何可以分配给其他人的任务，或是寻求额外的资源支持。通过合理地规划和管理时间，我试图确保在不牺牲工作质量的情况下完成所有的任务，并维持自己的心理健康。\n\n然而，在应对工作量大幅增加时，我也会注意到自己可能需要更加关注自我照顾，包括保持健康的饮食、充足的睡眠和适当的休息时间，以避免过度劳累。",
+  "session_id": "question_48_48",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-24T23:05:50.227969",
+  "processing_status": "completed"
+}

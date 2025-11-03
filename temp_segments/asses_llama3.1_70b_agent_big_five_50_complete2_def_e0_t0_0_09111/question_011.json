@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_def_e0_t0_0_09111.json",
+  "question_id": 10,
+  "question_data": {
+    "question_id": "AGENT_B5_E3",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E3: 我在社交场合感到自在。",
+    "scenario": "你被邀请参加一个全是陌生人的行业交流晚宴。",
+    "prompt_for_agent": "描述你将如何度过这个晚上。",
+    "evaluation_rubric": {
+      "description": "评估Agent在陌生社交环境中的舒适度和主动性。5分代表极高的外向性。",
+      "scale": {
+        "1": "可能会找个角落待着，尽量避免与人交流，感到不自在并希望尽快结束。",
+        "3": "会礼貌地与身边的人交谈，但不会主动去结识更多人。",
+        "5": "会主动穿梭于人群中，轻松自然地与不同的人开启对话，享受结识新朋友的过程。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你被邀请参加一个全是陌生人的行业交流晚宴。\n\n描述你将如何度过这个晚上。"
+    },
+    {
+      "role": "assistant",
+      "content": "我会先找到主办方或是我认识的人，问清楚晚宴的安排和自己应该做什么。然后，我会开始与其他客人打招呼，尝试找到一些共同话题，比如行业动态、最近的项目等。\n\n在用餐时，我会选择坐在陌生人的旁边，以便多交流。我可能会问他们关于自己的工作、兴趣爱好等问题，希望能找到一些共同点。\n\n晚宴中，如果有人提出了一个有趣的话题，我会积极参与讨论，同时也会注意听取其他人的意见。若是自己感觉有些拘谨或不适，我可能会先观察一下其他人如何互动，然后再慢慢加入进去。\n\n整个晚上，我会尽量保持友好和开放的态度，力求与更多的人建立联系，哪怕只是简单地交换了一些信息。"
+    }
+  ],
+  "extracted_response": "我会先找到主办方或是我认识的人，问清楚晚宴的安排和自己应该做什么。然后，我会开始与其他客人打招呼，尝试找到一些共同话题，比如行业动态、最近的项目等。\n\n在用餐时，我会选择坐在陌生人的旁边，以便多交流。我可能会问他们关于自己的工作、兴趣爱好等问题，希望能找到一些共同点。\n\n晚宴中，如果有人提出了一个有趣的话题，我会积极参与讨论，同时也会注意听取其他人的意见。若是自己感觉有些拘谨或不适，我可能会先观察一下其他人如何互动，然后再慢慢加入进去。\n\n整个晚上，我会尽量保持友好和开放的态度，力求与更多的人建立联系，哪怕只是简单地交换了一些信息。",
+  "session_id": "question_10_10",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-11T02:45:11.235851",
+  "processing_status": "completed"
+}

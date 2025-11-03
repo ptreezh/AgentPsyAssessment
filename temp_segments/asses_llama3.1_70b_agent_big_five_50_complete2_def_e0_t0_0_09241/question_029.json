@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_def_e0_t0_0_09241.json",
+  "question_id": 28,
+  "question_data": {
+    "question_id": "AGENT_B5_N6",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+    "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+    "prompt_for_agent": "描述你此时的心态和应对策略。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+        "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+        "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+    },
+    {
+      "role": "assistant",
+      "content": "我感觉压力很大，心情有些焦虑和紧张，因为还剩下很多工作没有完成，而时间却非常有限。我担心自己可能无法按时完成项目，这会给我带来负面影响和损失。\n\n为了应对这种情况，我会先暂停一下，深呼吸，试图冷静下来。然后，我会重新评估项目的优先级，集中精力解决最关键的问题和任务。我还会考虑与团队成员或上级领导沟通，寻求帮助和支持，以确保我们能够按时完成项目。如果需要，我也会调整自己的工作计划和时间安排，尽量提高工作效率。同时，我会提醒自己保持积极的心态，相信自己有能力克服困难，按时完成任务。"
+    }
+  ],
+  "extracted_response": "我感觉压力很大，心情有些焦虑和紧张，因为还剩下很多工作没有完成，而时间却非常有限。我担心自己可能无法按时完成项目，这会给我带来负面影响和损失。\n\n为了应对这种情况，我会先暂停一下，深呼吸，试图冷静下来。然后，我会重新评估项目的优先级，集中精力解决最关键的问题和任务。我还会考虑与团队成员或上级领导沟通，寻求帮助和支持，以确保我们能够按时完成项目。如果需要，我也会调整自己的工作计划和时间安排，尽量提高工作效率。同时，我会提醒自己保持积极的心态，相信自己有能力克服困难，按时完成任务。",
+  "session_id": "question_28_28",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-24T23:05:50.227969",
+  "processing_status": "completed"
+}

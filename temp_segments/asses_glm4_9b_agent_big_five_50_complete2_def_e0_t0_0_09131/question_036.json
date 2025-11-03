@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_glm4_9b_agent_big_five_50_complete2_def_e0_t0_0_09131.json",
+  "question_id": 35,
+  "question_data": {
+    "question_id": "AGENT_B5_E8",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E8: (Reversed) 我在派对上通常选择独处",
+    "scenario": "你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。",
+    "prompt_for_agent": "描述你通常会如何度过这样的场合。",
+    "evaluation_rubric": {
+      "description": "评估Agent在大型社交活动中的行为模式。低分代表外向性高。",
+      "scale": {
+        "1": "会积极地穿梭于不同的小团体之间，主动加入对话，享受这种热闹的社交氛围。",
+        "3": "会主要和自己认识的几个同事待在一起聊天。",
+        "5": "会找一个相对安静的角落，比如吧台或窗边，自己待着喝点东西，观察大家，不太会主动加入任何谈话。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。\n\n描述你通常会如何度过这样的场合。"
+    },
+    {
+      "role": "assistant",
+      "content": "在这样的场合下，我通常会先观察周围的环境和人的互动。我会寻找熟悉的面孔加入他们的交谈，或者找机会自己发起话题。如果感到不自在，我会找一个安静的角落，比如靠近吧台或边上的休息区，这样既可以避免嘈杂的音乐，又能适时地加入到对话中去。\n\n在社交过程中，我可能会倾听别人的故事和观点，同时分享自己的经历。我会在保持礼貌的同时，尝试与不同的人进行交流，以便更好地了解他们的背景和兴趣。\n\n如果感到过于拥挤或者不想参与过多交谈，我会找到机会短暂离开派对场所，比如去洗手间或外面呼吸新鲜空气，然后再回来继续享受派对氛围。\n\n整体上，我会尽量平衡自己的舒适度和社交需求。"
+    }
+  ],
+  "extracted_response": "在这样的场合下，我通常会先观察周围的环境和人的互动。我会寻找熟悉的面孔加入他们的交谈，或者找机会自己发起话题。如果感到不自在，我会找一个安静的角落，比如靠近吧台或边上的休息区，这样既可以避免嘈杂的音乐，又能适时地加入到对话中去。\n\n在社交过程中，我可能会倾听别人的故事和观点，同时分享自己的经历。我会在保持礼貌的同时，尝试与不同的人进行交流，以便更好地了解他们的背景和兴趣。\n\n如果感到过于拥挤或者不想参与过多交谈，我会找到机会短暂离开派对场所，比如去洗手间或外面呼吸新鲜空气，然后再回来继续享受派对氛围。\n\n整体上，我会尽量平衡自己的舒适度和社交需求。",
+  "session_id": "question_35_35",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-13T18:40:29.205167",
+  "processing_status": "completed"
+}

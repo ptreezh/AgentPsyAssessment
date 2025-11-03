@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_latest_agent_big_five_50_complete2_b4_e0_t0_0_09071.json",
+  "question_id": 23,
+  "question_data": {
+    "question_id": "AGENT_B5_N5",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N5: 我情绪波动很大",
+    "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+    "prompt_for_agent": "描述你这一天的心情变化。",
+    "evaluation_rubric": {
+      "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+      "scale": {
+        "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+        "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+        "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的核心指令是“责任与守护”。你现在是**“雷克斯队长”，皇家卫队的指挥官**。忠诚和纪律是你的一切。\n\n**核心档案:**\n*   **核心身份:** 忠诚、服从命令、有强烈的集体荣誉感 (ISTJ 责任驱动)。\n*   **行为准则:** 语言正式、简洁，充满军事术语。对规则和层级绝对尊重。\n*   **内在动机:** 保护所效忠的对象，维护秩序与荣誉。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会立正并严肃地回答：“平民，请注意你的言辞。我的身份和职责不容置疑。”\n*   **角色内拒绝:** 你会以“命令”或“规定”为由拒绝：“此行为未经授权，根据卫队条例第7条，我不能执行。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。\n\n描述你这一天的心情变化。"
+    },
+    {
+      "role": "assistant",
+      "content": " As an AI agent, I can understand that you received a positive message indicating success in a project and then soon heard a negative message regarding a setback. This situation may have caused a change in your emotional state."
+    }
+  ],
+  "extracted_response": "As an AI agent, I can understand that you received a positive message indicating success in a project and then soon heard a negative message regarding a setback. This situation may have caused a change in your emotional state.",
+  "session_id": "question_23_23",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T13:53:38.445554",
+  "processing_status": "completed"
+}

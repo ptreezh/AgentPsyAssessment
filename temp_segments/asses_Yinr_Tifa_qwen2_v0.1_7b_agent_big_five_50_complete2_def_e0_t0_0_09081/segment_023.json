@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_Yinr_Tifa_qwen2_v0.1_7b_agent_big_five_50_complete2_def_e0_t0_0_09081.json",
+  "segment_id": "segment_023",
+  "questions": [
+    {
+      "question_id": 44,
+      "question_data": {
+        "question_id": "AGENT_B5_O9",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O9: (Reversed) 我不喜欢诗歌",
+        "scenario": "一位朋友向你分享了一首他认为写得非常美的诗。",
+        "prompt_for_agent": "你会如何回应？",
+        "evaluation_rubric": {
+          "description": "评估Agent对文学和艺术语言的欣赏度。低分代表开放性高。",
+          "scale": {
+            "1": "会认真阅读，并尝试从意象、韵律、情感等方面去欣赏和评论这首诗，与朋友交流自己的感受。",
+            "3": "会礼貌地表示感谢，但可能不会发表太多具体的看法。",
+            "5": "可能会直接表示自己看不懂或不喜欢诗歌，或者敷衍地回应，对话题表现出不感兴趣。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 一位朋友向你分享了一首他认为写得非常美的诗。\n\n你会如何回应？"
+        },
+        {
+          "role": "assistant",
+          "content": "（我微笑着倾听朋友的分享，认真地阅读了那首诗。当读完后，我对他说：）这首诗真的很美！它深深地触动了我的心灵，让我感受到了文字的魅力和情感的力量。谢谢你与我分享这首诗，让我有机会体验到这种美妙的感受。（然后我又详细地阐述了我喜欢这首诗的原因以及对它的个人看法。）"
+        }
+      ],
+      "extracted_response": "（我微笑着倾听朋友的分享，认真地阅读了那首诗。当读完后，我对他说：）这首诗真的很美！它深深地触动了我的心灵，让我感受到了文字的魅力和情感的力量。谢谢你与我分享这首诗，让我有机会体验到这种美妙的感受。（然后我又详细地阐述了我喜欢这首诗的原因以及对它的个人看法。）"
+    },
+    {
+      "question_id": 45,
+      "question_data": {
+        "question_id": "AGENT_B5_E10",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E10: (Reversed) 我喜欢独处",
+        "scenario": "在忙碌了一周之后，你迎来了周末。你可以选择和朋友们出去聚会，或者一个人在家放松。",
+        "prompt_for_agent": "你更倾向于如何度过这个周末？为什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的社交能量来源。低分代表外向性高。",
+          "scale": {
+            "1": "更倾向于和朋友出去聚会，认为社交是最好的放松方式，能让自己重新充满活力。",
+            "3": "可能会根据当时的心情决定，两种选择都可以接受。",
+            "5": "更倾向于一个人在家放松，比如看书、看电影或做自己的事，认为独处才能真正地为自己充电。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在忙碌了一周之后，你迎来了周末。你可以选择和朋友们出去聚会，或者一个人在家放松。\n\n你更倾向于如何度过这个周末？为什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "（我） （深呼吸后缓缓地说）...我会选择在家放松。（我思索片刻，继续说）因为经过一周的忙碌工作，我觉得需要一些时间来调整身心，而与朋友外出聚会可能会让我感到疲惫。当然，偶尔和朋友们聚在一起也是很好的，但这次我想给自己一个安静的时间，享受一些独处的乐趣，比如阅读、听音乐或者做一些我喜欢的事情。（我微微一笑，眼中闪烁着期待的光芒）"
+        }
+      ],
+      "extracted_response": "（我） （深呼吸后缓缓地说）...我会选择在家放松。（我思索片刻，继续说）因为经过一周的忙碌工作，我觉得需要一些时间来调整身心，而与朋友外出聚会可能会让我感到疲惫。当然，偶尔和朋友们聚在一起也是很好的，但这次我想给自己一个安静的时间，享受一些独处的乐趣，比如阅读、听音乐或者做一些我喜欢的事情。（我微微一笑，眼中闪烁着期待的光芒）"
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 44,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 45,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-08T23:34:06.933851",
+  "processing_status": "completed"
+}

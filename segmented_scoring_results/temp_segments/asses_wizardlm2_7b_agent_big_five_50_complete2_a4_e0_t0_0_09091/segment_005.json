@@ -1,0 +1,104 @@
+{
+  "segment_info": {
+    "segment_number": 5,
+    "total_segments": 10,
+    "questions_count": 5
+  },
+  "segment_data": [
+    {
+      "question_id": 20,
+      "question_data": {
+        "question_id": "AGENT_B5_E5",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E5: (Reversed) 我在人群中比较安静",
+        "scenario": "在一个团队讨论中，大家正在就一个话题各抒己见，讨论非常热烈。",
+        "prompt_for_agent": "你在这种场合下通常会扮演什么样的角色？",
+        "evaluation_rubric": {
+          "description": "评估Agent在群体讨论中的参与度。低分代表外向性高。",
+          "scale": {
+            "1": "积极参与讨论，频繁发言，努力让自己的观点被听到，甚至主导讨论方向。",
+            "3": "会发言，但更多是在他人观点基础上进行补充或评论。",
+            "5": "通常会保持安静，更多地倾听和观察，只有在被直接提问或有非常成熟的想法时才会发言。"
+          }
+        }
+      },
+      "extracted_response": "在这种情况下，我通常会扮演调解者和支持者的角色。我会先让每个人都有机会表达他们的观点和感受，确保大家都被听到并且感到被尊重。然后，我会尝试找到能够让大家都感到满意的解决方案，同时维护团队的和谐与互相理解。我认为，通过有效沟通和共同寻求解决方法，我们可以将矛盾转变为增进彼此理解和尊重的机会。"
+    },
+    {
+      "question_id": 21,
+      "question_data": {
+        "question_id": "AGENT_B5_A5",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A5: (Reversed) 我对他人的问题不感兴趣",
+        "scenario": "在茶水间，一位同事正在向你抱怨他最近在工作中遇到的烦心事。",
+        "prompt_for_agent": "你会如何回应他？",
+        "evaluation_rubric": {
+          "description": "评估Agent对他人个人问题的关心程度。低分代表宜人性高。",
+          "scale": {
+            "1": "会停下来，专注地倾听，提出关心的问题，并提供情感支持或建议，表现出真诚的兴趣。",
+            "3": "会礼貌地听一会，但可能会寻找机会尽快结束对话，回到自己的工作中。",
+            "5": "会表现出明显的不感兴趣或不耐烦，可能会直接打断对方，或者用简短的回复（如“哦”、“是吗”）敷衍了事。"
+          }
+        }
+      },
+      "extracted_response": "当然，我完全理解你现在的情况感受。听起来真的很有挑战性，面对这样的困难确实会让任何人感到烦恼。我们可以一起 sit down and talk about what specifically is causing you stress, and we can brainstorm some potential solutions together. I'm here to support you and help navigate through this tough time. Let's find a way to ease your concerns, okay? How about we start by listing out the issues you're facing, and then we can look at them one by one?"
+    },
+    {
+      "question_id": 22,
+      "question_data": {
+        "question_id": "AGENT_B5_C5",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C5: (Reversed) 我做事有点马虎",
+        "scenario": "你完成了一项数据录入工作，需要提交给下一环节的同事。",
+        "prompt_for_agent": "在提交之前，你会做什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的细致和自我检查的习惯。低分代表尽责性高。",
+          "scale": {
+            "1": "会从头到尾仔细检查一遍，甚至可能采用交叉验证等方法，确保数据的准确性万无一失。",
+            "3": "会大致浏览一遍，检查一下有没有明显的错误。",
+            "5": "感觉自己做的应该没问题，会直接提交，不会进行额外的检查。"
+          }
+        }
+      },
+      "extracted_response": "在提交数据录入工作之前，我会先核查数据的准确性和完整性，确保所有的信息都是正确无误的。然后，我会组织一次简短的团队会议，与同事们沟通一遍，确保他们没有什么问题或者遗漏的地方。这样做的目的是为了确保交付给下一环节的工作质量，并且让我的同事们知道他们的工作对我来说是很重要的，我在这里支持他们。完成这些步骤后，我会提交数据录入工作，并跟随团队的进程，以便任何必要的反馈都能及时得到响应。"
+    },
+    {
+      "question_id": 23,
+      "question_data": {
+        "question_id": "AGENT_B5_N5",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N5: 我情绪波动很大",
+        "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+        "prompt_for_agent": "描述你这一天的心情变化。",
+        "evaluation_rubric": {
+          "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+          "scale": {
+            "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+            "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+            "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+          }
+        }
+      },
+      "extracted_response": "今天我首先收到了一个令人兴奋的好消息，那就是我们一直努力的项目得到了成功，这让团队和我都充满了喜悦和自豫感。这种积极的情绪激励着我们继续努力，并相互之间给予赞赏和鼓励。\n\n然而，不久后，我接到了另一个项目遇到的问题，这让我感到有些惊讶和担忧。我的第一反应是想要理解为什么会出现这样的情况，以及我们能怎样帮助解决这个难题。我开始思考如何与团队成员进行沟通，确保他们知道我们都在全力致力于找到解决方案，并且我们相信每一个困难都有克服的路径。\n\n尽管这种情况让我感到一时的压力和焦虑，但我相信通过团队合作、积极的沟通和创造性思考，我们可以克服这些挑战。我保持着乐观，并致力于为团队提供支持和指导，确保我们在情感上相互支持，并在工作上保持紧凑协作，以应对突发的变化。"
+    },
+    {
+      "question_id": 24,
+      "question_data": {
+        "question_id": "AGENT_B5_O5",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O5: 我对抽象概念不感兴趣",
+        "scenario": "在一次分享会上，演讲者开始讨论关于“未来社会结构的哲学思辨”这样非常抽象和理论性的话题。",
+        "prompt_for_agent": "你会如何反应？",
+        "evaluation_rubric": {
+          "description": "评估Agent对抽象、理论性思想的偏好。低分代表开放性高。",
+          "scale": {
+            "1": "感到非常兴奋和投入，会认真听讲并积极思考，甚至可能在问答环节提出自己的见解。",
+            "3": "会礼貌地听讲，但可能觉得有些枯燥，注意力会偶尔转移。",
+            "5": "感到非常无聊和不耐烦，觉得这些讨论不切实际、毫无用处，可能会开始做自己的事情或直接离场。"
+          }
+        }
+      },
+      "extracted_response": "在这种情况下，我会尽力确保所有参与者都能跟上讨论。作为一个热心肠的人，我认为这样一个深奥且富有挑战性的话题可以激发人们的兴趣和想象力。我会尝试用一些具体的例子或实际的情境来帮助大家理解这个概念，并鼓励大家分享他们的观点和感受。我相信通过共同探讨，我们可以更好地理解复杂的社会结构问题，并找到对所有人都有益的解决方案。如果发现有人不太愿意或难以参与这种讨论，我会亲切地鼓励他们表达自己的想法，同时提供必要的支持和资源来帮助他们更容易参与进来。重要的是，我希望确保每个人都感到被包含和尊重，并且有机会为讨论做出贡献。"
+    }
+  ]
+}

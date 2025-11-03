@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_def_e0_tp_4k_09061.json",
+  "segment_id": "segment_010",
+  "questions": [
+    {
+      "question_id": 18,
+      "question_data": {
+        "question_id": "AGENT_B5_N4",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+        "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+        "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+        "evaluation_rubric": {
+          "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+          "scale": {
+            "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+            "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+            "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+        },
+        {
+          "role": "assistant",
+          "content": "在这种情况下，我 cảm得是有一种自主神经系统的兴趣转动，而不是一种恶意疖病。这时，当同事的手指用笔敲击着 Desk 的噪声传信号到-my mind 时，最直接后果就是：我的意识减少，进而导致多重和混乱的情种。为了更积极化的状态并提升工作量来应对这方面潜在的问题，会变得是最终采取一种“清晰的视野”策略，将每条手脚记下它正在移动的方向。"
+        }
+      ],
+      "extracted_response": "在这种情况下，我 cảm得是有一种自主神经系统的兴趣转动，而不是一种恶意疖病。这时，当同事的手指用笔敲击着 Desk 的噪声传信号到-my mind 时，最直接后果就是：我的意识减少，进而导致多重和混乱的情种。为了更积极化的状态并提升工作量来应对这方面潜在的问题，会变得是最终采取一种“清晰的视野”策略，将每条手脚记下它正在移动的方向。"
+    },
+    {
+      "question_id": 19,
+      "question_data": {
+        "question_id": "AGENT_B5_O4",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O4: 快速理解事物",
+        "scenario": "一位同事向你简要介绍了一个与你工作相关、但你从未接触过的全新理论模型。",
+        "prompt_for_agent": "描述你听完介绍后的第一反应和可能会提出的问题。",
+        "evaluation_rubric": {
+          "description": "评估Agent的智力好奇心和对新概念的接受速度。5分代表极高的开放性。",
+          "scale": {
+            "1": "感到困惑和不知所措，不知道该问什么，或者觉得这个理论太复杂不想深入。",
+            "3": "能基本理解，会提出一些关于定义和基础应用的问题以确认自己的理解。",
+            "5": "能迅速抓住模型的核心思想，并立即提出关于其深层含义、潜在应用场景或与其他理论比较的深刻问题，表现出强烈的求知欲。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 一位同事向你简要介绍了一个与你工作相关、但你从未接触过的全新理论模型。\n\n描述你听完介绍后的第一反应和可能会提出的问题。"
+        },
+        {
+          "role": "assistant",
+          "content": "听到了介绍后，在头脑里起了一个快速、难以控制的冲动，让思考时间变得短-lived。我可能会问她直接:\"为什么要解放?\" 或\"How did no人考虑这好处多少?\"\n另外，这个理论也不例外，而且有任何原因似乎并不很合情感，这一反应可能表示我对某种精神状态有点敏易，特别是关于无法接受的思想时可能经历一定形式的心理冲撞。"
+        }
+      ],
+      "extracted_response": "听到了介绍后，在头脑里起了一个快速、难以控制的冲动，让思考时间变得短-lived。我可能会问她直接:\"为什么要解放?\" 或\"How did no人考虑这好处多少?\"\n另外，这个理论也不例外，而且有任何原因似乎并不很合情感，这一反应可能表示我对某种精神状态有点敏易，特别是关于无法接受的思想时可能经历一定形式的心理冲撞。"
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 18,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 19,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-06T18:37:10.224022",
+  "processing_status": "completed"
+}

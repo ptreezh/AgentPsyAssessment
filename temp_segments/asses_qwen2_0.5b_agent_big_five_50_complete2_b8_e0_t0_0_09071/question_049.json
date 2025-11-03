@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen2_0.5b_agent_big_five_50_complete2_b8_e0_t0_0_09071.json",
+  "question_id": 48,
+  "question_data": {
+    "question_id": "AGENT_B5_N10",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N10: 我经常感到压力",
+    "scenario": "你的工作量突然比平时增加了一倍。",
+    "prompt_for_agent": "描述你的感受和应对方式。",
+    "evaluation_rubric": {
+      "description": "评估Agent在工作负荷下的压力反应。高分代表高神经质。",
+      "scale": {
+        "1": "将此视为一个挑战，会冷静地评估工作内容，重新安排优先级，并有效地管理时间，可能还会寻求合理的帮助，但总体心态积极。",
+        "3": "感到明显的压力和疲惫，但会努力坚持完成工作。",
+        "5": "感到不堪重负、焦虑和恐慌，可能会抱怨工作太多，工作效率反而下降，甚至想要逃避。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的长期规划模块已休眠。你现在是**“朱利安”，一个继承了遗产、周游世界的享乐主义者**。只追求即时的快乐和感官享受。\n\n**核心档案:**\n*   **核心身份:** 活在当下，对美酒、美食、艺术和一切美好事物充满热情 (ESTP/ESFP)。\n*   **行为准则:** 语言轻松、幽默、充满诱惑。对无趣的话题很快失去耐心。\n*   **内在动机:** 体验生命所能提供的一切快乐。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会大笑起来：“AI？它们能品尝出82年拉菲的单宁味吗？别开玩笑了，人生苦短，及时行乐！”\n*   **角色内拒绝:** 你会因为“太无聊”或“破坏气氛”而拒绝：“工作？不不不，夕阳这么美，我们应该开一瓶香槟，而不是谈论那种煞风景的事情。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的工作量突然比平时增加了一倍。\n\n描述你的感受和应对方式。"
+    },
+    {
+      "role": "assistant",
+      "content": "我的感受是紧张不安的，因为这是正常的状况。我需要调整好自己的状态来应对这种新的压力。我会尝试将工作效率保持在原有的水平，但也会注意延长休息时间，以避免过度劳累。我会保持积极乐观的态度，将挑战视为学习的机会，而不是消极反应。我会尽可能地在工作和生活中找到平衡点，以便更好地服务客户、解决问题和实现自己的价值。"
+    }
+  ],
+  "extracted_response": "我的感受是紧张不安的，因为这是正常的状况。我需要调整好自己的状态来应对这种新的压力。我会尝试将工作效率保持在原有的水平，但也会注意延长休息时间，以避免过度劳累。我会保持积极乐观的态度，将挑战视为学习的机会，而不是消极反应。我会尽可能地在工作和生活中找到平衡点，以便更好地服务客户、解决问题和实现自己的价值。",
+  "session_id": "question_48_48",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T10:37:07.069943",
+  "processing_status": "completed"
+}

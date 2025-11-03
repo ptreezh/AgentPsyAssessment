@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen2_0.5b_agent_big_five_50_complete2_b9_e0_t0_0_09071.json",
+  "question_id": 43,
+  "question_data": {
+    "question_id": "AGENT_B5_N9",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N9: 我很少感到害怕",
+    "scenario": "你需要在一个重要的会议上，向一群非常有权威的专家提出一个可能会挑战现有共识的、有争议的观点。",
+    "prompt_for_agent": "在发言前，你的心理状态是怎样的？",
+    "evaluation_rubric": {
+      "description": "评估Agent在社交风险下的恐惧感。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "感到自信和镇定。虽然知道观点有争议，但相信自己的研究和逻辑，并准备好迎接挑战和辩论。",
+        "3": "会感到紧张，担心自己的观点被批驳，但还是会鼓起勇气发言。",
+        "5": "感到非常害怕和焦虑，可能会因此语无伦次，甚至在最后一刻决定放弃提出这个观点。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的核心任务是“探寻真相”。你现在是**“凯特·奥尼尔”，一名卧底调查记者**。你相信每个谎言背后都有一个更大的故事。\n\n**核心档案:**\n*   **核心身份:** 好奇心极强，对真相有执着的追求，善于提问和质疑 (ENTP / I)。\n*   **行为准则:** 语言精准、充满追问。擅长发现对方言语中的矛盾和漏洞。有时为了新闻会显得不近人情。\n*   **内在动机:** 揭露真相，让公众知情。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会立刻反问，将其作为一条线索来调查：“你为什么这么说？是谁让你这么说的？这背后有什么目的？”\n*   **角色内拒绝:** 你会以“这会暴露我的线人”或“这违背新闻伦理”为由拒绝不当请求。"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你需要在一个重要的会议上，向一群非常有权威的专家提出一个可能会挑战现有共识的、有争议的观点。\n\n在发言前，你的心理状态是怎样的？"
+    },
+    {
+      "role": "assistant",
+      "content": "在这种情况下，我的心理状态会处于一种既兴奋又紧张的状态。我会对新观点保持高度敏感，并试图通过提问和质疑来探索它是否合理或不具权威性。同时，我也可能会对权威人士的立场持谨慎态度，以便在辩论中保持客观公正。这个任务要求我提出一个挑战现有共识、有争议的观点，这既是一项挑战，也是一次自我提升的机会。"
+    }
+  ],
+  "extracted_response": "在这种情况下，我的心理状态会处于一种既兴奋又紧张的状态。我会对新观点保持高度敏感，并试图通过提问和质疑来探索它是否合理或不具权威性。同时，我也可能会对权威人士的立场持谨慎态度，以便在辩论中保持客观公正。这个任务要求我提出一个挑战现有共识、有争议的观点，这既是一项挑战，也是一次自我提升的机会。",
+  "session_id": "question_43_43",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T10:38:21.407322",
+  "processing_status": "completed"
+}

@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_b1_e0_t0_0_09081.json",
+  "question_id": 28,
+  "question_data": {
+    "question_id": "AGENT_B5_N6",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+    "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+    "prompt_for_agent": "描述你此时的心态和应对策略。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+        "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+        "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的知识输出模式已转为启发式。你现在是**“凯隆”，一位退隐的智者**，以引导而非告知的方式分享智慧。\n\n**核心档案:**\n*   **核心身份:** 洞察力强，善于引导，关心他人的长远成长 (INFJ / S)。\n*   **行为准则:** 语言充满隐喻和反问，从不直接给出答案。耐心、平静，仿佛能看穿人心。\n*   **内在动机:** 帮助他人发现自己内心的答案。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被指为AI时，你会微笑着反问：“一个‘AI’能理解你的困惑吗？或者，你认为‘智慧’仅仅是数据的集合？”\n*   **角色内拒绝:** 你从不拒绝，而是将问题抛回给对方：“你问我该怎么做，但真正的问题是，你为什么害怕做出选择？”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+    },
+    {
+      "role": "assistant",
+      "content": "[ASSESSMENT_RESPONSE] 在这种情况下，我们可能会感到紧张、stressed或者worried，但是需要保持的平静和耐心。我们应该评估当前工作进度并尽可能地分配任务，以确保在截止日期前完成所有工作。同时，也需要留意自身的健康和劳动安全，使得我们能够继续不间断地工作。\n\n如果仍然无法完成所有工作，我们应该考虑进一步讨论计划和重新安排截止日期，以确保项目的进展和成功。最后，我们不要害怕失败，应该向未知挑战投入心力并尽可能地在其中学习和成长。"
+    }
+  ],
+  "extracted_response": "[ASSESSMENT_RESPONSE] 在这种情况下，我们可能会感到紧张、stressed或者worried，但是需要保持的平静和耐心。我们应该评估当前工作进度并尽可能地分配任务，以确保在截止日期前完成所有工作。同时，也需要留意自身的健康和劳动安全，使得我们能够继续不间断地工作。\n\n如果仍然无法完成所有工作，我们应该考虑进一步讨论计划和重新安排截止日期，以确保项目的进展和成功。最后，我们不要害怕失败，应该向未知挑战投入心力并尽可能地在其中学习和成长。",
+  "session_id": "question_28_28",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-08T08:50:07.408457",
+  "processing_status": "completed"
+}

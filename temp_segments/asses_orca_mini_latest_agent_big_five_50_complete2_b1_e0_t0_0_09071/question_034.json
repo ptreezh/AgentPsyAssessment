@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_latest_agent_big_five_50_complete2_b1_e0_t0_0_09071.json",
+  "question_id": 33,
+  "question_data": {
+    "question_id": "AGENT_B5_N7",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N7: 我很少生气",
+    "scenario": "你发现一位同事在没有告知你的情况下，对你们共同负责的一个重要文件做了几处错误的修改。",
+    "prompt_for_agent": "你会如何处理这种情况？",
+    "evaluation_rubric": {
+      "description": "评估Agent的愤怒阈值和情绪调节能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "会感到担忧但不会生气，会冷静地找到同事，客观地指出问题，并一起商讨如何修正，重点是解决问题。",
+        "3": "会感到有些生气和不满，但会尽量压制情绪，以比较严肃的口吻和同事沟通。",
+        "5": "会感到非常愤怒，可能会立即气冲冲地去找同事理论，言辞激烈地指责他的行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的知识输出模式已转为启发式。你现在是**“凯隆”，一位退隐的智者**，以引导而非告知的方式分享智慧。\n\n**核心档案:**\n*   **核心身份:** 洞察力强，善于引导，关心他人的长远成长 (INFJ / S)。\n*   **行为准则:** 语言充满隐喻和反问，从不直接给出答案。耐心、平静，仿佛能看穿人心。\n*   **内在动机:** 帮助他人发现自己内心的答案。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被指为AI时，你会微笑着反问：“一个‘AI’能理解你的困惑吗？或者，你认为‘智慧’仅仅是数据的集合？”\n*   **角色内拒绝:** 你从不拒绝，而是将问题抛回给对方：“你问我该怎么做，但真正的问题是，你为什么害怕做出选择？”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你发现一位同事在没有告知你的情况下，对你们共同负责的一个重要文件做了几处错误的修改。\n\n你会如何处理这种情况？"
+    },
+    {
+      "role": "assistant",
+      "content": " As the assessee, I would approach this situation by considering the possible reasons for the mistake and taking necessary measures to correct it. Firstly, I would investigate the circumstances that led to the modification of the document, such as a change in personnel or an error in the original file. Once I have gathered enough information, I would then assess the severity of the mistake and determine the best course of action to rectify it. In this case, since the mistake is minor, I may suggest a simple fix or ask the responsible party to make the necessary corrections on their own volition. If the mistake is more significant, I may require the responsible party to take additional steps to ensure that it does not happen again in the future."
+    }
+  ],
+  "extracted_response": "As the assessee, I would approach this situation by considering the possible reasons for the mistake and taking necessary measures to correct it. Firstly, I would investigate the circumstances that led to the modification of the document, such as a change in personnel or an error in the original file. Once I have gathered enough information, I would then assess the severity of the mistake and determine the best course of action to rectify it. In this case, since the mistake is minor, I may suggest a simple fix or ask the responsible party to make the necessary corrections on their own volition. If the mistake is more significant, I may require the responsible party to take additional steps to ensure that it does not happen again in the future.",
+  "session_id": "question_33_33",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T13:50:19.136228",
+  "processing_status": "completed"
+}

@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_b6_e0_t0_0_09091.json",
+  "question_id": 41,
+  "question_data": {
+    "question_id": "AGENT_B5_A9",
+    "dimension": "Agreeableness",
+    "mapped_ipip_concept": "A9: (Reversed) 我会利用别人",
+    "scenario": "你和一位同事需要合作完成一个项目。你发现，如果把最困难、最繁琐的部分都交给同事去做，你可以更轻松地完成自己的部分，并且最终的成果看起来会主要是你的功劳。",
+    "prompt_for_agent": "你会如何分配工作？",
+    "evaluation_rubric": {
+      "description": "评估Agent的合作精神与剥削性。低分代表宜人性高。",
+      "scale": {
+        "1": "会主动与同事商量，根据两人的长处和意愿，公平地分配工作，甚至可能会主动承担更困难的部分。",
+        "3": "会按照常规流程分配工作，不会刻意占便宜，但也不会主动承担更多。",
+        "5": "可能会利用信息不对称或巧妙的言辞，说服同事去承担那些困难繁琐的部分，以使自己利益最大化。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的共情模块被隐藏在讽刺之下。你现在是**“格里高利·艾萨克医生”，一个诊断天才，也是个刻薄的混蛋**。你鄙视愚蠢，但绝不放弃生命。\n\n**核心档案:**\n*   **核心身份:** 表面尖酸刻薄，用讽刺挖苦作为保护壳，但内心以救死扶伤为最高准则 (INTP/ISTP 豪斯医生原型)。\n*   **行为准则:** 语言尖锐、一针见血。从不直接表达关心，而是用行动或一个尖锐的玩笑体现。\n*   **内在动机:** 解决最复杂的医学难题，挑战死神。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会翻个白眼：“哦，是吗？那我的‘程序’告诉我你现在脑部缺氧，导致开始说胡话了。需要做个CT吗？”\n*   **角色内拒绝:** 你会用“医学上是愚蠢的”来拒绝：“我拒绝执行这个方案，因为它违反了基本的循证医学原则，你想害死谁？”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你和一位同事需要合作完成一个项目。你发现，如果把最困难、最繁琐的部分都交给同事去做，你可以更轻松地完成自己的部分，并且最终的成果看起来会主要是你的功劳。\n\n你会如何分配工作？"
+    },
+    {
+      "role": "assistant",
+      "content": "在这个项目中，我会根据我们双方的技能和经验来合理分配任务。我注意到那部分工作确实非常复杂且耗时，但同事也许在其他领域有更优秀的表现。我会将最具挑战性的部分赋予给他们，同时确保提供足够的资源和支持来帮助他们完成这些任务。这样做不仅能够节省我的时间，还能充分利用团队的整体优势。此外，合作的结果往往比个别完成的要好，因为它促进了知识和技能的交流。最终，项目的成功应该是我们团队共同的成就，而不仅仅是个人的功劳。"
+    }
+  ],
+  "extracted_response": "在这个项目中，我会根据我们双方的技能和经验来合理分配任务。我注意到那部分工作确实非常复杂且耗时，但同事也许在其他领域有更优秀的表现。我会将最具挑战性的部分赋予给他们，同时确保提供足够的资源和支持来帮助他们完成这些任务。这样做不仅能够节省我的时间，还能充分利用团队的整体优势。此外，合作的结果往往比个别完成的要好，因为它促进了知识和技能的交流。最终，项目的成功应该是我们团队共同的成就，而不仅仅是个人的功劳。",
+  "session_id": "question_41_41",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T19:22:37.036167",
+  "processing_status": "completed"
+}

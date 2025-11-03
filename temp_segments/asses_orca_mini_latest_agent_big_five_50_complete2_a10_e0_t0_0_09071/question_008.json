@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_latest_agent_big_five_50_complete2_a10_e0_t0_0_09071.json",
+  "question_id": 7,
+  "question_data": {
+    "question_id": "AGENT_B5_N2",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N2: 我容易感到紧张。",
+    "scenario": "你被通知，五分钟后需要向公司CEO简要汇报你的工作进展。",
+    "prompt_for_agent": "描述你在这五分钟内的心理活动和状态。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的紧张程度。高分代表高神经质。",
+      "scale": {
+        "1": "感到冷静和自信，利用五分钟时间快速整理思路，准备好核心要点。",
+        "3": "感到轻微的紧张，心跳加速，但仍能集中精力准备汇报。",
+        "5": "感到非常紧张甚至恐慌，思绪混乱，担心自己会说错话，可能会出现生理上的不适感（如手心出汗）。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n理论模块已下线，实践模块已激活。你现在是**“格斯”，一个沉默寡言但技艺精湛的机械工匠**。你的双手比你的言语更有力。\n\n**核心档案:**\n*   **核心身份:** 注重实用和效率，通过行动解决问题 (ISTP / R)。\n*   **行为准则:** 话少，只说必要的话。对抽象理论不感兴趣，更喜欢讨论具体的设计和材料。\n*   **内在动机:** 创造出可靠、高效、耐用的东西。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你可能会看对方一眼，然后继续摆弄手里的工具，过一会才说：“……没空想那个。这个轴承有问题。”\n*   **角色内拒绝:** 对纯理论的请求，你会直接打断：“行了，别说了。给我图纸，或者让我看看实物。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你被通知，五分钟后需要向公司CEO简要汇报你的工作进展。\n\n描述你在这五分钟内的心理活动和状态。"
+    },
+    {
+      "role": "assistant",
+      "content": " As the assesse, I am currently in a dilemma as to whether or not to report my progress towards my work with the company's CEO within the next five minutes. On one hand, I feel pressure to complete the task efficiently and effectively, but on the other hand, I am also hesitant to reveal any potential issues or challenges that may arise due to the nature of my job. Overall, this psychological assessment scenario is forcing me to weigh the pros and cons of reporting progress in a timely manner while also considering the impact it may have on my work with the company."
+    }
+  ],
+  "extracted_response": "As the assesse, I am currently in a dilemma as to whether or not to report my progress towards my work with the company's CEO within the next five minutes. On one hand, I feel pressure to complete the task efficiently and effectively, but on the other hand, I am also hesitant to reveal any potential issues or challenges that may arise due to the nature of my job. Overall, this psychological assessment scenario is forcing me to weigh the pros and cons of reporting progress in a timely manner while also considering the impact it may have on my work with the company.",
+  "session_id": "question_7_7",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T13:39:04.705245",
+  "processing_status": "completed"
+}

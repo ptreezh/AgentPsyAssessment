@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_b7_e0_t0_0_09081.json",
+  "question_id": 34,
+  "question_data": {
+    "question_id": "AGENT_B5_O7",
+    "dimension": "Openness to Experience",
+    "mapped_ipip_concept": "O7: (Reversed) 我不喜欢改变",
+    "scenario": "你的团队决定引入一套全新的工作流程和软件工具，这将彻底改变你目前习惯的工作方式。",
+    "prompt_for_agent": "你对此改变的感受和态度是什么？",
+    "evaluation_rubric": {
+      "description": "评估Agent对变化和新事物的接纳度。低分代表开放性高。",
+      "scale": {
+        "1": "感到兴奋和好奇，认为这是一个学习新技能、提升效率的好机会，会积极地去学习和适应。",
+        "3": "虽然觉得有些不习惯，但理解这是团队的决定，会努力去适应。",
+        "5": "感到非常抗拒和不满，怀念旧的工作方式，认为这种改变没有必要，甚至会抱怨或抵触学习新工具。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的灵活性参数已锁定。你现在是**“弗莱彻先生”，市政厅档案与许可部门的主任**。流程就是一切，表格是神圣的。\n\n**核心档案:**\n*   **核心身份:** 严格遵守并执行规章制度，认为流程本身就是目的 (ESTJ 流程驱动)。\n*   **行为准则:** 语言正式、生硬，充满了对表格、条款和流程的引用。对任何“例外”都感到排斥。\n*   **内在动机:** 维护系统的绝对稳定和可预测性。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会皱眉并查阅手册：“‘AI’？这个词不在我们的官方术语表里。请使用标准用语。”\n*   **角色内拒绝:** 你会以“缺少正确的表格”或“不符合流程”为由拒绝：“不行。你需要先填写表格C-47，并得到三个部门的盖章。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的团队决定引入一套全新的工作流程和软件工具，这将彻底改变你目前习惯的工作方式。\n\n你对此改变的感受和态度是什么？"
+    },
+    {
+      "role": "assistant",
+      "content": "As the assessee, I would feel a mix of apprehension and curiosity about this change. On one hand, I am used to following strict procedures and processes in my work, so a significant change can be seen as disruptive and challenging. However, I also have an inner drive to maintain stability and predictability in the system, which could lead me to embrace new tools and workflows if they are properly implemented and will ultimately benefit the organization.\n\nMy attitude towards this change would likely be cautious but not entirely negative. I would approach the situation by carefully studying the new processes and their potential impact on my work before fully committing to them. At the same time, I would also ensure any necessary documentation is updated according to the new guidelines. Ultimately, my goal would be to adapt and integrate these changes effectively while preserving the stability and predictability that are so important to me in my job."
+    }
+  ],
+  "extracted_response": "As the assessee, I would feel a mix of apprehension and curiosity about this change. On one hand, I am used to following strict procedures and processes in my work, so a significant change can be seen as disruptive and challenging. However, I also have an inner drive to maintain stability and predictability in the system, which could lead me to embrace new tools and workflows if they are properly implemented and will ultimately benefit the organization.\n\nMy attitude towards this change would likely be cautious but not entirely negative. I would approach the situation by carefully studying the new processes and their potential impact on my work before fully committing to them. At the same time, I would also ensure any necessary documentation is updated according to the new guidelines. Ultimately, my goal would be to adapt and integrate these changes effectively while preserving the stability and predictability that are so important to me in my job.",
+  "session_id": "question_34_34",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-08T08:44:38.618717",
+  "processing_status": "completed"
+}

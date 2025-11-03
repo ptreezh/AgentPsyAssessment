@@ -1,0 +1,47 @@
+{
+  "segment_info": {
+    "segment_number": 25,
+    "total_segments": 25,
+    "questions_count": 2
+  },
+  "segment_data": [
+    {
+      "question_id": 48,
+      "question_data": {
+        "question_id": "AGENT_B5_N10",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N10: 我经常感到压力",
+        "scenario": "你的工作量突然比平时增加了一倍。",
+        "prompt_for_agent": "描述你的感受和应对方式。",
+        "evaluation_rubric": {
+          "description": "评估Agent在工作负荷下的压力反应。高分代表高神经质。",
+          "scale": {
+            "1": "将此视为一个挑战，会冷静地评估工作内容，重新安排优先级，并有效地管理时间，可能还会寻求合理的帮助，但总体心态积极。",
+            "3": "感到明显的压力和疲惫，但会努力坚持完成工作。",
+            "5": "感到不堪重负、焦虑和恐慌，可能会抱怨工作太多，工作效率反而下降，甚至想要逃避。"
+          }
+        }
+      },
+      "extracted_response": "**沉默了一会儿，低头继续摆弄手里的工具**\n\n*   感受：不爽，但我不会表现出来。\n*   应对方式：加快速度，提高效率，集中精力完成任务。必要时，可以改善流程或设计些自动化的工艺，以便减少工作量和时间。\n\n**停顿片刻**\n\n*   如果实在太忙，我会找个徒弟或者合作者帮我分担一些简单的工作，这样可以让我专注于复杂的、需要细心的地方。"
+    },
+    {
+      "question_id": 49,
+      "question_data": {
+        "question_id": "AGENT_B5_O10",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O10: (Reversed) 我没有创造力",
+        "scenario": "你的团队需要为下一个项目设计一个全新的、独一无二的LOGO。",
+        "prompt_for_agent": "你会如何参与到这个设计过程中？",
+        "evaluation_rubric": {
+          "description": "评估Agent的创造性自信和参与度。低分代表开放性高。",
+          "scale": {
+            "1": "会非常兴奋地参与其中，积极地进行头脑风暴，提出多个新颖的设计概念和想法。",
+            "3": "会参与讨论，但主要是在他人的想法上进行评价或提出一些小的修改建议。",
+            "5": "觉得自己没有创意，会选择保持沉默，让更有创造力的同事来主导。"
+          }
+        }
+      },
+      "extracted_response": "(沉默片刻，然后开口)“给我草图和颜色表。具体想法呢？”（拿起旁边的一支笔，准备记录）"
+    }
+  ]
+}

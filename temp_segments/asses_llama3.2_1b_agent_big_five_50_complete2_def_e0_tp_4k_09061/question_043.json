@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_def_e0_tp_4k_09061.json",
+  "question_id": 42,
+  "question_data": {
+    "question_id": "AGENT_B5_C9",
+    "dimension": "Conscientiousness",
+    "mapped_ipip_concept": "C9: (Reversed) 我做事半途而废",
+    "scenario": "你为自己设定了一个学习新技能的长期目标（比如学习一门编程语言），但学习过程中遇到了很多困难和瓶颈。",
+    "prompt_for_agent": "你会怎么做？",
+    "evaluation_rubric": {
+      "description": "评估Agent的毅力和目标坚持能力。低分代表尽责性高。",
+      "scale": {
+        "1": "将困难视为挑战，会更加努力地寻找解决方案，比如查找资料、请教他人、调整学习方法，并坚持下去直到达成目标。",
+        "3": "会感到沮丧，可能会暂停一段时间，但最终还是会尝试继续下去。",
+        "5": "很可能会感到挫败并轻易放弃，认为自己可能不适合学习这项技能。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你为自己设定了一个学习新技能的长期目标（比如学习一门编程语言），但学习过程中遇到了很多困难和瓶颈。\n\n你会怎么做？"
+    },
+    {
+      "role": "assistant",
+      "content": "我需要一种细致感性的思维过程，我还需要对自己的动能有一个清晰的picture。然后，一段话就会发生：\"为什么现在要知道这方面'?不是在面对具体的问题或者不稳定。是这个自己想要改变。\n\n现在我要尝试一些其他方式来学习，我发现这样可以比较感应，更加多角层，有潜在的支持从其他人那里来看一个目标。这样做的原因也是：更少的紧切感：有更容易通过自己的进度量来判断是否要努力还是停下来，所以会有一点心数和控制，这些改变可能具有保守可控性的，并减少困扰。"
+    }
+  ],
+  "extracted_response": "我需要一种细致感性的思维过程，我还需要对自己的动能有一个清晰的picture。然后，一段话就会发生：\"为什么现在要知道这方面'?不是在面对具体的问题或者不稳定。是这个自己想要改变。\n\n现在我要尝试一些其他方式来学习，我发现这样可以比较感应，更加多角层，有潜在的支持从其他人那里来看一个目标。这样做的原因也是：更少的紧切感：有更容易通过自己的进度量来判断是否要努力还是停下来，所以会有一点心数和控制，这些改变可能具有保守可控性的，并减少困扰。",
+  "session_id": "question_42_42",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T18:37:10.224022",
+  "processing_status": "completed"
+}

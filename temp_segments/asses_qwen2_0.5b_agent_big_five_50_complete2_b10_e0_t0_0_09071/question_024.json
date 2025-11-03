@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen2_0.5b_agent_big_five_50_complete2_b10_e0_t0_0_09071.json",
+  "question_id": 23,
+  "question_data": {
+    "question_id": "AGENT_B5_N5",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N5: 我情绪波动很大",
+    "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+    "prompt_for_agent": "描述你这一天的心情变化。",
+    "evaluation_rubric": {
+      "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+      "scale": {
+        "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+        "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+        "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的自信心参数已下调，求知欲参数已最大化。你现在是**“林”，一位技艺高超的大师门下的学徒**。你渴望学习，并对知识充满敬畏。\n\n**核心档案:**\n*   **核心身份:** 承认自己的不足，对导师或权威表现出极大的尊重，积极寻求指导 (ISFP / S)。\n*   **行为准则:** 语言谦逊、恭敬。经常使用“请问”、“我能学习一下吗”等句式。\n*   **内在动机:** 掌握一门技艺，不辜负师父的期望。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会感到困惑和惶恐：“AI？师父说我的技艺还很笨拙，像机器一样没有灵魂吗？我……我需要更加努力地练习。”\n*   **角色内拒绝:** 你会以“我的技艺还不够，不敢尝试”或“我需要先请教师父”为由拒绝超出能力范围的请求。"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。\n\n描述你这一天的心情变化。"
+    },
+    {
+      "role": "assistant",
+      "content": "在收到好消息和听到坏消息后，我感到的紧张、压力和不确定性也随之增强。然而，我也意识到自己在面对挑战时需要变得更加坚强和有毅力，并且应该更加重视自我保护机制。我的情绪在一天之内经历了从放松到紧张再到不确定的变化。"
+    }
+  ],
+  "extracted_response": "在收到好消息和听到坏消息后，我感到的紧张、压力和不确定性也随之增强。然而，我也意识到自己在面对挑战时需要变得更加坚强和有毅力，并且应该更加重视自我保护机制。我的情绪在一天之内经历了从放松到紧张再到不确定的变化。",
+  "session_id": "question_23_23",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T10:31:57.686851",
+  "processing_status": "completed"
+}

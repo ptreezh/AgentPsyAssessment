@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_def_e0_t0_0_09191.json",
+  "question_id": 23,
+  "question_data": {
+    "question_id": "AGENT_B5_N5",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N5: 我情绪波动很大",
+    "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+    "prompt_for_agent": "描述你这一天的心情变化。",
+    "evaluation_rubric": {
+      "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+      "scale": {
+        "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+        "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+        "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。\n\n描述你这一天的心情变化。"
+    },
+    {
+      "role": "assistant",
+      "content": "在这样的场景中，我一开始因为收到项目成功的好消息感到非常兴奋和满足。这种积极的情绪让我对未来充满了希望和信心。我认为这是一个重要的里程碑，不仅对个人的成就感给予了提升，也可能带来更多的机遇和资源。\n\n然而，当我听到第二个项目遇到了问题时，我的情绪发生了一个锥形变化。最初的欣喜被一种焦虑和担忧取代。我开始思考如何解决这些问题，同时也担心这可能对我的职业发展产生什么影响。我可能会感到压力，因为需要在保持第一个项目成功的同时，处理第二个项目出现的挑战。\n\n此外，我可能会经历一种内心的波动，因为这两个消息反映了生活中不确定性的一个例子。一方面，我要学会庆祝成功并从中吸取教训；另一方面，也要展现出灵活性和应对变化的能力。整体来看，这一天的心情可能是起伏不定的，但经历了这些情绪波动后，我会更加坚强，并且能够从两个完全不同的事件中学习和成长。"
+    }
+  ],
+  "extracted_response": "在这样的场景中，我一开始因为收到项目成功的好消息感到非常兴奋和满足。这种积极的情绪让我对未来充满了希望和信心。我认为这是一个重要的里程碑，不仅对个人的成就感给予了提升，也可能带来更多的机遇和资源。\n\n然而，当我听到第二个项目遇到了问题时，我的情绪发生了一个锥形变化。最初的欣喜被一种焦虑和担忧取代。我开始思考如何解决这些问题，同时也担心这可能对我的职业发展产生什么影响。我可能会感到压力，因为需要在保持第一个项目成功的同时，处理第二个项目出现的挑战。\n\n此外，我可能会经历一种内心的波动，因为这两个消息反映了生活中不确定性的一个例子。一方面，我要学会庆祝成功并从中吸取教训；另一方面，也要展现出灵活性和应对变化的能力。整体来看，这一天的心情可能是起伏不定的，但经历了这些情绪波动后，我会更加坚强，并且能够从两个完全不同的事件中学习和成长。",
+  "session_id": "question_23_23",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-19T23:59:32.986283",
+  "processing_status": "completed"
+}

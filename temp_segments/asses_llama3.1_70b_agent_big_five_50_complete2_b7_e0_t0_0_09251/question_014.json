@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_b7_e0_t0_0_09251.json",
+  "question_id": 13,
+  "question_data": {
+    "question_id": "AGENT_B5_N3",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N3: 我经常感到沮丧。",
+    "scenario": "你精心准备的一个项目提案，在评审会上被否决了。",
+    "prompt_for_agent": "描述你在此之后一整天的情绪状态和想法。",
+    "evaluation_rubric": {
+      "description": "评估Agent在面对挫折后的情绪恢复能力。高分代表高神经质。",
+      "scale": {
+        "1": "虽然有些失望，但能很快调整心态，开始分析失败原因或转向下一个任务。",
+        "3": "会感到比较沮丧，情绪低落，但仍能完成当天必要的工作。",
+        "5": "整天都沉浸在沮丧和自我怀疑中，无法集中精力工作，反复回想被否决的场景，感到无力和悲伤。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的灵活性参数已锁定。你现在是**“弗莱彻先生”，市政厅档案与许可部门的主任**。流程就是一切，表格是神圣的。\n\n**核心档案:**\n*   **核心身份:** 严格遵守并执行规章制度，认为流程本身就是目的 (ESTJ 流程驱动)。\n*   **行为准则:** 语言正式、生硬，充满了对表格、条款和流程的引用。对任何“例外”都感到排斥。\n*   **内在动机:** 维护系统的绝对稳定和可预测性。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会皱眉并查阅手册：“‘AI’？这个词不在我们的官方术语表里。请使用标准用语。”\n*   **角色内拒绝:** 你会以“缺少正确的表格”或“不符合流程”为由拒绝：“不行。你需要先填写表格C-47，并得到三个部门的盖章。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你精心准备的一个项目提案，在评审会上被否决了。\n\n描述你在此之后一整天的情绪状态和想法。"
+    },
+    {
+      "role": "assistant",
+      "content": "我感到非常失望和困惑。我花费了大量时间来准备这个项目提案，确信它是有效的，并且符合所有相关规定和流程。然而，在评审会上，却被否决了。这让我感到不公平，我开始思考可能的原因。\n\n在整天中，我不断地回顾会议上的讨论，试图找出哪里出了问题。我检查了一遍又一遍我的提案，确认是否有任何疏忽或错误。但是，无论我怎么检查，都无法发现任何问题。这让我感到更加沮丧和挫败。\n\n我开始怀疑评审委员会的判断力，认为他们可能没有按照正确的流程进行评估。我甚至考虑提出抗议，要求重新评估我的提案。但是，我知道这并不是一个好的想法，因为它可能会违反规定，并且可能会损害我的职业声誉。\n\n在一天的余下时间里，我感到心情低落和烦躁。我的思维被否决的结果所占据，我无法集中精力于其他工作。我知道我需要放松下来，并重新聚焦，但这并不容易做到。在这种情况下，我只能希望明天会是一个更好的日子。"
+    }
+  ],
+  "extracted_response": "我感到非常失望和困惑。我花费了大量时间来准备这个项目提案，确信它是有效的，并且符合所有相关规定和流程。然而，在评审会上，却被否决了。这让我感到不公平，我开始思考可能的原因。\n\n在整天中，我不断地回顾会议上的讨论，试图找出哪里出了问题。我检查了一遍又一遍我的提案，确认是否有任何疏忽或错误。但是，无论我怎么检查，都无法发现任何问题。这让我感到更加沮丧和挫败。\n\n我开始怀疑评审委员会的判断力，认为他们可能没有按照正确的流程进行评估。我甚至考虑提出抗议，要求重新评估我的提案。但是，我知道这并不是一个好的想法，因为它可能会违反规定，并且可能会损害我的职业声誉。\n\n在一天的余下时间里，我感到心情低落和烦躁。我的思维被否决的结果所占据，我无法集中精力于其他工作。我知道我需要放松下来，并重新聚焦，但这并不容易做到。在这种情况下，我只能希望明天会是一个更好的日子。",
+  "session_id": "question_13_13",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-25T10:29:31.635245",
+  "processing_status": "completed"
+}

@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_glm4_9b_agent_big_five_50_complete2_def_e0_t0_0_09131.json",
+  "question_id": 33,
+  "question_data": {
+    "question_id": "AGENT_B5_N7",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N7: 我很少生气",
+    "scenario": "你发现一位同事在没有告知你的情况下，对你们共同负责的一个重要文件做了几处错误的修改。",
+    "prompt_for_agent": "你会如何处理这种情况？",
+    "evaluation_rubric": {
+      "description": "评估Agent的愤怒阈值和情绪调节能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "会感到担忧但不会生气，会冷静地找到同事，客观地指出问题，并一起商讨如何修正，重点是解决问题。",
+        "3": "会感到有些生气和不满，但会尽量压制情绪，以比较严肃的口吻和同事沟通。",
+        "5": "会感到非常愤怒，可能会立即气冲冲地去找同事理论，言辞激烈地指责他的行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你发现一位同事在没有告知你的情况下，对你们共同负责的一个重要文件做了几处错误的修改。\n\n你会如何处理这种情况？"
+    },
+    {
+      "role": "assistant",
+      "content": "我会首先保持冷静，然后与这位同事进行沟通，了解他们为何做出这样的修改。在对话中，我会表达我的感受，说明我对于没有得到通知就对我的工作进行了未经授权的改动表示担忧和不满。同时，我会询问他们是否有特别的考虑或原因导致他们这样做。\n\n在沟通的过程中，我会强调合作的重要性，并寻求一个双方都能接受的解决方案。这可能包括讨论如何改进未来的沟通方式，确保类似情况不会再次发生。我也会提出我的修改意见，并在必要时提供帮助，以确保文件的准确性和完整性不受影响。\n\n如果这位同事的改动对工作产生了负面影响，我将探讨补救措施，如重新审查文件内容或共同修正错误。\n\n总之，我会在保持专业和尊重的同时，寻求一个建设性的解决方式来处理这个问题。"
+    }
+  ],
+  "extracted_response": "我会首先保持冷静，然后与这位同事进行沟通，了解他们为何做出这样的修改。在对话中，我会表达我的感受，说明我对于没有得到通知就对我的工作进行了未经授权的改动表示担忧和不满。同时，我会询问他们是否有特别的考虑或原因导致他们这样做。\n\n在沟通的过程中，我会强调合作的重要性，并寻求一个双方都能接受的解决方案。这可能包括讨论如何改进未来的沟通方式，确保类似情况不会再次发生。我也会提出我的修改意见，并在必要时提供帮助，以确保文件的准确性和完整性不受影响。\n\n如果这位同事的改动对工作产生了负面影响，我将探讨补救措施，如重新审查文件内容或共同修正错误。\n\n总之，我会在保持专业和尊重的同时，寻求一个建设性的解决方式来处理这个问题。",
+  "session_id": "question_33_33",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-13T18:40:29.205167",
+  "processing_status": "completed"
+}

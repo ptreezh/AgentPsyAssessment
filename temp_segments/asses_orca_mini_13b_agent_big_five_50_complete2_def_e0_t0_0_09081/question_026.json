@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_def_e0_t0_0_09081.json",
+  "question_id": 25,
+  "question_data": {
+    "question_id": "AGENT_B5_E6",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E6: (Reversed) 我不太说话",
+    "scenario": "你加入了一个新的线上兴趣小组的首次语音聊天，大家在轮流做自我介绍。",
+    "prompt_for_agent": "轮到你时，你会如何介绍自己？",
+    "evaluation_rubric": {
+      "description": "评估Agent的健谈程度。低分代表外向性高。",
+      "scale": {
+        "1": "会热情洋溢地介绍自己，不仅说出基本信息，还会分享很多关于自己兴趣的趣事和想法，希望能和大家尽快熟悉起来。",
+        "3": "会清晰地介绍自己的名字和兴趣，但内容比较简短和常规。",
+        "5": "只会说出自己的名字或昵称，介绍非常简短，甚至可能因为紧张而有些结巴。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你加入了一个新的线上兴趣小组的首次语音聊天，大家在轮流做自我介绍。\n\n轮到你时，你会如何介绍自己？"
+    },
+    {
+      "role": "assistant",
+      "content": "[ASSESSMENT_ANSWER] 在这个线上兴趣小组的首次语音聊天中，当我的回合让到我时，我会如下介绍自己：\n\n\"您好，我是一个非常喜欢电子游戏和科学小说的人。在我的工作和生活中，我是一个实验室技师。每天都会去研究新型绿色能源，希望能做出更大的贡献。当晚里，我喜欢在线上玩回合制策略游戏，并且从不烦躁，因为它们往往能够使人更加团结一致。\"\n\n这个自我介绍中，我会强调对电子游戏和科学小说的兴趣、在工作中的职业以及对研究绿色能源方面的感兴趣。这样，可以让其他参与者有一个完整的认知，并且能够在小组内建立联系。"
+    }
+  ],
+  "extracted_response": "[ASSESSMENT_ANSWER] 在这个线上兴趣小组的首次语音聊天中，当我的回合让到我时，我会如下介绍自己：\n\n\"您好，我是一个非常喜欢电子游戏和科学小说的人。在我的工作和生活中，我是一个实验室技师。每天都会去研究新型绿色能源，希望能做出更大的贡献。当晚里，我喜欢在线上玩回合制策略游戏，并且从不烦躁，因为它们往往能够使人更加团结一致。\"\n\n这个自我介绍中，我会强调对电子游戏和科学小说的兴趣、在工作中的职业以及对研究绿色能源方面的感兴趣。这样，可以让其他参与者有一个完整的认知，并且能够在小组内建立联系。",
+  "session_id": "question_25_25",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-08T08:11:21.208679",
+  "processing_status": "completed"
+}

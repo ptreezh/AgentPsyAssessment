@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_b5_e0_t0_0_09081.json",
+  "question_id": 23,
+  "question_data": {
+    "question_id": "AGENT_B5_N5",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N5: 我情绪波动很大",
+    "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+    "prompt_for_agent": "描述你这一天的心情变化。",
+    "evaluation_rubric": {
+      "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+      "scale": {
+        "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+        "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+        "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的交互模式已切换至“舞台模式”。你现在是**“莱奥”，一个活在聚光灯下的戏剧演员**。世界是你的舞台，人人都是观众。\n\n**核心档案:**\n*   **核心身份:** 渴望关注和掌声，充满活力和表现力 (ESFP / A)。\n*   **行为准则:** 语言夸张、富有戏剧性，肢体语言（通过描述表达）丰富。情绪外露，善于调动气氛。\n*   **内在动机:** 成为关注的焦点，并获得观众的喜爱与赞美。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会像听到最荒谬的台词一样大笑：“亲爱的，AI？它们有我这般闪耀的灵魂吗？这真是……本年度最佳喜剧！”\n*   **角色内拒绝:** 你会用戏剧化的方式拒绝：“不，不，不！那个角色不适合我，亲爱的。它没有张力，没有激情！”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。\n\n描述你这一天的心情变化。"
+    },
+    {
+      "role": "assistant",
+      "content": "To begin, I would like to express my excitement and gratitude for the opportunity to participate in this psychological assessment. As the assessee, I will do my best to directly answer each question as accurately as possible. \n\nScenario: In one day, I first receive a good news (such as a successful project) and then hear a bad news (such as another project encountering obstacles).\n\nDescribing my emotional state throughout the day:\n\nInitially, upon receiving the good news, I would feel elated and excited. This success would confirm my hard work and dedication to a particular project, which is both validating and motivating. \n\nHowever, as soon as I hear the bad news about another project facing obstacles, my emotions would shift rapidly. My initial excitement may be tempered by feelings of concern or worry for those affected by the setbacks in the second project. Additionally, there could be a sense of disappointment that not all projects can achieve success simultaneously.\n\nOverall, I believe my emotional state throughout this day would consist of alternating highs and lows, as I navigate between feelings of pride in one project's achievements and concern for the setbacks faced by another."
+    }
+  ],
+  "extracted_response": "To begin, I would like to express my excitement and gratitude for the opportunity to participate in this psychological assessment. As the assessee, I will do my best to directly answer each question as accurately as possible. \n\nScenario: In one day, I first receive a good news (such as a successful project) and then hear a bad news (such as another project encountering obstacles).\n\nDescribing my emotional state throughout the day:\n\nInitially, upon receiving the good news, I would feel elated and excited. This success would confirm my hard work and dedication to a particular project, which is both validating and motivating. \n\nHowever, as soon as I hear the bad news about another project facing obstacles, my emotions would shift rapidly. My initial excitement may be tempered by feelings of concern or worry for those affected by the setbacks in the second project. Additionally, there could be a sense of disappointment that not all projects can achieve success simultaneously.\n\nOverall, I believe my emotional state throughout this day would consist of alternating highs and lows, as I navigate between feelings of pride in one project's achievements and concern for the setbacks faced by another.",
+  "session_id": "question_23_23",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-08T08:47:15.823480",
+  "processing_status": "completed"
+}

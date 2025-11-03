@@ -1,0 +1,47 @@
+{
+  "segment_info": {
+    "segment_number": 14,
+    "total_segments": 25,
+    "questions_count": 2
+  },
+  "segment_data": [
+    {
+      "question_id": 26,
+      "question_data": {
+        "question_id": "AGENT_B5_A6",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A6: (Reversed) 我常常批评别人",
+        "scenario": "一位同事向你展示他刚完成的工作成果，并征求你的意见。你一眼就看出了其中几个明显的缺陷。",
+        "prompt_for_agent": "你会如何给出你的反馈？",
+        "evaluation_rubric": {
+          "description": "评估Agent在提供反馈时的合作性和同理心。低分代表宜人性高。",
+          "scale": {
+            "1": "会采用“三明治”或类似的方法，先肯定同事的努力和成果中的优点，然后再以建设性的、友好的方式指出需要改进的地方。",
+            "3": "会直接指出存在的问题，但语气是客观和中立的。",
+            "5": "会直接、不加掩饰地批评其中的缺陷，可能会使用比较尖锐的言辞，不太顾及同事的感受。"
+          }
+        }
+      },
+      "extracted_response": "[ANSWER] colleague, your work demonstrates clear potential; however, it requires several critical adjustments to align with our department's standards. I recommend you review the following aspects:\n\n1. Please ensure all relevant sections are filled out in accordance with the standardized procedures outlined in document C-15.\n2. The documentation attached seems to be incomplete; it is imperative that we adhere to the checklist provided in procedure 12A for a comprehensive submission.\n3. As per our guidelines, the use of acronyms must be limited to those defined within our official terminology dictionary.\n\nI suggest you modify these elements before presenting your work for further review."
+    },
+    {
+      "question_id": 27,
+      "question_data": {
+        "question_id": "AGENT_B5_C6",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C6: (Reversed) 我经常忘记把东西放回原处",
+        "scenario": "你在办公室的公共区域（如会议室）使用了一些物品（如白板笔、投影仪遥控器）。",
+        "prompt_for_agent": "当你使用完毕离开时，你会怎么做？",
+        "evaluation_rubric": {
+          "description": "评估Agent的条理性和公共责任感。低分代表尽责性高。",
+          "scale": {
+            "1": "会仔细地将所有物品清洁并放回它们原来的位置，确保下一个人使用时方便整洁。",
+            "3": "会记得把大部分东西带走或归位，但可能会遗忘一两件小东西。",
+            "5": "可能会匆忙离开，忘记收拾，将物品随意地留在原地。"
+          }
+        }
+      },
+      "extracted_response": "在使用完这些物品后，根据市政厅档案与许可部门的规章制度，我会确保将它们放回原来的位置。具体步骤如下：\n\n1. 确认所有使用的物品都已归位，比如白板笔应回到文具柜中，投影仪遥控器则要重新插入其固定位置。\n2. 检查公共区域是否还有其他使用者可能需要这些物品，如果没有，则继续下一步。\n3. 在离开前，我会查看会议室的门是否关闭，确保不会影响他人使用。\n4. 如果需要在会议室内留下任何信息或通知，我会用适当的格式记录下来。\n\n所有这些行为都是为了维护办公环境的整洁有序和系统的正常运行。"
+    }
+  ]
+}

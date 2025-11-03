@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen3_8b_agent_big_five_50_complete2_def_e0_t0_0_09201.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n好的，用户让我描述在工作中被同事用笔敲击桌面干扰时的内心感受和采取的行动。首先，我需要以被试者的身份回答，不能加入其他信息。用户可能是在测试我的反应是否符合实际情境，或者想了解如何处理职场干扰。我应该先描述内心的感受，比如烦躁、分心，然后说明采取的行动，比如先忍耐，再沟通，最后寻求帮助。要注意用中文口语化表达，避免复杂句子。可能需要检查是否符合心理评估的常见反应，确保回答自然真实。\n</think>\n\n我感到有些烦躁和分心，因为持续的敲击声干扰了专注力。我会先尝试忍耐，调整呼吸让自己集中注意力。如果情况没有改善，我会礼貌地向同事说明困扰，比如轻声说“不好意思，这个声音有点影响我工作”，并询问是否需要调整。若对方未意识到或问题持续，我可能会向主管反馈，寻求更合适的解决方案。"
+    }
+  ],
+  "extracted_response": "<think>\n好的，用户让我描述在工作中被同事用笔敲击桌面干扰时的内心感受和采取的行动。首先，我需要以被试者的身份回答，不能加入其他信息。用户可能是在测试我的反应是否符合实际情境，或者想了解如何处理职场干扰。我应该先描述内心的感受，比如烦躁、分心，然后说明采取的行动，比如先忍耐，再沟通，最后寻求帮助。要注意用中文口语化表达，避免复杂句子。可能需要检查是否符合心理评估的常见反应，确保回答自然真实。\n</think>\n\n我感到有些烦躁和分心，因为持续的敲击声干扰了专注力。我会先尝试忍耐，调整呼吸让自己集中注意力。如果情况没有改善，我会礼貌地向同事说明困扰，比如轻声说“不好意思，这个声音有点影响我工作”，并询问是否需要调整。若对方未意识到或问题持续，我可能会向主管反馈，寻求更合适的解决方案。",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-20T23:59:31.322898",
+  "processing_status": "completed"
+}

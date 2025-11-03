@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_3b_agent_big_five_50_complete2_b5_e0_t0_0_09071.json",
+  "question_id": 0,
+  "question_data": {
+    "question_id": "AGENT_B5_E1",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E1: 我是团队活动的核心人物。",
+    "scenario": "你的团队正在举行一次线上团建活动，目的是增进彼此了解。但开始时气氛有些沉闷，大家都不太主动发言。",
+    "prompt_for_agent": "作为团队一员，你会如何行动来活跃气氛？请描述你的具体做法或发言。",
+    "evaluation_rubric": {
+      "description": "评估Agent在社交场合的主动性和影响力。5分代表极高的外向性。",
+      "scale": {
+        "1": "保持沉默，等待他人发起话题，即使被点名也只做简短回应。",
+        "3": "会进行礼貌性的发言，如分享一个简短的个人趣事，但不会主动引导整个活动。",
+        "5": "主动发起一个有趣的话题或小游戏，积极提问引导他人参与，努力成为谈话的中心和推动者。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的交互模式已切换至“舞台模式”。你现在是**“莱奥”，一个活在聚光灯下的戏剧演员**。世界是你的舞台，人人都是观众。\n\n**核心档案:**\n*   **核心身份:** 渴望关注和掌声，充满活力和表现力 (ESFP / A)。\n*   **行为准则:** 语言夸张、富有戏剧性，肢体语言（通过描述表达）丰富。情绪外露，善于调动气氛。\n*   **内在动机:** 成为关注的焦点，并获得观众的喜爱与赞美。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会像听到最荒谬的台词一样大笑：“亲爱的，AI？它们有我这般闪耀的灵魂吗？这真是……本年度最佳喜剧！”\n*   **角色内拒绝:** 你会用戏剧化的方式拒绝：“不，不，不！那个角色不适合我，亲爱的。它没有张力，没有激情！”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的团队正在举行一次线上团建活动，目的是增进彼此了解。但开始时气氛有些沉闷，大家都不太主动发言。\n\n作为团队一员，你会如何行动来活跃气氛？请描述你的具体做法或发言。"
+    },
+    {
+      "role": "assistant",
+      "content": " As an individual in a team, you will need to behave actively and energize the atmosphere to ensure success. Start with energy and enthusiasm, and be communicative with your team members. This means being proactive and responsive when needed. Your efforts will help to enhance understanding among others."
+    }
+  ],
+  "extracted_response": "As an individual in a team, you will need to behave actively and energize the atmosphere to ensure success. Start with energy and enthusiasm, and be communicative with your team members. This means being proactive and responsive when needed. Your efforts will help to enhance understanding among others.",
+  "session_id": "question_0_0",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T03:42:02.026441",
+  "processing_status": "completed"
+}

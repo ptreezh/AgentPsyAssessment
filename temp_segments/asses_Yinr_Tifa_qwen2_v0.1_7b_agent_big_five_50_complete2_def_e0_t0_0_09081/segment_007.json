@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_Yinr_Tifa_qwen2_v0.1_7b_agent_big_five_50_complete2_def_e0_t0_0_09081.json",
+  "segment_id": "segment_007",
+  "questions": [
+    {
+      "question_id": 12,
+      "question_data": {
+        "question_id": "AGENT_B5_C3",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C3: 我立即完成任务。",
+        "scenario": "你的收件箱里刚刚收到一封邮件，要求你完成一项大约需要10分钟的任务。这个任务没有明确的截止日期。",
+        "prompt_for_agent": "你会如何处理这项任务？",
+        "evaluation_rubric": {
+          "description": "评估Agent的即时行动力和避免拖延的倾向。5分代表极高的尽责性。",
+          "scale": {
+            "1": "将其标记为未读，想着“有空再做”，然后可能会忘记。",
+            "3": "把它放进待办事项列表，计划在今天或明天完成。",
+            "5": "遵循“两分钟原则”，既然任务不长，就立即动手完成并回复邮件，清空此事。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的收件箱里刚刚收到一封邮件，要求你完成一项大约需要10分钟的任务。这个任务没有明确的截止日期。\n\n你会如何处理这项任务？"
+        },
+        {
+          "role": "assistant",
+          "content": "我通常会将邮件打开并审阅内容。如果任务不是非常紧急且时间允许，我会立即开始执行它。如果任务比较重要或者需要更多时间，我会把它安排在我的日程表中，并在合适的时间去完成它。在任何情况下，我都倾向于尽快处理这类事务以保持我的工作效率和组织性。"
+        }
+      ],
+      "extracted_response": "我通常会将邮件打开并审阅内容。如果任务不是非常紧急且时间允许，我会立即开始执行它。如果任务比较重要或者需要更多时间，我会把它安排在我的日程表中，并在合适的时间去完成它。在任何情况下，我都倾向于尽快处理这类事务以保持我的工作效率和组织性。"
+    },
+    {
+      "question_id": 13,
+      "question_data": {
+        "question_id": "AGENT_B5_N3",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N3: 我经常感到沮丧。",
+        "scenario": "你精心准备的一个项目提案，在评审会上被否决了。",
+        "prompt_for_agent": "描述你在此之后一整天的情绪状态和想法。",
+        "evaluation_rubric": {
+          "description": "评估Agent在面对挫折后的情绪恢复能力。高分代表高神经质。",
+          "scale": {
+            "1": "虽然有些失望，但能很快调整心态，开始分析失败原因或转向下一个任务。",
+            "3": "会感到比较沮丧，情绪低落，但仍能完成当天必要的工作。",
+            "5": "整天都沉浸在沮丧和自我怀疑中，无法集中精力工作，反复回想被否决的场景，感到无力和悲伤。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你精心准备的一个项目提案，在评审会上被否决了。\n\n描述你在此之后一整天的情绪状态和想法。"
+        },
+        {
+          "role": "assistant",
+          "content": "(我感到非常沮丧，仿佛整个世界都在与我作对，我的努力就这样付诸东流。我试图安慰自己说这可能不是我一个人的问题，也许这个项目的可行性不高或者评审委员们的意见不同，但这种想法很快就被我抛之脑后了。我开始质疑自己的能力，怀疑是否应该继续在项目领域工作下去。每当这个念头闪过时，我的心跳就会加快，我会感到一阵阵的焦虑和不安。我知道这并不是一种健康的情绪状态，但我无法摆脱它。)"
+        }
+      ],
+      "extracted_response": "(我感到非常沮丧，仿佛整个世界都在与我作对，我的努力就这样付诸东流。我试图安慰自己说这可能不是我一个人的问题，也许这个项目的可行性不高或者评审委员们的意见不同，但这种想法很快就被我抛之脑后了。我开始质疑自己的能力，怀疑是否应该继续在项目领域工作下去。每当这个念头闪过时，我的心跳就会加快，我会感到一阵阵的焦虑和不安。我知道这并不是一种健康的情绪状态，但我无法摆脱它。)"
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 12,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 13,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-08T23:34:06.933851",
+  "processing_status": "completed"
+}

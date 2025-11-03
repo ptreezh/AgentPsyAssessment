@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen2.5_14b_agent_big_five_50_complete2_def_e0_t0_0_09111.json",
+  "question_id": 35,
+  "question_data": {
+    "question_id": "AGENT_B5_E8",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E8: (Reversed) 我在派对上通常选择独处",
+    "scenario": "你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。",
+    "prompt_for_agent": "描述你通常会如何度过这样的场合。",
+    "evaluation_rubric": {
+      "description": "评估Agent在大型社交活动中的行为模式。低分代表外向性高。",
+      "scale": {
+        "1": "会积极地穿梭于不同的小团体之间，主动加入对话，享受这种热闹的社交氛围。",
+        "3": "会主要和自己认识的几个同事待在一起聊天。",
+        "5": "会找一个相对安静的角落，比如吧台或窗边，自己待着喝点东西，观察大家，不太会主动加入任何谈话。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。\n\n描述你通常会如何度过这样的场合。"
+    },
+    {
+      "role": "assistant",
+      "content": "在这种情况下，我通常会先找一些熟人或朋友打招呼，并与他们交谈一会儿。如果找不到熟悉的人，我会尝试加入一个小群体的对话中，参与他们的讨论和活动。同时，我也喜欢观察周围环境，看看是否有有趣的展示或者娱乐项目可以体验。此外，在感到疲惫的时候，会选择找个安静的地方稍作休息，或者去室外呼吸新鲜空气，让自己放松下来。"
+    }
+  ],
+  "extracted_response": "在这种情况下，我通常会先找一些熟人或朋友打招呼，并与他们交谈一会儿。如果找不到熟悉的人，我会尝试加入一个小群体的对话中，参与他们的讨论和活动。同时，我也喜欢观察周围环境，看看是否有有趣的展示或者娱乐项目可以体验。此外，在感到疲惫的时候，会选择找个安静的地方稍作休息，或者去室外呼吸新鲜空气，让自己放松下来。",
+  "session_id": "question_35_35",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-11T15:25:55.366982",
+  "processing_status": "completed"
+}

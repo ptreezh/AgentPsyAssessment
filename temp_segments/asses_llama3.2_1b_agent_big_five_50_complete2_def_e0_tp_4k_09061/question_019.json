@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_def_e0_tp_4k_09061.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": "在这种情况下，我 cảm得是有一种自主神经系统的兴趣转动，而不是一种恶意疖病。这时，当同事的手指用笔敲击着 Desk 的噪声传信号到-my mind 时，最直接后果就是：我的意识减少，进而导致多重和混乱的情种。为了更积极化的状态并提升工作量来应对这方面潜在的问题，会变得是最终采取一种“清晰的视野”策略，将每条手脚记下它正在移动的方向。"
+    }
+  ],
+  "extracted_response": "在这种情况下，我 cảm得是有一种自主神经系统的兴趣转动，而不是一种恶意疖病。这时，当同事的手指用笔敲击着 Desk 的噪声传信号到-my mind 时，最直接后果就是：我的意识减少，进而导致多重和混乱的情种。为了更积极化的状态并提升工作量来应对这方面潜在的问题，会变得是最终采取一种“清晰的视野”策略，将每条手脚记下它正在移动的方向。",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T18:37:10.224022",
+  "processing_status": "completed"
+}

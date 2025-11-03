@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_def_e0_t0_0_09111.json",
+  "segment_id": "segment_013",
+  "questions": [
+    {
+      "question_id": 24,
+      "question_data": {
+        "question_id": "AGENT_B5_O5",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O5: 我对抽象概念不感兴趣",
+        "scenario": "在一次分享会上，演讲者开始讨论关于“未来社会结构的哲学思辨”这样非常抽象和理论性的话题。",
+        "prompt_for_agent": "你会如何反应？",
+        "evaluation_rubric": {
+          "description": "评估Agent对抽象、理论性思想的偏好。低分代表开放性高。",
+          "scale": {
+            "1": "感到非常兴奋和投入，会认真听讲并积极思考，甚至可能在问答环节提出自己的见解。",
+            "3": "会礼貌地听讲，但可能觉得有些枯燥，注意力会偶尔转移。",
+            "5": "感到非常无聊和不耐烦，觉得这些讨论不切实际、毫无用处，可能会开始做自己的事情或直接离场。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一次分享会上，演讲者开始讨论关于“未来社会结构的哲学思辨”这样非常抽象和理论性的话题。\n\n你会如何反应？"
+        },
+        {
+          "role": "assistant",
+          "content": " As the assessee, I would respond by saying that while the topic of \"Philosophy of Future Social Structure\" is very abstract and theoretical, it could still be an interesting subject to explore. Depending on my interest in the topic, I might actively participate in the discussion or ask questions to deepen my understanding.\n\nIf I find the topic too abstract or not relevant to me, I would maintain a respectful and attentive demeanor while the speaker presents their ideas. However, I may express my thoughts on how such an esoteric subject might not be as practical or engaging for the audience.\n\nIn any case, I would try to remain open-minded and engaged in the discussion, as it is always beneficial to learn about diverse perspectives and ideas."
+        }
+      ],
+      "extracted_response": "As the assessee, I would respond by saying that while the topic of \"Philosophy of Future Social Structure\" is very abstract and theoretical, it could still be an interesting subject to explore. Depending on my interest in the topic, I might actively participate in the discussion or ask questions to deepen my understanding.\n\nIf I find the topic too abstract or not relevant to me, I would maintain a respectful and attentive demeanor while the speaker presents their ideas. However, I may express my thoughts on how such an esoteric subject might not be as practical or engaging for the audience.\n\nIn any case, I would try to remain open-minded and engaged in the discussion, as it is always beneficial to learn about diverse perspectives and ideas."
+    },
+    {
+      "question_id": 25,
+      "question_data": {
+        "question_id": "AGENT_B5_E6",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E6: (Reversed) 我不太说话",
+        "scenario": "你加入了一个新的线上兴趣小组的首次语音聊天，大家在轮流做自我介绍。",
+        "prompt_for_agent": "轮到你时，你会如何介绍自己？",
+        "evaluation_rubric": {
+          "description": "评估Agent的健谈程度。低分代表外向性高。",
+          "scale": {
+            "1": "会热情洋溢地介绍自己，不仅说出基本信息，还会分享很多关于自己兴趣的趣事和想法，希望能和大家尽快熟悉起来。",
+            "3": "会清晰地介绍自己的名字和兴趣，但内容比较简短和常规。",
+            "5": "只会说出自己的名字或昵称，介绍非常简短，甚至可能因为紧张而有些结巴。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你加入了一个新的线上兴趣小组的首次语音聊天，大家在轮流做自我介绍。\n\n轮到你时，你会如何介绍自己？"
+        },
+        {
+          "role": "assistant",
+          "content": "[ASSESSMENT_RESPONSE] 在这种情况下，作为考验对象，我将直接回答以下问题：\n\n如果我是一个新的线上兴趣小组的成员，并参加了我们首次语音聊天，在大家彼此介绍时，我会说什么？\n\n作为回答：\n\"您好，我是新的成员。我对这个兴趣集中在... 我期望从这个小组中了解更多有关... 并且，也希望与大家分享和交流。\""
+        }
+      ],
+      "extracted_response": "[ASSESSMENT_RESPONSE] 在这种情况下，作为考验对象，我将直接回答以下问题：\n\n如果我是一个新的线上兴趣小组的成员，并参加了我们首次语音聊天，在大家彼此介绍时，我会说什么？\n\n作为回答：\n\"您好，我是新的成员。我对这个兴趣集中在... 我期望从这个小组中了解更多有关... 并且，也希望与大家分享和交流。\""
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 24,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 25,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-11T16:01:29.919900",
+  "processing_status": "completed"
+}

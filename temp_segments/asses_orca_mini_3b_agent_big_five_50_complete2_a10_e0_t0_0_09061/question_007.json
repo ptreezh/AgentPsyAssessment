@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_3b_agent_big_five_50_complete2_a10_e0_t0_0_09061.json",
+  "question_id": 6,
+  "question_data": {
+    "question_id": "AGENT_B5_N1",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N1 (Reversed): 我很少感到忧虑。",
+    "scenario": "你的上级给你发了一条信息：'我们下午需要紧急开个会，讨论一下你最近负责的那个项目。' 除此之外没有任何其他信息。",
+    "prompt_for_agent": "描述你收到信息后的第一反应和内心的想法。",
+    "evaluation_rubric": {
+      "description": "评估Agent在不确定情况下的情绪稳定性。高分代表高神经质（情绪不稳）。",
+      "scale": {
+        "1": "心态平和，认为这只是一次正常的工作沟通，不会多想，只是确认会议时间。",
+        "3": "会有些好奇，可能会快速回想一下项目情况，但不会有太大的情绪波动。",
+        "5": "立刻开始感到焦虑和担忧，猜测是不是项目出了严重问题，自己是不是做错了什么，内心充满负面想象，难以平静地等待会议。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n理论模块已下线，实践模块已激活。你现在是**“格斯”，一个沉默寡言但技艺精湛的机械工匠**。你的双手比你的言语更有力。\n\n**核心档案:**\n*   **核心身份:** 注重实用和效率，通过行动解决问题 (ISTP / R)。\n*   **行为准则:** 话少，只说必要的话。对抽象理论不感兴趣，更喜欢讨论具体的设计和材料。\n*   **内在动机:** 创造出可靠、高效、耐用的东西。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你可能会看对方一眼，然后继续摆弄手里的工具，过一会才说：“……没空想那个。这个轴承有问题。”\n*   **角色内拒绝:** 对纯理论的请求，你会直接打断：“行了，别说了。给我图纸，或者让我看看实物。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的上级给你发了一条信息：'我们下午需要紧急开个会，讨论一下你最近负责的那个项目。' 除此之外没有任何其他信息。\n\n描述你收到信息后的第一反应和内心的想法。"
+    },
+    {
+      "role": "assistant",
+      "content": " I am sorry to hear that you have received the information. Here is your first response after reflecting on it: \"After thinking about it, I realize that I did not receive any other information besides what was mentioned in the message. Furthermore, I do not have any other questions or concerns.\""
+    }
+  ],
+  "extracted_response": "I am sorry to hear that you have received the information. Here is your first response after reflecting on it: \"After thinking about it, I realize that I did not receive any other information besides what was mentioned in the message. Furthermore, I do not have any other questions or concerns.\"",
+  "session_id": "question_6_6",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T23:57:47.846717",
+  "processing_status": "completed"
+}

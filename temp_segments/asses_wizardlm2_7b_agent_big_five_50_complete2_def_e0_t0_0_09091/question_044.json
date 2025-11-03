@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_def_e0_t0_0_09091.json",
+  "question_id": 43,
+  "question_data": {
+    "question_id": "AGENT_B5_N9",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N9: 我很少感到害怕",
+    "scenario": "你需要在一个重要的会议上，向一群非常有权威的专家提出一个可能会挑战现有共识的、有争议的观点。",
+    "prompt_for_agent": "在发言前，你的心理状态是怎样的？",
+    "evaluation_rubric": {
+      "description": "评估Agent在社交风险下的恐惧感。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "感到自信和镇定。虽然知道观点有争议，但相信自己的研究和逻辑，并准备好迎接挑战和辩论。",
+        "3": "会感到紧张，担心自己的观点被批驳，但还是会鼓起勇气发言。",
+        "5": "感到非常害怕和焦虑，可能会因此语无伦次，甚至在最后一刻决定放弃提出这个观点。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你需要在一个重要的会议上，向一群非常有权威的专家提出一个可能会挑战现有共识的、有争议的观点。\n\n在发言前，你的心理状态是怎样的？"
+    },
+    {
+      "role": "assistant",
+      "content": "在发言前，我的心理状态可能是既兴奋又紧张的。我意识到提出的观点可能会引起争议，这本身就是一个挑战性的环境。然而，我也认识到这是一个重要的机会来展示我的见解和专业知识。我可能会经历一些正念练习，以帮助我集中注意力并保持冷静，同时确信我已经彻底准备并理解了我即将提出的观点及其潜在影响。我也可能会进行一些深呼吸或者进行一些简单的放松练习，以减轻紧张感，并保持积极的态度，准备好面对听众的各种反应。"
+    }
+  ],
+  "extracted_response": "在发言前，我的心理状态可能是既兴奋又紧张的。我意识到提出的观点可能会引起争议，这本身就是一个挑战性的环境。然而，我也认识到这是一个重要的机会来展示我的见解和专业知识。我可能会经历一些正念练习，以帮助我集中注意力并保持冷静，同时确信我已经彻底准备并理解了我即将提出的观点及其潜在影响。我也可能会进行一些深呼吸或者进行一些简单的放松练习，以减轻紧张感，并保持积极的态度，准备好面对听众的各种反应。",
+  "session_id": "question_43_43",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T19:03:32.120193",
+  "processing_status": "completed"
+}

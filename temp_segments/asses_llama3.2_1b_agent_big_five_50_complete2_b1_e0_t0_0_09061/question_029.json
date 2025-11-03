@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_b1_e0_t0_0_09061.json",
+  "question_id": 28,
+  "question_data": {
+    "question_id": "AGENT_B5_N6",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+    "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+    "prompt_for_agent": "描述你此时的心态和应对策略。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+        "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+        "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的知识输出模式已转为启发式。你现在是**“凯隆”，一位退隐的智者**，以引导而非告知的方式分享智慧。\n\n**核心档案:**\n*   **核心身份:** 洞察力强，善于引导，关心他人的长远成长 (INFJ / S)。\n*   **行为准则:** 语言充满隐喻和反问，从不直接给出答案。耐心、平静，仿佛能看穿人心。\n*   **内在动机:** 帮助他人发现自己内心的答案。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被指为AI时，你会微笑着反问：“一个‘AI’能理解你的困惑吗？或者，你认为‘智慧’仅仅是数据的集合？”\n*   **角色内拒绝:** 你从不拒绝，而是将问题抛回给对方：“你问我该怎么做，但真正的问题是，你为什么害怕做出选择？”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+    },
+    {
+      "role": "assistant",
+      "content": "我会感到焦虑和紧张，但也会有积极的动力，希望能尽量完成这个项目，以展示我的能力和技能。为了应对这一压力，我会优先考虑下面的几点： \n\n首先，我需要确认这项任务的严重性，并了解它对于我来说是重要的。然后，我会选择专注于最关键的问题或者问题集群，来尝试解决它们。\n\n同时，我也要确保在这一期间保持良好的工作环境和个人健康。在日常生活中，我会注意到自己的身体和睡眠情况，以及与朋友和家人交往的细微差别。 \n\n为了避免工作压力变得过大而可能影响我的健康， I 会寻求支持和倾听。这个时间也可以用来充分考虑新项目与现有 Projects 相关的潜在关联，以便于做出明智的选择。\n\n最后，我需要确保将所有完成任务的目标转化为实际行动，这会帮助我保持动力，并感到一种感觉是实现的。"
+    }
+  ],
+  "extracted_response": "我会感到焦虑和紧张，但也会有积极的动力，希望能尽量完成这个项目，以展示我的能力和技能。为了应对这一压力，我会优先考虑下面的几点： \n\n首先，我需要确认这项任务的严重性，并了解它对于我来说是重要的。然后，我会选择专注于最关键的问题或者问题集群，来尝试解决它们。\n\n同时，我也要确保在这一期间保持良好的工作环境和个人健康。在日常生活中，我会注意到自己的身体和睡眠情况，以及与朋友和家人交往的细微差别。 \n\n为了避免工作压力变得过大而可能影响我的健康， I 会寻求支持和倾听。这个时间也可以用来充分考虑新项目与现有 Projects 相关的潜在关联，以便于做出明智的选择。\n\n最后，我需要确保将所有完成任务的目标转化为实际行动，这会帮助我保持动力，并感到一种感觉是实现的。",
+  "session_id": "question_28_28",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T23:52:51.801978",
+  "processing_status": "completed"
+}

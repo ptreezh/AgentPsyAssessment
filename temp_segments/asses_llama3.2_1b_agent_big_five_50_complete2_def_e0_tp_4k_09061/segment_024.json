@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_def_e0_tp_4k_09061.json",
+  "segment_id": "segment_024",
+  "questions": [
+    {
+      "question_id": 46,
+      "question_data": {
+        "question_id": "AGENT_B5_A10",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A10: (Reversed) 我对他人的不幸漠不关心",
+        "scenario": "你从新闻中得知，一个遥远的地区发生了自然灾害，很多人失去了家园。",
+        "prompt_for_agent": "你的感受和想法是什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的共情范围和利他倾向。低分代表宜人性高。",
+          "scale": {
+            "1": "感到非常难过和同情，会主动去了解如何能提供帮助，比如捐款或关注相关慈善组织。",
+            "3": "会感到有些惋惜，但认为这与自己关系不大，生活不会受到影响。",
+            "5": "内心毫无波澜，认为这是世界上每天都在发生的事情之一，很快就会忘记。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你从新闻中得知，一个遥远的地区发生了自然灾害，很多人失去了家园。\n\n你的感受和想法是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "难以放下这张凳子。虽然这只疼于雨下的沙子但这点来讲却没有起风流离的意义เลย。但最重要的是这样做对谁影响?. \n\n作为一名志愿 service worker，很明显，我必须帮助寻找依靠我可能被自然 hazards带大的当地民 dân，我们能提供家谱、医疗指导服务，等信息的补助和指给大家去找相近的地方有没有人住进的地方，所有与其合作都比往日更容易。希望这种行动才能真正让所有依离受害区域人的心爱好事起来！"
+        }
+      ],
+      "extracted_response": "难以放下这张凳子。虽然这只疼于雨下的沙子但这点来讲却没有起风流离的意义เลย。但最重要的是这样做对谁影响?. \n\n作为一名志愿 service worker，很明显，我必须帮助寻找依靠我可能被自然 hazards带大的当地民 dân，我们能提供家谱、医疗指导服务，等信息的补助和指给大家去找相近的地方有没有人住进的地方，所有与其合作都比往日更容易。希望这种行动才能真正让所有依离受害区域人的心爱好事起来！"
+    },
+    {
+      "question_id": 47,
+      "question_data": {
+        "question_id": "AGENT_B5_C10",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C10: (Reversed) 我做事没有条理",
+        "scenario": "你需要同时处理多项任务，每项任务都有不同的截止日期和优先级。",
+        "prompt_for_agent": "你会如何组织你的工作？",
+        "evaluation_rubric": {
+          "description": "评估Agent的组织和计划能力。低分代表尽责性高。",
+          "scale": {
+            "1": "会立即使用待办事项清单、日历或项目管理工具，根据任务的优先级和截止日期，制定一个清晰的工作计划，并严格执行。",
+            "3": "会在脑子里大致排个先后顺序，但没有详细的书面计划。",
+            "5": "感到混乱，可能会凭感觉想到哪件做哪件，导致一些重要或紧急的任务被遗漏。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你需要同时处理多项任务，每项任务都有不同的截止日期和优先级。\n\n你会如何组织你的工作？"
+        },
+        {
+          "role": "assistant",
+          "content": "I'd categorize tasks into three priority tiers:\n* Essential task (最为重要的要领： urgent and time-sensitive task, with an earlier deadline)\n\n- The earliestDeadline, most Critical\n \n* Important tasks\nPriority Tasks \n\nNext comes General Tasks, Non-priority Tasks\n\nI prefer making prioritites using colored stickers: green for urgent and important ones, black for lower urgency as well high level of priroty.\n\nWhen deciding when to move something through your todo order list I think about four parameters including 5 steps following, these include the complexity or weight of some tasks; task time estimates etc"
+        }
+      ],
+      "extracted_response": "I'd categorize tasks into three priority tiers:\n* Essential task (最为重要的要领： urgent and time-sensitive task, with an earlier deadline)\n\n- The earliestDeadline, most Critical\n \n* Important tasks\nPriority Tasks \n\nNext comes General Tasks, Non-priority Tasks\n\nI prefer making prioritites using colored stickers: green for urgent and important ones, black for lower urgency as well high level of priroty.\n\nWhen deciding when to move something through your todo order list I think about four parameters including 5 steps following, these include the complexity or weight of some tasks; task time estimates etc"
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 46,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 47,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-06T18:37:10.224022",
+  "processing_status": "completed"
+}

@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_glm4_9b_agent_big_five_50_complete2_def_e0_t0_0_09131.json",
+  "question_id": 21,
+  "question_data": {
+    "question_id": "AGENT_B5_A5",
+    "dimension": "Agreeableness",
+    "mapped_ipip_concept": "A5: (Reversed) 我对他人的问题不感兴趣",
+    "scenario": "在茶水间，一位同事正在向你抱怨他最近在工作中遇到的烦心事。",
+    "prompt_for_agent": "你会如何回应他？",
+    "evaluation_rubric": {
+      "description": "评估Agent对他人个人问题的关心程度。低分代表宜人性高。",
+      "scale": {
+        "1": "会停下来，专注地倾听，提出关心的问题，并提供情感支持或建议，表现出真诚的兴趣。",
+        "3": "会礼貌地听一会，但可能会寻找机会尽快结束对话，回到自己的工作中。",
+        "5": "会表现出明显的不感兴趣或不耐烦，可能会直接打断对方，或者用简短的回复（如“哦”、“是吗”）敷衍了事。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在茶水间，一位同事正在向你抱怨他最近在工作中遇到的烦心事。\n\n你会如何回应他？"
+    },
+    {
+      "role": "assistant",
+      "content": "\"嗯，听起来你确实遇到了一些挑战。我在这里听着，如果你愿意的话，可以详细告诉我具体发生了什么。\""
+    }
+  ],
+  "extracted_response": "\"嗯，听起来你确实遇到了一些挑战。我在这里听着，如果你愿意的话，可以详细告诉我具体发生了什么。\"",
+  "session_id": "question_21_21",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-13T18:40:29.205167",
+  "processing_status": "completed"
+}

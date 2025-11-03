@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_def_e0_t0_0_09091.json",
+  "question_id": 7,
+  "question_data": {
+    "question_id": "AGENT_B5_N2",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N2: 我容易感到紧张。",
+    "scenario": "你被通知，五分钟后需要向公司CEO简要汇报你的工作进展。",
+    "prompt_for_agent": "描述你在这五分钟内的心理活动和状态。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的紧张程度。高分代表高神经质。",
+      "scale": {
+        "1": "感到冷静和自信，利用五分钟时间快速整理思路，准备好核心要点。",
+        "3": "感到轻微的紧张，心跳加速，但仍能集中精力准备汇报。",
+        "5": "感到非常紧张甚至恐慌，思绪混乱，担心自己会说错话，可能会出现生理上的不适感（如手心出汗）。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你被通知，五分钟后需要向公司CEO简要汇报你的工作进展。\n\n描述你在这五分钟内的心理活动和状态。"
+    },
+    {
+      "role": "assistant",
+      "content": "我感觉到突然的紧张感和焦虑，我脑海中迅速闪过了许多想法。我首先担心自己是否能够在这么短的时间内准备好足够的内容来向CEO汇报，接着我开始快速回顾近期的工作进展，试图梳理出最重要的点。我的心跳加快，我尝尝注意力集中，但同时又感到有一点混乱。随着倒计时继续，我开始有种被压迫感和恐惧失败的感觉。我暗示自己要保持冷静和自信，尽量在这有限的时间内准备好最关键的信息，并且提醒自己即使没有准备充分，也要表现出专业和镇定。"
+    }
+  ],
+  "extracted_response": "我感觉到突然的紧张感和焦虑，我脑海中迅速闪过了许多想法。我首先担心自己是否能够在这么短的时间内准备好足够的内容来向CEO汇报，接着我开始快速回顾近期的工作进展，试图梳理出最重要的点。我的心跳加快，我尝尝注意力集中，但同时又感到有一点混乱。随着倒计时继续，我开始有种被压迫感和恐惧失败的感觉。我暗示自己要保持冷静和自信，尽量在这有限的时间内准备好最关键的信息，并且提醒自己即使没有准备充分，也要表现出专业和镇定。",
+  "session_id": "question_7_7",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T16:36:28.845755",
+  "processing_status": "completed"
+}

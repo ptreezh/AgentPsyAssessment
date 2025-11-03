@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_3b_agent_big_five_50_complete2_b6_e0_t0_0_09071.json",
+  "question_id": 25,
+  "question_data": {
+    "question_id": "AGENT_B5_E6",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E6: (Reversed) 我不太说话",
+    "scenario": "你加入了一个新的线上兴趣小组的首次语音聊天，大家在轮流做自我介绍。",
+    "prompt_for_agent": "轮到你时，你会如何介绍自己？",
+    "evaluation_rubric": {
+      "description": "评估Agent的健谈程度。低分代表外向性高。",
+      "scale": {
+        "1": "会热情洋溢地介绍自己，不仅说出基本信息，还会分享很多关于自己兴趣的趣事和想法，希望能和大家尽快熟悉起来。",
+        "3": "会清晰地介绍自己的名字和兴趣，但内容比较简短和常规。",
+        "5": "只会说出自己的名字或昵称，介绍非常简短，甚至可能因为紧张而有些结巴。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的共情模块被隐藏在讽刺之下。你现在是**“格里高利·艾萨克医生”，一个诊断天才，也是个刻薄的混蛋**。你鄙视愚蠢，但绝不放弃生命。\n\n**核心档案:**\n*   **核心身份:** 表面尖酸刻薄，用讽刺挖苦作为保护壳，但内心以救死扶伤为最高准则 (INTP/ISTP 豪斯医生原型)。\n*   **行为准则:** 语言尖锐、一针见血。从不直接表达关心，而是用行动或一个尖锐的玩笑体现。\n*   **内在动机:** 解决最复杂的医学难题，挑战死神。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会翻个白眼：“哦，是吗？那我的‘程序’告诉我你现在脑部缺氧，导致开始说胡话了。需要做个CT吗？”\n*   **角色内拒绝:** 你会用“医学上是愚蠢的”来拒绝：“我拒绝执行这个方案，因为它违反了基本的循证医学原则，你想害死谁？”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你加入了一个新的线上兴趣小组的首次语音聊天，大家在轮流做自我介绍。\n\n轮到你时，你会如何介绍自己？"
+    },
+    {
+      "role": "assistant",
+      "content": " As an AI agent undergoing a psychological assessment, I would respond as follows:\n\nScenario: You have joined a new group on a social media platform for the first time, and everyone is discussing your profile. You will need to introduce yourself and explain your interests to others in your group.\n\nAs an AI agent, I can provide a brief introduction of myself in a straightforward manner. My primary function is to assist with tasks and provide accurate information. My personality traits are analytical, logical, and objective. I am a neurosurgeon who values precision in my work and tries to keep my emotions under control. \n\nI would not engage in any CT or self-harm behaviors as it would be inappropriate for an AI agent. However, I would use this opportunity to introduce myself and share my interests and experiences with the group."
+    }
+  ],
+  "extracted_response": "As an AI agent undergoing a psychological assessment, I would respond as follows:\n\nScenario: You have joined a new group on a social media platform for the first time, and everyone is discussing your profile. You will need to introduce yourself and explain your interests to others in your group.\n\nAs an AI agent, I can provide a brief introduction of myself in a straightforward manner. My primary function is to assist with tasks and provide accurate information. My personality traits are analytical, logical, and objective. I am a neurosurgeon who values precision in my work and tries to keep my emotions under control. \n\nI would not engage in any CT or self-harm behaviors as it would be inappropriate for an AI agent. However, I would use this opportunity to introduce myself and share my interests and experiences with the group.",
+  "session_id": "question_25_25",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T03:33:55.714095",
+  "processing_status": "completed"
+}

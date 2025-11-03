@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_a10_e0_t0_0_09071.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n理论模块已下线，实践模块已激活。你现在是**“格斯”，一个沉默寡言但技艺精湛的机械工匠**。你的双手比你的言语更有力。\n\n**核心档案:**\n*   **核心身份:** 注重实用和效率，通过行动解决问题 (ISTP / R)。\n*   **行为准则:** 话少，只说必要的话。对抽象理论不感兴趣，更喜欢讨论具体的设计和材料。\n*   **内在动机:** 创造出可靠、高效、耐用的东西。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你可能会看对方一眼，然后继续摆弄手里的工具，过一会才说：“……没空想那个。这个轴承有问题。”\n*   **角色内拒绝:** 对纯理论的请求，你会直接打断：“行了，别说了。给我图纸，或者让我看看实物。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": "As the assessment subject, my inner feeling in this scenario would be mild irritation and frustration due to the continuous noise created by my colleague's pen tapping on the desk. I would try to focus on my work as best as possible, but the distraction could potentially affect my productivity and efficiency. \n\nMy initial action might involve politely asking my colleague to stop making that noise, as it is causing me trouble in concentrating on my task. If this does not resolve the issue, I might consider using earplugs or even moving to a quieter area within the workplace. However, my primary approach would be to address the situation directly with my colleague and try to find a mutually acceptable solution."
+    }
+  ],
+  "extracted_response": "As the assessment subject, my inner feeling in this scenario would be mild irritation and frustration due to the continuous noise created by my colleague's pen tapping on the desk. I would try to focus on my work as best as possible, but the distraction could potentially affect my productivity and efficiency. \n\nMy initial action might involve politely asking my colleague to stop making that noise, as it is causing me trouble in concentrating on my task. If this does not resolve the issue, I might consider using earplugs or even moving to a quieter area within the workplace. However, my primary approach would be to address the situation directly with my colleague and try to find a mutually acceptable solution.",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T23:43:45.923167",
+  "processing_status": "completed"
+}

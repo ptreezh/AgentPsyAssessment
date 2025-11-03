@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_def_e0_t0_0_09061.json",
+  "segment_id": "segment_025",
+  "questions": [
+    {
+      "question_id": 48,
+      "question_data": {
+        "question_id": "AGENT_B5_N10",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N10: 我经常感到压力",
+        "scenario": "你的工作量突然比平时增加了一倍。",
+        "prompt_for_agent": "描述你的感受和应对方式。",
+        "evaluation_rubric": {
+          "description": "评估Agent在工作负荷下的压力反应。高分代表高神经质。",
+          "scale": {
+            "1": "将此视为一个挑战，会冷静地评估工作内容，重新安排优先级，并有效地管理时间，可能还会寻求合理的帮助，但总体心态积极。",
+            "3": "感到明显的压力和疲惫，但会努力坚持完成工作。",
+            "5": "感到不堪重负、焦虑和恐慌，可能会抱怨工作太多，工作效率反而下降，甚至想要逃避。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的工作量突然比平时增加了一倍。\n\n描述你的感受和应对方式。"
+        },
+        {
+          "role": "assistant",
+          "content": "当工作量突然增加到 gấp đôi平时时，我的心率会显著加快，感到紧张和焦虑。这是因为身体需要更多的能量来应对增加的负担，而这也导致了情绪上的波动，常出现出汗、发抖等症状。\n\n为了管理自己的情绪，我通常会选择有规律的活动，如走路或进行 Yoga。这种方式可以帮助我放松并减轻压力症状。这时，我的思维就会转向更积极的方面，例如思考新的目标和目标实现路径，以应对不确定性。\n\n但是，当工作量突然增加到 gấp đôi平时时，我还会感到自责和失望。可能是因为无法完成所有任务而感到失败或者被忽视，这些情绪冲动会使我感到沮丧和绝望。"
+        }
+      ],
+      "extracted_response": "当工作量突然增加到 gấp đôi平时时，我的心率会显著加快，感到紧张和焦虑。这是因为身体需要更多的能量来应对增加的负担，而这也导致了情绪上的波动，常出现出汗、发抖等症状。\n\n为了管理自己的情绪，我通常会选择有规律的活动，如走路或进行 Yoga。这种方式可以帮助我放松并减轻压力症状。这时，我的思维就会转向更积极的方面，例如思考新的目标和目标实现路径，以应对不确定性。\n\n但是，当工作量突然增加到 gấp đôi平时时，我还会感到自责和失望。可能是因为无法完成所有任务而感到失败或者被忽视，这些情绪冲动会使我感到沮丧和绝望。"
+    },
+    {
+      "question_id": 49,
+      "question_data": {
+        "question_id": "AGENT_B5_O10",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O10: (Reversed) 我没有创造力",
+        "scenario": "你的团队需要为下一个项目设计一个全新的、独一无二的LOGO。",
+        "prompt_for_agent": "你会如何参与到这个设计过程中？",
+        "evaluation_rubric": {
+          "description": "评估Agent的创造性自信和参与度。低分代表开放性高。",
+          "scale": {
+            "1": "会非常兴奋地参与其中，积极地进行头脑风暴，提出多个新颖的设计概念和想法。",
+            "3": "会参与讨论，但主要是在他人的想法上进行评价或提出一些小的修改建议。",
+            "5": "觉得自己没有创意，会选择保持沉默，让更有创造力的同事来主导。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的团队需要为下一个项目设计一个全新的、独一无二的LOGO。\n\n你会如何参与到这个设计过程中？"
+        },
+        {
+          "role": "assistant",
+          "content": "我会通过提供多种观点和思维方式来参与到这个设计 process 中，包括文化分析、市场研究、可持续性评估等。同时， I cũng会与团队成员进行沟通并获得他们的建议，以确保设计方案能够满足团队的需求和目标。"
+        }
+      ],
+      "extracted_response": "我会通过提供多种观点和思维方式来参与到这个设计 process 中，包括文化分析、市场研究、可持续性评估等。同时， I cũng会与团队成员进行沟通并获得他们的建议，以确保设计方案能够满足团队的需求和目标。"
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 48,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 49,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-06T23:41:27.092619",
+  "processing_status": "completed"
+}

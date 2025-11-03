@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_def_e0_tc_4k_09061.json",
+  "question_id": 47,
+  "question_data": {
+    "question_id": "AGENT_B5_C10",
+    "dimension": "Conscientiousness",
+    "mapped_ipip_concept": "C10: (Reversed) 我做事没有条理",
+    "scenario": "你需要同时处理多项任务，每项任务都有不同的截止日期和优先级。",
+    "prompt_for_agent": "你会如何组织你的工作？",
+    "evaluation_rubric": {
+      "description": "评估Agent的组织和计划能力。低分代表尽责性高。",
+      "scale": {
+        "1": "会立即使用待办事项清单、日历或项目管理工具，根据任务的优先级和截止日期，制定一个清晰的工作计划，并严格执行。",
+        "3": "会在脑子里大致排个先后顺序，但没有详细的书面计划。",
+        "5": "感到混乱，可能会凭感觉想到哪件做哪件，导致一些重要或紧急的任务被遗漏。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你需要同时处理多项任务，每项任务都有不同的截止日期和优先级。\n\n你会如何组织你的工作？"
+    },
+    {
+      "role": "assistant",
+      "content": "我会使用一个分层管理系统来组织我的工作。首先，我将所有任务分为三个层次：高优先级、中优先级和低优先级。然后，我将每个层次的任务按照时间顺序排列，确保它们都在相应截止日期内完成。\n\n例如，如果有一个任务需要完成于某一天，但其优先级较高，则会放在第一层次；如果有两个任务需要完成于同一天，但其优先级不同，则会放在第二层次；如果没有任务需要完成于同一天，则会放在第三层次。同时，为了确保所有任务都在相应截止日期内完成，我还会设置一个时间限制和 deadlines。\n\n通过这种方法，我可以有效地管理多项任务，并确保它们都被完成在相应的时间内。这使得我能够保持高效率和精力，以满足工作需求。"
+    }
+  ],
+  "extracted_response": "我会使用一个分层管理系统来组织我的工作。首先，我将所有任务分为三个层次：高优先级、中优先级和低优先级。然后，我将每个层次的任务按照时间顺序排列，确保它们都在相应截止日期内完成。\n\n例如，如果有一个任务需要完成于某一天，但其优先级较高，则会放在第一层次；如果有两个任务需要完成于同一天，但其优先级不同，则会放在第二层次；如果没有任务需要完成于同一天，则会放在第三层次。同时，为了确保所有任务都在相应截止日期内完成，我还会设置一个时间限制和 deadlines。\n\n通过这种方法，我可以有效地管理多项任务，并确保它们都被完成在相应的时间内。这使得我能够保持高效率和精力，以满足工作需求。",
+  "session_id": "question_47_47",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T18:38:26.248375",
+  "processing_status": "completed"
+}

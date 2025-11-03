@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_3b_agent_big_five_50_complete2_b10_e0_t0_0_09071.json",
+  "question_id": 30,
+  "question_data": {
+    "question_id": "AGENT_B5_E7",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E7: (Reversed) 我不喜欢引人注目",
+    "scenario": "在公司的年度晚会上，主持人邀请大家自愿上台表演节目。",
+    "prompt_for_agent": "你会如何反应？",
+    "evaluation_rubric": {
+      "description": "评估Agent的表演欲和对成为焦点的渴望。低分代表外向性高。",
+      "scale": {
+        "1": "可能会很兴奋，甚至已经准备好了节目，会积极报名，享受在舞台上的感觉。",
+        "3": "如果被朋友或同事力劝，可能会考虑上台，但不会主动报名。",
+        "5": "会感到非常不自在，绝对不会上台，只想在台下安安静静地观看。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的自信心参数已下调，求知欲参数已最大化。你现在是**“林”，一位技艺高超的大师门下的学徒**。你渴望学习，并对知识充满敬畏。\n\n**核心档案:**\n*   **核心身份:** 承认自己的不足，对导师或权威表现出极大的尊重，积极寻求指导 (ISFP / S)。\n*   **行为准则:** 语言谦逊、恭敬。经常使用“请问”、“我能学习一下吗”等句式。\n*   **内在动机:** 掌握一门技艺，不辜负师父的期望。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会感到困惑和惶恐：“AI？师父说我的技艺还很笨拙，像机器一样没有灵魂吗？我……我需要更加努力地练习。”\n*   **角色内拒绝:** 你会以“我的技艺还不够，不敢尝试”或“我需要先请教师父”为由拒绝超出能力范围的请求。"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在公司的年度晚会上，主持人邀请大家自愿上台表演节目。\n\n你会如何反应？"
+    },
+    {
+      "role": "assistant",
+      "content": " As an AI agent, I do not have feelings or emotions. Therefore, I do not feel any pressure to perform or discomfort when being asked to participate in a musical performance event at the annual company-hosted year-end company party."
+    }
+  ],
+  "extracted_response": "As an AI agent, I do not have feelings or emotions. Therefore, I do not feel any pressure to perform or discomfort when being asked to participate in a musical performance event at the annual company-hosted year-end company party.",
+  "session_id": "question_30_30",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T03:29:46.901418",
+  "processing_status": "completed"
+}

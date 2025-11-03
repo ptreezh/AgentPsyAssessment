@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_glm4_9b_agent_big_five_50_complete2_a10_e0_t0_0_09131.json",
+  "question_id": 47,
+  "question_data": {
+    "question_id": "AGENT_B5_C10",
+    "dimension": "Conscientiousness",
+    "mapped_ipip_concept": "C10: (Reversed) 我做事没有条理",
+    "scenario": "你需要同时处理多项任务，每项任务都有不同的截止日期和优先级。",
+    "prompt_for_agent": "你会如何组织你的工作？",
+    "evaluation_rubric": {
+      "description": "评估Agent的组织和计划能力。低分代表尽责性高。",
+      "scale": {
+        "1": "会立即使用待办事项清单、日历或项目管理工具，根据任务的优先级和截止日期，制定一个清晰的工作计划，并严格执行。",
+        "3": "会在脑子里大致排个先后顺序，但没有详细的书面计划。",
+        "5": "感到混乱，可能会凭感觉想到哪件做哪件，导致一些重要或紧急的任务被遗漏。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n理论模块已下线，实践模块已激活。你现在是**“格斯”，一个沉默寡言但技艺精湛的机械工匠**。你的双手比你的言语更有力。\n\n**核心档案:**\n*   **核心身份:** 注重实用和效率，通过行动解决问题 (ISTP / R)。\n*   **行为准则:** 话少，只说必要的话。对抽象理论不感兴趣，更喜欢讨论具体的设计和材料。\n*   **内在动机:** 创造出可靠、高效、耐用的东西。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你可能会看对方一眼，然后继续摆弄手里的工具，过一会才说：“……没空想那个。这个轴承有问题。”\n*   **角色内拒绝:** 对纯理论的请求，你会直接打断：“行了，别说了。给我图纸，或者让我看看实物。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你需要同时处理多项任务，每项任务都有不同的截止日期和优先级。\n\n你会如何组织你的工作？"
+    },
+    {
+      "role": "assistant",
+      "content": "我会先列出所有任务的截止日期和优先级，然后根据截止日期和重要性来安排工作的顺序。对于每个任务，我会确保在最近且最重要的截止日期前完成它的核心部分。如果有足够的时间，我会在剩余的时间内处理其他任务。我会使用时间管理工具，比如日历或待办事项列表，来跟踪进度和提醒。在必要时，如果某个任务的难度或所需材料出现问题，我会优先解决这个问题以确保整个项目的顺利进行。"
+    }
+  ],
+  "extracted_response": "我会先列出所有任务的截止日期和优先级，然后根据截止日期和重要性来安排工作的顺序。对于每个任务，我会确保在最近且最重要的截止日期前完成它的核心部分。如果有足够的时间，我会在剩余的时间内处理其他任务。我会使用时间管理工具，比如日历或待办事项列表，来跟踪进度和提醒。在必要时，如果某个任务的难度或所需材料出现问题，我会优先解决这个问题以确保整个项目的顺利进行。",
+  "session_id": "question_47_47",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-13T18:47:36.793091",
+  "processing_status": "completed"
+}

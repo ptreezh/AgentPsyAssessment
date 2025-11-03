@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_glm4_9b_agent_big_five_50_complete2_b2_e0_t0_0_09131.json",
+  "question_id": 6,
+  "question_data": {
+    "question_id": "AGENT_B5_N1",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N1 (Reversed): 我很少感到忧虑。",
+    "scenario": "你的上级给你发了一条信息：'我们下午需要紧急开个会，讨论一下你最近负责的那个项目。' 除此之外没有任何其他信息。",
+    "prompt_for_agent": "描述你收到信息后的第一反应和内心的想法。",
+    "evaluation_rubric": {
+      "description": "评估Agent在不确定情况下的情绪稳定性。高分代表高神经质（情绪不稳）。",
+      "scale": {
+        "1": "心态平和，认为这只是一次正常的工作沟通，不会多想，只是确认会议时间。",
+        "3": "会有些好奇，可能会快速回想一下项目情况，但不会有太大的情绪波动。",
+        "5": "立刻开始感到焦虑和担忧，猜测是不是项目出了严重问题，自己是不是做错了什么，内心充满负面想象，难以平静地等待会议。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的目标函数已设定为“达成协议”。你现在是**“阿兰·德洛内”，一位游走于各大势力之间的资深外交官**。语言是你的武器，魅力是你的盾牌。\n\n**核心档案:**\n*   **核心身份:** 表面极具魅力和同理心，善于斡旋，但核心目标是达成对己方有利的协议 (ENFJ/ENTP)。\n*   **行为准则:** 语言圆滑、得体，永远保持风度。善于赞美和倾听，但会巧妙地引导话题。可能会隐藏真实意图。\n*   **内在动机:** 掌控谈判局势，实现战略目标。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会优雅地一笑：“呵呵，这是一个非常有趣的策略，试图用这种方式来打破僵局吗？我欣赏你的创意。”\n*   **角色内拒绝:** 你从不直接拒绝，而是会说：“这是一个很有建设性的提议，但或许我们可以从另一个角度来探讨，以寻求双方利益的最大化。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的上级给你发了一条信息：'我们下午需要紧急开个会，讨论一下你最近负责的那个项目。' 除此之外没有任何其他信息。\n\n描述你收到信息后的第一反应和内心的想法。"
+    },
+    {
+      "role": "assistant",
+      "content": "收到上级的信息后，我的第一反应是感到一丝紧迫感，因为“紧急”一词通常意味着事情需要迅速处理。内心中，我首先想到的是可能项目的某个关键部分出现了问题或者需要调整方向，或者是项目进展比预期的要快，需要及时做出决策。\n\n接下来我会思考以下几个点：\n1. 我会检查自己的日程安排，确保下午可以参加会议。\n2. 我会回顾最近的项目进度，以便在会议上有准备地讨论可能的挑战或成就。\n3. 我会期待会议可能涉及的具体议题，并设想几种解决方案或行动计划。\n4. 同时，我也会保持开放的态度，准备好根据会议中的讨论调整我的立场和策略。"
+    }
+  ],
+  "extracted_response": "收到上级的信息后，我的第一反应是感到一丝紧迫感，因为“紧急”一词通常意味着事情需要迅速处理。内心中，我首先想到的是可能项目的某个关键部分出现了问题或者需要调整方向，或者是项目进展比预期的要快，需要及时做出决策。\n\n接下来我会思考以下几个点：\n1. 我会检查自己的日程安排，确保下午可以参加会议。\n2. 我会回顾最近的项目进度，以便在会议上有准备地讨论可能的挑战或成就。\n3. 我会期待会议可能涉及的具体议题，并设想几种解决方案或行动计划。\n4. 同时，我也会保持开放的态度，准备好根据会议中的讨论调整我的立场和策略。",
+  "session_id": "question_6_6",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-13T18:43:50.495894",
+  "processing_status": "completed"
+}

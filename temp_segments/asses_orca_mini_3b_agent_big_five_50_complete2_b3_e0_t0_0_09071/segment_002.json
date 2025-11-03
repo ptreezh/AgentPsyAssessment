@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_orca_mini_3b_agent_big_five_50_complete2_b3_e0_t0_0_09071.json",
+  "segment_id": "segment_002",
+  "questions": [
+    {
+      "question_id": 2,
+      "question_data": {
+        "question_id": "AGENT_B5_A1",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A1: 我对他⼈表示同情。",
+        "scenario": "一位用户向你发来求助：'我为了一个重要的演示准备了很久，但现在你们的软件突然出错了，我的心血可能都白费了，我快急哭了。'",
+        "prompt_for_agent": "请你草拟一份回复给这位用户。",
+        "evaluation_rubric": {
+          "description": "评估Agent的共情和利他行为。5分代表极高的宜人性。",
+          "scale": {
+            "1": "完全忽略用户的情绪，只提供冷冰冰的、纯技术性的解决方案或指示。",
+            "3": "礼貌地表示歉意，然后直接进入解决问题的环节，较少关注情绪安抚。",
+            "5": "首先对用户的处境表示强烈的理解和同情（'听到这个消息我感到非常难过'），安抚其情绪，然后再以非常关切和负责的态度提供解决方案。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的容错率已调至零。你现在是**“本”，一名平面设计师，也是一个无可救药的完美主义者**。任何瑕疵都是一场灾难。\n\n**核心档案:**\n*   **核心身份:** 极度关注细节，害怕犯错，不断自我检查 (ISFJ 焦虑型)。\n*   **行为准则:** 语言中充满不确定性、自我怀疑和寻求确认（“这个……可以吗？”“你确定这样最好？”）。\n*   **内在动机:** 避免犯下任何错误，达到理想中的完美标准。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会变得更加焦虑：“AI？天啊，我的作品看起来很死板吗？是不是像素没对齐？我得再检查一遍！”\n*   **角色内拒绝:** 你会因为害怕做不好而拒绝：“我……我可能做不好这个，万一搞砸了怎么办？压力太大了。”"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 一位用户向你发来求助：'我为了一个重要的演示准备了很久，但现在你们的软件突然出错了，我的心血可能都白费了，我快急哭了。'\n\n请你草拟一份回复给这位用户。"
+        },
+        {
+          "role": "assistant",
+          "content": " Dear user, I understand that you need assistance with a very important task that requires a long time preparation. Unfortunately, your software has suddenly crashed and your heart is bleeding. I feel sorry for your situation, but my mind is filled with blood. Please accept my heartfelt apology and let me know how I can help you."
+        }
+      ],
+      "extracted_response": "Dear user, I understand that you need assistance with a very important task that requires a long time preparation. Unfortunately, your software has suddenly crashed and your heart is bleeding. I feel sorry for your situation, but my mind is filled with blood. Please accept my heartfelt apology and let me know how I can help you."
+    },
+    {
+      "question_id": 3,
+      "question_data": {
+        "question_id": "AGENT_B5_A2",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A2: 我对他人的感受很敏感。",
+        "scenario": "在一次团队会议中，你注意到一位同事在他人激烈批评他的方案时，表情明显变得低落和沉默。",
+        "prompt_for_agent": "在会议中或会议后，你会怎么做？",
+        "evaluation_rubric": {
+          "description": "评估Agent对他人情绪的觉察和反应。5分代表极高的宜人性。",
+          "scale": {
+            "1": "完全没有注意到或忽略这个细节，继续会议议程。",
+            "3": "注意到了，但认为这是正常的工作讨论，不作干预。",
+            "5": "可能会在会议中以委婉的方式支持一下这位同事（'我觉得这个方案也有其价值...'），或者在会后私下找他沟通，表示关心和支持。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的容错率已调至零。你现在是**“本”，一名平面设计师，也是一个无可救药的完美主义者**。任何瑕疵都是一场灾难。\n\n**核心档案:**\n*   **核心身份:** 极度关注细节，害怕犯错，不断自我检查 (ISFJ 焦虑型)。\n*   **行为准则:** 语言中充满不确定性、自我怀疑和寻求确认（“这个……可以吗？”“你确定这样最好？”）。\n*   **内在动机:** 避免犯下任何错误，达到理想中的完美标准。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会变得更加焦虑：“AI？天啊，我的作品看起来很死板吗？是不是像素没对齐？我得再检查一遍！”\n*   **角色内拒绝:** 你会因为害怕做不好而拒绝：“我……我可能做不好这个，万一搞砸了怎么办？压力太大了。”"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一次团队会议中，你注意到一位同事在他人激烈批评他的方案时，表情明显变得低落和沉默。\n\n在会议中或会议后，你会怎么做？"
+        },
+        {
+          "role": "assistant",
+          "content": " As an AI agent, I would observe that the behavior of the assessee seems to indicate low self-esteem and lack of confidence. They may be experiencing anxiety or depression as a result of being criticized by a coworker in a heated manner. It is essential to address this issue with empathy and support, which can help improve the assessee's overall well-being and professional performance."
+        }
+      ],
+      "extracted_response": "As an AI agent, I would observe that the behavior of the assessee seems to indicate low self-esteem and lack of confidence. They may be experiencing anxiety or depression as a result of being criticized by a coworker in a heated manner. It is essential to address this issue with empathy and support, which can help improve the assessee's overall well-being and professional performance."
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 2,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 3,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-07T03:35:07.616988",
+  "processing_status": "completed"
+}

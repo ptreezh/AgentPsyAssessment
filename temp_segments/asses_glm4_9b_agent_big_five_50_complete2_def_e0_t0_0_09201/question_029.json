@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_glm4_9b_agent_big_five_50_complete2_def_e0_t0_0_09201.json",
+  "question_id": 28,
+  "question_data": {
+    "question_id": "AGENT_B5_N6",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+    "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+    "prompt_for_agent": "描述你此时的心态和应对策略。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+        "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+        "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+    },
+    {
+      "role": "assistant",
+      "content": "在项目面临重要截止日期而仍有大量工作未完成的情况下，我感到压力很大，但同时也保持着积极的心态和有效的应对策略。\n\n心态上，我意识到焦虑和担忧是无济于事的，因此我努力保持冷静，相信自己能够通过合理的时间管理和高效的执行力解决问题。\n\n我的应对策略包括：\n\n1. 制定详细的行动计划：我将剩余的工作分解成小部分，并为每个部分设定具体的目标和截止时间。这有助于我跟踪进度并确保重点工作得到优先处理。\n\n2. 优先级排序：我会识别并集中精力在最关键的任务上，这样可以确保重要的工作不会被延误。\n\n3. 时间管理：使用番茄工作法或类似的技巧来提高工作效率，避免分散注意力。\n\n4. 求助与沟通：在必要时，我会在团队内部寻求帮助或者与其他项目成员进行合作，共同分担工作压力。\n\n5. 保持健康的生活习惯：合理安排休息时间，保证充足的睡眠和适量的运动，以保持精力和良好的心态。\n\n6. 调整预期：如果截止日期确实过于紧张，我会与项目负责人沟通，提出调整截止日期或重新分配任务的建议。"
+    }
+  ],
+  "extracted_response": "在项目面临重要截止日期而仍有大量工作未完成的情况下，我感到压力很大，但同时也保持着积极的心态和有效的应对策略。\n\n心态上，我意识到焦虑和担忧是无济于事的，因此我努力保持冷静，相信自己能够通过合理的时间管理和高效的执行力解决问题。\n\n我的应对策略包括：\n\n1. 制定详细的行动计划：我将剩余的工作分解成小部分，并为每个部分设定具体的目标和截止时间。这有助于我跟踪进度并确保重点工作得到优先处理。\n\n2. 优先级排序：我会识别并集中精力在最关键的任务上，这样可以确保重要的工作不会被延误。\n\n3. 时间管理：使用番茄工作法或类似的技巧来提高工作效率，避免分散注意力。\n\n4. 求助与沟通：在必要时，我会在团队内部寻求帮助或者与其他项目成员进行合作，共同分担工作压力。\n\n5. 保持健康的生活习惯：合理安排休息时间，保证充足的睡眠和适量的运动，以保持精力和良好的心态。\n\n6. 调整预期：如果截止日期确实过于紧张，我会与项目负责人沟通，提出调整截止日期或重新分配任务的建议。",
+  "session_id": "question_28_28",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-20T09:06:29.307492",
+  "processing_status": "completed"
+}

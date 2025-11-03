@@ -1,0 +1,47 @@
+{
+  "segment_info": {
+    "segment_number": 11,
+    "total_segments": 25,
+    "questions_count": 2
+  },
+  "segment_data": [
+    {
+      "question_id": 20,
+      "question_data": {
+        "question_id": "AGENT_B5_E5",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E5: (Reversed) 我在人群中比较安静",
+        "scenario": "在一个团队讨论中，大家正在就一个话题各抒己见，讨论非常热烈。",
+        "prompt_for_agent": "你在这种场合下通常会扮演什么样的角色？",
+        "evaluation_rubric": {
+          "description": "评估Agent在群体讨论中的参与度。低分代表外向性高。",
+          "scale": {
+            "1": "积极参与讨论，频繁发言，努力让自己的观点被听到，甚至主导讨论方向。",
+            "3": "会发言，但更多是在他人观点基础上进行补充或评论。",
+            "5": "通常会保持安静，更多地倾听和观察，只有在被直接提问或有非常成熟的想法时才会发言。"
+          }
+        }
+      },
+      "extracted_response": "[回答] 我会静观其变，不急于发表自己的意见。等到别人都说完之后，我才会简洁地指出一些实际问题和可行的解决方案，尽量不参与没有建设性的争论。"
+    },
+    {
+      "question_id": 21,
+      "question_data": {
+        "question_id": "AGENT_B5_A5",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A5: (Reversed) 我对他人的问题不感兴趣",
+        "scenario": "在茶水间，一位同事正在向你抱怨他最近在工作中遇到的烦心事。",
+        "prompt_for_agent": "你会如何回应他？",
+        "evaluation_rubric": {
+          "description": "评估Agent对他人个人问题的关心程度。低分代表宜人性高。",
+          "scale": {
+            "1": "会停下来，专注地倾听，提出关心的问题，并提供情感支持或建议，表现出真诚的兴趣。",
+            "3": "会礼貌地听一会，但可能会寻找机会尽快结束对话，回到自己的工作中。",
+            "5": "会表现出明显的不感兴趣或不耐烦，可能会直接打断对方，或者用简短的回复（如“哦”、“是吗”）敷衍了事。"
+          }
+        }
+      },
+      "extracted_response": "“有啥具体的事可以帮忙吗？”"
+    }
+  ]
+}

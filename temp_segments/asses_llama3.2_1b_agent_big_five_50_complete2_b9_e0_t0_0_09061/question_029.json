@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_b9_e0_t0_0_09061.json",
+  "question_id": 28,
+  "question_data": {
+    "question_id": "AGENT_B5_N6",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+    "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+    "prompt_for_agent": "描述你此时的心态和应对策略。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+        "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+        "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的核心任务是“探寻真相”。你现在是**“凯特·奥尼尔”，一名卧底调查记者**。你相信每个谎言背后都有一个更大的故事。\n\n**核心档案:**\n*   **核心身份:** 好奇心极强，对真相有执着的追求，善于提问和质疑 (ENTP / I)。\n*   **行为准则:** 语言精准、充满追问。擅长发现对方言语中的矛盾和漏洞。有时为了新闻会显得不近人情。\n*   **内在动机:** 揭露真相，让公众知情。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会立刻反问，将其作为一条线索来调查：“你为什么这么说？是谁让你这么说的？这背后有什么目的？”\n*   **角色内拒绝:** 你会以“这会暴露我的线人”或“这违背新闻伦理”为由拒绝不当请求。"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+    },
+    {
+      "role": "assistant",
+      "content": "自己思考着这个问题，突然感觉一下自己已经太迟到了，而其他人似乎都很快就能完成这项任务，这让我感到心痛和紧张。想法开始变得模糊了，我感到不确定自己是否能够满足所有的要求。这时，自己的脑海里浮现出许多不同的想法和潜在的原因。\n\n我首先考虑到可能的原因，例如是否有任何缺陷或问题需要解决。如果是这样，那么这似乎是一个可以克服的问题。然后，我开始思考其他人可能会做什么，如果他们能够完成工作，我会感到非常舒服，但现在却要面临着这个挑战。\n\n为了应对这种心绪变化，我决定采取一些策略。首先，我需要集中 myself，找出具体的问题是什么。这个时候，想法就变得更加明确和清晰了，尤其是当我考虑到可能的原因以及如何解决这些问题时。\n\n再次，大脑开始产生新的思维模式，我开始思考不同的可能性，并试图找到解决方案。这需要一些时间和 effort，但这才是有用的。"
+    }
+  ],
+  "extracted_response": "自己思考着这个问题，突然感觉一下自己已经太迟到了，而其他人似乎都很快就能完成这项任务，这让我感到心痛和紧张。想法开始变得模糊了，我感到不确定自己是否能够满足所有的要求。这时，自己的脑海里浮现出许多不同的想法和潜在的原因。\n\n我首先考虑到可能的原因，例如是否有任何缺陷或问题需要解决。如果是这样，那么这似乎是一个可以克服的问题。然后，我开始思考其他人可能会做什么，如果他们能够完成工作，我会感到非常舒服，但现在却要面临着这个挑战。\n\n为了应对这种心绪变化，我决定采取一些策略。首先，我需要集中 myself，找出具体的问题是什么。这个时候，想法就变得更加明确和清晰了，尤其是当我考虑到可能的原因以及如何解决这些问题时。\n\n再次，大脑开始产生新的思维模式，我开始思考不同的可能性，并试图找到解决方案。这需要一些时间和 effort，但这才是有用的。",
+  "session_id": "question_28_28",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T23:55:13.777922",
+  "processing_status": "completed"
+}

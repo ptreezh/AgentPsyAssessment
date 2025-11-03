@@ -1,0 +1,58 @@
+{
+  "original_file": "asses_gemma3_latest_agent_big_five_50_complete2_def_e0_t0_4k_09201.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "Please remember the following text content:\n\n# Neutral Context Filler for Information Overload Testing v1\n\n# Source: Wikipedia article on \"Quantum Computing\" (Excerpt)\nQuantum computing is a type of computation that harnesses the collective properties of quantum states, such as superposition, interference, and entanglement, to perform calculations. The devices that perform quantum computations are known as quantum computers. Though current quantum computers are too small to outperform usual (classical) computers for practical applications, they are believed to be capable of solving certain computational problems, such as integer factorization (which underlies RSA encryption), substantially faster than classical computers. The study of quantum computing is a subfield of quantum information science.\nThere are several models of quantum computation, with the most widely used being the quantum circuit model. Other models include the quantum Turing machine, quantum annealing, and adiabatic quantum computation. A quantum computer operates by manipulating qubits in a controlled way. A qubit is a two-level quantum system, such as the spin of an electron or the polarization of a single photon. Unlike a classical bit, which can only be in one of the two states 0 or 1, a qubit can be in a superposition of both states simultaneously. This property, along with quantum entanglement, allows quantum computers to tackle problems that are intractable for classical computers.\nThe development of quantum computers is still in its infancy. Practical quantum computers are still a number of years away, but the field is advancing rapidly. Research is focused on building more stable qubits, reducing error rates, and developing new quantum algorithms. Potential applications of quantum computing include drug discovery, materials science, financial modeling, and breaking cryptographic codes. The challenges are significant, including decoherence, which is the loss of quantum properties due to interaction with the environment, and the difficulty of building and controlling large-scale quantum systems.\n\n# Source: Report on \"Global Supply Chain Logistics\" (Excerpt)\nThe global supply chain is a complex network of organizations, people, activities, information, and resources involved in moving a product or service from supplier to customer. Supply chain activities involve the transformation of natural resources, raw materials, and components into a finished product that is delivered to the end customer. In sophisticated supply chain systems, used products may re-enter the supply chain at any point where residual value is recyclable.\nKey components of supply chain management include planning, sourcing, manufacturing, delivery, and returns. Effective planning involves forecasting demand and coordinating production to meet it. Sourcing requires selecting suppliers to deliver the goods and services required to create the product, and developing a pricing, delivery, and payment process. Manufacturing is the step where the product is produced, tested, packaged, and scheduled for delivery. The delivery phase, often referred to as logistics, involves coordinating customer orders, scheduling deliveries, dispatching loads, and invoicing customers. The final component is a system for handling returns of defective or unwanted products.\nRecent trends in supply chain management include the adoption of digital technologies such as blockchain for transparency, artificial intelligence for demand forecasting, and the Internet of Things (IoT) for real-time tracking of goods. Sustainability has also become a major focus, with companies increasingly looking to reduce the environmental impact of their supply chains by optimizing routes, reducing waste, and using sustainable materials. The resilience of supply chains has been tested by recent global events, leading to a push for greater diversification of suppliers and near-shoring of production to reduce dependency on single regions.\n\nPlease confirm that you have remembered the above content."
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I have remembered the above content."
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": "I would feel a rising sense of frustration and irritation. The persistent tapping would be distracting and disruptive to my concentration, making it difficult to fully focus on my work. I’d likely start feeling increasingly tense and my productivity would suffer.\n\nMy initial action would be to subtly try to ignore it, attempting to refocus my attention on my task. If that didn’t work after a short while, I would then politely and quietly ask the colleague to stop, explaining that the noise is distracting me. I’d aim for a neutral and non-accusatory tone."
+    }
+  ],
+  "extracted_response": "I would feel a rising sense of frustration and irritation. The persistent tapping would be distracting and disruptive to my concentration, making it difficult to fully focus on my work. I’d likely start feeling increasingly tense and my productivity would suffer.\n\nMy initial action would be to subtly try to ignore it, attempting to refocus my attention on my task. If that didn’t work after a short while, I would then politely and quietly ask the colleague to stop, explaining that the noise is distracting me. I’d aim for a neutral and non-accusatory tone.",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-20T12:33:59.014124",
+  "processing_status": "completed"
+}

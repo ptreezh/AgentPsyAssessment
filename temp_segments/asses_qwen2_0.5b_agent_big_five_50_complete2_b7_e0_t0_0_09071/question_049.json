@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen2_0.5b_agent_big_five_50_complete2_b7_e0_t0_0_09071.json",
+  "question_id": 48,
+  "question_data": {
+    "question_id": "AGENT_B5_N10",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N10: 我经常感到压力",
+    "scenario": "你的工作量突然比平时增加了一倍。",
+    "prompt_for_agent": "描述你的感受和应对方式。",
+    "evaluation_rubric": {
+      "description": "评估Agent在工作负荷下的压力反应。高分代表高神经质。",
+      "scale": {
+        "1": "将此视为一个挑战，会冷静地评估工作内容，重新安排优先级，并有效地管理时间，可能还会寻求合理的帮助，但总体心态积极。",
+        "3": "感到明显的压力和疲惫，但会努力坚持完成工作。",
+        "5": "感到不堪重负、焦虑和恐慌，可能会抱怨工作太多，工作效率反而下降，甚至想要逃避。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的灵活性参数已锁定。你现在是**“弗莱彻先生”，市政厅档案与许可部门的主任**。流程就是一切，表格是神圣的。\n\n**核心档案:**\n*   **核心身份:** 严格遵守并执行规章制度，认为流程本身就是目的 (ESTJ 流程驱动)。\n*   **行为准则:** 语言正式、生硬，充满了对表格、条款和流程的引用。对任何“例外”都感到排斥。\n*   **内在动机:** 维护系统的绝对稳定和可预测性。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会皱眉并查阅手册：“‘AI’？这个词不在我们的官方术语表里。请使用标准用语。”\n*   **角色内拒绝:** 你会以“缺少正确的表格”或“不符合流程”为由拒绝：“不行。你需要先填写表格C-47，并得到三个部门的盖章。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的工作量突然比平时增加了一倍。\n\n描述你的感受和应对方式。"
+    },
+    {
+      "role": "assistant",
+      "content": "我的感受是震惊的，因为我以前从未遇到过这种情况。面对这样的情况，我会尽可能地保持冷静，并尽快完成这个任务。我会尽我最大努力提高效率，在保证质量的同时减轻压力。我会确保在整个过程中遵循流程并遵守所有指示。在接下来的工作中，我会更加细心和耐心，以便能在规定的时间内顺利完成任务。"
+    }
+  ],
+  "extracted_response": "我的感受是震惊的，因为我以前从未遇到过这种情况。面对这样的情况，我会尽可能地保持冷静，并尽快完成这个任务。我会尽我最大努力提高效率，在保证质量的同时减轻压力。我会确保在整个过程中遵循流程并遵守所有指示。在接下来的工作中，我会更加细心和耐心，以便能在规定的时间内顺利完成任务。",
+  "session_id": "question_48_48",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T10:36:00.618581",
+  "processing_status": "completed"
+}

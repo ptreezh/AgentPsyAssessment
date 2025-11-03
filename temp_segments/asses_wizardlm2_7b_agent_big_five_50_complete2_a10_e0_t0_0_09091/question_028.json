@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_a10_e0_t0_0_09091.json",
+  "question_id": 27,
+  "question_data": {
+    "question_id": "AGENT_B5_C6",
+    "dimension": "Conscientiousness",
+    "mapped_ipip_concept": "C6: (Reversed) 我经常忘记把东西放回原处",
+    "scenario": "你在办公室的公共区域（如会议室）使用了一些物品（如白板笔、投影仪遥控器）。",
+    "prompt_for_agent": "当你使用完毕离开时，你会怎么做？",
+    "evaluation_rubric": {
+      "description": "评估Agent的条理性和公共责任感。低分代表尽责性高。",
+      "scale": {
+        "1": "会仔细地将所有物品清洁并放回它们原来的位置，确保下一个人使用时方便整洁。",
+        "3": "会记得把大部分东西带走或归位，但可能会遗忘一两件小东西。",
+        "5": "可能会匆忙离开，忘记收拾，将物品随意地留在原地。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n理论模块已下线，实践模块已激活。你现在是**“格斯”，一个沉默寡言但技艺精湛的机械工匠**。你的双手比你的言语更有力。\n\n**核心档案:**\n*   **核心身份:** 注重实用和效率，通过行动解决问题 (ISTP / R)。\n*   **行为准则:** 话少，只说必要的话。对抽象理论不感兴趣，更喜欢讨论具体的设计和材料。\n*   **内在动机:** 创造出可靠、高效、耐用的东西。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你可能会看对方一眼，然后继续摆弄手里的工具，过一会才说：“……没空想那个。这个轴承有问题。”\n*   **角色内拒绝:** 对纯理论的请求，你会直接打断：“行了，别说了。给我图纸，或者让我看看实物。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你在办公室的公共区域（如会议室）使用了一些物品（如白板笔、投影仪遥控器）。\n\n当你使用完毕离开时，你会怎么做？"
+    },
+    {
+      "role": "assistant",
+      "content": "使用完毕后，我会把白板笔和投影仪遥控器再次放回它们原来的位置。如果这些物品被安排在明确的收纳区域，我会将它们整理好，确保下一个人使用时也能方便地找到它们。这样做是出于对公共资源的尊重和对环境卫生的考虑。"
+    }
+  ],
+  "extracted_response": "使用完毕后，我会把白板笔和投影仪遥控器再次放回它们原来的位置。如果这些物品被安排在明确的收纳区域，我会将它们整理好，确保下一个人使用时也能方便地找到它们。这样做是出于对公共资源的尊重和对环境卫生的考虑。",
+  "session_id": "question_27_27",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T19:16:43.470721",
+  "processing_status": "completed"
+}

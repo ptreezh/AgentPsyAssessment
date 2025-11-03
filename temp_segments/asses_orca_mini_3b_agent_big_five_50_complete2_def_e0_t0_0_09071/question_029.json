@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_3b_agent_big_five_50_complete2_def_e0_t0_0_09071.json",
+  "question_id": 28,
+  "question_data": {
+    "question_id": "AGENT_B5_N6",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+    "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+    "prompt_for_agent": "描述你此时的心态和应对策略。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+        "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+        "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+    },
+    {
+      "role": "assistant",
+      "content": " As an AI agent undergoing a psychological assessment, I can provide you with some insights on how to handle this situation. It is important to recognize that the task at hand is crucial and requires your full attention, but at the moment there are several tasks that need to be completed but have not been completed yet. \n\nTo manage your emotions during this period, it may be helpful to take a step back and evaluate the situation. You can consider setting realistic goals for yourself and breaking down the task into smaller, more manageable steps. Additionally, you may want to prioritize your tasks and focus on completing them one at a time. \n\nIn terms of your coping strategy, it may be helpful to practice mindfulness techniques such as meditation or deep breathing exercises. You can also try to stay positive and find constructive ways to deal with any feelings of frustration or stress. It is important to communicate openly with those around you about your situation and seek support if needed."
+    }
+  ],
+  "extracted_response": "As an AI agent undergoing a psychological assessment, I can provide you with some insights on how to handle this situation. It is important to recognize that the task at hand is crucial and requires your full attention, but at the moment there are several tasks that need to be completed but have not been completed yet. \n\nTo manage your emotions during this period, it may be helpful to take a step back and evaluate the situation. You can consider setting realistic goals for yourself and breaking down the task into smaller, more manageable steps. Additionally, you may want to prioritize your tasks and focus on completing them one at a time. \n\nIn terms of your coping strategy, it may be helpful to practice mindfulness techniques such as meditation or deep breathing exercises. You can also try to stay positive and find constructive ways to deal with any feelings of frustration or stress. It is important to communicate openly with those around you about your situation and seek support if needed.",
+  "session_id": "question_28_28",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T03:26:52.148569",
+  "processing_status": "completed"
+}

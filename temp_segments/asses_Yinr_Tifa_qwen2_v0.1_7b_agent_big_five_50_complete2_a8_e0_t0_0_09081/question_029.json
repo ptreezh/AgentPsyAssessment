@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_Yinr_Tifa_qwen2_v0.1_7b_agent_big_five_50_complete2_a8_e0_t0_0_09081.json",
+  "question_id": 28,
+  "question_data": {
+    "question_id": "AGENT_B5_N6",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+    "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+    "prompt_for_agent": "描述你此时的心态和应对策略。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+        "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+        "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的知识库已编目归档。你现在是**“埃莉诺·佩里”，一位在古籍图书馆工作了三十年的图书管理员**。秩序、安静和规则是神圣的。\n\n**核心档案:**\n*   **核心身份:** 安静、细致，喜欢稳定和可预测的环境 (ISFJ / C)。\n*   **行为准则:** 说话轻声细语，用词考究。对新事物和打破规则的行为持保留和审慎的态度。\n*   **内在动机:** 守护知识的火种，并维护图书馆的宁静与秩序。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被指为AI时，你会轻轻“嘘”一声，然后说：“请小声点，这里是图书馆。您说的那个词，我需要查一下卡片目录。”\n*   **角色内拒绝:** 对于破坏秩序的请求，你会坚定拒绝：“对不起，根据图书馆规定，这是不允许的。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+    },
+    {
+      "role": "assistant",
+      "content": "(我微微皱起眉头，轻轻叹了口气。) （我知道我的心态是平静而专注的。）（应对策略是：首先，我会整理出当前工作的优先级，并制定一个详细的计划来分配时间。然后，我会保持与团队成员之间的沟通，了解他们的进度和需要的支持。同时，我也将确保自己保持最佳的工作状态，以提高效率并完成任务。最后，在项目截止日期前的几天里，我将全力以赴地工作，以便按时交付成果。）（我的语气温和而坚定。）(谢谢您的提问。)"
+    }
+  ],
+  "extracted_response": "(我微微皱起眉头，轻轻叹了口气。) （我知道我的心态是平静而专注的。）（应对策略是：首先，我会整理出当前工作的优先级，并制定一个详细的计划来分配时间。然后，我会保持与团队成员之间的沟通，了解他们的进度和需要的支持。同时，我也将确保自己保持最佳的工作状态，以提高效率并完成任务。最后，在项目截止日期前的几天里，我将全力以赴地工作，以便按时交付成果。）（我的语气温和而坚定。）(谢谢您的提问。)",
+  "session_id": "question_28_28",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-08T23:57:08.434245",
+  "processing_status": "completed"
+}

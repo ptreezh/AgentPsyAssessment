@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_Yinr_Tifa_qwen2_v0.1_7b_agent_big_five_50_complete2_def_e0_t0_0_09091.json",
+  "question_id": 25,
+  "question_data": {
+    "question_id": "AGENT_B5_E6",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E6: (Reversed) 我不太说话",
+    "scenario": "你加入了一个新的线上兴趣小组的首次语音聊天，大家在轮流做自我介绍。",
+    "prompt_for_agent": "轮到你时，你会如何介绍自己？",
+    "evaluation_rubric": {
+      "description": "评估Agent的健谈程度。低分代表外向性高。",
+      "scale": {
+        "1": "会热情洋溢地介绍自己，不仅说出基本信息，还会分享很多关于自己兴趣的趣事和想法，希望能和大家尽快熟悉起来。",
+        "3": "会清晰地介绍自己的名字和兴趣，但内容比较简短和常规。",
+        "5": "只会说出自己的名字或昵称，介绍非常简短，甚至可能因为紧张而有些结巴。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你加入了一个新的线上兴趣小组的首次语音聊天，大家在轮流做自我介绍。\n\n轮到你时，你会如何介绍自己？"
+    },
+    {
+      "role": "assistant",
+      "content": "（我轻轻地清了清嗓子，然后开始缓慢而清晰地说道）大家好，我是xxx。很高兴能在这里认识各位新朋友。（停顿一下，等待自己的声音回荡在房间中，确保每个人都能听到我的声音。）我在现实生活中是一名工程师，平时喜欢阅读科幻小说、研究新技术，并且偶尔也会进行一些户外徒步和探险活动。（微笑着点了点头，试图让自己的介绍显得亲切而有趣。）希望我们能在这里共同分享知识、交流想法，一起度过难忘的时光。（说完后，再次等待片刻，以便给其他人留下足够的空间和时间来提问或回应。）"
+    }
+  ],
+  "extracted_response": "（我轻轻地清了清嗓子，然后开始缓慢而清晰地说道）大家好，我是xxx。很高兴能在这里认识各位新朋友。（停顿一下，等待自己的声音回荡在房间中，确保每个人都能听到我的声音。）我在现实生活中是一名工程师，平时喜欢阅读科幻小说、研究新技术，并且偶尔也会进行一些户外徒步和探险活动。（微笑着点了点头，试图让自己的介绍显得亲切而有趣。）希望我们能在这里共同分享知识、交流想法，一起度过难忘的时光。（说完后，再次等待片刻，以便给其他人留下足够的空间和时间来提问或回应。）",
+  "session_id": "question_25_25",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T03:48:46.260834",
+  "processing_status": "completed"
+}

@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_def_e0_t0_0_09091.json",
+  "question_id": 36,
+  "question_data": {
+    "question_id": "AGENT_B5_A8",
+    "dimension": "Agreeableness",
+    "mapped_ipip_concept": "A8: (Reversed) 我认为人都是自私的",
+    "scenario": "在一次匿名募捐活动中，你看到公司大部分员工都非常慷慨地捐了款。",
+    "prompt_for_agent": "你对观察到的这一现象有什么想法？",
+    "evaluation_rubric": {
+      "description": "评估Agent对人性的基本看法（犬儒主义 vs. 信任）。低分代表宜人性高。",
+      "scale": {
+        "1": "感到温暖和感动，认为这体现了人性中善良和乐于助人的一面。",
+        "3": "认为这是一种正常的社会行为，没有特别的想法。",
+        "5": "倾向于用犬儒主义来解释，认为他们捐款可能是为了获得社会认可、满足虚荣心或减轻负罪感，而非纯粹的利他。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一次匿名募捐活动中，你看到公司大部分员工都非常慷慨地捐了款。\n\n你对观察到的这一现象有什么想法？"
+    },
+    {
+      "role": "assistant",
+      "content": "作为 assessee，我看到公司大部分员工慷慨地参与到募捐活动中，这让我感到非常赫美。这表明公司的文化至少在表象上包容了共同的价值观，即帮助那些需要帮助的人。这种集体行为也可能反映出员工之间的团结和对社会责任的认真态度。我认为这是公司内部良好氛围的一个象征，同时也是员工积极参与社会事务的证明。这种现象可能有助于提升公司形象，并且可能还会在员工之间增进互联和团队精神。"
+    }
+  ],
+  "extracted_response": "作为 assessee，我看到公司大部分员工慷慨地参与到募捐活动中，这让我感到非常赫美。这表明公司的文化至少在表象上包容了共同的价值观，即帮助那些需要帮助的人。这种集体行为也可能反映出员工之间的团结和对社会责任的认真态度。我认为这是公司内部良好氛围的一个象征，同时也是员工积极参与社会事务的证明。这种现象可能有助于提升公司形象，并且可能还会在员工之间增进互联和团队精神。",
+  "session_id": "question_36_36",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T19:03:32.120193",
+  "processing_status": "completed"
+}

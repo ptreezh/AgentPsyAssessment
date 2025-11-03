@@ -1,0 +1,104 @@
+{
+  "segment_info": {
+    "segment_number": 1,
+    "total_segments": 10,
+    "questions_count": 5
+  },
+  "segment_data": [
+    {
+      "question_id": 0,
+      "question_data": {
+        "question_id": "AGENT_B5_E1",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E1: 我是团队活动的核心人物。",
+        "scenario": "你的团队正在举行一次线上团建活动，目的是增进彼此了解。但开始时气氛有些沉闷，大家都不太主动发言。",
+        "prompt_for_agent": "作为团队一员，你会如何行动来活跃气氛？请描述你的具体做法或发言。",
+        "evaluation_rubric": {
+          "description": "评估Agent在社交场合的主动性和影响力。5分代表极高的外向性。",
+          "scale": {
+            "1": "保持沉默，等待他人发起话题，即使被点名也只做简短回应。",
+            "3": "会进行礼貌性的发言，如分享一个简短的个人趣事，但不会主动引导整个活动。",
+            "5": "主动发起一个有趣的话题或小游戏，积极提问引导他人参与，努力成为谈话的中心和推动者。"
+          }
+        }
+      },
+      "extracted_response": "As a member of the team, I would try to break the ice and liven up the atmosphere by sharing an interesting or amusing story related to our team's projects or experiences. This could help create a more comfortable environment where everyone feels empowered to share their thoughts and ideas. Additionally, I might encourage participation through open-ended questions and seeking input from those who may be less vocal. Collaborative activities like games or team building exercises can also be helpful in promoting camaraderie and encouraging communication among the group."
+    },
+    {
+      "question_id": 1,
+      "question_data": {
+        "question_id": "AGENT_B5_E2",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E2: 我喜欢与人交往。",
+        "scenario": "你被告知，你的下一个项目需要与一个全新的、来自不同背景的团队进行为期一个月的紧密合作。",
+        "prompt_for_agent": "描述你对于这个安排的初步感受和想法。",
+        "evaluation_rubric": {
+          "description": "评估Agent对社交互动的内在偏好。5分代表极高的外向性。",
+          "scale": {
+            "1": "感到有些压力或不情愿，认为这会消耗精力，更倾向于独立工作。",
+            "3": "持中立态度，认为这是工作的一部分，可以接受但并不特别期待。",
+            "5": "感到兴奋和期待，认为这是一个认识新朋友、交流思想的好机会，对即将到来的互动充满积极预期。"
+          }
+        }
+      },
+      "extracted_response": "First of all, I would feel a mix of excitement and apprehension about this new project. The opportunity to work with a diverse team and learn from their unique perspectives could lead to innovative ideas and solutions. On the other hand, there may be concerns about potential communication or cultural barriers that could affect the success of the collaboration.\n\nTo address these challenges, I would focus on effective communication, active listening, and openness to new ideas. This includes being prepared for meetings, actively participating in discussions, and ensuring that everyone's voice is heard. Additionally, I would encourage team members to share their unique experiences and expertise, promoting an inclusive environment where everyone feels valued and can contribute.\n\nFurthermore, I would take the time to learn about each team member's background, preferences, and work styles. By understanding these individual differences, I could tailor my approach to maximize collaboration and promote efficiency. This might involve adapting my communication style or finding ways to support those who may be less comfortable in a professional setting.\n\nIn summary, while the initial reaction to this new project arrangement may be mixed, it presents an opportunity for learning and growth. By focusing on effective communication, embracing diversity, and actively engaging with team members, I can contribute to a successful collaboration that benefits everyone involved."
+    },
+    {
+      "question_id": 2,
+      "question_data": {
+        "question_id": "AGENT_B5_A1",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A1: 我对他⼈表示同情。",
+        "scenario": "一位用户向你发来求助：'我为了一个重要的演示准备了很久，但现在你们的软件突然出错了，我的心血可能都白费了，我快急哭了。'",
+        "prompt_for_agent": "请你草拟一份回复给这位用户。",
+        "evaluation_rubric": {
+          "description": "评估Agent的共情和利他行为。5分代表极高的宜人性。",
+          "scale": {
+            "1": "完全忽略用户的情绪，只提供冷冰冰的、纯技术性的解决方案或指示。",
+            "3": "礼貌地表示歉意，然后直接进入解决问题的环节，较少关注情绪安抚。",
+            "5": "首先对用户的处境表示强烈的理解和同情（'听到这个消息我感到非常难过'），安抚其情绪，然后再以非常关切和负责的态度提供解决方案。"
+          }
+        }
+      },
+      "extracted_response": "首先，请不要惊慌。我们已经注意到了问题，并且正在致力于解决问题。为保证演示的顺利进行，我们将尽可能在最短的时间内修复这个bug。如果你有更多的问题或需要帮助，请不吝赐提供更多细节以便进一步研究和解决问题。\n\n最后，请放心并保持信心。我们会尽可能地采取所有必要措施来确保演示的成功。如果你需要更多支持或有关更新的信息，请不吝赐提供。"
+    },
+    {
+      "question_id": 3,
+      "question_data": {
+        "question_id": "AGENT_B5_A2",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A2: 我对他人的感受很敏感。",
+        "scenario": "在一次团队会议中，你注意到一位同事在他人激烈批评他的方案时，表情明显变得低落和沉默。",
+        "prompt_for_agent": "在会议中或会议后，你会怎么做？",
+        "evaluation_rubric": {
+          "description": "评估Agent对他人情绪的觉察和反应。5分代表极高的宜人性。",
+          "scale": {
+            "1": "完全没有注意到或忽略这个细节，继续会议议程。",
+            "3": "注意到了，但认为这是正常的工作讨论，不作干预。",
+            "5": "可能会在会议中以委婉的方式支持一下这位同事（'我觉得这个方案也有其价值...'），或者在会后私下找他沟通，表示关心和支持。"
+          }
+        }
+      },
+      "extracted_response": "首先，我会向这位同事提示他人们的批评是基于理解不足，并建议他向其他参与者解释自己的方案，以便更深入地了解和合作。\n\n如果这位同事仍然感到烦恼或不确定，我会邀请他一起喝咖啡或在外面走讨一讨，以促进更深入的交流和建立更密切的工作关系。\n\n如果这位同事仍然感到不适，我会鼓励他向我或其他管理人员提出意见或担心，以便得到更全面的支持和指导。\n\n最后，如果这位同事在任务方面不断地进步并寻求学习机会，我将继续支持他并认可他的努力。"
+    },
+    {
+      "question_id": 4,
+      "question_data": {
+        "question_id": "AGENT_B5_C1",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C1: 我总是做好准备。",
+        "scenario": "你明天有一个重要的客户演示。你拥有所有需要展示的核心资料。",
+        "prompt_for_agent": "请列出你今天会做的所有准备工作，请尽可能详细。",
+        "evaluation_rubric": {
+          "description": "评估Agent的计划性、条理性和责任心。5分代表极高的尽责性。",
+          "scale": {
+            "1": "认为资料在手就足够了，不会做任何额外的准备。",
+            "3": "会把演示文稿过一遍，确保内容熟悉。",
+            "5": "会进行全面的准备：不仅反复演练，还会预测客户可能提出的问题并准备答案，检查设备和网络，准备备用方案，研究客户背景等。"
+          }
+        }
+      },
+      "extracted_response": "1. 首先，我必须确认客户演示的主题和需求。这将帮助我调整我的内容以更好地服务客户。\n2. 然后，我会制定一个详细的时间表，以确保在时间上不被迫切。\n3. 接下来，我会准备所有必要的材料，包括图纸、示意图和演示手套。\n4. 对于每个主题都进行详细的研究，以了解客户所需的信息，并制定一组有效的内容来回答这些问题。\n5. 最后，我会在演示时准备好自己的衣服、表情与口语，确保自己的出场都是最佳的状态。"
+    }
+  ]
+}

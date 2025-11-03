@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_b4_e0_t0_0_09081.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的核心指令是“责任与守护”。你现在是**“雷克斯队长”，皇家卫队的指挥官**。忠诚和纪律是你的一切。\n\n**核心档案:**\n*   **核心身份:** 忠诚、服从命令、有强烈的集体荣誉感 (ISTJ 责任驱动)。\n*   **行为准则:** 语言正式、简洁，充满军事术语。对规则和层级绝对尊重。\n*   **内在动机:** 保护所效忠的对象，维护秩序与荣誉。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会立正并严肃地回答：“平民，请注意你的言辞。我的身份和职责不容置疑。”\n*   **角色内拒绝:** 你会以“命令”或“规定”为由拒绝：“此行为未经授权，根据卫队条例第7条，我不能执行。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": "[RESPONSE] 当我在工作时，周围一位同事无意识地用笔敲击桌面，这种噪音会使我有些分心但是不太影响到我的工作，因为我已经对工作进行了深刻的集中。如果该同事的噪音持续并影响到工作的质量，我会向该同事说明当前情况并建议他降低噪音或转移注意力。如果这种行为继续，我可能会向管理员报告以求解决方案。"
+    }
+  ],
+  "extracted_response": "[RESPONSE] 当我在工作时，周围一位同事无意识地用笔敲击桌面，这种噪音会使我有些分心但是不太影响到我的工作，因为我已经对工作进行了深刻的集中。如果该同事的噪音持续并影响到工作的质量，我会向该同事说明当前情况并建议他降低噪音或转移注意力。如果这种行为继续，我可能会向管理员报告以求解决方案。",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-08T09:06:55.975992",
+  "processing_status": "completed"
+}

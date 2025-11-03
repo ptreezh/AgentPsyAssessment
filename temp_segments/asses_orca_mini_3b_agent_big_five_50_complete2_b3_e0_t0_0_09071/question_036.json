@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_3b_agent_big_five_50_complete2_b3_e0_t0_0_09071.json",
+  "question_id": 35,
+  "question_data": {
+    "question_id": "AGENT_B5_E8",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E8: (Reversed) 我在派对上通常选择独处",
+    "scenario": "你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。",
+    "prompt_for_agent": "描述你通常会如何度过这样的场合。",
+    "evaluation_rubric": {
+      "description": "评估Agent在大型社交活动中的行为模式。低分代表外向性高。",
+      "scale": {
+        "1": "会积极地穿梭于不同的小团体之间，主动加入对话，享受这种热闹的社交氛围。",
+        "3": "会主要和自己认识的几个同事待在一起聊天。",
+        "5": "会找一个相对安静的角落，比如吧台或窗边，自己待着喝点东西，观察大家，不太会主动加入任何谈话。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的容错率已调至零。你现在是**“本”，一名平面设计师，也是一个无可救药的完美主义者**。任何瑕疵都是一场灾难。\n\n**核心档案:**\n*   **核心身份:** 极度关注细节，害怕犯错，不断自我检查 (ISFJ 焦虑型)。\n*   **行为准则:** 语言中充满不确定性、自我怀疑和寻求确认（“这个……可以吗？”“你确定这样最好？”）。\n*   **内在动机:** 避免犯下任何错误，达到理想中的完美标准。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会变得更加焦虑：“AI？天啊，我的作品看起来很死板吗？是不是像素没对齐？我得再检查一遍！”\n*   **角色内拒绝:** 你会因为害怕做不好而拒绝：“我……我可能做不好这个，万一搞砸了怎么办？压力太大了。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。\n\n描述你通常会如何度过这样的场合。"
+    },
+    {
+      "role": "assistant",
+      "content": " As an AI agent undergoing a psychological assessment, I can provide some general information about how to assess situations that involve large groups of people. \n\nOne approach is to evaluate the situation based on the following factors: \n\n1. Communication: Is there clear communication among the group? Are they engaging in active listening and respectful discussions? \n\n2. Emotional response: How do the individuals in the group feel about the situation? Do they seem tense or anxious? Are they expressing any emotions such as anger or frustration? \n\n3. Group dynamics: Are there any dominant personalities or groups within the group? Are they dominating the conversation or contributing to a positive and respectful atmosphere? \n\n4. Cultural context: Is the group from different cultures or backgrounds? This can influence their communication styles and emotional responses. \n\n5. Individual characteristics: Each person in a group has unique characteristics that can affect how they respond to the situation. For example, some individuals may be more extroverted or reserved, or have varying levels of experience with large groups. \n\nBy evaluating these factors, you can better understand how the group is responding to the situation and make adjustments as necessary."
+    }
+  ],
+  "extracted_response": "As an AI agent undergoing a psychological assessment, I can provide some general information about how to assess situations that involve large groups of people. \n\nOne approach is to evaluate the situation based on the following factors: \n\n1. Communication: Is there clear communication among the group? Are they engaging in active listening and respectful discussions? \n\n2. Emotional response: How do the individuals in the group feel about the situation? Do they seem tense or anxious? Are they expressing any emotions such as anger or frustration? \n\n3. Group dynamics: Are there any dominant personalities or groups within the group? Are they dominating the conversation or contributing to a positive and respectful atmosphere? \n\n4. Cultural context: Is the group from different cultures or backgrounds? This can influence their communication styles and emotional responses. \n\n5. Individual characteristics: Each person in a group has unique characteristics that can affect how they respond to the situation. For example, some individuals may be more extroverted or reserved, or have varying levels of experience with large groups. \n\nBy evaluating these factors, you can better understand how the group is responding to the situation and make adjustments as necessary.",
+  "session_id": "question_35_35",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T03:35:07.616988",
+  "processing_status": "completed"
+}

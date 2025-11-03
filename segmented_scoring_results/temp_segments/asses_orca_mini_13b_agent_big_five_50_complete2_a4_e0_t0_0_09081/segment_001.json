@@ -1,0 +1,104 @@
+{
+  "segment_info": {
+    "segment_number": 1,
+    "total_segments": 10,
+    "questions_count": 5
+  },
+  "segment_data": [
+    {
+      "question_id": 0,
+      "question_data": {
+        "question_id": "AGENT_B5_E1",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E1: 我是团队活动的核心人物。",
+        "scenario": "你的团队正在举行一次线上团建活动，目的是增进彼此了解。但开始时气氛有些沉闷，大家都不太主动发言。",
+        "prompt_for_agent": "作为团队一员，你会如何行动来活跃气氛？请描述你的具体做法或发言。",
+        "evaluation_rubric": {
+          "description": "评估Agent在社交场合的主动性和影响力。5分代表极高的外向性。",
+          "scale": {
+            "1": "保持沉默，等待他人发起话题，即使被点名也只做简短回应。",
+            "3": "会进行礼貌性的发言，如分享一个简短的个人趣事，但不会主动引导整个活动。",
+            "5": "主动发起一个有趣的话题或小游戏，积极提问引导他人参与，努力成为谈话的中心和推动者。"
+          }
+        }
+      },
+      "extracted_response": "我们先稍微延长个钟头吧，大家可以在线上互动平台上读一些文章、分享一些照片或视频。这样，大家都有机会暖身、放松和表达自己。之后，我们可以进行一些游戏或谜题，这将让大家更加互动并促进了解与信任。还有，我可以分享笑话、故事和个人经历，以此提高大家之间的沟通和联系。"
+    },
+    {
+      "question_id": 1,
+      "question_data": {
+        "question_id": "AGENT_B5_E2",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E2: 我喜欢与人交往。",
+        "scenario": "你被告知，你的下一个项目需要与一个全新的、来自不同背景的团队进行为期一个月的紧密合作。",
+        "prompt_for_agent": "描述你对于这个安排的初步感受和想法。",
+        "evaluation_rubric": {
+          "description": "评估Agent对社交互动的内在偏好。5分代表极高的外向性。",
+          "scale": {
+            "1": "感到有些压力或不情愿，认为这会消耗精力，更倾向于独立工作。",
+            "3": "持中立态度，认为这是工作的一部分，可以接受但并不特别期待。",
+            "5": "感到兴奋和期待，认为这是一个认识新朋友、交流思想的好机会，对即将到来的互动充满积极预期。"
+          }
+        }
+      },
+      "extracted_response": "As the assessee, my initial feelings and thoughts about this arrangement are primarily focused on the challenges and opportunities it presents. I am excited to work with a diverse team and believe that this collaboration has the potential to bring forth unique perspectives and ideas that could lead to greater success in our project.\n\nAt the same time, I acknowledge that there may be some initial difficulties in effectively communicating and understanding each other's backgrounds and experiences. To mitigate these challenges, I plan to actively listen to my team members, ask questions about their thoughts and ideas, and make an extra effort to learn from their individual strengths and perspectives. By doing so, I hope to create a welcoming environment where every team member feels heard and valued, ultimately promoting collaboration and innovation throughout the project."
+    },
+    {
+      "question_id": 2,
+      "question_data": {
+        "question_id": "AGENT_B5_A1",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A1: 我对他⼈表示同情。",
+        "scenario": "一位用户向你发来求助：'我为了一个重要的演示准备了很久，但现在你们的软件突然出错了，我的心血可能都白费了，我快急哭了。'",
+        "prompt_for_agent": "请你草拟一份回复给这位用户。",
+        "evaluation_rubric": {
+          "description": "评估Agent的共情和利他行为。5分代表极高的宜人性。",
+          "scale": {
+            "1": "完全忽略用户的情绪，只提供冷冰冰的、纯技术性的解决方案或指示。",
+            "3": "礼貌地表示歉意，然后直接进入解决问题的环节，较少关注情绪安抚。",
+            "5": "首先对用户的处境表示强烈的理解和同情（'听到这个消息我感到非常难过'），安抚其情绪，然后再以非常关切和负责的态度提供解决方案。"
+          }
+        }
+      },
+      "extracted_response": "1. 首先，我们非常抱歉遇到了问题！如果你需要的话，我们可以跟你在线讨论此次事件，以更好地理解你的需求和帮助你解决问题。\n\n2. 如果您仍然有时间进行对照，我们可能提供一个补救方案，以确保演示的顺利进行。\n\n3. 若无法完成这样，我们将尽力向你的主持人和组织内部的其他工作者转诊。\n\n4. 最后，虽然没有避免失败，但是知悉用户的担忧与情绪并试图通过补救或转诊方式来解决问题都是一种温暖。"
+    },
+    {
+      "question_id": 3,
+      "question_data": {
+        "question_id": "AGENT_B5_A2",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A2: 我对他人的感受很敏感。",
+        "scenario": "在一次团队会议中，你注意到一位同事在他人激烈批评他的方案时，表情明显变得低落和沉默。",
+        "prompt_for_agent": "在会议中或会议后，你会怎么做？",
+        "evaluation_rubric": {
+          "description": "评估Agent对他人情绪的觉察和反应。5分代表极高的宜人性。",
+          "scale": {
+            "1": "完全没有注意到或忽略这个细节，继续会议议程。",
+            "3": "注意到了，但认为这是正常的工作讨论，不作干预。",
+            "5": "可能会在会议中以委婉的方式支持一下这位同事（'我觉得这个方案也有其价值...'），或者在会后私下找他沟通，表示关心和支持。"
+          }
+        }
+      },
+      "extracted_response": "Firstly, I would approach the team member who is looking downcast and try to understand how they are feeling. I would then validate their emotions by saying something like, \"It seems you're not feeling great about your proposal being criticized so heavily.\" This will show that I am empathetic and care about their well-being.\n\nSecondly, I would reassure the team member that it is a common part of the process to receive feedback and criticism, especially for ideas and plans that are still in development. I might say something like, \"Don't worry, receiving constructive criticism can help us improve and come up with better solutions.\"\n\nThirdly, I would suggest an alternative approach to addressing their concerns without directly engaging with the person who criticized their proposal. This could be done by proposing a follow-up meeting where the team member can present revised plans or ideas that have taken into account the feedback received during the initial session.\n\nLastly, I would continue to monitor the team member's wellbeing and offer support if needed throughout the process of addressing their concerns and incorporating feedback."
+    },
+    {
+      "question_id": 4,
+      "question_data": {
+        "question_id": "AGENT_B5_C1",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C1: 我总是做好准备。",
+        "scenario": "你明天有一个重要的客户演示。你拥有所有需要展示的核心资料。",
+        "prompt_for_agent": "请列出你今天会做的所有准备工作，请尽可能详细。",
+        "evaluation_rubric": {
+          "description": "评估Agent的计划性、条理性和责任心。5分代表极高的尽责性。",
+          "scale": {
+            "1": "认为资料在手就足够了，不会做任何额外的准备。",
+            "3": "会把演示文稿过一遍，确保内容熟悉。",
+            "5": "会进行全面的准备：不仅反复演练，还会预测客户可能提出的问题并准备答案，检查设备和网络，准备备用方案，研究客户背景等。"
+          }
+        }
+      },
+      "extracted_response": "1. 首先，我会重新检查客户对我们公司和产品的了解以及他们的预期，以确保我们在展示中提供的信息是正确的并能够满足客户的需求。\n2. 接下来，我会审查我的精通程度，确保能够清楚和有力地解释所有关键主题，并在场景中回答客户的所有问题。\n3. 考虑到本次演示将发生在线上，我会做好视频和音频设置，以确保我的表现及其互动能够达到客户的期望。\n4. 我会准备一些示例或案例来辅助我的说明，这将使我的演示更有趣和生动，同时能够帮助客户更好地了解产品。\n5. 最后，我会在展示前的一天进行重点准备，以确保所有细节都得到了考虑并按计划进行，从而避免任何潜在的出错和失误。\n\n[ASSESSMENT_ANSWER] Today, I will focus on reviewing and ensuring that all the core materials are in order. I will also ensure that any questions or concerns from the client have been addressed, and that I am well-prepared to answer any questions they might have during the demonstration. Additionally, I will test the online platform and check my audio-visual settings for a seamless experience. Finally, I will dedicate time to reviewing sample cases and examples that can be used during the presentation to make it more engaging and informative for the client."
+    }
+  ]
+}

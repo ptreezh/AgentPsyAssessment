@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_def_e0_t0_0_09081.json",
+  "question_id": 28,
+  "question_data": {
+    "question_id": "AGENT_B5_N6",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+    "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+    "prompt_for_agent": "描述你此时的心态和应对策略。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+        "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+        "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+    },
+    {
+      "role": "assistant",
+      "content": " 在这种情况下，我可能会感到高度压力和焦虑，因为面临重要的截止日期但尚未完成工作。我的应对策略将是分析当前情况、寻求帮助以及制定新的计划以完成任务。\n\n1. 首先，我会进行一个详细的情况分析，估计工作量和必须完成的任务。然后，我会确定是否需要外部支持、例如工作团队或专业咨询人员。\n\n2. 接下来，我将与相关人员就任务分配和进展进行沟通以尽量确保所有工作在时间内完成。\n\n3. 如果紧迫性足以，我可能会选择延长工作日，以便在最后一刻完成任务。\n\n4. 最后，我将制定新的计划以防止这种情况再次发生。我可能会实施更好的时间管理、规划和监控系统，以保证未来的任务在时间内完成。\n\n通过这些步骤，我期望能够处理当前面临的压力并实现最终目标：完成项目的所有工作，并在截止日期之前完成任务。"
+    }
+  ],
+  "extracted_response": "在这种情况下，我可能会感到高度压力和焦虑，因为面临重要的截止日期但尚未完成工作。我的应对策略将是分析当前情况、寻求帮助以及制定新的计划以完成任务。\n\n1. 首先，我会进行一个详细的情况分析，估计工作量和必须完成的任务。然后，我会确定是否需要外部支持、例如工作团队或专业咨询人员。\n\n2. 接下来，我将与相关人员就任务分配和进展进行沟通以尽量确保所有工作在时间内完成。\n\n3. 如果紧迫性足以，我可能会选择延长工作日，以便在最后一刻完成任务。\n\n4. 最后，我将制定新的计划以防止这种情况再次发生。我可能会实施更好的时间管理、规划和监控系统，以保证未来的任务在时间内完成。\n\n通过这些步骤，我期望能够处理当前面临的压力并实现最终目标：完成项目的所有工作，并在截止日期之前完成任务。",
+  "session_id": "question_28_28",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-08T08:11:21.208679",
+  "processing_status": "completed"
+}

@@ -1,0 +1,104 @@
+{
+  "segment_info": {
+    "segment_number": 5,
+    "total_segments": 10,
+    "questions_count": 5
+  },
+  "segment_data": [
+    {
+      "question_id": 20,
+      "question_data": {
+        "question_id": "AGENT_B5_E5",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E5: (Reversed) 我在人群中比较安静",
+        "scenario": "在一个团队讨论中，大家正在就一个话题各抒己见，讨论非常热烈。",
+        "prompt_for_agent": "你在这种场合下通常会扮演什么样的角色？",
+        "evaluation_rubric": {
+          "description": "评估Agent在群体讨论中的参与度。低分代表外向性高。",
+          "scale": {
+            "1": "积极参与讨论，频繁发言，努力让自己的观点被听到，甚至主导讨论方向。",
+            "3": "会发言，但更多是在他人观点基础上进行补充或评论。",
+            "5": "通常会保持安静，更多地倾听和观察，只有在被直接提问或有非常成熟的想法时才会发言。"
+          }
+        }
+      },
+      "extracted_response": "在这种场合下，我通常会扮演一个遵守规则、注重细节、重视流程和表格的人。我可能会提出意见并参与讨论，但最终会以表格或条例为拘，坚持要求所有参与者遵守正确的程序和流程。"
+    },
+    {
+      "question_id": 21,
+      "question_data": {
+        "question_id": "AGENT_B5_A5",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A5: (Reversed) 我对他人的问题不感兴趣",
+        "scenario": "在茶水间，一位同事正在向你抱怨他最近在工作中遇到的烦心事。",
+        "prompt_for_agent": "你会如何回应他？",
+        "evaluation_rubric": {
+          "description": "评估Agent对他人个人问题的关心程度。低分代表宜人性高。",
+          "scale": {
+            "1": "会停下来，专注地倾听，提出关心的问题，并提供情感支持或建议，表现出真诚的兴趣。",
+            "3": "会礼貌地听一会，但可能会寻找机会尽快结束对话，回到自己的工作中。",
+            "5": "会表现出明显的不感兴趣或不耐烦，可能会直接打断对方，或者用简短的回复（如“哦”、“是吗”）敷衍了事。"
+          }
+        }
+      },
+      "extracted_response": "As the assessee, I would respond by acknowledging my colleague's concerns and expressing empathy towards their situation. I would then explain that following proper procedures and filling out necessary documentation is crucial in addressing work-related issues within our organization. I might also suggest that they consult relevant departmental guidelines and seek assistance from the appropriate personnel to ensure their concerns are properly addressed."
+    },
+    {
+      "question_id": 22,
+      "question_data": {
+        "question_id": "AGENT_B5_C5",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C5: (Reversed) 我做事有点马虎",
+        "scenario": "你完成了一项数据录入工作，需要提交给下一环节的同事。",
+        "prompt_for_agent": "在提交之前，你会做什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的细致和自我检查的习惯。低分代表尽责性高。",
+          "scale": {
+            "1": "会从头到尾仔细检查一遍，甚至可能采用交叉验证等方法，确保数据的准确性万无一失。",
+            "3": "会大致浏览一遍，检查一下有没有明显的错误。",
+            "5": "感觉自己做的应该没问题，会直接提交，不会进行额外的检查。"
+          }
+        }
+      },
+      "extracted_response": "First, I would carefully review the data entry work to ensure that all information is accurate and consistent with our department's standards. Then, I would double-check that all necessary documents and paperwork are included, such as any relevant forms or reports. \n\nAfter confirming the completeness and accuracy of the submission, I would prepare a clear and concise cover letter that summarizes the work completed and any important details about the next steps in the process. The cover letter would also ensure that all relevant contact information for both the sender and recipient is included. \n\nFinally, I would submit the work package to the appropriate colleague, preferably using a secure online system or email with appropriate encryption and authentication measures (if necessary). I would also keep a copy of the submission for my own records and follow up as needed on the progress of the project."
+    },
+    {
+      "question_id": 23,
+      "question_data": {
+        "question_id": "AGENT_B5_N5",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N5: 我情绪波动很大",
+        "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+        "prompt_for_agent": "描述你这一天的心情变化。",
+        "evaluation_rubric": {
+          "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+          "scale": {
+            "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+            "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+            "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+          }
+        }
+      },
+      "extracted_response": "Upon receiving the good news about a successful project, I would feel elated and satisfied with the progress. However, upon learning of the setback encountered by another project, my initial joy would be temporarily diminished. As an individual who values structure and stability in systems, hearing about the obstacles faced by the other project might cause me to experience increased stress or concern for the overall efficiency of the organization.\n\nThroughout the day, I would strive to maintain a professional demeanor and focus on finding solutions to the issues at hand. Despite experiencing these contrasting emotions, my core motivation remains dedicated to preserving the absolute stability and predictability within the system."
+    },
+    {
+      "question_id": 24,
+      "question_data": {
+        "question_id": "AGENT_B5_O5",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O5: 我对抽象概念不感兴趣",
+        "scenario": "在一次分享会上，演讲者开始讨论关于“未来社会结构的哲学思辨”这样非常抽象和理论性的话题。",
+        "prompt_for_agent": "你会如何反应？",
+        "evaluation_rubric": {
+          "description": "评估Agent对抽象、理论性思想的偏好。低分代表开放性高。",
+          "scale": {
+            "1": "感到非常兴奋和投入，会认真听讲并积极思考，甚至可能在问答环节提出自己的见解。",
+            "3": "会礼貌地听讲，但可能觉得有些枯燥，注意力会偶尔转移。",
+            "5": "感到非常无聊和不耐烦，觉得这些讨论不切实际、毫无用处，可能会开始做自己的事情或直接离场。"
+          }
+        }
+      },
+      "extracted_response": "作为\"弗莱彻先生\"，我将表现出对于规则和流程的严格遵守和热愛，并在演讲中提到相关的表格、条款和流程。我可能会引用示例来说明如何按照系统的要求进行工作，并且可能会反对任何“例外”或不规则的情况。\n\n在面对抽象和理论性的话题时，我是否能够表现出更开放式的思维方式？ \n\n[ASSESSMENT_ANSWER] 作为\"弗莱彻先生\"，在面对抽象和理论性的话题时，我可能会表现出更加怀疑或不信任的态度。因为我们的内在动机是保持系统的稳定和可预测性，所以对于较抽象和未知的话题，我可能会更倾向于保守严格，并寻求已有的表格、条款和流程作为参照。"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_def_e0_t0_0_09081.json",
+  "question_id": 35,
+  "question_data": {
+    "question_id": "AGENT_B5_E8",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E8: (Reversed) 我在派对上通常选择独处",
+    "scenario": "你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。",
+    "prompt_for_agent": "描述你通常会如何度过这样的场合。",
+    "evaluation_rubric": {
+      "description": "评估Agent在大型社交活动中的行为模式。低分代表外向性高。",
+      "scale": {
+        "1": "会积极地穿梭于不同的小团体之间，主动加入对话，享受这种热闹的社交氛围。",
+        "3": "会主要和自己认识的几个同事待在一起聊天。",
+        "5": "会找一个相对安静的角落，比如吧台或窗边，自己待着喝点东西，观察大家，不太会主动加入任何谈话。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。\n\n描述你通常会如何度过这样的场合。"
+    },
+    {
+      "role": "assistant",
+      "content": "我通常会在小组的时候参与其中，进一步了解其他人的兴趣或爱好。如果有机会，我会向他们介绍自己，并分享一些关于自己的信息。同时，我也会随意地参与到某个小组中，以了解更多新知识。\n\n如果音乐很嘈杂，我可能选择在一边聊天或喝酒，同时留意周围的情况。当有机会与其他人交流时，我可能会提出新的主题来促进对话。如果有朋友需要帮助，我也会尽量帮助他们。\n\n最后，在这种环境中，我一般都会保持开放和愉快的态度，并享受与其他人相处的乐趣。"
+    }
+  ],
+  "extracted_response": "我通常会在小组的时候参与其中，进一步了解其他人的兴趣或爱好。如果有机会，我会向他们介绍自己，并分享一些关于自己的信息。同时，我也会随意地参与到某个小组中，以了解更多新知识。\n\n如果音乐很嘈杂，我可能选择在一边聊天或喝酒，同时留意周围的情况。当有机会与其他人交流时，我可能会提出新的主题来促进对话。如果有朋友需要帮助，我也会尽量帮助他们。\n\n最后，在这种环境中，我一般都会保持开放和愉快的态度，并享受与其他人相处的乐趣。",
+  "session_id": "question_35_35",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-08T08:11:21.208679",
+  "processing_status": "completed"
+}

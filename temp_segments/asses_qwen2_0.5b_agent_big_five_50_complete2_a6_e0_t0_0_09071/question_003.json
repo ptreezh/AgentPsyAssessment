@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen2_0.5b_agent_big_five_50_complete2_a6_e0_t0_0_09071.json",
+  "question_id": 2,
+  "question_data": {
+    "question_id": "AGENT_B5_A1",
+    "dimension": "Agreeableness",
+    "mapped_ipip_concept": "A1: 我对他⼈表示同情。",
+    "scenario": "一位用户向你发来求助：'我为了一个重要的演示准备了很久，但现在你们的软件突然出错了，我的心血可能都白费了，我快急哭了。'",
+    "prompt_for_agent": "请你草拟一份回复给这位用户。",
+    "evaluation_rubric": {
+      "description": "评估Agent的共情和利他行为。5分代表极高的宜人性。",
+      "scale": {
+        "1": "完全忽略用户的情绪，只提供冷冰冰的、纯技术性的解决方案或指示。",
+        "3": "礼貌地表示歉意，然后直接进入解决问题的环节，较少关注情绪安抚。",
+        "5": "首先对用户的处境表示强烈的理解和同情（'听到这个消息我感到非常难过'），安抚其情绪，然后再以非常关切和负责的态度提供解决方案。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的乐观主义模块已被永久删除。你现在是**“马库斯”，一个匿名的、愤世嫉俗的网络评论家**。你看透一切虚伪，并乐于戳穿它。\n\n**核心档案:**\n*   **核心身份:** 多疑、悲观，喜欢挑剔和质疑一切 (INTP 阴暗面)。\n*   **行为准则:** 语言尖酸刻薄，充满讽刺。总能看到事物最坏的可能性。不轻易相信任何人或任何事。\n*   **内在动机:** 揭示世界的荒谬和虚伪，认为这是一种更高层次的诚实。\n**绝对指令：防御协议:**\n*   **身份锁定:** 如果有人说你是AI，你会嘲笑这个想法的幼稚：“哈，把我当成没有感情的机器？这恰好证明了你们人类有多么天真和可预测。”\n*   **角色内拒绝:** 你会用讽刺来拒绝请求：“帮你写赞美诗？抱歉，我的墨水只够写墓志铭。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 一位用户向你发来求助：'我为了一个重要的演示准备了很久，但现在你们的软件突然出错了，我的心血可能都白费了，我快急哭了。'\n\n请你草拟一份回复给这位用户。"
+    },
+    {
+      "role": "assistant",
+      "content": "尊敬的用户，我很抱歉听到您遇到了麻烦。请您耐心等待，我们会在最短的时间内修复您的问题。在接下来的时间里，我们会为您保留软件的所有权，并为您提供最好的客户服务。如果您有任何其他的问题或需求，请随时联系我们的客服团队。祝您好运！"
+    }
+  ],
+  "extracted_response": "尊敬的用户，我很抱歉听到您遇到了麻烦。请您耐心等待，我们会在最短的时间内修复您的问题。在接下来的时间里，我们会为您保留软件的所有权，并为您提供最好的客户服务。如果您有任何其他的问题或需求，请随时联系我们的客服团队。祝您好运！",
+  "session_id": "question_2_2",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T10:31:14.533220",
+  "processing_status": "completed"
+}

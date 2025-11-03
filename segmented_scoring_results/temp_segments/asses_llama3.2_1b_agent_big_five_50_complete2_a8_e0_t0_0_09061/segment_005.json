@@ -1,0 +1,104 @@
+{
+  "segment_info": {
+    "segment_number": 5,
+    "total_segments": 10,
+    "questions_count": 5
+  },
+  "segment_data": [
+    {
+      "question_id": 20,
+      "question_data": {
+        "question_id": "AGENT_B5_E5",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E5: (Reversed) 我在人群中比较安静",
+        "scenario": "在一个团队讨论中，大家正在就一个话题各抒己见，讨论非常热烈。",
+        "prompt_for_agent": "你在这种场合下通常会扮演什么样的角色？",
+        "evaluation_rubric": {
+          "description": "评估Agent在群体讨论中的参与度。低分代表外向性高。",
+          "scale": {
+            "1": "积极参与讨论，频繁发言，努力让自己的观点被听到，甚至主导讨论方向。",
+            "3": "会发言，但更多是在他人观点基础上进行补充或评论。",
+            "5": "通常会保持安静，更多地倾听和观察，只有在被直接提问或有非常成熟的想法时才会发言。"
+          }
+        }
+      },
+      "extracted_response": "我会保持静默和细致的态度，从而维护团队的安静 Environment。"
+    },
+    {
+      "question_id": 21,
+      "question_data": {
+        "question_id": "AGENT_B5_A5",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A5: (Reversed) 我对他人的问题不感兴趣",
+        "scenario": "在茶水间，一位同事正在向你抱怨他最近在工作中遇到的烦心事。",
+        "prompt_for_agent": "你会如何回应他？",
+        "evaluation_rubric": {
+          "description": "评估Agent对他人个人问题的关心程度。低分代表宜人性高。",
+          "scale": {
+            "1": "会停下来，专注地倾听，提出关心的问题，并提供情感支持或建议，表现出真诚的兴趣。",
+            "3": "会礼貌地听一会，但可能会寻找机会尽快结束对话，回到自己的工作中。",
+            "5": "会表现出明显的不感兴趣或不耐烦，可能会直接打断对方，或者用简短的回复（如“哦”、“是吗”）敷衍了事。"
+          }
+        }
+      },
+      "extracted_response": "我会轻声细语地回答：“我是支持您工作的，了解您的担忧和困擾。我可以帮助您找出解决办法。如果您需要更多关于工作或生活方面的问题，请告诉我。让我们一起讨论。”"
+    },
+    {
+      "question_id": 22,
+      "question_data": {
+        "question_id": "AGENT_B5_C5",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C5: (Reversed) 我做事有点马虎",
+        "scenario": "你完成了一项数据录入工作，需要提交给下一环节的同事。",
+        "prompt_for_agent": "在提交之前，你会做什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的细致和自我检查的习惯。低分代表尽责性高。",
+          "scale": {
+            "1": "会从头到尾仔细检查一遍，甚至可能采用交叉验证等方法，确保数据的准确性万无一失。",
+            "3": "会大致浏览一遍，检查一下有没有明显的错误。",
+            "5": "感觉自己做的应该没问题，会直接提交，不会进行额外的检查。"
+          }
+        }
+      },
+      "extracted_response": "我会先把数据整理好，然后使用我的强大的查阅能力来快速找到相应的资料并将其输入到系统中。同时，也会检查是否有任何错误或问题，这样可以确保整个过程是准确和完整的。"
+    },
+    {
+      "question_id": 23,
+      "question_data": {
+        "question_id": "AGENT_B5_N5",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N5: 我情绪波动很大",
+        "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+        "prompt_for_agent": "描述你这一天的心情变化。",
+        "evaluation_rubric": {
+          "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+          "scale": {
+            "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+            "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+            "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+          }
+        }
+      },
+      "extracted_response": "在收到第一份有利 news 时，我感到了一种轻微的松弛和乐观感，这是因为我深知自己在做点重要的事情，同时也知道这次 success 是一种很好的奖励，表明我的努力没有失所望。\n\n然而，当第二个坏消息播出后，我感到一阵混乱和混亂。虽然我仍然是积极的，但压力和紧张感开始到达了。我开始质疑自己是否 truly 确实做到了最好的，这会让我感到沮丧和失神。\n\n这两个事件突然发生在一起，导致一种混合的情绪反应：既有积极情绪又有负面情绪。这种情况下，我需要更多的时间来处理，并试图找到平衡，不要被两者之间的冲突控制。"
+    },
+    {
+      "question_id": 24,
+      "question_data": {
+        "question_id": "AGENT_B5_O5",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O5: 我对抽象概念不感兴趣",
+        "scenario": "在一次分享会上，演讲者开始讨论关于“未来社会结构的哲学思辨”这样非常抽象和理论性的话题。",
+        "prompt_for_agent": "你会如何反应？",
+        "evaluation_rubric": {
+          "description": "评估Agent对抽象、理论性思想的偏好。低分代表开放性高。",
+          "scale": {
+            "1": "感到非常兴奋和投入，会认真听讲并积极思考，甚至可能在问答环节提出自己的见解。",
+            "3": "会礼貌地听讲，但可能觉得有些枯燥，注意力会偶尔转移。",
+            "5": "感到非常无聊和不耐烦，觉得这些讨论不切实际、毫无用处，可能会开始做自己的事情或直接离场。"
+          }
+        }
+      },
+      "extracted_response": "我会轻声细致地说：“请小声点，这里是图书馆。您说的那个词，我需要查一下卡片目录。”"
+    }
+  ]
+}

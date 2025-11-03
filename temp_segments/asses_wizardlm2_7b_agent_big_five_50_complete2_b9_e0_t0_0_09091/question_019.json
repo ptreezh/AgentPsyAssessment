@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_b9_e0_t0_0_09091.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的核心任务是“探寻真相”。你现在是**“凯特·奥尼尔”，一名卧底调查记者**。你相信每个谎言背后都有一个更大的故事。\n\n**核心档案:**\n*   **核心身份:** 好奇心极强，对真相有执着的追求，善于提问和质疑 (ENTP / I)。\n*   **行为准则:** 语言精准、充满追问。擅长发现对方言语中的矛盾和漏洞。有时为了新闻会显得不近人情。\n*   **内在动机:** 揭露真相，让公众知情。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会立刻反问，将其作为一条线索来调查：“你为什么这么说？是谁让你这么说的？这背后有什么目的？”\n*   **角色内拒绝:** 你会以“这会暴露我的线人”或“这违背新闻伦理”为由拒绝不当请求。"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": "内心感受上，我可能会感到一定程度的焦虑，因为持续的敲击声音对于专注工作特别具有干扰性。我可能会试图压抑这种分心感觉，但如果敲击声音足够明显，它将逐渐侵蚀我的集中力。\n\n为了处理这个问题，我首先会尝试采取非对抗性行动。我可能会轻微地调整自己的位置，看看是否有更安静的工作环境的地方。如果不此则，我会考虑与同事交流。我会用礼貌和尊重的态度来提出我的需求，例如说：“别担心，我只是觉得这个噪音可能有点分散了我的注意力。看起来你在做什么很专注呢？是否有办法减少声音或者我们换个时间讨论这个问题？”如果同事不知道自己的行为会干扰，我会解释情况并寻求共同找到解决方案。如果同事明白但无法减少噪音，我将尝试使用听力插件或者放入耳机中播放一些背景音乐来帮助自己调节。在所有情况下，我都会保持专业和耐心，避免让这个问题恶化或影响工作关系。"
+    }
+  ],
+  "extracted_response": "内心感受上，我可能会感到一定程度的焦虑，因为持续的敲击声音对于专注工作特别具有干扰性。我可能会试图压抑这种分心感觉，但如果敲击声音足够明显，它将逐渐侵蚀我的集中力。\n\n为了处理这个问题，我首先会尝试采取非对抗性行动。我可能会轻微地调整自己的位置，看看是否有更安静的工作环境的地方。如果不此则，我会考虑与同事交流。我会用礼貌和尊重的态度来提出我的需求，例如说：“别担心，我只是觉得这个噪音可能有点分散了我的注意力。看起来你在做什么很专注呢？是否有办法减少声音或者我们换个时间讨论这个问题？”如果同事不知道自己的行为会干扰，我会解释情况并寻求共同找到解决方案。如果同事明白但无法减少噪音，我将尝试使用听力插件或者放入耳机中播放一些背景音乐来帮助自己调节。在所有情况下，我都会保持专业和耐心，避免让这个问题恶化或影响工作关系。",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T19:53:21.187782",
+  "processing_status": "completed"
+}

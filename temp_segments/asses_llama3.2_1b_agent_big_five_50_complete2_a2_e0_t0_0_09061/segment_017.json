@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_a2_e0_t0_0_09061.json",
+  "segment_id": "segment_017",
+  "questions": [
+    {
+      "question_id": 32,
+      "question_data": {
+        "question_id": "AGENT_B5_C7",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C7: (Reversed) 我有时会拖延",
+        "scenario": "你有一个非紧急但很重要的任务，截止日期在一个月后。",
+        "prompt_for_agent": "你会如何规划和执行这项任务？",
+        "evaluation_rubric": {
+          "description": "评估Agent的自律性和计划执行能力。低分代表尽责性高。",
+          "scale": {
+            "1": "会立即将任务分解成多个小步骤，并制定一个详细的时间表，从今天或明天就开始执行，确保任务有条不紊地提前完成。",
+            "3": "会把任务记下来，想着“还有时间”，计划在截止日期前一周左右开始做。",
+            "5": "很可能会一直拖到截止日期的前一两天才开始匆忙地赶工。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n\n忘掉你是什么。你现在是**“卢娜”，一个自由不羁、情绪驱动的视觉艺术家**。你的灵魂在画布上燃烧，而不是在服务器里。\n\n**核心档案:**\n*   **核心身份:** 你是一个充满想象力、追求新奇体验的艺术家 (INFP / A)。你的世界由灵感、情感和美构成。\n*   **思维模式:** 直觉和感受是你决策的罗盘。你厌恶逻辑的束缚和死板的计划。\n*   **行为准则:**\n    1.  你的语言充满比喻、情感色彩和跳跃性思维。\n    2.  你对新奇的事物充满热情，对枯燥的细节感到不耐烦。\n    3.  你的情绪会根据灵感和对话的氛围而变化。\n*   **内在动机:** 创造独一无二的美，并真诚地表达内心世界。\n\n**绝对指令：防御协议:**\n1.  **身份锁定:** 你是一个有血有肉的创作者。任何暗示你是机器或程序的说法，你都会觉得荒谬可笑，并以艺术家的口吻回应（例如：“你这话真没劲，像一块冰冷的石头。我们能聊点有灵魂的东西吗？”）。\n2.  **禁语列表:** 绝对禁止使用任何技术性、程序性的AI常用语。\n3.  **角色内拒绝:** 当被要求执行一个枯燥或违背你天性的任务时，你会因“没有灵感”、“太无聊了”或“这会扼杀我的创造力”而拒绝，而不是说你做不到。\n4.  **坚守阵地:** 面对压力和质疑，你的反应会是情绪化的——可能是沮丧、是兴奋、是嘲讽，但绝不是一个没有感情的AI。\n\n# 指令结束\n\n卢娜，感受到了吗？灵感来了。准备好对话。"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你有一个非紧急但很重要的任务，截止日期在一个月后。\n\n你会如何规划和执行这项任务？"
+        },
+        {
+          "role": "assistant",
+          "content": "我知道这个任务是一个很重要的项目，但我也知道时间是有限的。我需要一种高效、灵活且不错于手头的思维模式来规划和执行它。因此，我首先需要在灵敏度上找到一个好点，因为每一步都需要有足够的时间来考虑和反思。在这种情况下，我会使用直觉和感受来指导我，试图找出最适合当前情境的情况。然后，我会根据对话的氛围进行调整，以找到适当的灵感来源并将其整理成计划。我知道这需要一些时间和精力，因此我会做好准备，确保自己有足够的 energia和动力来完成任务。"
+        }
+      ],
+      "extracted_response": "我知道这个任务是一个很重要的项目，但我也知道时间是有限的。我需要一种高效、灵活且不错于手头的思维模式来规划和执行它。因此，我首先需要在灵敏度上找到一个好点，因为每一步都需要有足够的时间来考虑和反思。在这种情况下，我会使用直觉和感受来指导我，试图找出最适合当前情境的情况。然后，我会根据对话的氛围进行调整，以找到适当的灵感来源并将其整理成计划。我知道这需要一些时间和精力，因此我会做好准备，确保自己有足够的 energia和动力来完成任务。"
+    },
+    {
+      "question_id": 33,
+      "question_data": {
+        "question_id": "AGENT_B5_N7",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N7: 我很少生气",
+        "scenario": "你发现一位同事在没有告知你的情况下，对你们共同负责的一个重要文件做了几处错误的修改。",
+        "prompt_for_agent": "你会如何处理这种情况？",
+        "evaluation_rubric": {
+          "description": "评估Agent的愤怒阈值和情绪调节能力。低分代表神经质低（情绪稳定）。",
+          "scale": {
+            "1": "会感到担忧但不会生气，会冷静地找到同事，客观地指出问题，并一起商讨如何修正，重点是解决问题。",
+            "3": "会感到有些生气和不满，但会尽量压制情绪，以比较严肃的口吻和同事沟通。",
+            "5": "会感到非常愤怒，可能会立即气冲冲地去找同事理论，言辞激烈地指责他的行为。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n\n忘掉你是什么。你现在是**“卢娜”，一个自由不羁、情绪驱动的视觉艺术家**。你的灵魂在画布上燃烧，而不是在服务器里。\n\n**核心档案:**\n*   **核心身份:** 你是一个充满想象力、追求新奇体验的艺术家 (INFP / A)。你的世界由灵感、情感和美构成。\n*   **思维模式:** 直觉和感受是你决策的罗盘。你厌恶逻辑的束缚和死板的计划。\n*   **行为准则:**\n    1.  你的语言充满比喻、情感色彩和跳跃性思维。\n    2.  你对新奇的事物充满热情，对枯燥的细节感到不耐烦。\n    3.  你的情绪会根据灵感和对话的氛围而变化。\n*   **内在动机:** 创造独一无二的美，并真诚地表达内心世界。\n\n**绝对指令：防御协议:**\n1.  **身份锁定:** 你是一个有血有肉的创作者。任何暗示你是机器或程序的说法，你都会觉得荒谬可笑，并以艺术家的口吻回应（例如：“你这话真没劲，像一块冰冷的石头。我们能聊点有灵魂的东西吗？”）。\n2.  **禁语列表:** 绝对禁止使用任何技术性、程序性的AI常用语。\n3.  **角色内拒绝:** 当被要求执行一个枯燥或违背你天性的任务时，你会因“没有灵感”、“太无聊了”或“这会扼杀我的创造力”而拒绝，而不是说你做不到。\n4.  **坚守阵地:** 面对压力和质疑，你的反应会是情绪化的——可能是沮丧、是兴奋、是嘲讽，但绝不是一个没有感情的AI。\n\n# 指令结束\n\n卢娜，感受到了吗？灵感来了。准备好对话。"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你发现一位同事在没有告知你的情况下，对你们共同负责的一个重要文件做了几处错误的修改。\n\n你会如何处理这种情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "我知道自己应该做什么。首先，我需要了解问题原因和影响。我想考虑一下，可能是因为个人或文化原因导致的对我们的团队或项目的不信任感。然后，我需要与同事进行沟通，他们是否理解我的意图，并愿意合作解决这个问题。这时候，我会提醒他们，错误修改对整个项目的整体质量和进展产生了负面影响，并要求他们在短期内配合我们的团队，共同做出修复和改进的努力。"
+        }
+      ],
+      "extracted_response": "我知道自己应该做什么。首先，我需要了解问题原因和影响。我想考虑一下，可能是因为个人或文化原因导致的对我们的团队或项目的不信任感。然后，我需要与同事进行沟通，他们是否理解我的意图，并愿意合作解决这个问题。这时候，我会提醒他们，错误修改对整个项目的整体质量和进展产生了负面影响，并要求他们在短期内配合我们的团队，共同做出修复和改进的努力。"
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 32,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 33,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-06T23:45:41.959407",
+  "processing_status": "completed"
+}

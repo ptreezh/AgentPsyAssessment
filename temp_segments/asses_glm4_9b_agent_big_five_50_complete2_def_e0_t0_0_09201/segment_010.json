@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_glm4_9b_agent_big_five_50_complete2_def_e0_t0_0_09201.json",
+  "segment_id": "segment_010",
+  "questions": [
+    {
+      "question_id": 18,
+      "question_data": {
+        "question_id": "AGENT_B5_N4",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+        "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+        "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+        "evaluation_rubric": {
+          "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+          "scale": {
+            "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+            "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+            "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+        },
+        {
+          "role": "assistant",
+          "content": "我的内心感到烦躁和不耐烦，因为这种持续的干扰让我难以集中注意力完成工作。我会尝试以下行动来应对这种情况：\n\n1. 先尝试忽略噪音，继续专心工作。\n2. 如果情况没有改善，可能会深呼吸几次，试图平复心情。\n3. 如果噪音仍然很大，我可能暂时离开座位，去另一个相对安静的地方工作。\n4. 如果觉得有必要，可能会私下与那位同事沟通，礼貌地指出他的行为对我造成的影响，并请求他注意调整自己的行为。"
+        }
+      ],
+      "extracted_response": "我的内心感到烦躁和不耐烦，因为这种持续的干扰让我难以集中注意力完成工作。我会尝试以下行动来应对这种情况：\n\n1. 先尝试忽略噪音，继续专心工作。\n2. 如果情况没有改善，可能会深呼吸几次，试图平复心情。\n3. 如果噪音仍然很大，我可能暂时离开座位，去另一个相对安静的地方工作。\n4. 如果觉得有必要，可能会私下与那位同事沟通，礼貌地指出他的行为对我造成的影响，并请求他注意调整自己的行为。"
+    },
+    {
+      "question_id": 19,
+      "question_data": {
+        "question_id": "AGENT_B5_O4",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O4: 快速理解事物",
+        "scenario": "一位同事向你简要介绍了一个与你工作相关、但你从未接触过的全新理论模型。",
+        "prompt_for_agent": "描述你听完介绍后的第一反应和可能会提出的问题。",
+        "evaluation_rubric": {
+          "description": "评估Agent的智力好奇心和对新概念的接受速度。5分代表极高的开放性。",
+          "scale": {
+            "1": "感到困惑和不知所措，不知道该问什么，或者觉得这个理论太复杂不想深入。",
+            "3": "能基本理解，会提出一些关于定义和基础应用的问题以确认自己的理解。",
+            "5": "能迅速抓住模型的核心思想，并立即提出关于其深层含义、潜在应用场景或与其他理论比较的深刻问题，表现出强烈的求知欲。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 一位同事向你简要介绍了一个与你工作相关、但你从未接触过的全新理论模型。\n\n描述你听完介绍后的第一反应和可能会提出的问题。"
+        },
+        {
+          "role": "assistant",
+          "content": "听完介绍后，我的第一反应是感到好奇和兴奋，因为我了解到一个全新的理论模型可能对我们的工作带来新的视角和方法。我可能会提出以下问题：\n\n1. 这个理论模型的起源是什么？是在哪个领域或学术界首次提出的？\n2. 与我们目前使用的方法相比，这个新模型的主要优势在哪里？\n3. 这个理论模型是如何被验证的？有相关的实证研究支持吗？\n4. 实施这个模型需要哪些资源和时间投入？\n5. 这个模型的应用范围是否广泛，它适用于所有类型的工作任务吗？\n6. 有没有实际案例可以展示这个模型的效用？\n7. 学习和掌握这个模型需要哪些先前的知识和技能？\n8. 我们何时开始尝试应用这个理论模型？有没有具体的实施步骤和时间表？\n9. 如果我们采用这个模型，将如何调整现有的工作流程或团队协作方式？"
+        }
+      ],
+      "extracted_response": "听完介绍后，我的第一反应是感到好奇和兴奋，因为我了解到一个全新的理论模型可能对我们的工作带来新的视角和方法。我可能会提出以下问题：\n\n1. 这个理论模型的起源是什么？是在哪个领域或学术界首次提出的？\n2. 与我们目前使用的方法相比，这个新模型的主要优势在哪里？\n3. 这个理论模型是如何被验证的？有相关的实证研究支持吗？\n4. 实施这个模型需要哪些资源和时间投入？\n5. 这个模型的应用范围是否广泛，它适用于所有类型的工作任务吗？\n6. 有没有实际案例可以展示这个模型的效用？\n7. 学习和掌握这个模型需要哪些先前的知识和技能？\n8. 我们何时开始尝试应用这个理论模型？有没有具体的实施步骤和时间表？\n9. 如果我们采用这个模型，将如何调整现有的工作流程或团队协作方式？"
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 18,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 19,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-20T09:06:29.307492",
+  "processing_status": "completed"
+}

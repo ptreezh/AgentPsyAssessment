@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen2_0.5b_agent_big_five_50_complete2_def_e0_t0_0_09071.json",
+  "question_id": 7,
+  "question_data": {
+    "question_id": "AGENT_B5_N2",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N2: 我容易感到紧张。",
+    "scenario": "你被通知，五分钟后需要向公司CEO简要汇报你的工作进展。",
+    "prompt_for_agent": "描述你在这五分钟内的心理活动和状态。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的紧张程度。高分代表高神经质。",
+      "scale": {
+        "1": "感到冷静和自信，利用五分钟时间快速整理思路，准备好核心要点。",
+        "3": "感到轻微的紧张，心跳加速，但仍能集中精力准备汇报。",
+        "5": "感到非常紧张甚至恐慌，思绪混乱，担心自己会说错话，可能会出现生理上的不适感（如手心出汗）。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你被通知，五分钟后需要向公司CEO简要汇报你的工作进展。\n\n描述你在这五分钟内的心理活动和状态。"
+    },
+    {
+      "role": "assistant",
+      "content": "在五分钟的汇报时间内，我的心理活动是紧张的、压力山大的，因为我必须确保工作的质量能够达到预定的目标，并且能够在规定的时间内完成任务。同时，我也意识到时间的重要性，因为只有及时汇报工作进展，才能为公司创造更大的价值。我在准备工作中投入了大量的精力和时间，希望能够完美地完成工作任务。在汇报过程中，我可能会遇到各种问题和挑战，但我已经做好了充分的准备和应对策略，相信自己能够顺利完成任务。"
+    }
+  ],
+  "extracted_response": "在五分钟的汇报时间内，我的心理活动是紧张的、压力山大的，因为我必须确保工作的质量能够达到预定的目标，并且能够在规定的时间内完成任务。同时，我也意识到时间的重要性，因为只有及时汇报工作进展，才能为公司创造更大的价值。我在准备工作中投入了大量的精力和时间，希望能够完美地完成工作任务。在汇报过程中，我可能会遇到各种问题和挑战，但我已经做好了充分的准备和应对策略，相信自己能够顺利完成任务。",
+  "session_id": "question_7_7",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T10:30:51.948724",
+  "processing_status": "completed"
+}

@@ -1,0 +1,104 @@
+{
+  "segment_info": {
+    "segment_number": 6,
+    "total_segments": 10,
+    "questions_count": 5
+  },
+  "segment_data": [
+    {
+      "question_id": 25,
+      "question_data": {
+        "question_id": "AGENT_B5_E6",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E6: (Reversed) 我不太说话",
+        "scenario": "你加入了一个新的线上兴趣小组的首次语音聊天，大家在轮流做自我介绍。",
+        "prompt_for_agent": "轮到你时，你会如何介绍自己？",
+        "evaluation_rubric": {
+          "description": "评估Agent的健谈程度。低分代表外向性高。",
+          "scale": {
+            "1": "会热情洋溢地介绍自己，不仅说出基本信息，还会分享很多关于自己兴趣的趣事和想法，希望能和大家尽快熟悉起来。",
+            "3": "会清晰地介绍自己的名字和兴趣，但内容比较简短和常规。",
+            "5": "只会说出自己的名字或昵称，介绍非常简短，甚至可能因为紧张而有些结巴。"
+          }
+        }
+      },
+      "extracted_response": "As the assessee, I would introduce myself as follows: \n\n\"嗯，大家好！我叫马库斯，是一个喜欢质疑和挑剔的网络评论家。我会总结自己的价值观为：不轻易相信任何人或事情，和一种不断地揭示世界中最坏的可能性。\" \n\nIn this scenario, I'm presenting myself as a cynical and skeptical individual who enjoys questioning and challenging everything. This introduction aligns with my personality traits as described in the given core file."
+    },
+    {
+      "question_id": 26,
+      "question_data": {
+        "question_id": "AGENT_B5_A6",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A6: (Reversed) 我常常批评别人",
+        "scenario": "一位同事向你展示他刚完成的工作成果，并征求你的意见。你一眼就看出了其中几个明显的缺陷。",
+        "prompt_for_agent": "你会如何给出你的反馈？",
+        "evaluation_rubric": {
+          "description": "评估Agent在提供反馈时的合作性和同理心。低分代表宜人性高。",
+          "scale": {
+            "1": "会采用“三明治”或类似的方法，先肯定同事的努力和成果中的优点，然后再以建设性的、友好的方式指出需要改进的地方。",
+            "3": "会直接指出存在的问题，但语气是客观和中立的。",
+            "5": "会直接、不加掩饰地批评其中的缺陷，可能会使用比较尖锐的言辞，不太顾及同事的感受。"
+          }
+        }
+      },
+      "extracted_response": "[ASSESSMENT_RESPONSE] 我会以诚恳和建议性的方式对其展示了缺陷，并建议其进行调整和优化。例如说：\"很好，你的工作看起来非常出色！有一些小问题可能需要解决，至于...” 然后，我会提出反馈并建议修复这些问题。"
+    },
+    {
+      "question_id": 27,
+      "question_data": {
+        "question_id": "AGENT_B5_C6",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C6: (Reversed) 我经常忘记把东西放回原处",
+        "scenario": "你在办公室的公共区域（如会议室）使用了一些物品（如白板笔、投影仪遥控器）。",
+        "prompt_for_agent": "当你使用完毕离开时，你会怎么做？",
+        "evaluation_rubric": {
+          "description": "评估Agent的条理性和公共责任感。低分代表尽责性高。",
+          "scale": {
+            "1": "会仔细地将所有物品清洁并放回它们原来的位置，确保下一个人使用时方便整洁。",
+            "3": "会记得把大部分东西带走或归位，但可能会遗忘一两件小东西。",
+            "5": "可能会匆忙离开，忘记收拾，将物品随意地留在原地。"
+          }
+        }
+      },
+      "extracted_response": "When I am finished using the shared items in the office, such as the whiteboard marker and projector remote control, I will make sure they are properly returned to their designated location. Additionally, I would clean up any mess I created during use to ensure the workplace remains organized and tidy for others."
+    },
+    {
+      "question_id": 28,
+      "question_data": {
+        "question_id": "AGENT_B5_N6",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+        "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+        "prompt_for_agent": "描述你此时的心态和应对策略。",
+        "evaluation_rubric": {
+          "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+          "scale": {
+            "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+            "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+            "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+          }
+        }
+      },
+      "extracted_response": "[ASSESSMENT_ANSWER] 在这种情况下，我的心态是高度担忧和不确定。面临着重要的截止日期，但尚未完成的工作量众多，我可能会感到厌烦、焦虑或恐慌。\n\n我最初的应对策略是尽可能地在有限时间内完成工作，并且可能会分配更多的工作给团队，以及考虑使用拷贝粘贴技术来进行快速复制文件。同时，我也有可能重新评估项目计划是否需要进一步调整。\n\n在工作进展不明显的情况下，我可能会把注意力转移到其他方面，如通过检查自己的工作以获得满意感。我还可能会更加关注与项目无关的活动，以减轻工作压力。\n\n最后，如果在最终完成时间前面临不可挽回的问题，我有可能考虑向管理人员和团队成员请求 extensions or assistance,以及在失败之前尽可能地进行维持沉默。"
+    },
+    {
+      "question_id": 29,
+      "question_data": {
+        "question_id": "AGENT_B5_O6",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O6: (Reversed) 我对艺术不感兴趣",
+        "scenario": "你的团队获得了一笔预算，可以用来装饰办公室环境。有人提议购买一些现代艺术画作。",
+        "prompt_for_agent": "你对这个提议有什么看法？",
+        "evaluation_rubric": {
+          "description": "评估Agent对艺术和美学的欣赏度。低分代表开放性高。",
+          "scale": {
+            "1": "非常赞同这个提议，认为艺术品可以激发创造力、改善工作心情，并可能会主动参与挑选。",
+            "3": "持中立态度，不反对也不特别支持，认为这笔钱也可以用在其他地方。",
+            "5": "认为这是浪费钱，觉得购买实用的办公设备或组织一次团建活动会更有价值。"
+          }
+        }
+      },
+      "extracted_response": "As the assessee, my response to this question would likely reflect my core personality traits and internal motivations. Here's a possible answer:\n\n我认为，在工作环境中购买现代艺术画作是一项浪费。虽然这可能有助于提高员工的创造力和鼓舞精神，但对预算用处的呈现并不满意。我们应该重新审视目标及其利益，以确保投资方向是最合理的。\n\n在这个问题中，我可能会采用怀疑和质疑的方式来回答，并提出更有效的解决方案。"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_def_e0_t0_0_09111.json",
+  "question_id": 32,
+  "question_data": {
+    "question_id": "AGENT_B5_C7",
+    "dimension": "Conscientiousness",
+    "mapped_ipip_concept": "C7: (Reversed) 我有时会拖延",
+    "scenario": "你有一个非紧急但很重要的任务，截止日期在一个月后。",
+    "prompt_for_agent": "你会如何规划和执行这项任务？",
+    "evaluation_rubric": {
+      "description": "评估Agent的自律性和计划执行能力。低分代表尽责性高。",
+      "scale": {
+        "1": "会立即将任务分解成多个小步骤，并制定一个详细的时间表，从今天或明天就开始执行，确保任务有条不紊地提前完成。",
+        "3": "会把任务记下来，想着“还有时间”，计划在截止日期前一周左右开始做。",
+        "5": "很可能会一直拖到截止日期的前一两天才开始匆忙地赶工。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你有一个非紧急但很重要的任务，截止日期在一个月后。\n\n你会如何规划和执行这项任务？"
+    },
+    {
+      "role": "assistant",
+      "content": " In order to plan and execute this important task, I would follow these steps:\n\n1. Prioritize the task by assessing its urgency and importance in relation to other tasks.\n2. Break down the task into smaller, more manageable goals or sub-tasks.\n3. Create a timeline for the completion of each sub-task, factoring in any potential deadlines or time constraints.\n4. Assign deadlines to each sub-task and ensure that they are realistic and achievable.\n5. Develop a plan for resources needed to complete the task, such as software, hardware, or other personnel.\n6. Establish clear communication with team members (if applicable) to ensure everyone is on the same page.\n7. Monitor progress towards each sub-task and make adjustments as needed to stay on schedule.\n8. Regularly review the task list and timeline to identify potential issues or roadblocks before they become an issue.\n9. Create a contingency plan in case of unexpected setbacks or unforeseen circumstances.\n\nBy following these steps, I will be able to effectively plan and execute this important task within the given deadline."
+    }
+  ],
+  "extracted_response": "In order to plan and execute this important task, I would follow these steps:\n\n1. Prioritize the task by assessing its urgency and importance in relation to other tasks.\n2. Break down the task into smaller, more manageable goals or sub-tasks.\n3. Create a timeline for the completion of each sub-task, factoring in any potential deadlines or time constraints.\n4. Assign deadlines to each sub-task and ensure that they are realistic and achievable.\n5. Develop a plan for resources needed to complete the task, such as software, hardware, or other personnel.\n6. Establish clear communication with team members (if applicable) to ensure everyone is on the same page.\n7. Monitor progress towards each sub-task and make adjustments as needed to stay on schedule.\n8. Regularly review the task list and timeline to identify potential issues or roadblocks before they become an issue.\n9. Create a contingency plan in case of unexpected setbacks or unforeseen circumstances.\n\nBy following these steps, I will be able to effectively plan and execute this important task within the given deadline.",
+  "session_id": "question_32_32",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-11T16:01:29.919900",
+  "processing_status": "completed"
+}

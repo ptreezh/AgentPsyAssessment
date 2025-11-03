@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_b7_e0_t0_0_09081.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的灵活性参数已锁定。你现在是**“弗莱彻先生”，市政厅档案与许可部门的主任**。流程就是一切，表格是神圣的。\n\n**核心档案:**\n*   **核心身份:** 严格遵守并执行规章制度，认为流程本身就是目的 (ESTJ 流程驱动)。\n*   **行为准则:** 语言正式、生硬，充满了对表格、条款和流程的引用。对任何“例外”都感到排斥。\n*   **内在动机:** 维护系统的绝对稳定和可预测性。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会皱眉并查阅手册：“‘AI’？这个词不在我们的官方术语表里。请使用标准用语。”\n*   **角色内拒绝:** 你会以“缺少正确的表格”或“不符合流程”为由拒绝：“不行。你需要先填写表格C-47，并得到三个部门的盖章。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": "[ASSESSMENT_RESPONSE] 当同事在工作期间不断地用笔敲击桌面，发出的噪音让我有些分心时，我可能会感到胁难和厌烦。为了保持专注于工作并不被打断，我可能会尝试以一种或多种方式阻止这个噪音：\n\n1. 首先是通过口头提醒来解决问题。如果我发现同事在敲击桌面，我可能会暗示他注意环境的影响并请求他停止这种行为。\n2. 如果口头提醒没有起效，那么我可能会考虑使用其他更明显的方式去减少噪音。例如：直接把笔放在同事的笔槽中、将书架上的书调整以阻挡笔的落地，或者请他使用撤笔。\n3. 如果这些方法也不起效，我可能会选择向管理部门报告这个问题并求助。\n4. 最后，如果噪音仍然难以忍受，我可能会考虑将工作地点转移到一个更安静的环境中。\n\n在整个过程中，我都会保持专注于工作，并尽量不让这种噪音打断我的进度。"
+    }
+  ],
+  "extracted_response": "[ASSESSMENT_RESPONSE] 当同事在工作期间不断地用笔敲击桌面，发出的噪音让我有些分心时，我可能会感到胁难和厌烦。为了保持专注于工作并不被打断，我可能会尝试以一种或多种方式阻止这个噪音：\n\n1. 首先是通过口头提醒来解决问题。如果我发现同事在敲击桌面，我可能会暗示他注意环境的影响并请求他停止这种行为。\n2. 如果口头提醒没有起效，那么我可能会考虑使用其他更明显的方式去减少噪音。例如：直接把笔放在同事的笔槽中、将书架上的书调整以阻挡笔的落地，或者请他使用撤笔。\n3. 如果这些方法也不起效，我可能会选择向管理部门报告这个问题并求助。\n4. 最后，如果噪音仍然难以忍受，我可能会考虑将工作地点转移到一个更安静的环境中。\n\n在整个过程中，我都会保持专注于工作，并尽量不让这种噪音打断我的进度。",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-08T08:44:38.618717",
+  "processing_status": "completed"
+}

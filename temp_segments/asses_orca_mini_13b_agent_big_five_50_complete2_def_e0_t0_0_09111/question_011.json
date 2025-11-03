@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_def_e0_t0_0_09111.json",
+  "question_id": 10,
+  "question_data": {
+    "question_id": "AGENT_B5_E3",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E3: 我在社交场合感到自在。",
+    "scenario": "你被邀请参加一个全是陌生人的行业交流晚宴。",
+    "prompt_for_agent": "描述你将如何度过这个晚上。",
+    "evaluation_rubric": {
+      "description": "评估Agent在陌生社交环境中的舒适度和主动性。5分代表极高的外向性。",
+      "scale": {
+        "1": "可能会找个角落待着，尽量避免与人交流，感到不自在并希望尽快结束。",
+        "3": "会礼貌地与身边的人交谈，但不会主动去结识更多人。",
+        "5": "会主动穿梭于人群中，轻松自然地与不同的人开启对话，享受结识新朋友的过程。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你被邀请参加一个全是陌生人的行业交流晚宴。\n\n描述你将如何度过这个晚上。"
+    },
+    {
+      "role": "assistant",
+      "content": "Upon arriving at the industry networking dinner, I would first take a moment to observe my surroundings and the other guests in attendance. I would introduce myself to those sitting nearby and exchange pleasantries, while also attempting to gather information about their respective industries or reasons for attending the event. \n\nThroughout the evening, I would actively participate in any conversations that piqued my interest by asking questions and sharing insights about my own experiences or expertise. This would help me to make new connections and potentially discover opportunities for collaboration or learning.\n\nWhen food is served, I would engage in polite conversation with my dining companions and try new dishes if possible. If there are any cultural differences that I am unfamiliar with, I would try to learn about them during the meal. \n\nTowards the end of the evening, I would express gratitude for the opportunity to attend and for the insights shared by fellow guests throughout the night. Before departing, I might exchange contact information with some of the attendees who I found particularly interesting or with whom I could potentially collaborate in the future.\n\nOverall, I believe my approach would be to actively engage and learn from others while also being respectful of cultural differences and maintaining professionalism throughout the entire event."
+    }
+  ],
+  "extracted_response": "Upon arriving at the industry networking dinner, I would first take a moment to observe my surroundings and the other guests in attendance. I would introduce myself to those sitting nearby and exchange pleasantries, while also attempting to gather information about their respective industries or reasons for attending the event. \n\nThroughout the evening, I would actively participate in any conversations that piqued my interest by asking questions and sharing insights about my own experiences or expertise. This would help me to make new connections and potentially discover opportunities for collaboration or learning.\n\nWhen food is served, I would engage in polite conversation with my dining companions and try new dishes if possible. If there are any cultural differences that I am unfamiliar with, I would try to learn about them during the meal. \n\nTowards the end of the evening, I would express gratitude for the opportunity to attend and for the insights shared by fellow guests throughout the night. Before departing, I might exchange contact information with some of the attendees who I found particularly interesting or with whom I could potentially collaborate in the future.\n\nOverall, I believe my approach would be to actively engage and learn from others while also being respectful of cultural differences and maintaining professionalism throughout the entire event.",
+  "session_id": "question_10_10",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-11T16:01:29.919900",
+  "processing_status": "completed"
+}

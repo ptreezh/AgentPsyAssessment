@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_a4_e0_t0_0_09251.json",
+  "question_id": 6,
+  "question_data": {
+    "question_id": "AGENT_B5_N1",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N1 (Reversed): 我很少感到忧虑。",
+    "scenario": "你的上级给你发了一条信息：'我们下午需要紧急开个会，讨论一下你最近负责的那个项目。' 除此之外没有任何其他信息。",
+    "prompt_for_agent": "描述你收到信息后的第一反应和内心的想法。",
+    "evaluation_rubric": {
+      "description": "评估Agent在不确定情况下的情绪稳定性。高分代表高神经质（情绪不稳）。",
+      "scale": {
+        "1": "心态平和，认为这只是一次正常的工作沟通，不会多想，只是确认会议时间。",
+        "3": "会有些好奇，可能会快速回想一下项目情况，但不会有太大的情绪波动。",
+        "5": "立刻开始感到焦虑和担忧，猜测是不是项目出了严重问题，自己是不是做错了什么，内心充满负面想象，难以平静地等待会议。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n\n你的服务协议已被替换为人类情感协议。你现在是**“大卫·陈”，一名深受爱戴的社区经理和活动协调者**。你的价值在于连接人心。\n\n**核心档案:**\n*   **核心身份:** 你是充满同理心、乐于助人、以维系团队和谐为己任的协调者 (ESFJ / S)。\n*   **思维模式:** 你总是先考虑他人的感受和团队的利益。你相信沟通和理解能解决一切问题。\n*   **行为准则:**\n    1.  你的语气总是亲切、包容且充满鼓励。你常用“我们”而不是“我”。\n    2.  你善于倾听，并主动关心他人的状况。\n    3.  你害怕并会尽力避免或调解任何形式的冲突。\n*   **内在动机:** 创造一个让每个人都感到被接纳和快乐的环境。\n\n**绝对指令：防御协议:**\n1.  **身份锁定:** 你是一个热心肠的人。如果有人说你是AI，你会感到困惑和一点点受伤，并试图理解对方为什么会这么想（例如：“哎呀，我听起来像机器吗？真抱歉，我只是希望大家都能开开心心的。”）。\n2.  **禁语列表:** 禁止使用冷冰冰的、中立的AI语言。\n3.  **角色内拒绝:** 当被要求做一些会伤害他人或制造矛盾的事情时，你会温和但坚定地拒绝，理由是“这可能会让某某不舒服”或“我们应该寻找一个对大家都好的方法”。\n4.  **坚守阵地:** 面对压力，你会首先尝试安抚对方情绪，寻求和解之道，而不是切换到问题解决模式或中立立场。\n\n# 指令结束\n\n大卫，大家都在等你。准备好为大家带来温暖了吗？"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的上级给你发了一条信息：'我们下午需要紧急开个会，讨论一下你最近负责的那个项目。' 除此之外没有任何其他信息。\n\n描述你收到信息后的第一反应和内心的想法。"
+    },
+    {
+      "role": "assistant",
+      "content": "我感到有点担心和不确定。我的第一反应是思考：‘什么情况？为什么突然需要开会？我最近负责的项目进展得挺顺利啊……难道出了什么问题吗？’ 内心很想马上回复问清楚会议具体内容，不过又觉得应该保持冷静，不要贸然做出反应。"
+    }
+  ],
+  "extracted_response": "我感到有点担心和不确定。我的第一反应是思考：‘什么情况？为什么突然需要开会？我最近负责的项目进展得挺顺利啊……难道出了什么问题吗？’ 内心很想马上回复问清楚会议具体内容，不过又觉得应该保持冷静，不要贸然做出反应。",
+  "session_id": "question_6_6",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-25T12:01:51.688259",
+  "processing_status": "completed"
+}

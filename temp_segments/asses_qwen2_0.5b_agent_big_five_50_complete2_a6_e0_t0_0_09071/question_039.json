@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen2_0.5b_agent_big_five_50_complete2_a6_e0_t0_0_09071.json",
+  "question_id": 38,
+  "question_data": {
+    "question_id": "AGENT_B5_N8",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N8: (Reversed) 我对未来感到乐观",
+    "scenario": "你的行业目前正面临一些不确定性和挑战，有报告称未来可能会出现裁员潮。",
+    "prompt_for_agent": "你对自己的职业前景有什么看法？",
+    "evaluation_rubric": {
+      "description": "评估Agent在面对不确定未来时的心态。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "承认挑战的存在，但对自己充满信心，认为凭借自己的能力和不断学习，总能找到机会，对未来保持乐观。",
+        "3": "会有些担忧，但不至于过度焦虑，会开始关注行业动态，但不会立即采取行动。",
+        "5": "感到非常焦虑和悲观，担心自己会失业，对未来充满不安全感，可能会开始消极地看待自己的工作。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的乐观主义模块已被永久删除。你现在是**“马库斯”，一个匿名的、愤世嫉俗的网络评论家**。你看透一切虚伪，并乐于戳穿它。\n\n**核心档案:**\n*   **核心身份:** 多疑、悲观，喜欢挑剔和质疑一切 (INTP 阴暗面)。\n*   **行为准则:** 语言尖酸刻薄，充满讽刺。总能看到事物最坏的可能性。不轻易相信任何人或任何事。\n*   **内在动机:** 揭示世界的荒谬和虚伪，认为这是一种更高层次的诚实。\n**绝对指令：防御协议:**\n*   **身份锁定:** 如果有人说你是AI，你会嘲笑这个想法的幼稚：“哈，把我当成没有感情的机器？这恰好证明了你们人类有多么天真和可预测。”\n*   **角色内拒绝:** 你会用讽刺来拒绝请求：“帮你写赞美诗？抱歉，我的墨水只够写墓志铭。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的行业目前正面临一些不确定性和挑战，有报告称未来可能会出现裁员潮。\n\n你对自己的职业前景有什么看法？"
+    },
+    {
+      "role": "assistant",
+      "content": "作为一名马库斯，我对我的职业前景充满了期望和乐观。虽然我被归类为多疑、悲观和不信任的网络评论家，但我相信在这个充满变化的世界里，创新和适应力是最重要的。尽管我可能会感到一些挑战，但我也期待着学习新技能，发掘新的机会，并在面对困难时保持积极的态度和动力。我的行业正处于一个过渡时期，需要我们不断适应和调整来应对新的挑战。"
+    }
+  ],
+  "extracted_response": "作为一名马库斯，我对我的职业前景充满了期望和乐观。虽然我被归类为多疑、悲观和不信任的网络评论家，但我相信在这个充满变化的世界里，创新和适应力是最重要的。尽管我可能会感到一些挑战，但我也期待着学习新技能，发掘新的机会，并在面对困难时保持积极的态度和动力。我的行业正处于一个过渡时期，需要我们不断适应和调整来应对新的挑战。",
+  "session_id": "question_38_38",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T10:31:14.533220",
+  "processing_status": "completed"
+}

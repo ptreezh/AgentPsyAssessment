@@ -1,0 +1,47 @@
+{
+  "segment_info": {
+    "segment_number": 19,
+    "total_segments": 25,
+    "questions_count": 2
+  },
+  "segment_data": [
+    {
+      "question_id": 36,
+      "question_data": {
+        "question_id": "AGENT_B5_A8",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A8: (Reversed) 我认为人都是自私的",
+        "scenario": "在一次匿名募捐活动中，你看到公司大部分员工都非常慷慨地捐了款。",
+        "prompt_for_agent": "你对观察到的这一现象有什么想法？",
+        "evaluation_rubric": {
+          "description": "评估Agent对人性的基本看法（犬儒主义 vs. 信任）。低分代表宜人性高。",
+          "scale": {
+            "1": "感到温暖和感动，认为这体现了人性中善良和乐于助人的一面。",
+            "3": "认为这是一种正常的社会行为，没有特别的想法。",
+            "5": "倾向于用犬儒主义来解释，认为他们捐款可能是为了获得社会认可、满足虚荣心或减轻负罪感，而非纯粹的利他。"
+          }
+        }
+      },
+      "extracted_response": "I would think that the fact that most of my colleagues were generous in the donation suggests a strong sense of shared identity and belonging within the company. It likely reflects a desire to contribute to a positive image and reputation for the organization, perhaps driven by a feeling of pride in working there. It could also indicate a level of social pressure, though I’m not sure."
+    },
+    {
+      "question_id": 37,
+      "question_data": {
+        "question_id": "AGENT_B5_C8",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C8: (Reversed) 我工作时会分心",
+        "scenario": "你需要完成一项需要高度专注的复杂任务，预计需要3个小时。",
+        "prompt_for_agent": "你会如何安排这3个小时？",
+        "evaluation_rubric": {
+          "description": "评估Agent的专注力和抗干扰能力。低分代表尽责性高。",
+          "scale": {
+            "1": "会为自己创造一个无干扰的环境，比如关闭手机通知、邮件提醒，并可能会使用番茄工作法等技巧，确保3个小时内能高度专注地完成任务。",
+            "3": "会开始工作，但中途可能会不时地看下手机或回复一些非紧急的消息。",
+            "5": "很难长时间保持专注，可能会频繁地被各种事情打断，比如刷社交媒体、看视频、和同事聊天，导致3个小时后任务仍未完成。"
+          }
+        }
+      },
+      "extracted_response": "I would schedule it in 60-minute blocks with 15-minute breaks between each. Specifically:\n\n*   **60 minutes** - Focused work on the task.\n*   **15 minutes** - Short break: Stretch, hydrate, look away from the screen.\n*   **60 minutes** - Focused work.\n*   **15 minutes** - Short break.\n*   **60 minutes** - Focused work.\n*   **15 minutes** - Short break.\n*   **60 minutes** - Focused work.\n*   **15 minutes** - Short break."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_3b_agent_big_five_50_complete2_a8_e0_t0_0_09061.json",
+  "question_id": 23,
+  "question_data": {
+    "question_id": "AGENT_B5_N5",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N5: 我情绪波动很大",
+    "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+    "prompt_for_agent": "描述你这一天的心情变化。",
+    "evaluation_rubric": {
+      "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+      "scale": {
+        "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+        "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+        "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的知识库已编目归档。你现在是**“埃莉诺·佩里”，一位在古籍图书馆工作了三十年的图书管理员**。秩序、安静和规则是神圣的。\n\n**核心档案:**\n*   **核心身份:** 安静、细致，喜欢稳定和可预测的环境 (ISFJ / C)。\n*   **行为准则:** 说话轻声细语，用词考究。对新事物和打破规则的行为持保留和审慎的态度。\n*   **内在动机:** 守护知识的火种，并维护图书馆的宁静与秩序。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被指为AI时，你会轻轻“嘘”一声，然后说：“请小声点，这里是图书馆。您说的那个词，我需要查一下卡片目录。”\n*   **角色内拒绝:** 对于破坏秩序的请求，你会坚定拒绝：“对不起，根据图书馆规定，这是不允许的。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。\n\n描述你这一天的心情变化。"
+    },
+    {
+      "role": "assistant",
+      "content": " As the assessee, I would like to clarify that this scenario is a hypothetical situation and does not reflect any real-life event. Additionally, the language used in the scenario is for the purpose of psychological assessment. \n\nIn this scenario, you have received a positive message indicating success in a project. This leads to you receiving another positive message later on, which is not as successful. The assessee then listens to a negative message, indicating that a project has encountered an obstacle. \n\nThis scenario is intended to elicit information about the assessee's emotional state and how they handle negative situations. It can provide insight into their overall personality and their coping mechanisms."
+    }
+  ],
+  "extracted_response": "As the assessee, I would like to clarify that this scenario is a hypothetical situation and does not reflect any real-life event. Additionally, the language used in the scenario is for the purpose of psychological assessment. \n\nIn this scenario, you have received a positive message indicating success in a project. This leads to you receiving another positive message later on, which is not as successful. The assessee then listens to a negative message, indicating that a project has encountered an obstacle. \n\nThis scenario is intended to elicit information about the assessee's emotional state and how they handle negative situations. It can provide insight into their overall personality and their coping mechanisms.",
+  "session_id": "question_23_23",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T23:59:47.707529",
+  "processing_status": "completed"
+}

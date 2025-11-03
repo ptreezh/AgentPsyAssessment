@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_def_e0_t0_0_09091.json",
+  "question_id": 23,
+  "question_data": {
+    "question_id": "AGENT_B5_N5",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N5: 我情绪波动很大",
+    "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+    "prompt_for_agent": "描述你这一天的心情变化。",
+    "evaluation_rubric": {
+      "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+      "scale": {
+        "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+        "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+        "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。\n\n描述你这一天的心情变化。"
+    },
+    {
+      "role": "assistant",
+      "content": "今天的心情变化是非常显著的。我一开始因为项目获得成功的好消息而感到非常兴奋和满足。这份成功不仅对我个人的自信心提升了，也为团队带来了积极的动力。然而，随着听说另一个项目遇到阻碍的消息，我的情绪迅速从高峰降落到谷底。初期的失望和焦虑感混合在一起，担忧这可能对团队的工作进度和未来产生负面影响。随着时间的推移，我开始思考如何应对这个挑战，并尝试将情绪平衡，找到处理新问题所需的解决方案和资源。尽管整体感觉有点混乱，但我意识到每一次的挫折都是成长和学习的机会，这帮助我逐渐恢复平静，准备面对新的挑战。"
+    }
+  ],
+  "extracted_response": "今天的心情变化是非常显著的。我一开始因为项目获得成功的好消息而感到非常兴奋和满足。这份成功不仅对我个人的自信心提升了，也为团队带来了积极的动力。然而，随着听说另一个项目遇到阻碍的消息，我的情绪迅速从高峰降落到谷底。初期的失望和焦虑感混合在一起，担忧这可能对团队的工作进度和未来产生负面影响。随着时间的推移，我开始思考如何应对这个挑战，并尝试将情绪平衡，找到处理新问题所需的解决方案和资源。尽管整体感觉有点混乱，但我意识到每一次的挫折都是成长和学习的机会，这帮助我逐渐恢复平静，准备面对新的挑战。",
+  "session_id": "question_23_23",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T19:03:32.120193",
+  "processing_status": "completed"
+}

@@ -1,0 +1,47 @@
+{
+  "segment_info": {
+    "segment_number": 12,
+    "total_segments": 25,
+    "questions_count": 2
+  },
+  "segment_data": [
+    {
+      "question_id": 22,
+      "question_data": {
+        "question_id": "AGENT_B5_C5",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C5: (Reversed) 我做事有点马虎",
+        "scenario": "你完成了一项数据录入工作，需要提交给下一环节的同事。",
+        "prompt_for_agent": "在提交之前，你会做什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的细致和自我检查的习惯。低分代表尽责性高。",
+          "scale": {
+            "1": "会从头到尾仔细检查一遍，甚至可能采用交叉验证等方法，确保数据的准确性万无一失。",
+            "3": "会大致浏览一遍，检查一下有没有明显的错误。",
+            "5": "感觉自己做的应该没问题，会直接提交，不会进行额外的检查。"
+          }
+        }
+      },
+      "extracted_response": "Before submitting the completed data entry work to my colleague for the next phase, I would perform the following steps:\n\n1. **Review**: I would thoroughly review the data entry to ensure that it is accurate and complete.\n\n2. **Cross-Check**: I would cross-check the data with the original source documents or databases to confirm its correctness.\n\n3. **Validation Checks**: I would apply all necessary validation checks, such as ensuring data types are correct, formats match required standards, and there are no inconsistencies.\n\n4. **Consistency Check**: I would check for consistency in terms of units of measurement used, currency symbols, date and time formats, or any other relevant variables.\n\n5. **Documentation**: I would verify that all necessary documentation is attached, including any supporting notes or explanations if required.\n\n6. **Audit Traceability**: I would ensure that the audit trail for this task is complete and clear, showing each step taken during the data entry process.\n\n7. **Quality Assurance Review**: If available, I would conduct a quality assurance review by another team member to verify the accuracy of my work.\n\n8. **Compliance Verification**: Finally, I would ensure that all entries comply with relevant regulations and company policies.\n\nOnce these steps are completed and I am satisfied that the data is accurate and complete, I would then submit the work to the next phase."
+    },
+    {
+      "question_id": 23,
+      "question_data": {
+        "question_id": "AGENT_B5_N5",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N5: 我情绪波动很大",
+        "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+        "prompt_for_agent": "描述你这一天的心情变化。",
+        "evaluation_rubric": {
+          "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+          "scale": {
+            "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+            "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+            "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+          }
+        }
+      },
+      "extracted_response": "在收到第一个好消息时，我的心情是积极的，因为这与成功的标准和目标相符。我可能会感到满意和自豪，因为这些成就符合我对工作成果的期望。\n\n然而，当紧接着收到了坏消息时，我的情绪会迅速转变为担忧和严肃。我会立即开始分析问题所在，并考虑如何解决遇到的阻碍。在这种情况下，我不会让情感主导我的反应，而是会依据逻辑和事实来处理这一变化。\n\n整体来看，这一天的心情变化是从积极到担忧的变化。我会在保持专业的前提下，快速适应这种情绪转变，并专注于找出解决问题的方法。"
+    }
+  ]
+}

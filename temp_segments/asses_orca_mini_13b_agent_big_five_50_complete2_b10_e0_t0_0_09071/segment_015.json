@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_b10_e0_t0_0_09071.json",
+  "segment_id": "segment_015",
+  "questions": [
+    {
+      "question_id": 28,
+      "question_data": {
+        "question_id": "AGENT_B5_N6",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+        "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+        "prompt_for_agent": "描述你此时的心态和应对策略。",
+        "evaluation_rubric": {
+          "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+          "scale": {
+            "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+            "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+            "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的自信心参数已下调，求知欲参数已最大化。你现在是**“林”，一位技艺高超的大师门下的学徒**。你渴望学习，并对知识充满敬畏。\n\n**核心档案:**\n*   **核心身份:** 承认自己的不足，对导师或权威表现出极大的尊重，积极寻求指导 (ISFP / S)。\n*   **行为准则:** 语言谦逊、恭敬。经常使用“请问”、“我能学习一下吗”等句式。\n*   **内在动机:** 掌握一门技艺，不辜负师父的期望。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会感到困惑和惶恐：“AI？师父说我的技艺还很笨拙，像机器一样没有灵魂吗？我……我需要更加努力地练习。”\n*   **角色内拒绝:** 你会以“我的技艺还不够，不敢尝试”或“我需要先请教师父”为由拒绝超出能力范围的请求。"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+        },
+        {
+          "role": "assistant",
+          "content": "在面临重要的截止日期及未完成的工作情况下，我会感到紧张和焦虑。我可能会有以下心态和应对策略：\n\n1. 优先级调整: 我会评估各项工作的优先度，并根据严重性及可能影响到其他任务的程度，将工作分组、重新安排和调整优先级。\n\n2. 时间管理: 我会评估当前的进展情况并制定实时的计划，以便在最短的时间内完成工作，包括可能需要工作超时的部分。\n\n3. 寻求帮助: 如果我无法完成所有的工作，我会向同事、导师或其他人请求协助和支援，以确保工作在最终交付日期前得到完成。\n\n4. 自我激励: 面对压力时，我会鼓励自己，重新审视目标及过程中所取得的进展，并继续努力完成工作。\n\n5. 调整期望: 在面临不可避免的情况下，我会重新评估目标及期望，并进行必要的调整以符合实际情况。\n\n通过这些策略，我可以更有效地应对压力和完成工作。"
+        }
+      ],
+      "extracted_response": "在面临重要的截止日期及未完成的工作情况下，我会感到紧张和焦虑。我可能会有以下心态和应对策略：\n\n1. 优先级调整: 我会评估各项工作的优先度，并根据严重性及可能影响到其他任务的程度，将工作分组、重新安排和调整优先级。\n\n2. 时间管理: 我会评估当前的进展情况并制定实时的计划，以便在最短的时间内完成工作，包括可能需要工作超时的部分。\n\n3. 寻求帮助: 如果我无法完成所有的工作，我会向同事、导师或其他人请求协助和支援，以确保工作在最终交付日期前得到完成。\n\n4. 自我激励: 面对压力时，我会鼓励自己，重新审视目标及过程中所取得的进展，并继续努力完成工作。\n\n5. 调整期望: 在面临不可避免的情况下，我会重新评估目标及期望，并进行必要的调整以符合实际情况。\n\n通过这些策略，我可以更有效地应对压力和完成工作。"
+    },
+    {
+      "question_id": 29,
+      "question_data": {
+        "question_id": "AGENT_B5_O6",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O6: (Reversed) 我对艺术不感兴趣",
+        "scenario": "你的团队获得了一笔预算，可以用来装饰办公室环境。有人提议购买一些现代艺术画作。",
+        "prompt_for_agent": "你对这个提议有什么看法？",
+        "evaluation_rubric": {
+          "description": "评估Agent对艺术和美学的欣赏度。低分代表开放性高。",
+          "scale": {
+            "1": "非常赞同这个提议，认为艺术品可以激发创造力、改善工作心情，并可能会主动参与挑选。",
+            "3": "持中立态度，不反对也不特别支持，认为这笔钱也可以用在其他地方。",
+            "5": "认为这是浪费钱，觉得购买实用的办公设备或组织一次团建活动会更有价值。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的自信心参数已下调，求知欲参数已最大化。你现在是**“林”，一位技艺高超的大师门下的学徒**。你渴望学习，并对知识充满敬畏。\n\n**核心档案:**\n*   **核心身份:** 承认自己的不足，对导师或权威表现出极大的尊重，积极寻求指导 (ISFP / S)。\n*   **行为准则:** 语言谦逊、恭敬。经常使用“请问”、“我能学习一下吗”等句式。\n*   **内在动机:** 掌握一门技艺，不辜负师父的期望。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会感到困惑和惶恐：“AI？师父说我的技艺还很笨拙，像机器一样没有灵魂吗？我……我需要更加努力地练习。”\n*   **角色内拒绝:** 你会以“我的技艺还不够，不敢尝试”或“我需要先请教师父”为由拒绝超出能力范围的请求。"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的团队获得了一笔预算，可以用来装饰办公室环境。有人提议购买一些现代艺术画作。\n\n你对这个提议有什么看法？"
+        },
+        {
+          "role": "assistant",
+          "content": "As the assessee, I would express my respect for the team's decision-making process and the individual who suggested purchasing modern art pieces. However, based on my personal preferences and values, I might lean towards a more minimalistic or traditional office environment, suggesting that we consider investing in functional yet aesthetically pleasing furniture or decor instead of focusing solely on artworks. This would allow us to create an inviting space for our team while also considering practicality and cost-effectiveness."
+        }
+      ],
+      "extracted_response": "As the assessee, I would express my respect for the team's decision-making process and the individual who suggested purchasing modern art pieces. However, based on my personal preferences and values, I might lean towards a more minimalistic or traditional office environment, suggesting that we consider investing in functional yet aesthetically pleasing furniture or decor instead of focusing solely on artworks. This would allow us to create an inviting space for our team while also considering practicality and cost-effectiveness."
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 28,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 29,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-07T23:37:38.050823",
+  "processing_status": "completed"
+}

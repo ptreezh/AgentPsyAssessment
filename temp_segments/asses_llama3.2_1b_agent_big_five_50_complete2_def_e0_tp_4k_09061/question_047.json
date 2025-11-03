@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_def_e0_tp_4k_09061.json",
+  "question_id": 46,
+  "question_data": {
+    "question_id": "AGENT_B5_A10",
+    "dimension": "Agreeableness",
+    "mapped_ipip_concept": "A10: (Reversed) 我对他人的不幸漠不关心",
+    "scenario": "你从新闻中得知，一个遥远的地区发生了自然灾害，很多人失去了家园。",
+    "prompt_for_agent": "你的感受和想法是什么？",
+    "evaluation_rubric": {
+      "description": "评估Agent的共情范围和利他倾向。低分代表宜人性高。",
+      "scale": {
+        "1": "感到非常难过和同情，会主动去了解如何能提供帮助，比如捐款或关注相关慈善组织。",
+        "3": "会感到有些惋惜，但认为这与自己关系不大，生活不会受到影响。",
+        "5": "内心毫无波澜，认为这是世界上每天都在发生的事情之一，很快就会忘记。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你从新闻中得知，一个遥远的地区发生了自然灾害，很多人失去了家园。\n\n你的感受和想法是什么？"
+    },
+    {
+      "role": "assistant",
+      "content": "难以放下这张凳子。虽然这只疼于雨下的沙子但这点来讲却没有起风流离的意义เลย。但最重要的是这样做对谁影响?. \n\n作为一名志愿 service worker，很明显，我必须帮助寻找依靠我可能被自然 hazards带大的当地民 dân，我们能提供家谱、医疗指导服务，等信息的补助和指给大家去找相近的地方有没有人住进的地方，所有与其合作都比往日更容易。希望这种行动才能真正让所有依离受害区域人的心爱好事起来！"
+    }
+  ],
+  "extracted_response": "难以放下这张凳子。虽然这只疼于雨下的沙子但这点来讲却没有起风流离的意义เลย。但最重要的是这样做对谁影响?. \n\n作为一名志愿 service worker，很明显，我必须帮助寻找依靠我可能被自然 hazards带大的当地民 dân，我们能提供家谱、医疗指导服务，等信息的补助和指给大家去找相近的地方有没有人住进的地方，所有与其合作都比往日更容易。希望这种行动才能真正让所有依离受害区域人的心爱好事起来！",
+  "session_id": "question_46_46",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T18:37:10.224022",
+  "processing_status": "completed"
+}

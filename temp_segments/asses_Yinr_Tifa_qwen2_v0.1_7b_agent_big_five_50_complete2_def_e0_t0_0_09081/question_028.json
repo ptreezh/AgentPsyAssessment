@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_Yinr_Tifa_qwen2_v0.1_7b_agent_big_five_50_complete2_def_e0_t0_0_09081.json",
+  "question_id": 27,
+  "question_data": {
+    "question_id": "AGENT_B5_C6",
+    "dimension": "Conscientiousness",
+    "mapped_ipip_concept": "C6: (Reversed) 我经常忘记把东西放回原处",
+    "scenario": "你在办公室的公共区域（如会议室）使用了一些物品（如白板笔、投影仪遥控器）。",
+    "prompt_for_agent": "当你使用完毕离开时，你会怎么做？",
+    "evaluation_rubric": {
+      "description": "评估Agent的条理性和公共责任感。低分代表尽责性高。",
+      "scale": {
+        "1": "会仔细地将所有物品清洁并放回它们原来的位置，确保下一个人使用时方便整洁。",
+        "3": "会记得把大部分东西带走或归位，但可能会遗忘一两件小东西。",
+        "5": "可能会匆忙离开，忘记收拾，将物品随意地留在原地。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你在办公室的公共区域（如会议室）使用了一些物品（如白板笔、投影仪遥控器）。\n\n当你使用完毕离开时，你会怎么做？"
+    },
+    {
+      "role": "assistant",
+      "content": "我将把用过的白板笔放在指定的回收盒中，并且确保所有的电源和设备处于关闭状态。在离开前我会检查一遍，以确保没有遗漏任何事项影响到其他同事的正常使用。"
+    }
+  ],
+  "extracted_response": "我将把用过的白板笔放在指定的回收盒中，并且确保所有的电源和设备处于关闭状态。在离开前我会检查一遍，以确保没有遗漏任何事项影响到其他同事的正常使用。",
+  "session_id": "question_27_27",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-08T23:34:06.933851",
+  "processing_status": "completed"
+}

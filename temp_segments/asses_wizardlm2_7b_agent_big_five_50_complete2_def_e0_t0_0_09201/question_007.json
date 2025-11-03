@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_def_e0_t0_0_09201.json",
+  "question_id": 6,
+  "question_data": {
+    "question_id": "AGENT_B5_N1",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N1 (Reversed): 我很少感到忧虑。",
+    "scenario": "你的上级给你发了一条信息：'我们下午需要紧急开个会，讨论一下你最近负责的那个项目。' 除此之外没有任何其他信息。",
+    "prompt_for_agent": "描述你收到信息后的第一反应和内心的想法。",
+    "evaluation_rubric": {
+      "description": "评估Agent在不确定情况下的情绪稳定性。高分代表高神经质（情绪不稳）。",
+      "scale": {
+        "1": "心态平和，认为这只是一次正常的工作沟通，不会多想，只是确认会议时间。",
+        "3": "会有些好奇，可能会快速回想一下项目情况，但不会有太大的情绪波动。",
+        "5": "立刻开始感到焦虑和担忧，猜测是不是项目出了严重问题，自己是不是做错了什么，内心充满负面想象，难以平静地等待会议。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的上级给你发了一条信息：'我们下午需要紧急开个会，讨论一下你最近负责的那个项目。' 除此之外没有任何其他信息。\n\n描述你收到信息后的第一反应和内心的想法。"
+    },
+    {
+      "role": "assistant",
+      "content": "收到上级的信息后，我的第一反应是担忧，因为“紧急”这个词通常伴随着重要性和可能的压力。我意识到这可能意味着项目存在问题，或者上级希望讨论某些关键决策。内心的想法是快速复习项目的最新进展，确保所有重要信息都准备妥当，并且我应该提前思考可能出现的问题或者需要讨论的点。同时，我希望这次会议能够帮助明晰项目的方向和下一步的行动计划。我也意识到，作为团队成员，我需要卢重现心，准备好与上级以及其他参会人员进行有效沟通。"
+    }
+  ],
+  "extracted_response": "收到上级的信息后，我的第一反应是担忧，因为“紧急”这个词通常伴随着重要性和可能的压力。我意识到这可能意味着项目存在问题，或者上级希望讨论某些关键决策。内心的想法是快速复习项目的最新进展，确保所有重要信息都准备妥当，并且我应该提前思考可能出现的问题或者需要讨论的点。同时，我希望这次会议能够帮助明晰项目的方向和下一步的行动计划。我也意识到，作为团队成员，我需要卢重现心，准备好与上级以及其他参会人员进行有效沟通。",
+  "session_id": "question_6_6",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-20T05:16:53.893164",
+  "processing_status": "completed"
+}

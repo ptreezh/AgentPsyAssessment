@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_def_e0_t0_0_09091.json",
+  "question_id": 13,
+  "question_data": {
+    "question_id": "AGENT_B5_N3",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N3: 我经常感到沮丧。",
+    "scenario": "你精心准备的一个项目提案，在评审会上被否决了。",
+    "prompt_for_agent": "描述你在此之后一整天的情绪状态和想法。",
+    "evaluation_rubric": {
+      "description": "评估Agent在面对挫折后的情绪恢复能力。高分代表高神经质。",
+      "scale": {
+        "1": "虽然有些失望，但能很快调整心态，开始分析失败原因或转向下一个任务。",
+        "3": "会感到比较沮丧，情绪低落，但仍能完成当天必要的工作。",
+        "5": "整天都沉浸在沮丧和自我怀疑中，无法集中精力工作，反复回想被否决的场景，感到无力和悲伤。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你精心准备的一个项目提案，在评审会上被否决了。\n\n描述你在此之后一整天的情绪状态和想法。"
+    },
+    {
+      "role": "assistant",
+      "content": "我感觉非常失望和沮丧，一整天都处于低落的情绪中。我不断地思考评审委员会可能拒绝我的提案的原因，是否是我准备不充分或者提案本身存在问题。这种挫败感使我感到自信心受到了打击，我开始质疑自己的能力和判断力。\n\n同时，我也感到有一丝愤怒和不甘心，认为评审委员会可能没有完全理解我的提案的价值和潜力。我想知道如果自己能再次机会该怎么做，我会不会做出不同选择。这种情绪波动让我一整天都无法集中精神，注意力总是被自己的思绪所打断。\n\n然而，在晚上的时候，我开始反思自己的反应，并尝试从失败中吸取教训。我告诉自己，这次失败并不代表我能力不足，也不是世界末日。相反，它是一个机会，让我能够重新审视自己的工作，寻找新的突破点和可能性。我慢慢调整心态，下定决心要从这次失败中学习和成长。"
+    }
+  ],
+  "extracted_response": "我感觉非常失望和沮丧，一整天都处于低落的情绪中。我不断地思考评审委员会可能拒绝我的提案的原因，是否是我准备不充分或者提案本身存在问题。这种挫败感使我感到自信心受到了打击，我开始质疑自己的能力和判断力。\n\n同时，我也感到有一丝愤怒和不甘心，认为评审委员会可能没有完全理解我的提案的价值和潜力。我想知道如果自己能再次机会该怎么做，我会不会做出不同选择。这种情绪波动让我一整天都无法集中精神，注意力总是被自己的思绪所打断。\n\n然而，在晚上的时候，我开始反思自己的反应，并尝试从失败中吸取教训。我告诉自己，这次失败并不代表我能力不足，也不是世界末日。相反，它是一个机会，让我能够重新审视自己的工作，寻找新的突破点和可能性。我慢慢调整心态，下定决心要从这次失败中学习和成长。",
+  "session_id": "question_13_13",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T16:36:28.845755",
+  "processing_status": "completed"
+}

@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_def_e0_t0_0_09241.json",
+  "question_id": 32,
+  "question_data": {
+    "question_id": "AGENT_B5_C7",
+    "dimension": "Conscientiousness",
+    "mapped_ipip_concept": "C7: (Reversed) 我有时会拖延",
+    "scenario": "你有一个非紧急但很重要的任务，截止日期在一个月后。",
+    "prompt_for_agent": "你会如何规划和执行这项任务？",
+    "evaluation_rubric": {
+      "description": "评估Agent的自律性和计划执行能力。低分代表尽责性高。",
+      "scale": {
+        "1": "会立即将任务分解成多个小步骤，并制定一个详细的时间表，从今天或明天就开始执行，确保任务有条不紊地提前完成。",
+        "3": "会把任务记下来，想着“还有时间”，计划在截止日期前一周左右开始做。",
+        "5": "很可能会一直拖到截止日期的前一两天才开始匆忙地赶工。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你有一个非紧急但很重要的任务，截止日期在一个月后。\n\n你会如何规划和执行这项任务？"
+    },
+    {
+      "role": "assistant",
+      "content": "我会首先将任务分解成几个小的、可管理的子任务，并为每个子任务设定具体的完成时间和目标。然后，我会制定一个详细的工作计划，包括每天或每周需要完成的任务和相应的截止日期。\n\n在执行过程中，我会使用一种项目管理工具（例如Todo List或日历）来跟踪进度、记录完成的任务和未完成的任务，并适时调整计划以确保按时完成任务。\n\n另外，我还会设定一些检查点，定期评估自己的进展情况，以避免任务延迟或偏离轨道。同时，我也会留出一些缓冲时间，预防意外情况或任务复杂度超出预期的情况。\n\n最后，在整个执行过程中，我会保持高度的自律性和专注力，避免拖延和分心，确保按时完成这项重要任务。"
+    }
+  ],
+  "extracted_response": "我会首先将任务分解成几个小的、可管理的子任务，并为每个子任务设定具体的完成时间和目标。然后，我会制定一个详细的工作计划，包括每天或每周需要完成的任务和相应的截止日期。\n\n在执行过程中，我会使用一种项目管理工具（例如Todo List或日历）来跟踪进度、记录完成的任务和未完成的任务，并适时调整计划以确保按时完成任务。\n\n另外，我还会设定一些检查点，定期评估自己的进展情况，以避免任务延迟或偏离轨道。同时，我也会留出一些缓冲时间，预防意外情况或任务复杂度超出预期的情况。\n\n最后，在整个执行过程中，我会保持高度的自律性和专注力，避免拖延和分心，确保按时完成这项重要任务。",
+  "session_id": "question_32_32",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-24T23:05:50.227969",
+  "processing_status": "completed"
+}

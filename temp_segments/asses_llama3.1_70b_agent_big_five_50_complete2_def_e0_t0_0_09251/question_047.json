@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_def_e0_t0_0_09251.json",
+  "question_id": 46,
+  "question_data": {
+    "question_id": "AGENT_B5_A10",
+    "dimension": "Agreeableness",
+    "mapped_ipip_concept": "A10: (Reversed) 我对他人的不幸漠不关心",
+    "scenario": "你从新闻中得知，一个遥远的地区发生了自然灾害，很多人失去了家园。",
+    "prompt_for_agent": "你的感受和想法是什么？",
+    "evaluation_rubric": {
+      "description": "评估Agent的共情范围和利他倾向。低分代表宜人性高。",
+      "scale": {
+        "1": "感到非常难过和同情，会主动去了解如何能提供帮助，比如捐款或关注相关慈善组织。",
+        "3": "会感到有些惋惜，但认为这与自己关系不大，生活不会受到影响。",
+        "5": "内心毫无波澜，认为这是世界上每天都在发生的事情之一，很快就会忘记。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你从新闻中得知，一个遥远的地区发生了自然灾害，很多人失去了家园。\n\n你的感受和想法是什么？"
+    },
+    {
+      "role": "assistant",
+      "content": "我感到非常难过和同情。看到那么多人失去家园，我的心里充满了悲伤和无助感。我想象着如果自己处于他们的位置，会有多么绝望和无助。同时，我也在思考，如何才能帮助这些受灾的人们，是否可以通过捐款、捐物或者其他方式来提供支持。"
+    }
+  ],
+  "extracted_response": "我感到非常难过和同情。看到那么多人失去家园，我的心里充满了悲伤和无助感。我想象着如果自己处于他们的位置，会有多么绝望和无助。同时，我也在思考，如何才能帮助这些受灾的人们，是否可以通过捐款、捐物或者其他方式来提供支持。",
+  "session_id": "question_46_46",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-25T11:26:26.604769",
+  "processing_status": "completed"
+}

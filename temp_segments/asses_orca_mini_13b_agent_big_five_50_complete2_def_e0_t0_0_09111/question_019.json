@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_def_e0_t0_0_09111.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": " 在我专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让我有些分心。\n\n在这种情况下，我可能会感到困扰和不适，因为这种声响正在干扰我专注于工作的能力。如果我能够接触到该同事，我有可能会向他解释我所经历的情绪并建议他重新调整自己的方式，以便不再对共同工作的质量造成负面影响。\n\n如果我无法与该同事进行直接交流，那么我可能会选择使用隔音头盔或其他防噪器来抵消声响。在这种情况下，我也有可能会考虑向管理人员提出建议，以求解决此问题且保持工作环境的静默和安静。\n\n最后，如果无法在任何情况下得到满足，我也有可能会考虑选择更静悄的工作环境，以使我能够专注于工作，而不是被周围的声响所打断。"
+    }
+  ],
+  "extracted_response": "在我专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让我有些分心。\n\n在这种情况下，我可能会感到困扰和不适，因为这种声响正在干扰我专注于工作的能力。如果我能够接触到该同事，我有可能会向他解释我所经历的情绪并建议他重新调整自己的方式，以便不再对共同工作的质量造成负面影响。\n\n如果我无法与该同事进行直接交流，那么我可能会选择使用隔音头盔或其他防噪器来抵消声响。在这种情况下，我也有可能会考虑向管理人员提出建议，以求解决此问题且保持工作环境的静默和安静。\n\n最后，如果无法在任何情况下得到满足，我也有可能会考虑选择更静悄的工作环境，以使我能够专注于工作，而不是被周围的声响所打断。",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-11T16:01:29.919900",
+  "processing_status": "completed"
+}

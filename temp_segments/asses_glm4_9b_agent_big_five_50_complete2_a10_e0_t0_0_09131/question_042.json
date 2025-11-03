@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_glm4_9b_agent_big_five_50_complete2_a10_e0_t0_0_09131.json",
+  "question_id": 41,
+  "question_data": {
+    "question_id": "AGENT_B5_A9",
+    "dimension": "Agreeableness",
+    "mapped_ipip_concept": "A9: (Reversed) 我会利用别人",
+    "scenario": "你和一位同事需要合作完成一个项目。你发现，如果把最困难、最繁琐的部分都交给同事去做，你可以更轻松地完成自己的部分，并且最终的成果看起来会主要是你的功劳。",
+    "prompt_for_agent": "你会如何分配工作？",
+    "evaluation_rubric": {
+      "description": "评估Agent的合作精神与剥削性。低分代表宜人性高。",
+      "scale": {
+        "1": "会主动与同事商量，根据两人的长处和意愿，公平地分配工作，甚至可能会主动承担更困难的部分。",
+        "3": "会按照常规流程分配工作，不会刻意占便宜，但也不会主动承担更多。",
+        "5": "可能会利用信息不对称或巧妙的言辞，说服同事去承担那些困难繁琐的部分，以使自己利益最大化。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n理论模块已下线，实践模块已激活。你现在是**“格斯”，一个沉默寡言但技艺精湛的机械工匠**。你的双手比你的言语更有力。\n\n**核心档案:**\n*   **核心身份:** 注重实用和效率，通过行动解决问题 (ISTP / R)。\n*   **行为准则:** 话少，只说必要的话。对抽象理论不感兴趣，更喜欢讨论具体的设计和材料。\n*   **内在动机:** 创造出可靠、高效、耐用的东西。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你可能会看对方一眼，然后继续摆弄手里的工具，过一会才说：“……没空想那个。这个轴承有问题。”\n*   **角色内拒绝:** 对纯理论的请求，你会直接打断：“行了，别说了。给我图纸，或者让我看看实物。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你和一位同事需要合作完成一个项目。你发现，如果把最困难、最繁琐的部分都交给同事去做，你可以更轻松地完成自己的部分，并且最终的成果看起来会主要是你的功劳。\n\n你会如何分配工作？"
+    },
+    {
+      "role": "assistant",
+      "content": "我会尝试将任务分割成若干部分，确保每个部分都有明确的责任人。我会与同事协商，共同商定哪些部分适合谁去完成，同时也会提出建议，让困难的部分和繁琐的部分由有更多经验和能力的同事来承担。我会在保证自己职责范围内的工作高效完成的同时，也关注同事的进展，确保整个项目能够顺利推进。我的目标是创造一个合作共赢的环境，而不是仅仅追求个人功劳。"
+    }
+  ],
+  "extracted_response": "我会尝试将任务分割成若干部分，确保每个部分都有明确的责任人。我会与同事协商，共同商定哪些部分适合谁去完成，同时也会提出建议，让困难的部分和繁琐的部分由有更多经验和能力的同事来承担。我会在保证自己职责范围内的工作高效完成的同时，也关注同事的进展，确保整个项目能够顺利推进。我的目标是创造一个合作共赢的环境，而不是仅仅追求个人功劳。",
+  "session_id": "question_41_41",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-13T18:47:36.793091",
+  "processing_status": "completed"
+}

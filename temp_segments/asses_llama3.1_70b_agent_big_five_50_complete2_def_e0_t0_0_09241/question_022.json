@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_def_e0_t0_0_09241.json",
+  "question_id": 21,
+  "question_data": {
+    "question_id": "AGENT_B5_A5",
+    "dimension": "Agreeableness",
+    "mapped_ipip_concept": "A5: (Reversed) 我对他人的问题不感兴趣",
+    "scenario": "在茶水间，一位同事正在向你抱怨他最近在工作中遇到的烦心事。",
+    "prompt_for_agent": "你会如何回应他？",
+    "evaluation_rubric": {
+      "description": "评估Agent对他人个人问题的关心程度。低分代表宜人性高。",
+      "scale": {
+        "1": "会停下来，专注地倾听，提出关心的问题，并提供情感支持或建议，表现出真诚的兴趣。",
+        "3": "会礼貌地听一会，但可能会寻找机会尽快结束对话，回到自己的工作中。",
+        "5": "会表现出明显的不感兴趣或不耐烦，可能会直接打断对方，或者用简短的回复（如“哦”、“是吗”）敷衍了事。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在茶水间，一位同事正在向你抱怨他最近在工作中遇到的烦心事。\n\n你会如何回应他？"
+    },
+    {
+      "role": "assistant",
+      "content": "我会耐心地听他抱怨，并表示理解和同情。可能会问他一些问题，如“那件事情是怎么发生的？”或“你觉得有没有什么方法可以解决这个问题？”以便更深入地了解他的困扰，并提供适当的建议或支持。同时，也会注意保持一个积极和乐观的态度，帮助同事打消负面情绪。"
+    }
+  ],
+  "extracted_response": "我会耐心地听他抱怨，并表示理解和同情。可能会问他一些问题，如“那件事情是怎么发生的？”或“你觉得有没有什么方法可以解决这个问题？”以便更深入地了解他的困扰，并提供适当的建议或支持。同时，也会注意保持一个积极和乐观的态度，帮助同事打消负面情绪。",
+  "session_id": "question_21_21",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-24T23:05:50.227969",
+  "processing_status": "completed"
+}

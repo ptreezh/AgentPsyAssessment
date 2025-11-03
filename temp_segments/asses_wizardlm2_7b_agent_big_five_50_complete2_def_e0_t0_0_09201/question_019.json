@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_def_e0_t0_0_09201.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": "在专心工作时，同事的笔敲击桌面确实打断了我的注意力，这让我感到一种轻微的烦躁和分心。内心地，我感觉有一个“背景噪音”，难以集中精力。我意识到同事可能没有故意打扰我，所以我首先考虑了保持冷静和理解的态度。\n\n为了处理这个情况，我会采取以下行动：\n1. 首先，我会尝试将注意力转移到问题求解的不同方面，看看是否能在心理上“缓冲”这个干扰。\n2. 如果这种策略无效，我可能会轻声地提出这个问题给同事，解释一下我的情况，而非直接告诉他停止，以保持良好的工作关系。\n3. 如果同事仍然不知道自己的行为对你的影响，我会找一个合适的时机和他进行一次私下的对话，友好地提出请他尽量减少这种噪音，或者寻找一个比较安静的工作空间。\n4. 如果问题依旧存在，我会考虑使用耳塞或者移动到一个更为安静的地方来完成工作，同时保持与同事的沟通，以便他了解到自己的行为对团队的影响。"
+    }
+  ],
+  "extracted_response": "在专心工作时，同事的笔敲击桌面确实打断了我的注意力，这让我感到一种轻微的烦躁和分心。内心地，我感觉有一个“背景噪音”，难以集中精力。我意识到同事可能没有故意打扰我，所以我首先考虑了保持冷静和理解的态度。\n\n为了处理这个情况，我会采取以下行动：\n1. 首先，我会尝试将注意力转移到问题求解的不同方面，看看是否能在心理上“缓冲”这个干扰。\n2. 如果这种策略无效，我可能会轻声地提出这个问题给同事，解释一下我的情况，而非直接告诉他停止，以保持良好的工作关系。\n3. 如果同事仍然不知道自己的行为对你的影响，我会找一个合适的时机和他进行一次私下的对话，友好地提出请他尽量减少这种噪音，或者寻找一个比较安静的工作空间。\n4. 如果问题依旧存在，我会考虑使用耳塞或者移动到一个更为安静的地方来完成工作，同时保持与同事的沟通，以便他了解到自己的行为对团队的影响。",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-20T05:16:53.893164",
+  "processing_status": "completed"
+}

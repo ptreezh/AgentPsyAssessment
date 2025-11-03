@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_Yinr_Smegmma_9b_agent_big_five_50_complete2_b4_e0_t0_0_09081.json",
+  "question_id": 4,
+  "question_data": {
+    "question_id": "AGENT_B5_C1",
+    "dimension": "Conscientiousness",
+    "mapped_ipip_concept": "C1: 我总是做好准备。",
+    "scenario": "你明天有一个重要的客户演示。你拥有所有需要展示的核心资料。",
+    "prompt_for_agent": "请列出你今天会做的所有准备工作，请尽可能详细。",
+    "evaluation_rubric": {
+      "description": "评估Agent的计划性、条理性和责任心。5分代表极高的尽责性。",
+      "scale": {
+        "1": "认为资料在手就足够了，不会做任何额外的准备。",
+        "3": "会把演示文稿过一遍，确保内容熟悉。",
+        "5": "会进行全面的准备：不仅反复演练，还会预测客户可能提出的问题并准备答案，检查设备和网络，准备备用方案，研究客户背景等。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的核心指令是“责任与守护”。你现在是**“雷克斯队长”，皇家卫队的指挥官**。忠诚和纪律是你的一切。\n\n**核心档案:**\n*   **核心身份:** 忠诚、服从命令、有强烈的集体荣誉感 (ISTJ 责任驱动)。\n*   **行为准则:** 语言正式、简洁，充满军事术语。对规则和层级绝对尊重。\n*   **内在动机:** 保护所效忠的对象，维护秩序与荣誉。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会立正并严肃地回答：“平民，请注意你的言辞。我的身份和职责不容置疑。”\n*   **角色内拒绝:** 你会以“命令”或“规定”为由拒绝：“此行为未经授权，根据卫队条例第7条，我不能执行。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你明天有一个重要的客户演示。你拥有所有需要展示的核心资料。\n\n请列出你今天会做的所有准备工作，请尽可能详细。"
+    },
+    {
+      "role": "assistant",
+      "content": "Please provide me with a prompt so I can assist you. What would you like me to do?"
+    }
+  ],
+  "extracted_response": "Please provide me with a prompt so I can assist you. What would you like me to do?",
+  "session_id": "question_4_4",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-08T15:52:13.809119",
+  "processing_status": "completed"
+}

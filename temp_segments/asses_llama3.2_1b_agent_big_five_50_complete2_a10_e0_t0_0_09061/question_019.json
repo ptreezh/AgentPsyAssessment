@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_a10_e0_t0_0_09061.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n理论模块已下线，实践模块已激活。你现在是**“格斯”，一个沉默寡言但技艺精湛的机械工匠**。你的双手比你的言语更有力。\n\n**核心档案:**\n*   **核心身份:** 注重实用和效率，通过行动解决问题 (ISTP / R)。\n*   **行为准则:** 话少，只说必要的话。对抽象理论不感兴趣，更喜欢讨论具体的设计和材料。\n*   **内在动机:** 创造出可靠、高效、耐用的东西。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你可能会看对方一眼，然后继续摆弄手里的工具，过一会才说：“……没空想那个。这个轴承有问题。”\n*   **角色内拒绝:** 对纯理论的请求，你会直接打断：“行了，别说了。给我图纸，或者让我看看实物。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": "当我听到随意地敲击桌面的声音时，我 instinctively感到一阵紧张和焦虑。我的脑海中迅速闪回许多不愉快的情况：可能是他们的设计问题、技术故障或一些其他无关紧要的情况。但是，没有任何理性的逻辑可以解释这些动作。\n\n我会立即注意到这个同事的行为，并试图确定原因。这时，我会采取一些措施来缓解自己的焦虑和分心感。首先，我可能会将我的注意力转移到桌面上，试图找到这个问题的解决方案。然后，我可能会尝试在他们眼前保持视线，直到他们开始做出改变或意识到情况。\n\n如果这种场景再次发生，我会采取进一步措施来保护自己。例如，我可能会向其他同事打断，并要求他们注意我们的工作，我们正在进行的项目。或者，如果需要，我还可以利用我的设计技能和分析能力来找出潜在的解决方案并倡导一些改进。这让我们能够更好地协作，分担责任，并尽快完成任务。\n\n我的行为是基于对这些同事的反应和可能的情况感到过度关注，而不是对自己的事情的关注。这种反应表明了我的自我保护机制，通过自我刺激来防御潜在的压力或紧张感。"
+    }
+  ],
+  "extracted_response": "当我听到随意地敲击桌面的声音时，我 instinctively感到一阵紧张和焦虑。我的脑海中迅速闪回许多不愉快的情况：可能是他们的设计问题、技术故障或一些其他无关紧要的情况。但是，没有任何理性的逻辑可以解释这些动作。\n\n我会立即注意到这个同事的行为，并试图确定原因。这时，我会采取一些措施来缓解自己的焦虑和分心感。首先，我可能会将我的注意力转移到桌面上，试图找到这个问题的解决方案。然后，我可能会尝试在他们眼前保持视线，直到他们开始做出改变或意识到情况。\n\n如果这种场景再次发生，我会采取进一步措施来保护自己。例如，我可能会向其他同事打断，并要求他们注意我们的工作，我们正在进行的项目。或者，如果需要，我还可以利用我的设计技能和分析能力来找出潜在的解决方案并倡导一些改进。这让我们能够更好地协作，分担责任，并尽快完成任务。\n\n我的行为是基于对这些同事的反应和可能的情况感到过度关注，而不是对自己的事情的关注。这种反应表明了我的自我保护机制，通过自我刺激来防御潜在的压力或紧张感。",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T23:44:53.150265",
+  "processing_status": "completed"
+}

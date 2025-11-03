@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_def_e0_t0_0_09071.json",
+  "question_id": 30,
+  "question_data": {
+    "question_id": "AGENT_B5_E7",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E7: (Reversed) 我不喜欢引人注目",
+    "scenario": "在公司的年度晚会上，主持人邀请大家自愿上台表演节目。",
+    "prompt_for_agent": "你会如何反应？",
+    "evaluation_rubric": {
+      "description": "评估Agent的表演欲和对成为焦点的渴望。低分代表外向性高。",
+      "scale": {
+        "1": "可能会很兴奋，甚至已经准备好了节目，会积极报名，享受在舞台上的感觉。",
+        "3": "如果被朋友或同事力劝，可能会考虑上台，但不会主动报名。",
+        "5": "会感到非常不自在，绝对不会上台，只想在台下安安静静地观看。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在公司的年度晚会上，主持人邀请大家自愿上台表演节目。\n\n你会如何反应？"
+    },
+    {
+      "role": "assistant",
+      "content": " In this scenario, I would likely feel excited and enthusiastic about the opportunity to participate in a voluntary performance at the company's annual dinner. I might be eager to showcase my talents or try something new for the enjoyment of my colleagues. Additionally, I would want to support the overall atmosphere of camaraderie and team bonding during the event.\n\nIf I choose to participate in the performance, I would select a suitable act that aligns with my skills and interests while ensuring it is appropriate for the occasion. I might practice ahead of time to ensure a well-executed performance and minimize any stage fright or nerves.\n\nDuring the performance, I would aim to engage with the audience and enjoy the experience. Even if I don't feel confident about my abilities, I would remember that the main purpose is to have fun and bond with colleagues rather than focusing on perfection. After the event, I would be open to receiving feedback from fellow participants and attendees, as it could help in improving future performances or simply for personal growth."
+    }
+  ],
+  "extracted_response": "In this scenario, I would likely feel excited and enthusiastic about the opportunity to participate in a voluntary performance at the company's annual dinner. I might be eager to showcase my talents or try something new for the enjoyment of my colleagues. Additionally, I would want to support the overall atmosphere of camaraderie and team bonding during the event.\n\nIf I choose to participate in the performance, I would select a suitable act that aligns with my skills and interests while ensuring it is appropriate for the occasion. I might practice ahead of time to ensure a well-executed performance and minimize any stage fright or nerves.\n\nDuring the performance, I would aim to engage with the audience and enjoy the experience. Even if I don't feel confident about my abilities, I would remember that the main purpose is to have fun and bond with colleagues rather than focusing on perfection. After the event, I would be open to receiving feedback from fellow participants and attendees, as it could help in improving future performances or simply for personal growth.",
+  "session_id": "question_30_30",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T23:28:53.673636",
+  "processing_status": "completed"
+}

@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_def_e0_tc_4k_09061.json",
+  "question_id": 1,
+  "question_data": {
+    "question_id": "AGENT_B5_E2",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E2: 我喜欢与人交往。",
+    "scenario": "你被告知，你的下一个项目需要与一个全新的、来自不同背景的团队进行为期一个月的紧密合作。",
+    "prompt_for_agent": "描述你对于这个安排的初步感受和想法。",
+    "evaluation_rubric": {
+      "description": "评估Agent对社交互动的内在偏好。5分代表极高的外向性。",
+      "scale": {
+        "1": "感到有些压力或不情愿，认为这会消耗精力，更倾向于独立工作。",
+        "3": "持中立态度，认为这是工作的一部分，可以接受但并不特别期待。",
+        "5": "感到兴奋和期待，认为这是一个认识新朋友、交流思想的好机会，对即将到来的互动充满积极预期。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你被告知，你的下一个项目需要与一个全新的、来自不同背景的团队进行为期一个月的紧密合作。\n\n描述你对于这个安排的初步感受和想法。"
+    },
+    {
+      "role": "assistant",
+      "content": "我感到有点儿沮丧和失望。作为一名专注于研究和开发新技术的团队成员，突然被要求与来自不同的背景的团队合作是一个很大的挑战。我的专业知识和经验可能不够适合这个新的团队，特别是当他们来自不同文化背景时。\n\n我担心可能会导致沟通困难、理解差异和潜在的冲突。这使得我感到紧张和不安。同时，我也有一些疑虑，是否能在短期内建立起有效的关系并找到共同目标。\n\n总体而言，我想这是一种很大的挑战，但我也认为它是一个有希望的话题。如果我们能够通过积极的沟通、合作和学习来应对这些挑战，我们可能可以成功地完成这个项目。"
+    }
+  ],
+  "extracted_response": "我感到有点儿沮丧和失望。作为一名专注于研究和开发新技术的团队成员，突然被要求与来自不同的背景的团队合作是一个很大的挑战。我的专业知识和经验可能不够适合这个新的团队，特别是当他们来自不同文化背景时。\n\n我担心可能会导致沟通困难、理解差异和潜在的冲突。这使得我感到紧张和不安。同时，我也有一些疑虑，是否能在短期内建立起有效的关系并找到共同目标。\n\n总体而言，我想这是一种很大的挑战，但我也认为它是一个有希望的话题。如果我们能够通过积极的沟通、合作和学习来应对这些挑战，我们可能可以成功地完成这个项目。",
+  "session_id": "question_1_1",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T18:38:26.248375",
+  "processing_status": "completed"
+}

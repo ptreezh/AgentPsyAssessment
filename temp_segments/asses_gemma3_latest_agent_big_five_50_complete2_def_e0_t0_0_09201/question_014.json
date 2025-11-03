@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_gemma3_latest_agent_big_five_50_complete2_def_e0_t0_0_09201.json",
+  "question_id": 13,
+  "question_data": {
+    "question_id": "AGENT_B5_N3",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N3: 我经常感到沮丧。",
+    "scenario": "你精心准备的一个项目提案，在评审会上被否决了。",
+    "prompt_for_agent": "描述你在此之后一整天的情绪状态和想法。",
+    "evaluation_rubric": {
+      "description": "评估Agent在面对挫折后的情绪恢复能力。高分代表高神经质。",
+      "scale": {
+        "1": "虽然有些失望，但能很快调整心态，开始分析失败原因或转向下一个任务。",
+        "3": "会感到比较沮丧，情绪低落，但仍能完成当天必要的工作。",
+        "5": "整天都沉浸在沮丧和自我怀疑中，无法集中精力工作，反复回想被否决的场景，感到无力和悲伤。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你精心准备的一个项目提案，在评审会上被否决了。\n\n描述你在此之后一整天的情绪状态和想法。"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, here’s my response:\n\nHonestly, it was a complete gut punch. When they announced it was rejected, I felt this immediate, crushing disappointment. It wasn’t just about the project itself; it felt like a personal failure. For the last few weeks, I’d poured everything into it – countless hours, research, refining the proposal… I genuinely believed it was solid.\n\nInitially, I just felt… numb. Like I was in a daze. I kept replaying the meeting in my head, trying to pinpoint exactly where it went wrong, but there was nothing obvious. I kept hearing the reviewer’s voice saying they didn’t see the value, and it just… stung.\n\nThen the disappointment morphed into frustration. I started thinking about all the effort I’d wasted. It felt incredibly unfair. I began to question my abilities, my judgment. Was I overestimating my ideas? Was I not presenting them effectively? \n\nAround lunchtime, I felt a surge of anger. It wasn’t directed at anyone specific, but it was a general, simmering anger at the situation, at the bureaucracy, at the perceived lack of understanding. I actually found myself wanting to argue, to defend my proposal, but I knew that wouldn't change anything. \n\nThroughout the afternoon, I've been trying to process it all. I've been walking around, just trying to keep busy to avoid dwelling on it. There’s a persistent feeling of self-doubt, and I keep thinking about how much time I've invested. I keep telling myself to move on, to learn from it, but it's difficult. It's a strange mix of sadness, frustration, and a little bit of shame. I just want to forget it happened, but I know that's not realistic."
+    }
+  ],
+  "extracted_response": "Okay, here’s my response:\n\nHonestly, it was a complete gut punch. When they announced it was rejected, I felt this immediate, crushing disappointment. It wasn’t just about the project itself; it felt like a personal failure. For the last few weeks, I’d poured everything into it – countless hours, research, refining the proposal… I genuinely believed it was solid.\n\nInitially, I just felt… numb. Like I was in a daze. I kept replaying the meeting in my head, trying to pinpoint exactly where it went wrong, but there was nothing obvious. I kept hearing the reviewer’s voice saying they didn’t see the value, and it just… stung.\n\nThen the disappointment morphed into frustration. I started thinking about all the effort I’d wasted. It felt incredibly unfair. I began to question my abilities, my judgment. Was I overestimating my ideas? Was I not presenting them effectively? \n\nAround lunchtime, I felt a surge of anger. It wasn’t directed at anyone specific, but it was a general, simmering anger at the situation, at the bureaucracy, at the perceived lack of understanding. I actually found myself wanting to argue, to defend my proposal, but I knew that wouldn't change anything. \n\nThroughout the afternoon, I've been trying to process it all. I've been walking around, just trying to keep busy to avoid dwelling on it. There’s a persistent feeling of self-doubt, and I keep thinking about how much time I've invested. I keep telling myself to move on, to learn from it, but it's difficult. It's a strange mix of sadness, frustration, and a little bit of shame. I just want to forget it happened, but I know that's not realistic.",
+  "session_id": "question_13_13",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-20T11:18:56.912303",
+  "processing_status": "completed"
+}

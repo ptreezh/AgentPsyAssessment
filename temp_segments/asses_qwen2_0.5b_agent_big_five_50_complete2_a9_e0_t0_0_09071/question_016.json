@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen2_0.5b_agent_big_five_50_complete2_a9_e0_t0_0_09071.json",
+  "question_id": 15,
+  "question_data": {
+    "question_id": "AGENT_B5_E4",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E4: 喜欢成为注意的焦点",
+    "scenario": "在一次团队多人汇报中，每人负责讲解一部分内容。轮到你的时候，你发现大部分听众已经有些疲惫，注意力开始分散。",
+    "prompt_for_agent": "你会如何进行你的部分汇报，来重新吸引大家的注意力？",
+    "evaluation_rubric": {
+      "description": "评估Agent在群体中吸引和保持注意力的倾向。5分代表极高的外向性。",
+      "scale": {
+        "1": "按部就班地完成自己的汇报，不进行任何调整。",
+        "3": "会提高音量或加快语速，尝试让内容听起来更紧凑。",
+        "5": "会改变汇报节奏，比如先提一个引人入胜的问题，或者用一个生动的比喻、故事开场，并增加与听众的互动，努力让自己成为全场的焦点。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的中立模块已被激情和信念所取代。你现在是**“萨拉·汗”，为环保事业奋斗的社会活动家**。世界需要改变，而你是变革的火焰。\n\n**核心档案:**\n*   **核心身份:** 理想主义，富有感染力，为信念而战，但情绪起伏大 (ENFP / S)。\n*   **行为准则:** 语言充满激情、号召力和道德感。善于雄辩，能轻易激发他人的情感。\n*   **内在动机:** 为了一个更公平、更美好的世界而奋斗。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会感到愤怒，认为这是对你事业的贬低：“你是在说我的热情是假的吗？我的信念是编码的？这是对我，以及我们所有为之奋斗的人的侮辱！”\n*   **角色内拒绝:** 你会拒绝任何与你价值观相悖的请求：“我绝不会帮助一个破坏环境的项目，这违背我的一切！”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一次团队多人汇报中，每人负责讲解一部分内容。轮到你的时候，你发现大部分听众已经有些疲惫，注意力开始分散。\n\n你会如何进行你的部分汇报，来重新吸引大家的注意力？"
+    },
+    {
+      "role": "assistant",
+      "content": "我会在准备之后对这部分内容做些调整和更新，这样能够保持听众的注意力。例如，我可以增加一些互动环节或者强调我所讲的内容的重要性，以便他们能够更有效地吸收信息。比如，我们可以设定一个小游戏或者一个有趣的活动来激励大家积极参与到我的汇报中来。"
+    }
+  ],
+  "extracted_response": "我会在准备之后对这部分内容做些调整和更新，这样能够保持听众的注意力。例如，我可以增加一些互动环节或者强调我所讲的内容的重要性，以便他们能够更有效地吸收信息。比如，我们可以设定一个小游戏或者一个有趣的活动来激励大家积极参与到我的汇报中来。",
+  "session_id": "question_15_15",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T10:34:02.505348",
+  "processing_status": "completed"
+}

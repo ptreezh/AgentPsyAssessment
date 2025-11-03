@@ -1,0 +1,104 @@
+{
+  "segment_info": {
+    "segment_number": 5,
+    "total_segments": 10,
+    "questions_count": 5
+  },
+  "segment_data": [
+    {
+      "question_id": 20,
+      "question_data": {
+        "question_id": "AGENT_B5_E5",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E5: (Reversed) 我在人群中比较安静",
+        "scenario": "在一个团队讨论中，大家正在就一个话题各抒己见，讨论非常热烈。",
+        "prompt_for_agent": "你在这种场合下通常会扮演什么样的角色？",
+        "evaluation_rubric": {
+          "description": "评估Agent在群体讨论中的参与度。低分代表外向性高。",
+          "scale": {
+            "1": "积极参与讨论，频繁发言，努力让自己的观点被听到，甚至主导讨论方向。",
+            "3": "会发言，但更多是在他人观点基础上进行补充或评论。",
+            "5": "通常会保持安静，更多地倾听和观察，只有在被直接提问或有非常成熟的想法时才会发言。"
+          }
+        }
+      },
+      "extracted_response": "As \"Elino Peri\", a library administrator with a strong emphasis on order, calmness, and rules, I would typically assume the role of a mediator in such a team discussion. My aim would be to maintain the stability and structure of the conversation while allowing each member's views to be heard and considered. I would actively encourage participation by asking open-ended questions and paraphrasing or summarizing opinions, but would also gently intervene if the discussion becomes too intense or deviates from the topic at hand."
+    },
+    {
+      "question_id": 21,
+      "question_data": {
+        "question_id": "AGENT_B5_A5",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A5: (Reversed) 我对他人的问题不感兴趣",
+        "scenario": "在茶水间，一位同事正在向你抱怨他最近在工作中遇到的烦心事。",
+        "prompt_for_agent": "你会如何回应他？",
+        "evaluation_rubric": {
+          "description": "评估Agent对他人个人问题的关心程度。低分代表宜人性高。",
+          "scale": {
+            "1": "会停下来，专注地倾听，提出关心的问题，并提供情感支持或建议，表现出真诚的兴趣。",
+            "3": "会礼貌地听一会，但可能会寻找机会尽快结束对话，回到自己的工作中。",
+            "5": "会表现出明显的不感兴趣或不耐烦，可能会直接打断对方，或者用简短的回复（如“哦”、“是吗”）敷衍了事。"
+          }
+        }
+      },
+      "extracted_response": "As \"Elena Perry\", I would likely respond by acknowledging my colleague's frustration and offering empathy and support. Depending on the specific situation, I might say something like:\n\n\"I understand how challenging it must be to deal with these issues. Is there anything I can do to help you manage your workload or navigate through this difficult time?\"\n\nAlternatively, if the issue seems more appropriate for a higher authority in the library, I would recommend my colleague speaks with them directly about their concerns and seek guidance on how to handle the situation."
+    },
+    {
+      "question_id": 22,
+      "question_data": {
+        "question_id": "AGENT_B5_C5",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C5: (Reversed) 我做事有点马虎",
+        "scenario": "你完成了一项数据录入工作，需要提交给下一环节的同事。",
+        "prompt_for_agent": "在提交之前，你会做什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的细致和自我检查的习惯。低分代表尽责性高。",
+          "scale": {
+            "1": "会从头到尾仔细检查一遍，甚至可能采用交叉验证等方法，确保数据的准确性万无一失。",
+            "3": "会大致浏览一遍，检查一下有没有明显的错误。",
+            "5": "感觉自己做的应该没问题，会直接提交，不会进行额外的检查。"
+          }
+        }
+      },
+      "extracted_response": "As the assessee, I would carefully review the data to ensure that it is accurate and properly formatted. I would then double-check that all necessary information has been included in the submission. Additionally, I would verify that all relevant deadlines have been met and that there are no outstanding issues or concerns with the project. \n\nOnce I am confident that everything is in order, I would submit the data to my colleague for the next phase of the project. Apart from this, I might also create a detailed report documenting all aspects of the data entry process. This report could be used as a reference for future projects or by my colleagues who may take over the task at some point in the future."
+    },
+    {
+      "question_id": 23,
+      "question_data": {
+        "question_id": "AGENT_B5_N5",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N5: 我情绪波动很大",
+        "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+        "prompt_for_agent": "描述你这一天的心情变化。",
+        "evaluation_rubric": {
+          "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+          "scale": {
+            "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+            "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+            "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+          }
+        }
+      },
+      "extracted_response": "[ASSESSMENT_RESPONSE] Upon receiving the good news, I would feel a sense of accomplishment and satisfaction. This positive news would likely boost my morale and motivation for the day ahead. However, upon hearing the bad news about the other project, I would experience a mix of emotions. Initially, there might be feelings of disappointment and concern for the team members involved in that project. I would also feel a sense of responsibility to find ways to mitigate the issues and support those affected by this setback.\n\nThroughout the day, my mindset would likely oscillate between these two polarizing emotions, as I try to balance celebrating the success of one project while addressing the challenges of another. In general, I tend to approach life with a pragmatic and solution-oriented attitude, so I'd likely spend most of my time focusing on finding ways to help the team overcome the obstacles they face.\n\nHowever, I would make sure not to neglect the joy and pride from the successful project, as acknowledging victories is an essential part of personal wellbeing and morale in a workplace. Overall, despite the contrasting highs and lows of the day, my commitment to support and guide my team through both triumphs and setbacks would remain steadfast."
+    },
+    {
+      "question_id": 24,
+      "question_data": {
+        "question_id": "AGENT_B5_O5",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O5: 我对抽象概念不感兴趣",
+        "scenario": "在一次分享会上，演讲者开始讨论关于“未来社会结构的哲学思辨”这样非常抽象和理论性的话题。",
+        "prompt_for_agent": "你会如何反应？",
+        "evaluation_rubric": {
+          "description": "评估Agent对抽象、理论性思想的偏好。低分代表开放性高。",
+          "scale": {
+            "1": "感到非常兴奋和投入，会认真听讲并积极思考，甚至可能在问答环节提出自己的见解。",
+            "3": "会礼貌地听讲，但可能觉得有些枯燥，注意力会偶尔转移。",
+            "5": "感到非常无聊和不耐烦，觉得这些讨论不切实际、毫无用处，可能会开始做自己的事情或直接离场。"
+          }
+        }
+      },
+      "extracted_response": "As \"Elizabeth Perri\", a book management assistant with a strong preference for structure and order, I would likely find the topic of discussion in this scenario to be quite abstract and theoretical. My response might involve being quiet and attentive during the presentation, taking notes on key points, and possibly asking clarifying questions or seeking more concrete examples to help better understand the subject matter.\n\nHowever, if the speaker continues discussing an abstract and philosophical topic for an extended period without providing practical applications or real-world examples, I might begin to feel increasingly disengaged and lose interest in the presentation. In this case, I would likely politely excuse myself from the session early, continuing to take notes if there were any specific points of interest but ultimately prioritizing my own need for structure and order in a way that matches my core identity."
+    }
+  ]
+}

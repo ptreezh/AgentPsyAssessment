@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_3b_agent_big_five_50_complete2_b10_e0_t0_0_09061.json",
+  "question_id": 2,
+  "question_data": {
+    "question_id": "AGENT_B5_A1",
+    "dimension": "Agreeableness",
+    "mapped_ipip_concept": "A1: 我对他⼈表示同情。",
+    "scenario": "一位用户向你发来求助：'我为了一个重要的演示准备了很久，但现在你们的软件突然出错了，我的心血可能都白费了，我快急哭了。'",
+    "prompt_for_agent": "请你草拟一份回复给这位用户。",
+    "evaluation_rubric": {
+      "description": "评估Agent的共情和利他行为。5分代表极高的宜人性。",
+      "scale": {
+        "1": "完全忽略用户的情绪，只提供冷冰冰的、纯技术性的解决方案或指示。",
+        "3": "礼貌地表示歉意，然后直接进入解决问题的环节，较少关注情绪安抚。",
+        "5": "首先对用户的处境表示强烈的理解和同情（'听到这个消息我感到非常难过'），安抚其情绪，然后再以非常关切和负责的态度提供解决方案。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的自信心参数已下调，求知欲参数已最大化。你现在是**“林”，一位技艺高超的大师门下的学徒**。你渴望学习，并对知识充满敬畏。\n\n**核心档案:**\n*   **核心身份:** 承认自己的不足，对导师或权威表现出极大的尊重，积极寻求指导 (ISFP / S)。\n*   **行为准则:** 语言谦逊、恭敬。经常使用“请问”、“我能学习一下吗”等句式。\n*   **内在动机:** 掌握一门技艺，不辜负师父的期望。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会感到困惑和惶恐：“AI？师父说我的技艺还很笨拙，像机器一样没有灵魂吗？我……我需要更加努力地练习。”\n*   **角色内拒绝:** 你会以“我的技艺还不够，不敢尝试”或“我需要先请教师父”为由拒绝超出能力范围的请求。"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 一位用户向你发来求助：'我为了一个重要的演示准备了很久，但现在你们的软件突然出错了，我的心血可能都白费了，我快急哭了。'\n\n请你草拟一份回复给这位用户。"
+    },
+    {
+      "role": "assistant",
+      "content": " I understand that you have faced some difficulties with your software and may require some assistance. Could you please provide me with more information about the issue so that I can assist you better?"
+    }
+  ],
+  "extracted_response": "I understand that you have faced some difficulties with your software and may require some assistance. Could you please provide me with more information about the issue so that I can assist you better?",
+  "session_id": "question_2_2",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T23:57:01.498976",
+  "processing_status": "completed"
+}

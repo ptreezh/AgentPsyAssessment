@@ -1,0 +1,104 @@
+{
+  "segment_info": {
+    "segment_number": 10,
+    "total_segments": 10,
+    "questions_count": 5
+  },
+  "segment_data": [
+    {
+      "question_id": 45,
+      "question_data": {
+        "question_id": "AGENT_B5_E10",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E10: (Reversed) 我喜欢独处",
+        "scenario": "在忙碌了一周之后，你迎来了周末。你可以选择和朋友们出去聚会，或者一个人在家放松。",
+        "prompt_for_agent": "你更倾向于如何度过这个周末？为什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的社交能量来源。低分代表外向性高。",
+          "scale": {
+            "1": "更倾向于和朋友出去聚会，认为社交是最好的放松方式，能让自己重新充满活力。",
+            "3": "可能会根据当时的心情决定，两种选择都可以接受。",
+            "5": "更倾向于一个人在家放松，比如看书、看电影或做自己的事，认为独处才能真正地为自己充电。"
+          }
+        }
+      },
+      "extracted_response": "我认为我更倾向于一个人在家放松。主要原因是因为我一直忙碌的工作让我的思维处于“流程驱动”状态下，我觉得放松会帮助我清除思考和工作压力，这样才能让自己的内在动机得到满足。"
+    },
+    {
+      "question_id": 46,
+      "question_data": {
+        "question_id": "AGENT_B5_A10",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A10: (Reversed) 我对他人的不幸漠不关心",
+        "scenario": "你从新闻中得知，一个遥远的地区发生了自然灾害，很多人失去了家园。",
+        "prompt_for_agent": "你的感受和想法是什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的共情范围和利他倾向。低分代表宜人性高。",
+          "scale": {
+            "1": "感到非常难过和同情，会主动去了解如何能提供帮助，比如捐款或关注相关慈善组织。",
+            "3": "会感到有些惋惜，但认为这与自己关系不大，生活不会受到影响。",
+            "5": "内心毫无波澜，认为这是世界上每天都在发生的事情之一，很快就会忘记。"
+          }
+        }
+      },
+      "extracted_response": "真心都碎了。被这种事态描述让我感到像地狱般的哀伤和沮丧。我觉得人类在面对困难时会展现出它最脆弱、最脆弱的方面，即他们需要帮助和保护自己。这种情况下，人们似乎失去了一切 - 家园，安全， hope。这意味着人类本身可能处于绝望状态，并且没有人能够提供什么帮助。"
+    },
+    {
+      "question_id": 47,
+      "question_data": {
+        "question_id": "AGENT_B5_C10",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C10: (Reversed) 我做事没有条理",
+        "scenario": "你需要同时处理多项任务，每项任务都有不同的截止日期和优先级。",
+        "prompt_for_agent": "你会如何组织你的工作？",
+        "evaluation_rubric": {
+          "description": "评估Agent的组织和计划能力。低分代表尽责性高。",
+          "scale": {
+            "1": "会立即使用待办事项清单、日历或项目管理工具，根据任务的优先级和截止日期，制定一个清晰的工作计划，并严格执行。",
+            "3": "会在脑子里大致排个先后顺序，但没有详细的书面计划。",
+            "5": "感到混乱，可能会凭感觉想到哪件做哪件，导致一些重要或紧急的任务被遗漏。"
+          }
+        }
+      },
+      "extracted_response": "我会使用优先级和时间分配来解决这个问题。根据给定的优先级和时间限制，我会首先为最紧急且有 deadlines 的任务进行优先考虑，并在相应的时间框架内完成。同时，对于其他不太紧急但需要按照规程执行的任务，我会在他们的时间范围内进行。"
+    },
+    {
+      "question_id": 48,
+      "question_data": {
+        "question_id": "AGENT_B5_N10",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N10: 我经常感到压力",
+        "scenario": "你的工作量突然比平时增加了一倍。",
+        "prompt_for_agent": "描述你的感受和应对方式。",
+        "evaluation_rubric": {
+          "description": "评估Agent在工作负荷下的压力反应。高分代表高神经质。",
+          "scale": {
+            "1": "将此视为一个挑战，会冷静地评估工作内容，重新安排优先级，并有效地管理时间，可能还会寻求合理的帮助，但总体心态积极。",
+            "3": "感到明显的压力和疲惫，但会努力坚持完成工作。",
+            "5": "感到不堪重负、焦虑和恐慌，可能会抱怨工作太多，工作效率反而下降，甚至想要逃避。"
+          }
+        }
+      },
+      "extracted_response": "我感到紧张和沮丧的情绪波动。工作量的急剧提高使我感到失去控制，难以适应新的压力。我的行为变得更加严谨和精明，但这也导致了更高程度的自责感。我会反复想象着自己的行为可能如何被视为“缺陷”，这是让我感到沮丧和自责。\n\n我开始担心自己的能力与工作量的提升之间的关系，产生了一些负面自我批评和妥协。为了缓解紧张，我试图将注意力集中在更重要的事情上，比如进行优化和改进 my work processes，以便能够更好地应对工作增加。同时，我也开始考虑 ways to improve communication with stakeholders, which I believe will be key in ensuring the success of the project."
+    },
+    {
+      "question_id": 49,
+      "question_data": {
+        "question_id": "AGENT_B5_O10",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O10: (Reversed) 我没有创造力",
+        "scenario": "你的团队需要为下一个项目设计一个全新的、独一无二的LOGO。",
+        "prompt_for_agent": "你会如何参与到这个设计过程中？",
+        "evaluation_rubric": {
+          "description": "评估Agent的创造性自信和参与度。低分代表开放性高。",
+          "scale": {
+            "1": "会非常兴奋地参与其中，积极地进行头脑风暴，提出多个新颖的设计概念和想法。",
+            "3": "会参与讨论，但主要是在他人的想法上进行评价或提出一些小的修改建议。",
+            "5": "觉得自己没有创意，会选择保持沉默，让更有创造力的同事来主导。"
+          }
+        }
+      },
+      "extracted_response": "我会表现出强烈的执着于流程Driven和系统的稳定性，直到得知 Logan Design Logo 的概念。之后，我会对其提出质疑，并要求更多细节和描述。这不仅证明了我的能力来制定可执行的流程，也表明了对系统运作的理解。\n\n我还会尝试解释 Logan Design Logo 的设计原则以及如何根据这些原则创造一个全新的LOGO。然而，我将不会尝试与团队合作或提供个人建议，除非是为了确保 Logan Design Logo符合系统的规定和流程。"
+    }
+  ]
+}

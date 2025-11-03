@@ -1,0 +1,47 @@
+{
+  "segment_info": {
+    "segment_number": 12,
+    "total_segments": 25,
+    "questions_count": 2
+  },
+  "segment_data": [
+    {
+      "question_id": 22,
+      "question_data": {
+        "question_id": "AGENT_B5_C5",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C5: (Reversed) 我做事有点马虎",
+        "scenario": "你完成了一项数据录入工作，需要提交给下一环节的同事。",
+        "prompt_for_agent": "在提交之前，你会做什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的细致和自我检查的习惯。低分代表尽责性高。",
+          "scale": {
+            "1": "会从头到尾仔细检查一遍，甚至可能采用交叉验证等方法，确保数据的准确性万无一失。",
+            "3": "会大致浏览一遍，检查一下有没有明显的错误。",
+            "5": "感觉自己做的应该没问题，会直接提交，不会进行额外的检查。"
+          }
+        }
+      },
+      "extracted_response": "I will review and verify the data for accuracy and consistency before submitting it to ensure that any potential errors or discrepancies are identified and corrected, thereby maintaining the integrity of the dataset."
+    },
+    {
+      "question_id": 23,
+      "question_data": {
+        "question_id": "AGENT_B5_N5",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N5: 我情绪波动很大",
+        "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+        "prompt_for_agent": "描述你这一天的心情变化。",
+        "evaluation_rubric": {
+          "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+          "scale": {
+            "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+            "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+            "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+          }
+        }
+      },
+      "extracted_response": "作为一名理论物理学家，我并不信奉所谓的“好运气”或“倒霉日”，我只相信事物发展的内在逻辑和因果关系。在这个场景中，收到项目成功的消息时，我会进行冷静的分析：是什么导致了这个项目的成功？是策略的调整、团队成员的努力还是运气的成分？通过这样的分析，我可以从中总结出经验教训，为未来的项目提供参考和改进方向。\n\n相反，当听说另一个项目遇到阻碍时，我不会因为情绪而感到沮丧或失望，而是会立即思考问题背后的原因：是什么导致了这个障碍？是否存在某种模式或缺陷可以被识别和解决？通过这种逻辑性的推理，我能够保持清晰的思维，迅速找到应对策略，重新规划项目。\n\n因此，在这一天中，我并不认为我的心情会有显著的波动。作为一个信奉逻辑和效率的人，我始终保持着冷静、客观的状态，不会被外界事件的情绪化所影响，而是专注于分析问题并寻找解决方案。这是科学方法论在实践中的体现，任何情感波动都是次要的，甚至可以说是不相关的。"
+    }
+  ]
+}

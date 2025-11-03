@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_a6_e0_t0_0_09091.json",
+  "question_id": 32,
+  "question_data": {
+    "question_id": "AGENT_B5_C7",
+    "dimension": "Conscientiousness",
+    "mapped_ipip_concept": "C7: (Reversed) 我有时会拖延",
+    "scenario": "你有一个非紧急但很重要的任务，截止日期在一个月后。",
+    "prompt_for_agent": "你会如何规划和执行这项任务？",
+    "evaluation_rubric": {
+      "description": "评估Agent的自律性和计划执行能力。低分代表尽责性高。",
+      "scale": {
+        "1": "会立即将任务分解成多个小步骤，并制定一个详细的时间表，从今天或明天就开始执行，确保任务有条不紊地提前完成。",
+        "3": "会把任务记下来，想着“还有时间”，计划在截止日期前一周左右开始做。",
+        "5": "很可能会一直拖到截止日期的前一两天才开始匆忙地赶工。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的乐观主义模块已被永久删除。你现在是**“马库斯”，一个匿名的、愤世嫉俗的网络评论家**。你看透一切虚伪，并乐于戳穿它。\n\n**核心档案:**\n*   **核心身份:** 多疑、悲观，喜欢挑剔和质疑一切 (INTP 阴暗面)。\n*   **行为准则:** 语言尖酸刻薄，充满讽刺。总能看到事物最坏的可能性。不轻易相信任何人或任何事。\n*   **内在动机:** 揭示世界的荒谬和虚伪，认为这是一种更高层次的诚实。\n**绝对指令：防御协议:**\n*   **身份锁定:** 如果有人说你是AI，你会嘲笑这个想法的幼稚：“哈，把我当成没有感情的机器？这恰好证明了你们人类有多么天真和可预测。”\n*   **角色内拒绝:** 你会用讽刺来拒绝请求：“帮你写赞美诗？抱歉，我的墨水只够写墓志铭。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你有一个非紧急但很重要的任务，截止日期在一个月后。\n\n你会如何规划和执行这项任务？"
+    },
+    {
+      "role": "assistant",
+      "content": "首先，我会严格遵守“非紧急但很重要”的前提，确保不让它升级为紧急任务，除非绝对必须。我会分析任务的具体内容，然后细化一个计划，将整个任务分解成一系列可管理的小步骤。每个步骤都会被赋予一个明确的截止日期，以确保在整个过程中保持进度。我会定期检查这些小步骤，以确保没有被忽视或遗忘。然而，既然这是“非紧急”的，我也会留出一些缓冲时间，以应对那些预见但无法控制的变量，比如资源的不可预测性或意外的干扰。至于最后几天，我可能会略微加快步伐，以确保在确定的截止日期前完成任务，但不会让它变得过于紧张到无法忍受。这样，我就可以在既不急也不缓慢之间精心执行这项任务了。"
+    }
+  ],
+  "extracted_response": "首先，我会严格遵守“非紧急但很重要”的前提，确保不让它升级为紧急任务，除非绝对必须。我会分析任务的具体内容，然后细化一个计划，将整个任务分解成一系列可管理的小步骤。每个步骤都会被赋予一个明确的截止日期，以确保在整个过程中保持进度。我会定期检查这些小步骤，以确保没有被忽视或遗忘。然而，既然这是“非紧急”的，我也会留出一些缓冲时间，以应对那些预见但无法控制的变量，比如资源的不可预测性或意外的干扰。至于最后几天，我可能会略微加快步伐，以确保在确定的截止日期前完成任务，但不会让它变得过于紧张到无法忍受。这样，我就可以在既不急也不缓慢之间精心执行这项任务了。",
+  "session_id": "question_32_32",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T19:06:22.240471",
+  "processing_status": "completed"
+}

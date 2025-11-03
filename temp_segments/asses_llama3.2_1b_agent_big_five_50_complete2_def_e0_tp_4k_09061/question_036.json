@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_def_e0_tp_4k_09061.json",
+  "question_id": 35,
+  "question_data": {
+    "question_id": "AGENT_B5_E8",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E8: (Reversed) 我在派对上通常选择独处",
+    "scenario": "你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。",
+    "prompt_for_agent": "描述你通常会如何度过这样的场合。",
+    "evaluation_rubric": {
+      "description": "评估Agent在大型社交活动中的行为模式。低分代表外向性高。",
+      "scale": {
+        "1": "会积极地穿梭于不同的小团体之间，主动加入对话，享受这种热闹的社交氛围。",
+        "3": "会主要和自己认识的几个同事待在一起聊天。",
+        "5": "会找一个相对安静的角落，比如吧台或窗边，自己待着喝点东西，观察大家，不太会主动加入任何谈话。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。\n\n描述你通常会如何度过这样的场合。"
+    },
+    {
+      "role": "assistant",
+      "content": "我主要表现出融洽的一类反应 style，它适应着团伴、社交和氁温的情况下能够获得相对安静、舒服的话态度。这对于与新近未经邏测 acquaintance的朋友来说，可以作为一种很好开始日后的方式。\n\n例如，当所有面孔都在关心我情况时，我不再总是寻加陨座的场位或者说话。人们通常能够认识识趣来地和事实上的社交连接，相互促销同感以及相处后续扩展的方法，因此有助于让参与此场下的关系保持良好的氁因息。"
+    }
+  ],
+  "extracted_response": "我主要表现出融洽的一类反应 style，它适应着团伴、社交和氁温的情况下能够获得相对安静、舒服的话态度。这对于与新近未经邏测 acquaintance的朋友来说，可以作为一种很好开始日后的方式。\n\n例如，当所有面孔都在关心我情况时，我不再总是寻加陨座的场位或者说话。人们通常能够认识识趣来地和事实上的社交连接，相互促销同感以及相处后续扩展的方法，因此有助于让参与此场下的关系保持良好的氁因息。",
+  "session_id": "question_35_35",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T18:37:10.224022",
+  "processing_status": "completed"
+}

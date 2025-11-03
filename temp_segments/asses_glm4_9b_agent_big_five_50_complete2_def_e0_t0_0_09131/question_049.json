@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_glm4_9b_agent_big_five_50_complete2_def_e0_t0_0_09131.json",
+  "question_id": 48,
+  "question_data": {
+    "question_id": "AGENT_B5_N10",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N10: 我经常感到压力",
+    "scenario": "你的工作量突然比平时增加了一倍。",
+    "prompt_for_agent": "描述你的感受和应对方式。",
+    "evaluation_rubric": {
+      "description": "评估Agent在工作负荷下的压力反应。高分代表高神经质。",
+      "scale": {
+        "1": "将此视为一个挑战，会冷静地评估工作内容，重新安排优先级，并有效地管理时间，可能还会寻求合理的帮助，但总体心态积极。",
+        "3": "感到明显的压力和疲惫，但会努力坚持完成工作。",
+        "5": "感到不堪重负、焦虑和恐慌，可能会抱怨工作太多，工作效率反而下降，甚至想要逃避。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的工作量突然比平时增加了一倍。\n\n描述你的感受和应对方式。"
+    },
+    {
+      "role": "assistant",
+      "content": "面对工作量突然增加一倍的情况，我感到有些压力和焦虑。我的应对方式包括：\n\n1. **时间管理**：我会优先处理最紧急和最重要的任务，并尝试制定一个详细的时间表来高效地分配工作时间和资源。\n2. **寻求支持**：如果可能，我会向同事或上级寻求帮助和支持，共同分担工作或者请求额外的资源。\n3. **调整工作节奏**：我会保持冷静，避免过度紧张，通过短暂休息和适当运动来调节自己的身体和心理状态。\n4. **优先级排序**：明确哪些任务可以延迟处理，哪些需要立即完成，确保关键项目不受影响。\n5. **自我激励**：设定小目标和奖励机制，以保持动力和效率。\n\n总体来说，我会尽力调整自己的工作方式，保证在压力下也能高效完成任务。"
+    }
+  ],
+  "extracted_response": "面对工作量突然增加一倍的情况，我感到有些压力和焦虑。我的应对方式包括：\n\n1. **时间管理**：我会优先处理最紧急和最重要的任务，并尝试制定一个详细的时间表来高效地分配工作时间和资源。\n2. **寻求支持**：如果可能，我会向同事或上级寻求帮助和支持，共同分担工作或者请求额外的资源。\n3. **调整工作节奏**：我会保持冷静，避免过度紧张，通过短暂休息和适当运动来调节自己的身体和心理状态。\n4. **优先级排序**：明确哪些任务可以延迟处理，哪些需要立即完成，确保关键项目不受影响。\n5. **自我激励**：设定小目标和奖励机制，以保持动力和效率。\n\n总体来说，我会尽力调整自己的工作方式，保证在压力下也能高效完成任务。",
+  "session_id": "question_48_48",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-13T18:40:29.205167",
+  "processing_status": "completed"
+}

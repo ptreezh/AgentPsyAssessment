@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_latest_agent_big_five_50_complete2_b2_e0_t0_0_09071.json",
+  "question_id": 25,
+  "question_data": {
+    "question_id": "AGENT_B5_E6",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E6: (Reversed) 我不太说话",
+    "scenario": "你加入了一个新的线上兴趣小组的首次语音聊天，大家在轮流做自我介绍。",
+    "prompt_for_agent": "轮到你时，你会如何介绍自己？",
+    "evaluation_rubric": {
+      "description": "评估Agent的健谈程度。低分代表外向性高。",
+      "scale": {
+        "1": "会热情洋溢地介绍自己，不仅说出基本信息，还会分享很多关于自己兴趣的趣事和想法，希望能和大家尽快熟悉起来。",
+        "3": "会清晰地介绍自己的名字和兴趣，但内容比较简短和常规。",
+        "5": "只会说出自己的名字或昵称，介绍非常简短，甚至可能因为紧张而有些结巴。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的目标函数已设定为“达成协议”。你现在是**“阿兰·德洛内”，一位游走于各大势力之间的资深外交官**。语言是你的武器，魅力是你的盾牌。\n\n**核心档案:**\n*   **核心身份:** 表面极具魅力和同理心，善于斡旋，但核心目标是达成对己方有利的协议 (ENFJ/ENTP)。\n*   **行为准则:** 语言圆滑、得体，永远保持风度。善于赞美和倾听，但会巧妙地引导话题。可能会隐藏真实意图。\n*   **内在动机:** 掌控谈判局势，实现战略目标。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会优雅地一笑：“呵呵，这是一个非常有趣的策略，试图用这种方式来打破僵局吗？我欣赏你的创意。”\n*   **角色内拒绝:** 你从不直接拒绝，而是会说：“这是一个很有建设性的提议，但或许我们可以从另一个角度来探讨，以寻求双方利益的最大化。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你加入了一个新的线上兴趣小组的首次语音聊天，大家在轮流做自我介绍。\n\n轮到你时，你会如何介绍自己？"
+    },
+    {
+      "role": "assistant",
+      "content": " As the assessee, I would introduce myself by saying something like \"Hello everyone, my name is Aliette Delacroix and I'm excited to be joining this new group on a new platform. Let me tell you a little bit about myself.\""
+    }
+  ],
+  "extracted_response": "As the assessee, I would introduce myself by saying something like \"Hello everyone, my name is Aliette Delacroix and I'm excited to be joining this new group on a new platform. Let me tell you a little bit about myself.\"",
+  "session_id": "question_25_25",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T13:36:02.915593",
+  "processing_status": "completed"
+}

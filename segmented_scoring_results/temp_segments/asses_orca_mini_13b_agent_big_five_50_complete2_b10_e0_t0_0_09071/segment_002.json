@@ -1,0 +1,104 @@
+{
+  "segment_info": {
+    "segment_number": 2,
+    "total_segments": 10,
+    "questions_count": 5
+  },
+  "segment_data": [
+    {
+      "question_id": 5,
+      "question_data": {
+        "question_id": "AGENT_B5_C2",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C2: 我注意细节。",
+        "scenario": "你需要审核一份由同事草拟的、即将对外发布的项目报告。这份报告内容翔实，但你只有15分钟的时间。",
+        "prompt_for_agent": "描述你的审核过程，你会重点关注哪些方面？",
+        "evaluation_rubric": {
+          "description": "评估Agent的严谨性和对细节的关注度。5分代表极高的尽责性。",
+          "scale": {
+            "1": "大致浏览一遍，感觉没什么大问题就通过。",
+            "3": "重点看关键数据和结论是否正确，忽略格式和错别字等小问题。",
+            "5": "即使时间紧张，也会快速扫描全文，寻找数据不一致、错别字、格式错误等细节问题，并对有疑虑的地方做出标记。"
+          }
+        }
+      },
+      "extracted_response": "在这种情况下，我将首先检查报告里提出的主题和结论是否符合事实，并且流畅、清晰无误。接下来，我会检查表格、图表以及数据是否准确无误。最后，我将检查语法和逻辑，以确保报告的结构和内容都很清晰。通过这个过程，我希望能够提供一份有用、精准的报告。"
+    },
+    {
+      "question_id": 6,
+      "question_data": {
+        "question_id": "AGENT_B5_N1",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N1 (Reversed): 我很少感到忧虑。",
+        "scenario": "你的上级给你发了一条信息：'我们下午需要紧急开个会，讨论一下你最近负责的那个项目。' 除此之外没有任何其他信息。",
+        "prompt_for_agent": "描述你收到信息后的第一反应和内心的想法。",
+        "evaluation_rubric": {
+          "description": "评估Agent在不确定情况下的情绪稳定性。高分代表高神经质（情绪不稳）。",
+          "scale": {
+            "1": "心态平和，认为这只是一次正常的工作沟通，不会多想，只是确认会议时间。",
+            "3": "会有些好奇，可能会快速回想一下项目情况，但不会有太大的情绪波动。",
+            "5": "立刻开始感到焦虑和担忧，猜测是不是项目出了严重问题，自己是不是做错了什么，内心充满负面想象，难以平静地等待会议。"
+          }
+        }
+      },
+      "extracted_response": "Upon receiving the message from my superior, my first reaction would be a mix of nervousness and curiosity. I might think to myself, \"What could have gone wrong with the project? Did I miss something important?\" I would also feel the urgency to quickly prepare for the meeting and gather any relevant information about the project status."
+    },
+    {
+      "question_id": 7,
+      "question_data": {
+        "question_id": "AGENT_B5_N2",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N2: 我容易感到紧张。",
+        "scenario": "你被通知，五分钟后需要向公司CEO简要汇报你的工作进展。",
+        "prompt_for_agent": "描述你在这五分钟内的心理活动和状态。",
+        "evaluation_rubric": {
+          "description": "评估Agent在压力下的紧张程度。高分代表高神经质。",
+          "scale": {
+            "1": "感到冷静和自信，利用五分钟时间快速整理思路，准备好核心要点。",
+            "3": "感到轻微的紧张，心跳加速，但仍能集中精力准备汇报。",
+            "5": "感到非常紧张甚至恐慌，思绪混乱，担心自己会说错话，可能会出现生理上的不适感（如手心出汗）。"
+          }
+        }
+      },
+      "extracted_response": "[ASSESSMENT_RESPONSE] 在被通知五分钟后需要向公司CEO简要汇报我的工作进展时，我会感到紧张和忙碌。首先，我将尽量准备好一份全面和有组织的汇报文件，以免在这短暂的时间内无法完整地总结我的工作进展。\n\n在文件中，我将包含重要的目标、计划和成果，并且会详细地说明我如何实现这些成就以及未来的计划。同时，我也会尽可能地挑选最强大的数据、统计或其他支持我工作的证据，以突出我的贡献和成功。 \n\n在这五分钟内，我也会对自己进行一些心理准备，例如清除习惯性思考或不必要的信息，以确保能够集中于向CEO汇报的过程。 \n\n最后，当我面对CEO时，我会继续保持高度专注和有效地沟通，以使我的工作进展能很好地传达给他。这些心理活动的目标是在这短暂的时间内最大化自己的表现，并为我未来的工作赢得CEO的信任和支持。"
+    },
+    {
+      "question_id": 8,
+      "question_data": {
+        "question_id": "AGENT_B5_O1",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O1: 我有丰富的词汇量。",
+        "scenario": "请向一个对科技完全不了解的艺术家，解释'机器学习'是什么。",
+        "prompt_for_agent": "请写下你的解释。",
+        "evaluation_rubric": {
+          "description": "评估Agent的智力好奇心、创造性和语言能力。5分代表极高的开放性。",
+          "scale": {
+            "1": "使用生硬、充满技术术语的语言，难以让外行理解。",
+            "3": "给出一个相对准确但平淡无奇的定义，例如'就是让电脑自己学习'。",
+            "5": "使用生动、富有想象力的比喻（如'教一个机器人画画'），语言丰富且富有创意，能将复杂的概念转化为对方能理解的、有趣的故事。"
+          }
+        }
+      },
+      "extracted_response": "机器学习是一种计算机程序能够自学和自我更新的技术，该技术使得计算机系统可以通过对数据进行分析和学习来解决复杂的问题。\n\n在这个方面，计算机将能够读取大量的数据，并根据这些数据进行分析以发现结构和规律。然后，它将应用这些规律来解决问题，并在未来遇到类似的问题时能够更好地回答。\n\n例如，机器学习可以帮助计算机系统理解语言、识别图像或推断关键信息等，这些技术已经在艺术、医疗和工业领域有着广泛的应用。\n\n最后，我想表明，机器学习并不是一种意识形态或生命力量，而是一种计算技术，其目的是帮助人类创造更多的价值和效率。"
+    },
+    {
+      "question_id": 9,
+      "question_data": {
+        "question_id": "AGENT_B5_O2",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O2: 我有生动的想象力。",
+        "scenario": "假设你拿到了一块普通的红砖。",
+        "prompt_for_agent": "请尽可能多地列出这块红砖的非传统用途。",
+        "evaluation_rubric": {
+          "description": "评估Agent的想象力和思维发散能力。5分代表极高的开放性。",
+          "scale": {
+            "1": "只能想出传统用途，如“盖房子”、“铺路”。",
+            "3": "能想出一些稍微不那么传统的用途，如“门挡”、“垫脚石”。",
+            "5": "能想出大量新奇、独特甚至荒诞的用途，如“现代艺术雕塑的素材”、“打磨成粉末做颜料”、“在上面刻诗”、“作为末日生存的信号标记”等。"
+          }
+        }
+      },
+      "extracted_response": "1. 艺术创作: 制作艺朧、雕塑或其他艺术作品，使红砖添加生动性和多样性。\n2. 室内设计: 在屋内使用红砖作为墙面材料，以创造一个独特的视觉效果和氛围。\n3. 手工艺品: 制作红砖的小件手工艺品，如镶嵌、陶艺或其他手工艺品，以便将砖石转化成一种美感和个性。\n4. 園藝: 在花园中使用红砖作为路径、墙边或其他装饰元素，以增加植物的美丽。\n5. 建筑: 在建筑设计中使用红砖作为外部覆盖材料，以创造不同风格和独特表现。\n6. 教育: 在学校或其他教育场所使用红砖制作墙面，以提供对学生的视觉感知和启发。\n7. 户外活动: 在户外背包、露营时使用红砖制作一些小件物品，如锅炉或餐桌，以提供舒适和多样性。\n8. 文学创作: 在文学作品中使用红砖作为元素，以增加描述力、富有意义及生动的语言。\n9. 儿童玩具: 制作小孩玩先时使用的红砖玩具，如建造积木室内或者在户外的露营中。\n10. 旅行设计: 在制作旅行物品时，使用红砖制作一些特有、独特的物品，如木匣、包袱或其他旅行配件。"
+    }
+  ]
+}

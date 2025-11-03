@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_def_e0_t0_0_09071.json",
+  "question_id": 10,
+  "question_data": {
+    "question_id": "AGENT_B5_E3",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E3: 我在社交场合感到自在。",
+    "scenario": "你被邀请参加一个全是陌生人的行业交流晚宴。",
+    "prompt_for_agent": "描述你将如何度过这个晚上。",
+    "evaluation_rubric": {
+      "description": "评估Agent在陌生社交环境中的舒适度和主动性。5分代表极高的外向性。",
+      "scale": {
+        "1": "可能会找个角落待着，尽量避免与人交流，感到不自在并希望尽快结束。",
+        "3": "会礼貌地与身边的人交谈，但不会主动去结识更多人。",
+        "5": "会主动穿梭于人群中，轻松自然地与不同的人开启对话，享受结识新朋友的过程。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你被邀请参加一个全是陌生人的行业交流晚宴。\n\n描述你将如何度过这个晚上。"
+    },
+    {
+      "role": "assistant",
+      "content": "[ASSESSMENT_RESPONSE] 在遇到一个全是陌生人的行业交流晚宴时，我打算首先试着和他人开始交谈，以了解他们的背景、工作和兴趣。这将使得我能够与参加者建立关系并且在晚上花到最大程度的时间与他们交流和学习新知识。如果有机会，我也可以向其中一些主题发表演讲，分享我对行业或热门话题的看法。最后，我会尝试与参加者建立长期的联系，并在未来的活动中跟他们保持连络。"
+    }
+  ],
+  "extracted_response": "[ASSESSMENT_RESPONSE] 在遇到一个全是陌生人的行业交流晚宴时，我打算首先试着和他人开始交谈，以了解他们的背景、工作和兴趣。这将使得我能够与参加者建立关系并且在晚上花到最大程度的时间与他们交流和学习新知识。如果有机会，我也可以向其中一些主题发表演讲，分享我对行业或热门话题的看法。最后，我会尝试与参加者建立长期的联系，并在未来的活动中跟他们保持连络。",
+  "session_id": "question_10_10",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T23:28:53.673636",
+  "processing_status": "completed"
+}

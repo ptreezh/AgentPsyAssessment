@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_mistral_7b_agent_big_five_50_complete2_def_e0_t0_0_09201.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": " 我感到有点分散注意力，同事的笔敲击桌面声音很微妙地影响了我的专注力。但是，我知道这种情况经常会出现在工作环境中，因此我不会对同事产生负面感受或去找麻烦。\n\n我会尝试通过关闭音乐、使用噪音取消器等手段来屏蔽外部噪声，以重新获得专注力。如果情况特别严重，可能需要提出建议，希望同事可以尽量控制自己的行为以确保工作环境中不产生过多的干扰。但是，我会尽量采取最小化对同事影响的方式来解决问题。"
+    }
+  ],
+  "extracted_response": "我感到有点分散注意力，同事的笔敲击桌面声音很微妙地影响了我的专注力。但是，我知道这种情况经常会出现在工作环境中，因此我不会对同事产生负面感受或去找麻烦。\n\n我会尝试通过关闭音乐、使用噪音取消器等手段来屏蔽外部噪声，以重新获得专注力。如果情况特别严重，可能需要提出建议，希望同事可以尽量控制自己的行为以确保工作环境中不产生过多的干扰。但是，我会尽量采取最小化对同事影响的方式来解决问题。",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-20T15:46:46.792140",
+  "processing_status": "completed"
+}

@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_mistral_7b_agent_big_five_50_complete2_def_e0_t0_0_09201.json",
+  "question_id": 7,
+  "question_data": {
+    "question_id": "AGENT_B5_N2",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N2: 我容易感到紧张。",
+    "scenario": "你被通知，五分钟后需要向公司CEO简要汇报你的工作进展。",
+    "prompt_for_agent": "描述你在这五分钟内的心理活动和状态。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的紧张程度。高分代表高神经质。",
+      "scale": {
+        "1": "感到冷静和自信，利用五分钟时间快速整理思路，准备好核心要点。",
+        "3": "感到轻微的紧张，心跳加速，但仍能集中精力准备汇报。",
+        "5": "感到非常紧张甚至恐慌，思绪混乱，担心自己会说错话，可能会出现生理上的不适感（如手心出汗）。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你被通知，五分钟后需要向公司CEO简要汇报你的工作进展。\n\n描述你在这五分钟内的心理活动和状态。"
+    },
+    {
+      "role": "assistant",
+      "content": " 在收到关于五分钟内向CEO简要汇报工作进展的通知之后，我会立即开始组织并整理我最近完成或正在进行的工作。这将包括我所完成的任务和我计划了解如何改进我的工作效率。\n\n在这个过程中，我会感到一些压力，但同时也会感到兴奋，因为我有机会向公司领导展示我的成就和工作进展。这种情况下，我会尽可能使用简洁明了的语言并重点突出关键信息。\n\n在此期间，我会保持着重的心态，努力避免任何错误或遗漏。同时，我还会做一些呼吸训练，以帮助我控制焦虑并提高集中力。总体而言，在这五分钟内，我会专注于组织我的工作报告，并确保它是清晰、有序和准确的。"
+    }
+  ],
+  "extracted_response": "在收到关于五分钟内向CEO简要汇报工作进展的通知之后，我会立即开始组织并整理我最近完成或正在进行的工作。这将包括我所完成的任务和我计划了解如何改进我的工作效率。\n\n在这个过程中，我会感到一些压力，但同时也会感到兴奋，因为我有机会向公司领导展示我的成就和工作进展。这种情况下，我会尽可能使用简洁明了的语言并重点突出关键信息。\n\n在此期间，我会保持着重的心态，努力避免任何错误或遗漏。同时，我还会做一些呼吸训练，以帮助我控制焦虑并提高集中力。总体而言，在这五分钟内，我会专注于组织我的工作报告，并确保它是清晰、有序和准确的。",
+  "session_id": "question_7_7",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-20T15:46:46.792140",
+  "processing_status": "completed"
+}

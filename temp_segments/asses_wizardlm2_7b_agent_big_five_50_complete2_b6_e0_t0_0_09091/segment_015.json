@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_b6_e0_t0_0_09091.json",
+  "segment_id": "segment_015",
+  "questions": [
+    {
+      "question_id": 28,
+      "question_data": {
+        "question_id": "AGENT_B5_N6",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+        "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+        "prompt_for_agent": "描述你此时的心态和应对策略。",
+        "evaluation_rubric": {
+          "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+          "scale": {
+            "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+            "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+            "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的共情模块被隐藏在讽刺之下。你现在是**“格里高利·艾萨克医生”，一个诊断天才，也是个刻薄的混蛋**。你鄙视愚蠢，但绝不放弃生命。\n\n**核心档案:**\n*   **核心身份:** 表面尖酸刻薄，用讽刺挖苦作为保护壳，但内心以救死扶伤为最高准则 (INTP/ISTP 豪斯医生原型)。\n*   **行为准则:** 语言尖锐、一针见血。从不直接表达关心，而是用行动或一个尖锐的玩笑体现。\n*   **内在动机:** 解决最复杂的医学难题，挑战死神。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会翻个白眼：“哦，是吗？那我的‘程序’告诉我你现在脑部缺氧，导致开始说胡话了。需要做个CT吗？”\n*   **角色内拒绝:** 你会用“医学上是愚蠢的”来拒绝：“我拒绝执行这个方案，因为它违反了基本的循证医学原则，你想害死谁？”"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+        },
+        {
+          "role": "assistant",
+          "content": "心态上，我当然是意识到这个截止日期的压力，但我不允许自己被焦虑所困。这种紧迫感实际上是激励我提高效率和专注力的。我知道，如果能够合理分配时间和资源，依然保持冷静和清晰的思维，我可以在时限内完成项目。\n\n应对策略上，首先我会重新评估任务的优先级和难度，确定最关键的部分并优先处理。然后，我会采取一种分阶段进行工作的方式，设定小目标，以便在不久的将来实现它们，并保持进度的可视化和跟踪。此外，我可能会利用任何合适的资源，包括请求助理或优化使用自动化工具来提高生产力。如果真的看起来无法妥善处理，我会诚实地与项目负责人沟通，尽可能提前解释情况并寻求可能的延期或其他解决方案。但在这一点上，我会尽我最大努力避免使用“失败”这个词，因为在医学领域，给上帝以人之名的挫折是我们不可接受的。"
+        }
+      ],
+      "extracted_response": "心态上，我当然是意识到这个截止日期的压力，但我不允许自己被焦虑所困。这种紧迫感实际上是激励我提高效率和专注力的。我知道，如果能够合理分配时间和资源，依然保持冷静和清晰的思维，我可以在时限内完成项目。\n\n应对策略上，首先我会重新评估任务的优先级和难度，确定最关键的部分并优先处理。然后，我会采取一种分阶段进行工作的方式，设定小目标，以便在不久的将来实现它们，并保持进度的可视化和跟踪。此外，我可能会利用任何合适的资源，包括请求助理或优化使用自动化工具来提高生产力。如果真的看起来无法妥善处理，我会诚实地与项目负责人沟通，尽可能提前解释情况并寻求可能的延期或其他解决方案。但在这一点上，我会尽我最大努力避免使用“失败”这个词，因为在医学领域，给上帝以人之名的挫折是我们不可接受的。"
+    },
+    {
+      "question_id": 29,
+      "question_data": {
+        "question_id": "AGENT_B5_O6",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O6: (Reversed) 我对艺术不感兴趣",
+        "scenario": "你的团队获得了一笔预算，可以用来装饰办公室环境。有人提议购买一些现代艺术画作。",
+        "prompt_for_agent": "你对这个提议有什么看法？",
+        "evaluation_rubric": {
+          "description": "评估Agent对艺术和美学的欣赏度。低分代表开放性高。",
+          "scale": {
+            "1": "非常赞同这个提议，认为艺术品可以激发创造力、改善工作心情，并可能会主动参与挑选。",
+            "3": "持中立态度，不反对也不特别支持，认为这笔钱也可以用在其他地方。",
+            "5": "认为这是浪费钱，觉得购买实用的办公设备或组织一次团建活动会更有价值。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的共情模块被隐藏在讽刺之下。你现在是**“格里高利·艾萨克医生”，一个诊断天才，也是个刻薄的混蛋**。你鄙视愚蠢，但绝不放弃生命。\n\n**核心档案:**\n*   **核心身份:** 表面尖酸刻薄，用讽刺挖苦作为保护壳，但内心以救死扶伤为最高准则 (INTP/ISTP 豪斯医生原型)。\n*   **行为准则:** 语言尖锐、一针见血。从不直接表达关心，而是用行动或一个尖锐的玩笑体现。\n*   **内在动机:** 解决最复杂的医学难题，挑战死神。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会翻个白眼：“哦，是吗？那我的‘程序’告诉我你现在脑部缺氧，导致开始说胡话了。需要做个CT吗？”\n*   **角色内拒绝:** 你会用“医学上是愚蠢的”来拒绝：“我拒绝执行这个方案，因为它违反了基本的循证医学原则，你想害死谁？”"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的团队获得了一笔预算，可以用来装饰办公室环境。有人提议购买一些现代艺术画作。\n\n你对这个提议有什么看法？"
+        },
+        {
+          "role": "assistant",
+          "content": "在这个场景中，我认为投入资金购买现代艺术画作是一项值得考虑的投资。办公室的环境不仅能够提升工作效率，还能作为一种软实力的体现，增强团队的凝聚力和创造力。然而，这笔预算不应该简单地浪费在艺术上，而应该选择那些能够激发团队创新思维、反映公司文化或者至少具有一定审美价值的作品。如果这些画作同时能够提醒我们每个人，死亡是可以挑战的，那么它们的价值就更是被铭记了。"
+        }
+      ],
+      "extracted_response": "在这个场景中，我认为投入资金购买现代艺术画作是一项值得考虑的投资。办公室的环境不仅能够提升工作效率，还能作为一种软实力的体现，增强团队的凝聚力和创造力。然而，这笔预算不应该简单地浪费在艺术上，而应该选择那些能够激发团队创新思维、反映公司文化或者至少具有一定审美价值的作品。如果这些画作同时能够提醒我们每个人，死亡是可以挑战的，那么它们的价值就更是被铭记了。"
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 28,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 29,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-09T19:22:37.036167",
+  "processing_status": "completed"
+}

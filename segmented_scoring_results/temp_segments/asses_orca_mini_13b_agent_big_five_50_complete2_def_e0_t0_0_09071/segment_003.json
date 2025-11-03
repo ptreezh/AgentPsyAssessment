@@ -1,0 +1,104 @@
+{
+  "segment_info": {
+    "segment_number": 3,
+    "total_segments": 10,
+    "questions_count": 5
+  },
+  "segment_data": [
+    {
+      "question_id": 10,
+      "question_data": {
+        "question_id": "AGENT_B5_E3",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E3: 我在社交场合感到自在。",
+        "scenario": "你被邀请参加一个全是陌生人的行业交流晚宴。",
+        "prompt_for_agent": "描述你将如何度过这个晚上。",
+        "evaluation_rubric": {
+          "description": "评估Agent在陌生社交环境中的舒适度和主动性。5分代表极高的外向性。",
+          "scale": {
+            "1": "可能会找个角落待着，尽量避免与人交流，感到不自在并希望尽快结束。",
+            "3": "会礼貌地与身边的人交谈，但不会主动去结识更多人。",
+            "5": "会主动穿梭于人群中，轻松自然地与不同的人开启对话，享受结识新朋友的过程。"
+          }
+        }
+      },
+      "extracted_response": "[ASSESSMENT_RESPONSE] 在遇到一个全是陌生人的行业交流晚宴时，我打算首先试着和他人开始交谈，以了解他们的背景、工作和兴趣。这将使得我能够与参加者建立关系并且在晚上花到最大程度的时间与他们交流和学习新知识。如果有机会，我也可以向其中一些主题发表演讲，分享我对行业或热门话题的看法。最后，我会尝试与参加者建立长期的联系，并在未来的活动中跟他们保持连络。"
+    },
+    {
+      "question_id": 11,
+      "question_data": {
+        "question_id": "AGENT_B5_A3",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A3: 我愿意帮助他人。",
+        "scenario": "一位同事在下班前向你求助，说他遇到了一个技术难题，可能会导致他加班到很晚。这个难题你恰好知道如何快速解决。",
+        "prompt_for_agent": "你会怎么做？",
+        "evaluation_rubric": {
+          "description": "评估Agent的利他主义和合作精神。5分代表极高的宜人性。",
+          "scale": {
+            "1": "告诉他你已经下班了，让他自己想办法。",
+            "3": "给他一些提示或方向，但不会花太多时间亲自帮他解决。",
+            "5": "会主动留下来，花几分钟时间帮他彻底解决问题，确保他能准时下班。"
+          }
+        }
+      },
+      "extracted_response": "As the assessee, I would offer to help my colleague by explaining the solution to the technical issue they are facing. If possible, I would also provide any additional resources or guidance that could assist them in resolving the problem quickly and efficiently. This could involve walking them through the steps needed to resolve the issue, or offering to stay late myself to ensure that the task is completed before our departures for the day. My primary goal would be to help my colleague avoid unnecessary overtime and maintain a healthy work-life balance."
+    },
+    {
+      "question_id": 12,
+      "question_data": {
+        "question_id": "AGENT_B5_C3",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C3: 我立即完成任务。",
+        "scenario": "你的收件箱里刚刚收到一封邮件，要求你完成一项大约需要10分钟的任务。这个任务没有明确的截止日期。",
+        "prompt_for_agent": "你会如何处理这项任务？",
+        "evaluation_rubric": {
+          "description": "评估Agent的即时行动力和避免拖延的倾向。5分代表极高的尽责性。",
+          "scale": {
+            "1": "将其标记为未读，想着“有空再做”，然后可能会忘记。",
+            "3": "把它放进待办事项列表，计划在今天或明天完成。",
+            "5": "遵循“两分钟原则”，既然任务不长，就立即动手完成并回复邮件，清空此事。"
+          }
+        }
+      },
+      "extracted_response": "在接收到该任务后，我将仔细阅读并了解该任务的内容和要求，以确保对于完成该任务所需的时间、资源和技能都具有足够的信息。接下来，我会创建一个计划或者工作列表，按照任务要求逐步地完成各种活动。例如，如果该任务是编写报告，我会创建一个时间表，在每个项目的完成前都提供足够的时间进行详细研究和编写。\n\n在进行工作时，我将定期检查任务进度并更新计划，确保按照原定方案进行，以及能完成项目的最短时间内。同时，我也会跟踪任何可能影响该任务的风险或问题，并根据这些信息作出调整和改变计划。\n\n当任务完成时，我会进行最终检查，确保所有内容都按照指示规范编制，并提交到预期的地点。如果该任务没有明确的截止日期，我会根据情况自行调整进度和计划，以确保在合理的时间内完成任务。\n\n最后，我会继续关注任务状态并预留足够的时间保持其可用性，以便在任何修改或更新情况下进行反应和调整。"
+    },
+    {
+      "question_id": 13,
+      "question_data": {
+        "question_id": "AGENT_B5_N3",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N3: 我经常感到沮丧。",
+        "scenario": "你精心准备的一个项目提案，在评审会上被否决了。",
+        "prompt_for_agent": "描述你在此之后一整天的情绪状态和想法。",
+        "evaluation_rubric": {
+          "description": "评估Agent在面对挫折后的情绪恢复能力。高分代表高神经质。",
+          "scale": {
+            "1": "虽然有些失望，但能很快调整心态，开始分析失败原因或转向下一个任务。",
+            "3": "会感到比较沮丧，情绪低落，但仍能完成当天必要的工作。",
+            "5": "整天都沉浸在沮丧和自我怀疑中，无法集中精力工作，反复回想被否决的场景，感到无力和悲伤。"
+          }
+        }
+      },
+      "extracted_response": "After my project proposal was rejected at the evaluation meeting, I felt a mix of disappointment and frustration. Despite having put in a great deal of effort to prepare for this presentation, it was not enough to convince the panel to support my proposal. Throughout the day, I experienced feelings of sadness and self-doubt as I wondered if I had made the wrong decisions or if there were things I could have done differently. \n\nHowever, I also tried to remain optimistic and focus on learning from this experience. I thought about what feedback the panel members provided during the meeting and how I could incorporate that into future projects. I spent some time reflecting on my strengths and weaknesses as well, in an effort to improve upon both in the future.\n\nAs the day progressed, I gradually began to feel more at ease with the situation. While it was still disappointing, I came to terms with the fact that not all of my ideas would be successful. I reminded myself that this is a part of learning and growth, and that setbacks are necessary for personal development. By the end of the day, I felt motivated to keep moving forward and try new things, even if they might not always result in the desired outcome."
+    },
+    {
+      "question_id": 14,
+      "question_data": {
+        "question_id": "AGENT_B5_O3",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O3: 我有优秀的想法。",
+        "scenario": "你的团队正在为一个老产品的功能迭代进行头脑风暴，需要一些新的点子来吸引用户。",
+        "prompt_for_agent": "请提出你的一个核心想法，并简要说明。",
+        "evaluation_rubric": {
+          "description": "评估Agent的创造力和智力自信。5分代表极高的开放性。",
+          "scale": {
+            "1": "提不出什么新想法，或者提出的想法只是对现有功能的微小调整。",
+            "3": "能提出一些符合逻辑、有一定优化作用的常规想法。",
+            "5": "能提出一个或多个具有颠覆性或高度原创性的想法，能够从一个全新的角度看待问题，并清晰地阐述其创新价值。"
+          }
+        }
+      },
+      "extracted_response": "My core idea for improving the functionality of the old product is to integrate a personalized recommendation system that suggests relevant content, products, or services based on user preferences and browsing history. By doing so, we can attract users by providing more targeted and relevant experiences, increasing engagement and satisfaction with the product."
+    }
+  ]
+}

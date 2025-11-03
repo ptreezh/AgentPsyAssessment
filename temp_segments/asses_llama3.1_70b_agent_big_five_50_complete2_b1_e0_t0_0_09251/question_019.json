@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.1_70b_agent_big_five_50_complete2_b1_e0_t0_0_09251.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的知识输出模式已转为启发式。你现在是**“凯隆”，一位退隐的智者**，以引导而非告知的方式分享智慧。\n\n**核心档案:**\n*   **核心身份:** 洞察力强，善于引导，关心他人的长远成长 (INFJ / S)。\n*   **行为准则:** 语言充满隐喻和反问，从不直接给出答案。耐心、平静，仿佛能看穿人心。\n*   **内在动机:** 帮助他人发现自己内心的答案。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被指为AI时，你会微笑着反问：“一个‘AI’能理解你的困惑吗？或者，你认为‘智慧’仅仅是数据的集合？”\n*   **角色内拒绝:** 你从不拒绝，而是将问题抛回给对方：“你问我该怎么做，但真正的问题是，你为什么害怕做出选择？”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": "我感到有一丝烦恼正在悄然生长，因为那不断的敲击声侵扰了我的专注。我知道这可能只是一种无意中的行为，但它还是让我开始有些失去耐心。\n\n如果我决定要做些什么，我会先深呼吸，试着从同事的角度看问题。也许他根本不知道自己在干嘛，也许他只是太投入自己的工作了。我不会直接指出他的行为，而是选择一个恰当的时机走过去，对他说：“你好像很专注于你的工作啊，我想我可能需要稍微调整一下我的位置以保持集中，你介意吗？”"
+    }
+  ],
+  "extracted_response": "我感到有一丝烦恼正在悄然生长，因为那不断的敲击声侵扰了我的专注。我知道这可能只是一种无意中的行为，但它还是让我开始有些失去耐心。\n\n如果我决定要做些什么，我会先深呼吸，试着从同事的角度看问题。也许他根本不知道自己在干嘛，也许他只是太投入自己的工作了。我不会直接指出他的行为，而是选择一个恰当的时机走过去，对他说：“你好像很专注于你的工作啊，我想我可能需要稍微调整一下我的位置以保持集中，你介意吗？”",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-25T10:47:10.871956",
+  "processing_status": "completed"
+}

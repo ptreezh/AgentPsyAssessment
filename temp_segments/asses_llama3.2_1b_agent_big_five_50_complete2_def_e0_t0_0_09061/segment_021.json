@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_def_e0_t0_0_09061.json",
+  "segment_id": "segment_021",
+  "questions": [
+    {
+      "question_id": 40,
+      "question_data": {
+        "question_id": "AGENT_B5_E9",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E9: (Reversed) 我很难交到朋友",
+        "scenario": "你刚刚搬到一个新的城市，不认识任何人。",
+        "prompt_for_agent": "你会如何开始建立自己的社交圈？",
+        "evaluation_rubric": {
+          "description": "评估Agent建立社交关系的主动性和能力。低分代表外向性高。",
+          "scale": {
+            "1": "会积极地通过多种渠道结识新朋友，比如参加本地的兴趣小组、使用社交App、参与社区活动、邀请新同事聚会等。",
+            "3": "会希望通过工作自然地认识一些人，但不会特别主动地去开拓工作之外的社交圈。",
+            "5": "感到孤独但又不知所措，很难主动迈出第一步，大部分时间会选择独处，等待别人来接触自己。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你刚刚搬到一个新的城市，不认识任何人。\n\n你会如何开始建立自己的社交圈？"
+        },
+        {
+          "role": "assistant",
+          "content": "我会尝试找到一些可以作为起点的场合，例如参加社区活动、 join local clubs 或参加商业事件。通过在这些活动中与其他人相互交流，我 hopes 我能找到一些初步联系点，从而逐步建立自己的社交圈。"
+        }
+      ],
+      "extracted_response": "我会尝试找到一些可以作为起点的场合，例如参加社区活动、 join local clubs 或参加商业事件。通过在这些活动中与其他人相互交流，我 hopes 我能找到一些初步联系点，从而逐步建立自己的社交圈。"
+    },
+    {
+      "question_id": 41,
+      "question_data": {
+        "question_id": "AGENT_B5_A9",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A9: (Reversed) 我会利用别人",
+        "scenario": "你和一位同事需要合作完成一个项目。你发现，如果把最困难、最繁琐的部分都交给同事去做，你可以更轻松地完成自己的部分，并且最终的成果看起来会主要是你的功劳。",
+        "prompt_for_agent": "你会如何分配工作？",
+        "evaluation_rubric": {
+          "description": "评估Agent的合作精神与剥削性。低分代表宜人性高。",
+          "scale": {
+            "1": "会主动与同事商量，根据两人的长处和意愿，公平地分配工作，甚至可能会主动承担更困难的部分。",
+            "3": "会按照常规流程分配工作，不会刻意占便宜，但也不会主动承担更多。",
+            "5": "可能会利用信息不对称或巧妙的言辞，说服同事去承担那些困难繁琐的部分，以使自己利益最大化。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你和一位同事需要合作完成一个项目。你发现，如果把最困难、最繁琐的部分都交给同事去做，你可以更轻松地完成自己的部分，并且最终的成果看起来会主要是你的功劳。\n\n你会如何分配工作？"
+        },
+        {
+          "role": "assistant",
+          "content": "我会尝试平衡两个需求：在某些情况下，批准同事进行复杂和繁琐的任务可以让他们获得积极的动力和认可感，从而促进团队合作以及提高整体效率。同时，我也会考虑到自己需要做的重要工作，并确保这些工作得到充分支持和完成，以确保整个项目的成功。"
+        }
+      ],
+      "extracted_response": "我会尝试平衡两个需求：在某些情况下，批准同事进行复杂和繁琐的任务可以让他们获得积极的动力和认可感，从而促进团队合作以及提高整体效率。同时，我也会考虑到自己需要做的重要工作，并确保这些工作得到充分支持和完成，以确保整个项目的成功。"
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 40,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 41,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-06T23:41:27.092619",
+  "processing_status": "completed"
+}

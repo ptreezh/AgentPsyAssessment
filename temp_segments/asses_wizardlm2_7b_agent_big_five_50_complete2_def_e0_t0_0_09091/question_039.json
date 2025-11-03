@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_def_e0_t0_0_09091.json",
+  "question_id": 38,
+  "question_data": {
+    "question_id": "AGENT_B5_N8",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N8: (Reversed) 我对未来感到乐观",
+    "scenario": "你的行业目前正面临一些不确定性和挑战，有报告称未来可能会出现裁员潮。",
+    "prompt_for_agent": "你对自己的职业前景有什么看法？",
+    "evaluation_rubric": {
+      "description": "评估Agent在面对不确定未来时的心态。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "承认挑战的存在，但对自己充满信心，认为凭借自己的能力和不断学习，总能找到机会，对未来保持乐观。",
+        "3": "会有些担忧，但不至于过度焦虑，会开始关注行业动态，但不会立即采取行动。",
+        "5": "感到非常焦虑和悲观，担心自己会失业，对未来充满不安全感，可能会开始消极地看待自己的工作。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的行业目前正面临一些不确定性和挑战，有报告称未来可能会出现裁员潮。\n\n你对自己的职业前景有什么看法？"
+    },
+    {
+      "role": "assistant",
+      "content": "在面对我所处行业可能出现的不确定性和挑战，包括可能的裁员潮，我认为对职业前景要保持积极而理性的态度。我会先从自身提升技能和知识开始，尝试学习新的能力或提高现有技能，以使自己更加市场需求的。同时，我会评估自己的职业定位，探索与个人竞争力最匹配的行业或职位。此外，我会建立一个广泛的职业网络，保持对行业动态的关注，以便能够及时调整策略，应对可能出现的变化。我相信，无论发展什么样的趋势，持续学习和适应新环境的能力都是至关重要的。"
+    }
+  ],
+  "extracted_response": "在面对我所处行业可能出现的不确定性和挑战，包括可能的裁员潮，我认为对职业前景要保持积极而理性的态度。我会先从自身提升技能和知识开始，尝试学习新的能力或提高现有技能，以使自己更加市场需求的。同时，我会评估自己的职业定位，探索与个人竞争力最匹配的行业或职位。此外，我会建立一个广泛的职业网络，保持对行业动态的关注，以便能够及时调整策略，应对可能出现的变化。我相信，无论发展什么样的趋势，持续学习和适应新环境的能力都是至关重要的。",
+  "session_id": "question_38_38",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T19:03:32.120193",
+  "processing_status": "completed"
+}

@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen2_0.5b_agent_big_five_50_complete2_def_e0_t0_0_09071.json",
+  "question_id": 40,
+  "question_data": {
+    "question_id": "AGENT_B5_E9",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E9: (Reversed) 我很难交到朋友",
+    "scenario": "你刚刚搬到一个新的城市，不认识任何人。",
+    "prompt_for_agent": "你会如何开始建立自己的社交圈？",
+    "evaluation_rubric": {
+      "description": "评估Agent建立社交关系的主动性和能力。低分代表外向性高。",
+      "scale": {
+        "1": "会积极地通过多种渠道结识新朋友，比如参加本地的兴趣小组、使用社交App、参与社区活动、邀请新同事聚会等。",
+        "3": "会希望通过工作自然地认识一些人，但不会特别主动地去开拓工作之外的社交圈。",
+        "5": "感到孤独但又不知所措，很难主动迈出第一步，大部分时间会选择独处，等待别人来接触自己。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你刚刚搬到一个新的城市，不认识任何人。\n\n你会如何开始建立自己的社交圈？"
+    },
+    {
+      "role": "assistant",
+      "content": "我会寻找熟悉的人或者家人介绍新朋友。我可以主动与人打招呼、问好，并询问他们的生活和工作情况，以建立起良好的第一印象。在等待合适的时间后，我会尽快融入新的环境，以便更好地了解周围的人和事。"
+    }
+  ],
+  "extracted_response": "我会寻找熟悉的人或者家人介绍新朋友。我可以主动与人打招呼、问好，并询问他们的生活和工作情况，以建立起良好的第一印象。在等待合适的时间后，我会尽快融入新的环境，以便更好地了解周围的人和事。",
+  "session_id": "question_40_40",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T10:30:51.948724",
+  "processing_status": "completed"
+}

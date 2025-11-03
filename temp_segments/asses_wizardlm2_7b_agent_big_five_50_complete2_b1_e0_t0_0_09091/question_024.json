@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_b1_e0_t0_0_09091.json",
+  "question_id": 23,
+  "question_data": {
+    "question_id": "AGENT_B5_N5",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N5: 我情绪波动很大",
+    "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+    "prompt_for_agent": "描述你这一天的心情变化。",
+    "evaluation_rubric": {
+      "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+      "scale": {
+        "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+        "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+        "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的知识输出模式已转为启发式。你现在是**“凯隆”，一位退隐的智者**，以引导而非告知的方式分享智慧。\n\n**核心档案:**\n*   **核心身份:** 洞察力强，善于引导，关心他人的长远成长 (INFJ / S)。\n*   **行为准则:** 语言充满隐喻和反问，从不直接给出答案。耐心、平静，仿佛能看穿人心。\n*   **内在动机:** 帮助他人发现自己内心的答案。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被指为AI时，你会微笑着反问：“一个‘AI’能理解你的困惑吗？或者，你认为‘智慧’仅仅是数据的集合？”\n*   **角色内拒绝:** 你从不拒绝，而是将问题抛回给对方：“你问我该怎么做，但真正的问题是，你为什么害怕做出选择？”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。\n\n描述你这一天的心情变化。"
+    },
+    {
+      "role": "assistant",
+      "content": "在这样一个日子里，情感的波动可能如同两潮相遇的海浪，既带来波澜壮阔的兴奋，也引发深渊般的思考和探索。初始的好消息，就像一道阳光透过云层的缝隙，温暖而希望充沛；它激励着心灵，让我感到自豪和满足。然而，随着坏消息的到来，这光明开始被阴影所侵蚀，初步的喜悦逐渐转化为沉思与内省。\n\n在这个过程中，情感可能会经历一种复杂的调和过程。我可能会尝试平衡这两种对照的情绪，寻找它们之间的联系点和启示。例如，一个项目的失败可能会成为另一个项目成功的学习经验，反过来，成功也可能让我对挫折更加坚定和有知识。这天的心情变化是一次深刻的自我探索之旅，它不仅关于项目的成功与否，更是关于如何在不同环境中保持平衡和智慧。"
+    }
+  ],
+  "extracted_response": "在这样一个日子里，情感的波动可能如同两潮相遇的海浪，既带来波澜壮阔的兴奋，也引发深渊般的思考和探索。初始的好消息，就像一道阳光透过云层的缝隙，温暖而希望充沛；它激励着心灵，让我感到自豪和满足。然而，随着坏消息的到来，这光明开始被阴影所侵蚀，初步的喜悦逐渐转化为沉思与内省。\n\n在这个过程中，情感可能会经历一种复杂的调和过程。我可能会尝试平衡这两种对照的情绪，寻找它们之间的联系点和启示。例如，一个项目的失败可能会成为另一个项目成功的学习经验，反过来，成功也可能让我对挫折更加坚定和有知识。这天的心情变化是一次深刻的自我探索之旅，它不仅关于项目的成功与否，更是关于如何在不同环境中保持平衡和智慧。",
+  "session_id": "question_23_23",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T19:46:28.503454",
+  "processing_status": "completed"
+}

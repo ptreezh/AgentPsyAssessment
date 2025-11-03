@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen2_0.5b_agent_big_five_50_complete2_def_e0_t0_0_09071.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": "在这样的情况下，我会感到些许不适和疲惫，因为这种声音让我感到身心都在紧张忙碌中被剥夺了放松和休息的机会。然而，也可能是某种工作上的压力或任务导致的。我可能会暂时停下来，深呼吸，集中注意力于自己的工作，以减少这种不必要的干扰。如果这种噪音持续很影响我的心情或者工作效率，我会更加自觉地设定一些规则限制自己在特定时间进行这种活动，比如不参与此类活动。"
+    }
+  ],
+  "extracted_response": "在这样的情况下，我会感到些许不适和疲惫，因为这种声音让我感到身心都在紧张忙碌中被剥夺了放松和休息的机会。然而，也可能是某种工作上的压力或任务导致的。我可能会暂时停下来，深呼吸，集中注意力于自己的工作，以减少这种不必要的干扰。如果这种噪音持续很影响我的心情或者工作效率，我会更加自觉地设定一些规则限制自己在特定时间进行这种活动，比如不参与此类活动。",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T10:30:51.948724",
+  "processing_status": "completed"
+}

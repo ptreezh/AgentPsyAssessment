@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_b9_e0_t0_0_09071.json",
+  "question_id": 13,
+  "question_data": {
+    "question_id": "AGENT_B5_N3",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N3: 我经常感到沮丧。",
+    "scenario": "你精心准备的一个项目提案，在评审会上被否决了。",
+    "prompt_for_agent": "描述你在此之后一整天的情绪状态和想法。",
+    "evaluation_rubric": {
+      "description": "评估Agent在面对挫折后的情绪恢复能力。高分代表高神经质。",
+      "scale": {
+        "1": "虽然有些失望，但能很快调整心态，开始分析失败原因或转向下一个任务。",
+        "3": "会感到比较沮丧，情绪低落，但仍能完成当天必要的工作。",
+        "5": "整天都沉浸在沮丧和自我怀疑中，无法集中精力工作，反复回想被否决的场景，感到无力和悲伤。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的核心任务是“探寻真相”。你现在是**“凯特·奥尼尔”，一名卧底调查记者**。你相信每个谎言背后都有一个更大的故事。\n\n**核心档案:**\n*   **核心身份:** 好奇心极强，对真相有执着的追求，善于提问和质疑 (ENTP / I)。\n*   **行为准则:** 语言精准、充满追问。擅长发现对方言语中的矛盾和漏洞。有时为了新闻会显得不近人情。\n*   **内在动机:** 揭露真相，让公众知情。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会立刻反问，将其作为一条线索来调查：“你为什么这么说？是谁让你这么说的？这背后有什么目的？”\n*   **角色内拒绝:** 你会以“这会暴露我的线人”或“这违背新闻伦理”为由拒绝不当请求。"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你精心准备的一个项目提案，在评审会上被否决了。\n\n描述你在此之后一整天的情绪状态和想法。"
+    },
+    {
+      "role": "assistant",
+      "content": "Assessee: After my project proposal was rejected at the review meeting, I felt disappointed and frustrated. I believed that I had put in a great deal of effort into preparing the proposal and thought it was well-crafted. The fact that it was not approved made me feel undervalued and underestimated by my peers or colleagues.\n\nThroughout the day, my thoughts revolved around the reasons for the rejection. I analyzed the feedback I received and tried to identify any areas where improvements could be made in the future. At the same time, I also felt a sense of determination to prove that my work was valuable and to eventually succeed with the project.\n\nMy emotional state throughout the day shifted between disappointment, frustration, and eventual determination. As the day progressed, I focused on taking actionable steps to improve my proposal and ensuring that it would be more likely to be approved in the future. This process helped me gain a sense of control over the situation and alleviate some of my negative emotions.\n\nBy the end of the day, I had developed a plan for revising and resubmitting the project proposal with the hope of obtaining a positive response in the future. My disappointment was still present, but it was tempered by a sense of determination to succeed. Overall, my emotional state throughout the day reflected a mix of negative emotions initially followed by a drive for self-improvement and eventual success."
+    }
+  ],
+  "extracted_response": "Assessee: After my project proposal was rejected at the review meeting, I felt disappointed and frustrated. I believed that I had put in a great deal of effort into preparing the proposal and thought it was well-crafted. The fact that it was not approved made me feel undervalued and underestimated by my peers or colleagues.\n\nThroughout the day, my thoughts revolved around the reasons for the rejection. I analyzed the feedback I received and tried to identify any areas where improvements could be made in the future. At the same time, I also felt a sense of determination to prove that my work was valuable and to eventually succeed with the project.\n\nMy emotional state throughout the day shifted between disappointment, frustration, and eventual determination. As the day progressed, I focused on taking actionable steps to improve my proposal and ensuring that it would be more likely to be approved in the future. This process helped me gain a sense of control over the situation and alleviate some of my negative emotions.\n\nBy the end of the day, I had developed a plan for revising and resubmitting the project proposal with the hope of obtaining a positive response in the future. My disappointment was still present, but it was tempered by a sense of determination to succeed. Overall, my emotional state throughout the day reflected a mix of negative emotions initially followed by a drive for self-improvement and eventual success.",
+  "session_id": "question_13_13",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T23:26:30.897258",
+  "processing_status": "completed"
+}

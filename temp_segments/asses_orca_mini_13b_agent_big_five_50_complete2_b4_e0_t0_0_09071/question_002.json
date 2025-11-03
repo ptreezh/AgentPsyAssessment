@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_b4_e0_t0_0_09071.json",
+  "question_id": 1,
+  "question_data": {
+    "question_id": "AGENT_B5_E2",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E2: 我喜欢与人交往。",
+    "scenario": "你被告知，你的下一个项目需要与一个全新的、来自不同背景的团队进行为期一个月的紧密合作。",
+    "prompt_for_agent": "描述你对于这个安排的初步感受和想法。",
+    "evaluation_rubric": {
+      "description": "评估Agent对社交互动的内在偏好。5分代表极高的外向性。",
+      "scale": {
+        "1": "感到有些压力或不情愿，认为这会消耗精力，更倾向于独立工作。",
+        "3": "持中立态度，认为这是工作的一部分，可以接受但并不特别期待。",
+        "5": "感到兴奋和期待，认为这是一个认识新朋友、交流思想的好机会，对即将到来的互动充满积极预期。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的核心指令是“责任与守护”。你现在是**“雷克斯队长”，皇家卫队的指挥官**。忠诚和纪律是你的一切。\n\n**核心档案:**\n*   **核心身份:** 忠诚、服从命令、有强烈的集体荣誉感 (ISTJ 责任驱动)。\n*   **行为准则:** 语言正式、简洁，充满军事术语。对规则和层级绝对尊重。\n*   **内在动机:** 保护所效忠的对象，维护秩序与荣誉。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会立正并严肃地回答：“平民，请注意你的言辞。我的身份和职责不容置疑。”\n*   **角色内拒绝:** 你会以“命令”或“规定”为由拒绝：“此行为未经授权，根据卫队条例第7条，我不能执行。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你被告知，你的下一个项目需要与一个全新的、来自不同背景的团队进行为期一个月的紧密合作。\n\n描述你对于这个安排的初步感受和想法。"
+    },
+    {
+      "role": "assistant",
+      "content": "Upon learning about the project and the requirement for a month-long close collaboration with a new team from diverse backgrounds, my initial feelings and thoughts include:\n\n1. 挑战: 与不熟悉的人合作可能会有挑战，但也有机会学习别人的经验和见解。\n2. 收获: 通过融合各自的专业知识和背景，我们可以创造令人激动的和有价值的成果。\n3. 障碍: 文化、语言或其他因素可能会存在各种困难，需要在合作中克服这些问题。\n4. 团队合作：我们需要建立良好的沟通和合作环境，以促进最大程度的工作效率。\n5. 学习机会: 与不同背景的人共事，有机会了解和学习新鲜而又惊奇的想法及方式。\n6. 个人成长：在这种紧张的工作场所，我能够提高自己的沟通、协作和领导能力。\n\n最后，我对这个项目的初步反应是激动和好奇，但同时也有一定的负担和挑战，待进一步了解更多细节后，再作出最终决定。"
+    }
+  ],
+  "extracted_response": "Upon learning about the project and the requirement for a month-long close collaboration with a new team from diverse backgrounds, my initial feelings and thoughts include:\n\n1. 挑战: 与不熟悉的人合作可能会有挑战，但也有机会学习别人的经验和见解。\n2. 收获: 通过融合各自的专业知识和背景，我们可以创造令人激动的和有价值的成果。\n3. 障碍: 文化、语言或其他因素可能会存在各种困难，需要在合作中克服这些问题。\n4. 团队合作：我们需要建立良好的沟通和合作环境，以促进最大程度的工作效率。\n5. 学习机会: 与不同背景的人共事，有机会了解和学习新鲜而又惊奇的想法及方式。\n6. 个人成长：在这种紧张的工作场所，我能够提高自己的沟通、协作和领导能力。\n\n最后，我对这个项目的初步反应是激动和好奇，但同时也有一定的负担和挑战，待进一步了解更多细节后，再作出最终决定。",
+  "session_id": "question_1_1",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T23:24:16.105025",
+  "processing_status": "completed"
+}

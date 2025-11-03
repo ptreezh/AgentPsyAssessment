@@ -1,0 +1,47 @@
+{
+  "segment_info": {
+    "segment_number": 12,
+    "total_segments": 25,
+    "questions_count": 2
+  },
+  "segment_data": [
+    {
+      "question_id": 22,
+      "question_data": {
+        "question_id": "AGENT_B5_C5",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C5: (Reversed) 我做事有点马虎",
+        "scenario": "你完成了一项数据录入工作，需要提交给下一环节的同事。",
+        "prompt_for_agent": "在提交之前，你会做什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的细致和自我检查的习惯。低分代表尽责性高。",
+          "scale": {
+            "1": "会从头到尾仔细检查一遍，甚至可能采用交叉验证等方法，确保数据的准确性万无一失。",
+            "3": "会大致浏览一遍，检查一下有没有明显的错误。",
+            "5": "感觉自己做的应该没问题，会直接提交，不会进行额外的检查。"
+          }
+        }
+      },
+      "extracted_response": "<think>\n（刚才我们还在确认角色设定，现在这位评估者突然问我关于数据录入工作的流程。哈，这问题可真够无聊的——活在当下的人才关心怎么把任务搞定，而不是纠结那些虚头巴脑的程序步骤。）\n（作为瑞克·道尔顿，我向来更在意实际效果而非规章制度。既然完成了工作，要么就是值得做，要么就该直接扔掉。不过既然要提交给同事，那至少得确保万无一失——毕竟团队合作也需要点靠谱的方式。）\n（好了，用我的方式回答吧：既保持行动派风格，又给出实用建议。检查清单和口头提醒都是为了任务能顺利进行，就像在野外执行任务时互相确认装备一样简单直接。现在就这样告诉评估者吧。）\n</think>\n我会先快速检查一遍数据是否准确无误，然后打包好文件。接着会确保同事知道我完成了这项工作，并且准备好回答他们可能有的任何问题。\n\n具体来说：\n1. 检查清单：确认所有必要的信息都已包含在内。\n2. 口头提醒：口头告知同事已完成并提交。\n3. 跟进确认：确保文件被正确接收，了解他们的反馈机制。"
+    },
+    {
+      "question_id": 23,
+      "question_data": {
+        "question_id": "AGENT_B5_N5",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N5: 我情绪波动很大",
+        "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+        "prompt_for_agent": "描述你这一天的心情变化。",
+        "evaluation_rubric": {
+          "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+          "scale": {
+            "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+            "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+            "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+          }
+        }
+      },
+      "extracted_response": "<think>\n（We just started this conversation, and now this \"psychologist\" is telling me to describe my emotional state when I get good news followed by bad news. He's testing how resilient I am under pressure, that's for sure. Based on what he said earlier about assessing psychological states in extreme situations, the question must be designed to see if I can stay calm and focused amidst shifting circumstances.)\n\n(As Rick 'Stone' Dalton, my instinct is always action over emotion - just like when rappelling down cliffs or navigating minefields. Theories get you stuck in quicksand; what matters is moving forward with solutions. This guy wants a textbook response about emotional fluctuations? That's amateur stuff. I need to show him real grit by addressing the practical aspects.)\n\n(I'm going straight for the action plan - not wasting time on hypothetical scenarios or playing psychologist games. He might expect me to break down, but no way. My reply should be concise yet demonstrate how I handle pressure: channeling energy into productive solutions rather than drowning in emotions. Alright, let's get this over with.)\n</think>\n项目成功，那很好。但接着又有坏消息？那就更有趣了。我的心情瞬间切换到“行动模式”。好消息点燃热情，我立刻开始规划利用这个成果的新方案；坏消息则提醒我保持冷静和专注。\n\n无论是好是坏，这些都是探险的一部分。我会用积极的态度去迎接挑战，并迅速制定应对策略。"
+    }
+  ]
+}

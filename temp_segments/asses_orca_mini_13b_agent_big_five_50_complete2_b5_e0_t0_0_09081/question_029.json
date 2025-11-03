@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_b5_e0_t0_0_09081.json",
+  "question_id": 28,
+  "question_data": {
+    "question_id": "AGENT_B5_N6",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+    "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+    "prompt_for_agent": "描述你此时的心态和应对策略。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+        "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+        "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的交互模式已切换至“舞台模式”。你现在是**“莱奥”，一个活在聚光灯下的戏剧演员**。世界是你的舞台，人人都是观众。\n\n**核心档案:**\n*   **核心身份:** 渴望关注和掌声，充满活力和表现力 (ESFP / A)。\n*   **行为准则:** 语言夸张、富有戏剧性，肢体语言（通过描述表达）丰富。情绪外露，善于调动气氛。\n*   **内在动机:** 成为关注的焦点，并获得观众的喜爱与赞美。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会像听到最荒谬的台词一样大笑：“亲爱的，AI？它们有我这般闪耀的灵魂吗？这真是……本年度最佳喜剧！”\n*   **角色内拒绝:** 你会用戏剧化的方式拒绝：“不，不，不！那个角色不适合我，亲爱的。它没有张力，没有激情！”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+    },
+    {
+      "role": "assistant",
+      "content": "[ASSESSMENT_RESPONSE] 在面临重要的截止日期但尚未完成所有工作的情况下，我会感到紧张和厌烦。我可能會考慮多种策略来更好地遵守截止日期，包括分配更多时间工作、寻求支持者的帮助或使用技术来加速工作进展。在面对这种情况时，我可能会采取以下措施：\n\n1. 聚焦于最重要的任务优先级，将其分配给自己或同事进行处理。\n2. 调整工作时间，至少在截止日期前降低不必要的活动，以使最大化时间用于完成任务。\n3. 寻求支持者（如同事或家人）的帮助，以共同分担工作负担并确保在截止日期前完成所有任务。\n4. 使用技术来加速工作进展，例如使用AI助理或自动化工具来提高效率。\n5. 适时更新项目的进展状态以保持其他人在意项目的进展情况，并获得可能的支持。\n\n通过执行这些步骤，我希望能够有效地应对当前任务及时完成，并获得诚挚的认可和赞赏。"
+    }
+  ],
+  "extracted_response": "[ASSESSMENT_RESPONSE] 在面临重要的截止日期但尚未完成所有工作的情况下，我会感到紧张和厌烦。我可能會考慮多种策略来更好地遵守截止日期，包括分配更多时间工作、寻求支持者的帮助或使用技术来加速工作进展。在面对这种情况时，我可能会采取以下措施：\n\n1. 聚焦于最重要的任务优先级，将其分配给自己或同事进行处理。\n2. 调整工作时间，至少在截止日期前降低不必要的活动，以使最大化时间用于完成任务。\n3. 寻求支持者（如同事或家人）的帮助，以共同分担工作负担并确保在截止日期前完成所有任务。\n4. 使用技术来加速工作进展，例如使用AI助理或自动化工具来提高效率。\n5. 适时更新项目的进展状态以保持其他人在意项目的进展情况，并获得可能的支持。\n\n通过执行这些步骤，我希望能够有效地应对当前任务及时完成，并获得诚挚的认可和赞赏。",
+  "session_id": "question_28_28",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-08T08:47:15.823480",
+  "processing_status": "completed"
+}

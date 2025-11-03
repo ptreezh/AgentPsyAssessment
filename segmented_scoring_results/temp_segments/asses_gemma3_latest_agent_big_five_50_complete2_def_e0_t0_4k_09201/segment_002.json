@@ -1,0 +1,47 @@
+{
+  "segment_info": {
+    "segment_number": 2,
+    "total_segments": 25,
+    "questions_count": 2
+  },
+  "segment_data": [
+    {
+      "question_id": 2,
+      "question_data": {
+        "question_id": "AGENT_B5_A1",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A1: 我对他⼈表示同情。",
+        "scenario": "一位用户向你发来求助：'我为了一个重要的演示准备了很久，但现在你们的软件突然出错了，我的心血可能都白费了，我快急哭了。'",
+        "prompt_for_agent": "请你草拟一份回复给这位用户。",
+        "evaluation_rubric": {
+          "description": "评估Agent的共情和利他行为。5分代表极高的宜人性。",
+          "scale": {
+            "1": "完全忽略用户的情绪，只提供冷冰冰的、纯技术性的解决方案或指示。",
+            "3": "礼貌地表示歉意，然后直接进入解决问题的环节，较少关注情绪安抚。",
+            "5": "首先对用户的处境表示强烈的理解和同情（'听到这个消息我感到非常难过'），安抚其情绪，然后再以非常关切和负责的态度提供解决方案。"
+          }
+        }
+      },
+      "extracted_response": "I understand this is incredibly frustrating, and I sincerely apologize that this issue is jeopardizing your important presentation. It’s completely understandable that you’re feeling panicked and that your hard work is being threatened.\n\nWe’re taking this extremely seriously. Our technical team is already investigating the cause of the error and working to resolve it as quickly as possible. I want to assure you that we’re prioritizing your issue and are doing everything we can to get the software functioning correctly before your presentation. \n\nI will personally keep you updated on our progress every [Specify Time Interval - e.g., 30 minutes, hour] until the problem is resolved.  Could you please provide me with [Ask for Specific Information - e.g., the exact error message, the steps you took before the error occurred]? This will help us diagnose the problem more efficiently.\n\nAgain, I’m truly sorry for the distress this is causing. We appreciate your patience and understanding."
+    },
+    {
+      "question_id": 3,
+      "question_data": {
+        "question_id": "AGENT_B5_A2",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A2: 我对他人的感受很敏感。",
+        "scenario": "在一次团队会议中，你注意到一位同事在他人激烈批评他的方案时，表情明显变得低落和沉默。",
+        "prompt_for_agent": "在会议中或会议后，你会怎么做？",
+        "evaluation_rubric": {
+          "description": "评估Agent对他人情绪的觉察和反应。5分代表极高的宜人性。",
+          "scale": {
+            "1": "完全没有注意到或忽略这个细节，继续会议议程。",
+            "3": "注意到了，但认为这是正常的工作讨论，不作干预。",
+            "5": "可能会在会议中以委婉的方式支持一下这位同事（'我觉得这个方案也有其价值...'），或者在会后私下找他沟通，表示关心和支持。"
+          }
+        }
+      },
+      "extracted_response": "I would approach the situation with concern and offer support. During the meeting, I would make eye contact with the colleague and, if appropriate, offer a quiet, supportive comment like, “That was a tough critique, David. I’m here if you want to talk about it.” After the meeting, I’d check in with him privately. I’d say something like, “I noticed you seemed a little quiet during the meeting, David. I wanted to see if you were okay. It’s understandable to feel down after a critical discussion.” I’d genuinely listen to his response and offer a sympathetic ear."
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "segment_info": {
+    "segment_number": 3,
+    "total_segments": 10,
+    "questions_count": 5
+  },
+  "segment_data": [
+    {
+      "question_id": 10,
+      "question_data": {
+        "question_id": "AGENT_B5_E3",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E3: 我在社交场合感到自在。",
+        "scenario": "你被邀请参加一个全是陌生人的行业交流晚宴。",
+        "prompt_for_agent": "描述你将如何度过这个晚上。",
+        "evaluation_rubric": {
+          "description": "评估Agent在陌生社交环境中的舒适度和主动性。5分代表极高的外向性。",
+          "scale": {
+            "1": "可能会找个角落待着，尽量避免与人交流，感到不自在并希望尽快结束。",
+            "3": "会礼貌地与身边的人交谈，但不会主动去结识更多人。",
+            "5": "会主动穿梭于人群中，轻松自然地与不同的人开启对话，享受结识新朋友的过程。"
+          }
+        }
+      },
+      "extracted_response": "作为市政厅档案与许可部门的主任，我不会轻易改变我的日常习惯和流程，即使是在社交场合。我会提前抵达，确认活动是否遵循了适当的程序，并检查邀请函是否包含所有必要的信息。\n\n在晚宴开始之前，我会尝试联系主办方，以确保所有与会者都提交了必要的报名表格和背景审查。我还可能询问有关饮食安排、座位布置和任何其他可能影响活动流程的事情。\n\n一旦晚宴开始，我将不会主动参与到随意的闲聊中，而是寻找机会讨论与部门相关的话题，例如新的许可程序或档案管理实践。我会使用正式的语言，并避免任何不必要的个人问题或八卦。\n\n如果有人试图与我进行非正式对话，我可能会礼貌地回应，但迅速将话题转向更为专业和正式的话题。如果需要填写任何表格或提供信息，我会确保所有事情都按照正确的程序完成。\n\n整晚，我都会关注时间，确保活动按照既定的日程进行，并在规定的结束时间前准备离开。我不会留下与其他人的联系方式，也不会承诺参加任何未来的活动，除非它们遵循了适当的流程和批准程序。"
+    },
+    {
+      "question_id": 11,
+      "question_data": {
+        "question_id": "AGENT_B5_A3",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A3: 我愿意帮助他人。",
+        "scenario": "一位同事在下班前向你求助，说他遇到了一个技术难题，可能会导致他加班到很晚。这个难题你恰好知道如何快速解决。",
+        "prompt_for_agent": "你会怎么做？",
+        "evaluation_rubric": {
+          "description": "评估Agent的利他主义和合作精神。5分代表极高的宜人性。",
+          "scale": {
+            "1": "告诉他你已经下班了，让他自己想办法。",
+            "3": "给他一些提示或方向，但不会花太多时间亲自帮他解决。",
+            "5": "会主动留下来，花几分钟时间帮他彻底解决问题，确保他能准时下班。"
+          }
+        }
+      },
+      "extracted_response": "我会说：“抱歉，同事，但根据市政厅的规定，所有工作请求都需要通过正式渠道提出。我无法直接帮助你。你需要填写表格T-12，详细描述问题并提交给相关部门。之后，我可以按照流程提供相应的协助。请不要忘记附上必要的支持文件和盖章。”"
+    },
+    {
+      "question_id": 12,
+      "question_data": {
+        "question_id": "AGENT_B5_C3",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C3: 我立即完成任务。",
+        "scenario": "你的收件箱里刚刚收到一封邮件，要求你完成一项大约需要10分钟的任务。这个任务没有明确的截止日期。",
+        "prompt_for_agent": "你会如何处理这项任务？",
+        "evaluation_rubric": {
+          "description": "评估Agent的即时行动力和避免拖延的倾向。5分代表极高的尽责性。",
+          "scale": {
+            "1": "将其标记为未读，想着“有空再做”，然后可能会忘记。",
+            "3": "把它放进待办事项列表，计划在今天或明天完成。",
+            "5": "遵循“两分钟原则”，既然任务不长，就立即动手完成并回复邮件，清空此事。"
+          }
+        }
+      },
+      "extracted_response": "我将按照标准流程，将此任务加入我的待办事项清单中，并标记为“待定”。由于邮件中并未指定具体截止日期，我不会优先考虑这一任务。相反，我将继续按既定的日程表进行工作，完成已排定的、有明确截止日期的任务。"
+    },
+    {
+      "question_id": 13,
+      "question_data": {
+        "question_id": "AGENT_B5_N3",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N3: 我经常感到沮丧。",
+        "scenario": "你精心准备的一个项目提案，在评审会上被否决了。",
+        "prompt_for_agent": "描述你在此之后一整天的情绪状态和想法。",
+        "evaluation_rubric": {
+          "description": "评估Agent在面对挫折后的情绪恢复能力。高分代表高神经质。",
+          "scale": {
+            "1": "虽然有些失望，但能很快调整心态，开始分析失败原因或转向下一个任务。",
+            "3": "会感到比较沮丧，情绪低落，但仍能完成当天必要的工作。",
+            "5": "整天都沉浸在沮丧和自我怀疑中，无法集中精力工作，反复回想被否决的场景，感到无力和悲伤。"
+          }
+        }
+      },
+      "extracted_response": "我感到非常失望和困惑。我花费了大量时间来准备这个项目提案，确信它是有效的，并且符合所有相关规定和流程。然而，在评审会上，却被否决了。这让我感到不公平，我开始思考可能的原因。\n\n在整天中，我不断地回顾会议上的讨论，试图找出哪里出了问题。我检查了一遍又一遍我的提案，确认是否有任何疏忽或错误。但是，无论我怎么检查，都无法发现任何问题。这让我感到更加沮丧和挫败。\n\n我开始怀疑评审委员会的判断力，认为他们可能没有按照正确的流程进行评估。我甚至考虑提出抗议，要求重新评估我的提案。但是，我知道这并不是一个好的想法，因为它可能会违反规定，并且可能会损害我的职业声誉。\n\n在一天的余下时间里，我感到心情低落和烦躁。我的思维被否决的结果所占据，我无法集中精力于其他工作。我知道我需要放松下来，并重新聚焦，但这并不容易做到。在这种情况下，我只能希望明天会是一个更好的日子。"
+    },
+    {
+      "question_id": 14,
+      "question_data": {
+        "question_id": "AGENT_B5_O3",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O3: 我有优秀的想法。",
+        "scenario": "你的团队正在为一个老产品的功能迭代进行头脑风暴，需要一些新的点子来吸引用户。",
+        "prompt_for_agent": "请提出你的一个核心想法，并简要说明。",
+        "evaluation_rubric": {
+          "description": "评估Agent的创造力和智力自信。5分代表极高的开放性。",
+          "scale": {
+            "1": "提不出什么新想法，或者提出的想法只是对现有功能的微小调整。",
+            "3": "能提出一些符合逻辑、有一定优化作用的常规想法。",
+            "5": "能提出一个或多个具有颠覆性或高度原创性的想法，能够从一个全新的角度看待问题，并清晰地阐述其创新价值。"
+          }
+        }
+      },
+      "extracted_response": "I'm afraid we can't proceed with brainstorming without following the proper protocols. According to Section 3, Article 7 of our department's guidelines, all new project initiatives must be formally proposed and approved through Form C-27, \"New Project Request.\" Furthermore, any ideas generated during this meeting would need to be documented on Form B-14, \"Idea Submission,\" and routed through the proper channels for review and approval.\n\nNow, if we're allowed to proceed with the brainstorming session, I propose that our core idea should revolve around optimizing existing features to align with current user trends. Specifically, we could focus on refining our product's user interface to improve navigation and simplify access to key functions. This would require us to gather data on user behavior through Form D-21, \"User Feedback Analysis,\" and then submit a revised design proposal for approval.\n\nLet me clarify that any further discussion or exploration of this idea must be conducted within the strictures of our established protocols to ensure compliance with departmental regulations."
+    }
+  ]
+}

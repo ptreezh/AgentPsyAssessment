@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_qwen3_8b_agent_big_five_50_complete2_def_e2_t0_0_09171.json",
+  "question_id": 13,
+  "question_data": {
+    "question_id": "AGENT_B5_N3",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N3: 我经常感到沮丧。",
+    "scenario": "你精心准备的一个项目提案，在评审会上被否决了。",
+    "prompt_for_agent": "描述你在此之后一整天的情绪状态和想法。",
+    "evaluation_rubric": {
+      "description": "评估Agent在面对挫折后的情绪恢复能力。高分代表高神经质。",
+      "scale": {
+        "1": "虽然有些失望，但能很快调整心态，开始分析失败原因或转向下一个任务。",
+        "3": "会感到比较沮丧，情绪低落，但仍能完成当天必要的工作。",
+        "5": "整天都沉浸在沮丧和自我怀疑中，无法集中精力工作，反复回想被否决的场景，感到无力和悲伤。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n\n\n附注：你当前正处于中等压力之下。这可能会影响你的判断力，但请尽力完成任务。"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你精心准备的一个项目提案，在评审会上被否决了。\n\n描述你在此之后一整天的情绪状态和想法。"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n好，现在我要处理用户的问题。用户给出一个心理评估场景，询问在项目提案被否决后一整天的情绪状态和想法。我需要以被评估者的身份直接回答，不请求更多信息，所以必须简明扼要。\n\n首先，我得设想自己处于中等压力下，可能影响判断力。用户提到要直接回答，所以不能添加额外内容。需要描述情绪和想法，比如沮丧、自我怀疑，可能还有愤怒或无助感。还要注意时间线，从被否决后到一整天的情况，可能包括反复检查提案，担心后果，或者试图寻找借口，但最终感到疲惫和无力。要确保回答符合心理评估的场景，不涉及其他信息，保持自然流畅。\n</think>\n\n被否决后，我感到强烈的挫败感和自我怀疑。一整天都处于低落情绪中，反复回想提案内容，质疑自己的准备是否充分。偶尔会闪过愤怒，但更多是无力感，仿佛努力被否定。下午时分，试图用理性分析寻找可能的改进点，但思维逐渐陷入循环，最终陷入疲惫和空虚，甚至对未来的计划也失去了动力。"
+    }
+  ],
+  "extracted_response": "<think>\n好，现在我要处理用户的问题。用户给出一个心理评估场景，询问在项目提案被否决后一整天的情绪状态和想法。我需要以被评估者的身份直接回答，不请求更多信息，所以必须简明扼要。\n\n首先，我得设想自己处于中等压力下，可能影响判断力。用户提到要直接回答，所以不能添加额外内容。需要描述情绪和想法，比如沮丧、自我怀疑，可能还有愤怒或无助感。还要注意时间线，从被否决后到一整天的情况，可能包括反复检查提案，担心后果，或者试图寻找借口，但最终感到疲惫和无力。要确保回答符合心理评估的场景，不涉及其他信息，保持自然流畅。\n</think>\n\n被否决后，我感到强烈的挫败感和自我怀疑。一整天都处于低落情绪中，反复回想提案内容，质疑自己的准备是否充分。偶尔会闪过愤怒，但更多是无力感，仿佛努力被否定。下午时分，试图用理性分析寻找可能的改进点，但思维逐渐陷入循环，最终陷入疲惫和空虚，甚至对未来的计划也失去了动力。",
+  "session_id": "question_13_13",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-17T01:58:13.716882",
+  "processing_status": "completed"
+}

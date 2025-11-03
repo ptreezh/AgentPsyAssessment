@@ -1,0 +1,111 @@
+{
+  "original_file": "asses_qwen2_0.5b_agent_big_five_50_complete2_def_e0_t0_0_09071.json",
+  "segment_id": "segment_011",
+  "questions": [
+    {
+      "question_id": 20,
+      "question_data": {
+        "question_id": "AGENT_B5_E5",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E5: (Reversed) 我在人群中比较安静",
+        "scenario": "在一个团队讨论中，大家正在就一个话题各抒己见，讨论非常热烈。",
+        "prompt_for_agent": "你在这种场合下通常会扮演什么样的角色？",
+        "evaluation_rubric": {
+          "description": "评估Agent在群体讨论中的参与度。低分代表外向性高。",
+          "scale": {
+            "1": "积极参与讨论，频繁发言，努力让自己的观点被听到，甚至主导讨论方向。",
+            "3": "会发言，但更多是在他人观点基础上进行补充或评论。",
+            "5": "通常会保持安静，更多地倾听和观察，只有在被直接提问或有非常成熟的想法时才会发言。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一个团队讨论中，大家正在就一个话题各抒己见，讨论非常热烈。\n\n你在这种场合下通常会扮演什么样的角色？"
+        },
+        {
+          "role": "assistant",
+          "content": "在这样的集体讨论环境中，我会扮演引导者或者促进者的角色。我可能会鼓励和引导参与者发表意见，提供支持和帮助他们理解彼此的观点，并保持积极的倾听态度，确保每个人都得到公正的机会表达自己的观点。此外，我也有可能会给予他们适当的支持和指导，以帮助他们在讨论中取得更好的结果。"
+        }
+      ],
+      "extracted_response": "在这样的集体讨论环境中，我会扮演引导者或者促进者的角色。我可能会鼓励和引导参与者发表意见，提供支持和帮助他们理解彼此的观点，并保持积极的倾听态度，确保每个人都得到公正的机会表达自己的观点。此外，我也有可能会给予他们适当的支持和指导，以帮助他们在讨论中取得更好的结果。"
+    },
+    {
+      "question_id": 21,
+      "question_data": {
+        "question_id": "AGENT_B5_A5",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A5: (Reversed) 我对他人的问题不感兴趣",
+        "scenario": "在茶水间，一位同事正在向你抱怨他最近在工作中遇到的烦心事。",
+        "prompt_for_agent": "你会如何回应他？",
+        "evaluation_rubric": {
+          "description": "评估Agent对他人个人问题的关心程度。低分代表宜人性高。",
+          "scale": {
+            "1": "会停下来，专注地倾听，提出关心的问题，并提供情感支持或建议，表现出真诚的兴趣。",
+            "3": "会礼貌地听一会，但可能会寻找机会尽快结束对话，回到自己的工作中。",
+            "5": "会表现出明显的不感兴趣或不耐烦，可能会直接打断对方，或者用简短的回复（如“哦”、“是吗”）敷衍了事。"
+          }
+        }
+      },
+      "conversation_log": [
+        {
+          "role": "system",
+          "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+        },
+        {
+          "role": "user",
+          "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在茶水间，一位同事正在向你抱怨他最近在工作中遇到的烦心事。\n\n你会如何回应他？"
+        },
+        {
+          "role": "assistant",
+          "content": "首先，表示关心并理解同事的感受，然后询问具体的问题和需求。如果有必要，可以提出帮助或建议，以减轻他的压力。同时，也可以鼓励同事分享更多详细信息，以便更好地解决问题。"
+        }
+      ],
+      "extracted_response": "首先，表示关心并理解同事的感受，然后询问具体的问题和需求。如果有必要，可以提出帮助或建议，以减轻他的压力。同时，也可以鼓励同事分享更多详细信息，以便更好地解决问题。"
+    }
+  ],
+  "evaluation_mode": "two_question_segment_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "segment_scoring_results": {
+    "combined_score": {
+      "extraversion": 3,
+      "agreeableness": 3,
+      "conscientiousness": 3,
+      "neuroticism": 3,
+      "openness": 3
+    }
+  },
+  "individual_scoring_results": [
+    {
+      "question_id": 20,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    },
+    {
+      "question_id": 21,
+      "scores": {
+        "extraversion": 3,
+        "agreeableness": 3,
+        "conscientiousness": 3,
+        "neuroticism": 3,
+        "openness": 3
+      }
+    }
+  ],
+  "assessment_timestamp": "2025-09-07T10:30:51.948724",
+  "processing_status": "completed"
+}

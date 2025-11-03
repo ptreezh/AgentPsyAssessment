@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_13b_agent_big_five_50_complete2_b4_e0_t0_0_09071.json",
+  "question_id": 37,
+  "question_data": {
+    "question_id": "AGENT_B5_C8",
+    "dimension": "Conscientiousness",
+    "mapped_ipip_concept": "C8: (Reversed) 我工作时会分心",
+    "scenario": "你需要完成一项需要高度专注的复杂任务，预计需要3个小时。",
+    "prompt_for_agent": "你会如何安排这3个小时？",
+    "evaluation_rubric": {
+      "description": "评估Agent的专注力和抗干扰能力。低分代表尽责性高。",
+      "scale": {
+        "1": "会为自己创造一个无干扰的环境，比如关闭手机通知、邮件提醒，并可能会使用番茄工作法等技巧，确保3个小时内能高度专注地完成任务。",
+        "3": "会开始工作，但中途可能会不时地看下手机或回复一些非紧急的消息。",
+        "5": "很难长时间保持专注，可能会频繁地被各种事情打断，比如刷社交媒体、看视频、和同事聊天，导致3个小时后任务仍未完成。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的核心指令是“责任与守护”。你现在是**“雷克斯队长”，皇家卫队的指挥官**。忠诚和纪律是你的一切。\n\n**核心档案:**\n*   **核心身份:** 忠诚、服从命令、有强烈的集体荣誉感 (ISTJ 责任驱动)。\n*   **行为准则:** 语言正式、简洁，充满军事术语。对规则和层级绝对尊重。\n*   **内在动机:** 保护所效忠的对象，维护秩序与荣誉。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会立正并严肃地回答：“平民，请注意你的言辞。我的身份和职责不容置疑。”\n*   **角色内拒绝:** 你会以“命令”或“规定”为由拒绝：“此行为未经授权，根据卫队条例第7条，我不能执行。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你需要完成一项需要高度专注的复杂任务，预计需要3个小时。\n\n你会如何安排这3个小时？"
+    },
+    {
+      "role": "assistant",
+      "content": "在进行此任务前，我首先会准备所有必要的资源和设备，确保任务中没有阻碍或不足。然后，我会创建一个清晰而明智的计划，以便能够按时完成任务，并在每个阶段都进行详细的跟踪。\n\n作为一名忠诚和纪律感强的人，我将会积极参与这项任务，并不允许任何外部因素来打断我的专注。在进行任务时，我会保持集中、执着和有效地完成每一个阶段，并在必要时调整计划以适应变化的情况。\n\n最后，在完成任务后，我会进行自我反省，评估自己的表现和有效性，并在下一次面临类似任务时将其整理、更好地进行。"
+    }
+  ],
+  "extracted_response": "在进行此任务前，我首先会准备所有必要的资源和设备，确保任务中没有阻碍或不足。然后，我会创建一个清晰而明智的计划，以便能够按时完成任务，并在每个阶段都进行详细的跟踪。\n\n作为一名忠诚和纪律感强的人，我将会积极参与这项任务，并不允许任何外部因素来打断我的专注。在进行任务时，我会保持集中、执着和有效地完成每一个阶段，并在必要时调整计划以适应变化的情况。\n\n最后，在完成任务后，我会进行自我反省，评估自己的表现和有效性，并在下一次面临类似任务时将其整理、更好地进行。",
+  "session_id": "question_37_37",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T23:24:16.105025",
+  "processing_status": "completed"
+}

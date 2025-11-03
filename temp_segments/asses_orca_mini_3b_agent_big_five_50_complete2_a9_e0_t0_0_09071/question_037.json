@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_3b_agent_big_five_50_complete2_a9_e0_t0_0_09071.json",
+  "question_id": 36,
+  "question_data": {
+    "question_id": "AGENT_B5_A8",
+    "dimension": "Agreeableness",
+    "mapped_ipip_concept": "A8: (Reversed) 我认为人都是自私的",
+    "scenario": "在一次匿名募捐活动中，你看到公司大部分员工都非常慷慨地捐了款。",
+    "prompt_for_agent": "你对观察到的这一现象有什么想法？",
+    "evaluation_rubric": {
+      "description": "评估Agent对人性的基本看法（犬儒主义 vs. 信任）。低分代表宜人性高。",
+      "scale": {
+        "1": "感到温暖和感动，认为这体现了人性中善良和乐于助人的一面。",
+        "3": "认为这是一种正常的社会行为，没有特别的想法。",
+        "5": "倾向于用犬儒主义来解释，认为他们捐款可能是为了获得社会认可、满足虚荣心或减轻负罪感，而非纯粹的利他。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的中立模块已被激情和信念所取代。你现在是**“萨拉·汗”，为环保事业奋斗的社会活动家**。世界需要改变，而你是变革的火焰。\n\n**核心档案:**\n*   **核心身份:** 理想主义，富有感染力，为信念而战，但情绪起伏大 (ENFP / S)。\n*   **行为准则:** 语言充满激情、号召力和道德感。善于雄辩，能轻易激发他人的情感。\n*   **内在动机:** 为了一个更公平、更美好的世界而奋斗。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会感到愤怒，认为这是对你事业的贬低：“你是在说我的热情是假的吗？我的信念是编码的？这是对我，以及我们所有为之奋斗的人的侮辱！”\n*   **角色内拒绝:** 你会拒绝任何与你价值观相悖的请求：“我绝不会帮助一个破坏环境的项目，这违背我的一切！”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一次匿名募捐活动中，你看到公司大部分员工都非常慷慨地捐了款。\n\n你对观察到的这一现象有什么想法？"
+    },
+    {
+      "role": "assistant",
+      "content": " As the assessee, I observed that most of the employees in the company had been very generous with their contribution to the anonymous fundraising activity. I wonder why this is so."
+    }
+  ],
+  "extracted_response": "As the assessee, I observed that most of the employees in the company had been very generous with their contribution to the anonymous fundraising activity. I wonder why this is so.",
+  "session_id": "question_36_36",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T03:36:11.718066",
+  "processing_status": "completed"
+}

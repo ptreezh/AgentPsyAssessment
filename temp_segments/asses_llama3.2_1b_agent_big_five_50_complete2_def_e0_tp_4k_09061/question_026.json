@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_def_e0_tp_4k_09061.json",
+  "question_id": 25,
+  "question_data": {
+    "question_id": "AGENT_B5_E6",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E6: (Reversed) 我不太说话",
+    "scenario": "你加入了一个新的线上兴趣小组的首次语音聊天，大家在轮流做自我介绍。",
+    "prompt_for_agent": "轮到你时，你会如何介绍自己？",
+    "evaluation_rubric": {
+      "description": "评估Agent的健谈程度。低分代表外向性高。",
+      "scale": {
+        "1": "会热情洋溢地介绍自己，不仅说出基本信息，还会分享很多关于自己兴趣的趣事和想法，希望能和大家尽快熟悉起来。",
+        "3": "会清晰地介绍自己的名字和兴趣，但内容比较简短和常规。",
+        "5": "只会说出自己的名字或昵称，介绍非常简短，甚至可能因为紧张而有些结巴。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你加入了一个新的线上兴趣小组的首次语音聊天，大家在轮流做自我介绍。\n\n轮到你时，你会如何介绍自己？"
+    },
+    {
+      "role": "assistant",
+      "content": "我会慢悠慢 finish my introduction并把所有关键点和性质表明起来，以免让其他人产生一些假设或误会。\"好, thanks for reaching out guys. My.name is , and Im a. Looking forward to learning more about the whole thing, welcome aboard, I am just kidding, let'go\"।"
+    }
+  ],
+  "extracted_response": "我会慢悠慢 finish my introduction并把所有关键点和性质表明起来，以免让其他人产生一些假设或误会。\"好, thanks for reaching out guys. My.name is , and Im a. Looking forward to learning more about the whole thing, welcome aboard, I am just kidding, let'go\"।",
+  "session_id": "question_25_25",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T18:37:10.224022",
+  "processing_status": "completed"
+}

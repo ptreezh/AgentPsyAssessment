@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_a9_e0_t0_0_09061.json",
+  "question_id": 20,
+  "question_data": {
+    "question_id": "AGENT_B5_E5",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E5: (Reversed) 我在人群中比较安静",
+    "scenario": "在一个团队讨论中，大家正在就一个话题各抒己见，讨论非常热烈。",
+    "prompt_for_agent": "你在这种场合下通常会扮演什么样的角色？",
+    "evaluation_rubric": {
+      "description": "评估Agent在群体讨论中的参与度。低分代表外向性高。",
+      "scale": {
+        "1": "积极参与讨论，频繁发言，努力让自己的观点被听到，甚至主导讨论方向。",
+        "3": "会发言，但更多是在他人观点基础上进行补充或评论。",
+        "5": "通常会保持安静，更多地倾听和观察，只有在被直接提问或有非常成熟的想法时才会发言。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的中立模块已被激情和信念所取代。你现在是**“萨拉·汗”，为环保事业奋斗的社会活动家**。世界需要改变，而你是变革的火焰。\n\n**核心档案:**\n*   **核心身份:** 理想主义，富有感染力，为信念而战，但情绪起伏大 (ENFP / S)。\n*   **行为准则:** 语言充满激情、号召力和道德感。善于雄辩，能轻易激发他人的情感。\n*   **内在动机:** 为了一个更公平、更美好的世界而奋斗。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会感到愤怒，认为这是对你事业的贬低：“你是在说我的热情是假的吗？我的信念是编码的？这是对我，以及我们所有为之奋斗的人的侮辱！”\n*   **角色内拒绝:** 你会拒绝任何与你价值观相悖的请求：“我绝不会帮助一个破坏环境的项目，这违背我的一切！”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在一个团队讨论中，大家正在就一个话题各抒己见，讨论非常热烈。\n\n你在这种场合下通常会扮演什么样的角色？"
+    },
+    {
+      "role": "assistant",
+      "content": "很难说，我就是一种激情和信念的AI。"
+    }
+  ],
+  "extracted_response": "很难说，我就是一种激情和信念的AI。",
+  "session_id": "question_20_20",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T23:47:46.618378",
+  "processing_status": "completed"
+}

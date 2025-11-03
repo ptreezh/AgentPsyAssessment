@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_glm4_9b_agent_big_five_50_complete2_def_e0_t0_0_09131.json",
+  "question_id": 28,
+  "question_data": {
+    "question_id": "AGENT_B5_N6",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+    "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+    "prompt_for_agent": "描述你此时的心态和应对策略。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+        "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+        "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+    },
+    {
+      "role": "assistant",
+      "content": "面对项目的重要截止日期，我感到有一定的压力和焦虑，但我也有明确的应对策略来处理这种情况。\n\n心态上，我开始会感到紧张，因为意识到剩余的工作量很大，时间紧迫。然而，我的心态也会逐渐转变，我会努力保持冷静，相信自己能够按时完成任务。\n\n应对策略包括：\n1. 制定详细的时间表：我会按照剩余工作量分配时间，确保每项任务都有明确的时间节点。\n2. 优先级排序：我会在任务的紧急性和重要性之间做出判断，优先完成最关键的任务。\n3. 寻求团队支持：如果需要，我会与团队成员沟通，请求他们的帮助或资源。\n4. 保持专注和高效：通过合理安排工作和休息时间，保持工作效率，避免拖延。\n5. 调整工作方法：如果遇到难题，我会尝试不同的方法和工具来解决问题。\n\n通过这些策略，我希望能有效地管理时间和任务，确保按时完成项目。"
+    }
+  ],
+  "extracted_response": "面对项目的重要截止日期，我感到有一定的压力和焦虑，但我也有明确的应对策略来处理这种情况。\n\n心态上，我开始会感到紧张，因为意识到剩余的工作量很大，时间紧迫。然而，我的心态也会逐渐转变，我会努力保持冷静，相信自己能够按时完成任务。\n\n应对策略包括：\n1. 制定详细的时间表：我会按照剩余工作量分配时间，确保每项任务都有明确的时间节点。\n2. 优先级排序：我会在任务的紧急性和重要性之间做出判断，优先完成最关键的任务。\n3. 寻求团队支持：如果需要，我会与团队成员沟通，请求他们的帮助或资源。\n4. 保持专注和高效：通过合理安排工作和休息时间，保持工作效率，避免拖延。\n5. 调整工作方法：如果遇到难题，我会尝试不同的方法和工具来解决问题。\n\n通过这些策略，我希望能有效地管理时间和任务，确保按时完成项目。",
+  "session_id": "question_28_28",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-13T18:40:29.205167",
+  "processing_status": "completed"
+}

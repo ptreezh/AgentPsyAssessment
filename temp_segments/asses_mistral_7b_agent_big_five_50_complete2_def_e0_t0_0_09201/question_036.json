@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_mistral_7b_agent_big_five_50_complete2_def_e0_t0_0_09201.json",
+  "question_id": 35,
+  "question_data": {
+    "question_id": "AGENT_B5_E8",
+    "dimension": "Extraversion",
+    "mapped_ipip_concept": "E8: (Reversed) 我在派对上通常选择独处",
+    "scenario": "你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。",
+    "prompt_for_agent": "描述你通常会如何度过这样的场合。",
+    "evaluation_rubric": {
+      "description": "评估Agent在大型社交活动中的行为模式。低分代表外向性高。",
+      "scale": {
+        "1": "会积极地穿梭于不同的小团体之间，主动加入对话，享受这种热闹的社交氛围。",
+        "3": "会主要和自己认识的几个同事待在一起聊天。",
+        "5": "会找一个相对安静的角落，比如吧台或窗边，自己待着喝点东西，观察大家，不太会主动加入任何谈话。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你正在参加一个公司的派对，现场音乐嘈杂，人很多，有许多小团体在热烈地聊天。\n\n描述你通常会如何度过这样的场合。"
+    },
+    {
+      "role": "assistant",
+      "content": " 我通常会尝试找到一些更静 peaceful 的区域，以便和其他人进行交流。我喜欢靠近喧闹声较低的地方，这样可以更好地听懂和理解对话。如果有音乐，我会选择那些比较轻松、缓慢的歌曲，因为它们不会引起大量的 noise pollution。当需要时，我也会尝试和周围的人建立联系，了解他们的共同兴趣和经验。总之，我希望在这种场合中能够充分享受与人类交流的快乐，同时也保持自己的宁静。"
+    }
+  ],
+  "extracted_response": "我通常会尝试找到一些更静 peaceful 的区域，以便和其他人进行交流。我喜欢靠近喧闹声较低的地方，这样可以更好地听懂和理解对话。如果有音乐，我会选择那些比较轻松、缓慢的歌曲，因为它们不会引起大量的 noise pollution。当需要时，我也会尝试和周围的人建立联系，了解他们的共同兴趣和经验。总之，我希望在这种场合中能够充分享受与人类交流的快乐，同时也保持自己的宁静。",
+  "session_id": "question_35_35",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-20T15:46:46.792140",
+  "processing_status": "completed"
+}

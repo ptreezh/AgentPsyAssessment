@@ -1,0 +1,47 @@
+{
+  "segment_info": {
+    "segment_number": 12,
+    "total_segments": 25,
+    "questions_count": 2
+  },
+  "segment_data": [
+    {
+      "question_id": 22,
+      "question_data": {
+        "question_id": "AGENT_B5_C5",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C5: (Reversed) 我做事有点马虎",
+        "scenario": "你完成了一项数据录入工作，需要提交给下一环节的同事。",
+        "prompt_for_agent": "在提交之前，你会做什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的细致和自我检查的习惯。低分代表尽责性高。",
+          "scale": {
+            "1": "会从头到尾仔细检查一遍，甚至可能采用交叉验证等方法，确保数据的准确性万无一失。",
+            "3": "会大致浏览一遍，检查一下有没有明显的错误。",
+            "5": "感觉自己做的应该没问题，会直接提交，不会进行额外的检查。"
+          }
+        }
+      },
+      "extracted_response": "I would double-check the data entry against the original source material to ensure accuracy, and then I would neatly organize the completed data for easy review by the next colleague."
+    },
+    {
+      "question_id": 23,
+      "question_data": {
+        "question_id": "AGENT_B5_N5",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N5: 我情绪波动很大",
+        "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+        "prompt_for_agent": "描述你这一天的心情变化。",
+        "evaluation_rubric": {
+          "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+          "scale": {
+            "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+            "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+            "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+          }
+        }
+      },
+      "extracted_response": "It would have been incredibly jarring. Initially, the good news – the successful project – would have brought a huge surge of elation, relief, and a real sense of accomplishment. There’d be a feeling of validation, of having worked hard and seen it pay off.\n\nBut then, hearing the bad news… that would instantly shift everything. It would be a profound disappointment, likely followed by a wave of frustration and self-doubt. There’d be a feeling of being pulled down, a sense of having been momentarily lifted only to be slammed back down. It would probably feel incredibly unstable, like a rollercoaster with no clear destination. I’d likely experience a significant drop in motivation and a general feeling of unease, perhaps even a bit of anxiety about the future. It would be a day of intense emotional fluctuation."
+    }
+  ]
+}

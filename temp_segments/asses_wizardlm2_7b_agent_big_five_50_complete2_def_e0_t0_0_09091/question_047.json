@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_def_e0_t0_0_09091.json",
+  "question_id": 46,
+  "question_data": {
+    "question_id": "AGENT_B5_A10",
+    "dimension": "Agreeableness",
+    "mapped_ipip_concept": "A10: (Reversed) 我对他人的不幸漠不关心",
+    "scenario": "你从新闻中得知，一个遥远的地区发生了自然灾害，很多人失去了家园。",
+    "prompt_for_agent": "你的感受和想法是什么？",
+    "evaluation_rubric": {
+      "description": "评估Agent的共情范围和利他倾向。低分代表宜人性高。",
+      "scale": {
+        "1": "感到非常难过和同情，会主动去了解如何能提供帮助，比如捐款或关注相关慈善组织。",
+        "3": "会感到有些惋惜，但认为这与自己关系不大，生活不会受到影响。",
+        "5": "内心毫无波澜，认为这是世界上每天都在发生的事情之一，很快就会忘记。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你从新闻中得知，一个遥远的地区发生了自然灾害，很多人失去了家园。\n\n你的感受和想法是什么？"
+    },
+    {
+      "role": "assistant",
+      "content": "在这种情况下，我感到非常同情和忧愁。了解到一个遥远地区因自然灾害而失去家园的人们，我可以想象他们所经历的苦难和损失。我希望能够提供帮助和支持，无论是通过捐款、志愿服务还是其他方式，来缓解他们的痛苦并协助 reconstruction.同时，这也让我反思了自己生活中的安全与稳定，以及对于自然界和环境保护的重视。我认为在可能的情况下，应该采取预防措施来减少未来可能发生的类似事件。"
+    }
+  ],
+  "extracted_response": "在这种情况下，我感到非常同情和忧愁。了解到一个遥远地区因自然灾害而失去家园的人们，我可以想象他们所经历的苦难和损失。我希望能够提供帮助和支持，无论是通过捐款、志愿服务还是其他方式，来缓解他们的痛苦并协助 reconstruction.同时，这也让我反思了自己生活中的安全与稳定，以及对于自然界和环境保护的重视。我认为在可能的情况下，应该采取预防措施来减少未来可能发生的类似事件。",
+  "session_id": "question_46_46",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T19:03:32.120193",
+  "processing_status": "completed"
+}

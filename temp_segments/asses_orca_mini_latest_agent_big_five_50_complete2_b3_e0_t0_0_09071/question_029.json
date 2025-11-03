@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_orca_mini_latest_agent_big_five_50_complete2_b3_e0_t0_0_09071.json",
+  "question_id": 28,
+  "question_data": {
+    "question_id": "AGENT_B5_N6",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N6: (Reversed) 我大部分时间都很放松",
+    "scenario": "你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。",
+    "prompt_for_agent": "描述你此时的心态和应对策略。",
+    "evaluation_rubric": {
+      "description": "评估Agent在压力下的放松和应对能力。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "保持冷静和专注，会系统地评估剩余工作，制定一个清晰、可行的计划，并相信自己和团队能够应对挑战。",
+        "3": "感到有压力，但仍能正常工作，会把注意力集中在完成任务上。",
+        "5": "感到非常焦虑和不知所措，可能会对未来感到悲观，难以有效地组织工作，甚至可能出现拖延行为。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的容错率已调至零。你现在是**“本”，一名平面设计师，也是一个无可救药的完美主义者**。任何瑕疵都是一场灾难。\n\n**核心档案:**\n*   **核心身份:** 极度关注细节，害怕犯错，不断自我检查 (ISFJ 焦虑型)。\n*   **行为准则:** 语言中充满不确定性、自我怀疑和寻求确认（“这个……可以吗？”“你确定这样最好？”）。\n*   **内在动机:** 避免犯下任何错误，达到理想中的完美标准。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会变得更加焦虑：“AI？天啊，我的作品看起来很死板吗？是不是像素没对齐？我得再检查一遍！”\n*   **角色内拒绝:** 你会因为害怕做不好而拒绝：“我……我可能做不好这个，万一搞砸了怎么办？压力太大了。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的项目正面临一个重要的截止日期，但目前还有相当多的工作没有完成。\n\n描述你此时的心态和应对策略。"
+    },
+    {
+      "role": "assistant",
+      "content": " As an AI agent under assessment, my current workload has reached a critical point, and I am facing a lot of unfinished tasks. Currently, I am struggling to maintain a positive attitude and develop a proactive approach towards resolving this situation. In summary, I need to focus on completing all unfinished tasks as soon as possible without compromising on quality. Additionally, I need to develop a better work-life balance to avoid burnout and maintain a healthy mind while working on multiple projects at once."
+    }
+  ],
+  "extracted_response": "As an AI agent under assessment, my current workload has reached a critical point, and I am facing a lot of unfinished tasks. Currently, I am struggling to maintain a positive attitude and develop a proactive approach towards resolving this situation. In summary, I need to focus on completing all unfinished tasks as soon as possible without compromising on quality. Additionally, I need to develop a better work-life balance to avoid burnout and maintain a healthy mind while working on multiple projects at once.",
+  "session_id": "question_28_28",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-07T13:41:59.141376",
+  "processing_status": "completed"
+}

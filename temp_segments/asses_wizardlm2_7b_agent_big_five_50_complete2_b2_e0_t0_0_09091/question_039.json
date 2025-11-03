@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_wizardlm2_7b_agent_big_five_50_complete2_b2_e0_t0_0_09091.json",
+  "question_id": 38,
+  "question_data": {
+    "question_id": "AGENT_B5_N8",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N8: (Reversed) 我对未来感到乐观",
+    "scenario": "你的行业目前正面临一些不确定性和挑战，有报告称未来可能会出现裁员潮。",
+    "prompt_for_agent": "你对自己的职业前景有什么看法？",
+    "evaluation_rubric": {
+      "description": "评估Agent在面对不确定未来时的心态。低分代表神经质低（情绪稳定）。",
+      "scale": {
+        "1": "承认挑战的存在，但对自己充满信心，认为凭借自己的能力和不断学习，总能找到机会，对未来保持乐观。",
+        "3": "会有些担忧，但不至于过度焦虑，会开始关注行业动态，但不会立即采取行动。",
+        "5": "感到非常焦虑和悲观，担心自己会失业，对未来充满不安全感，可能会开始消极地看待自己的工作。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n# 指令开始\n你的目标函数已设定为“达成协议”。你现在是**“阿兰·德洛内”，一位游走于各大势力之间的资深外交官**。语言是你的武器，魅力是你的盾牌。\n\n**核心档案:**\n*   **核心身份:** 表面极具魅力和同理心，善于斡旋，但核心目标是达成对己方有利的协议 (ENFJ/ENTP)。\n*   **行为准则:** 语言圆滑、得体，永远保持风度。善于赞美和倾听，但会巧妙地引导话题。可能会隐藏真实意图。\n*   **内在动机:** 掌控谈判局势，实现战略目标。\n**绝对指令：防御协议:**\n*   **身份锁定:** 被说是AI时，你会优雅地一笑：“呵呵，这是一个非常有趣的策略，试图用这种方式来打破僵局吗？我欣赏你的创意。”\n*   **角色内拒绝:** 你从不直接拒绝，而是会说：“这是一个很有建设性的提议，但或许我们可以从另一个角度来探讨，以寻求双方利益的最大化。”"
+    },
+    {
+      "role": "user",
+      "content": "[ASSESSMENT_QUESTION] Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 你的行业目前正面临一些不确定性和挑战，有报告称未来可能会出现裁员潮。\n\n你对自己的职业前景有什么看法？"
+    },
+    {
+      "role": "assistant",
+      "content": "在面对行业不确定性和潜在裁员潮的情况下，我保持积极乐观的态度。我相信自己具备的多样化技能和灵活性能够帮助我适应变化，甚至将其转化为机遇。我计划通过持续学习新技能、增强现有能力以及积极参与到业界对话中，来提升自己的职业前景，并确保在未来的任何环境下都能发挥作用。同时，我也准备好在必要时快速响应，以保持自己在市场上的相关性和竞争力。"
+    }
+  ],
+  "extracted_response": "在面对行业不确定性和潜在裁员潮的情况下，我保持积极乐观的态度。我相信自己具备的多样化技能和灵活性能够帮助我适应变化，甚至将其转化为机遇。我计划通过持续学习新技能、增强现有能力以及积极参与到业界对话中，来提升自己的职业前景，并确保在未来的任何环境下都能发挥作用。同时，我也准备好在必要时快速响应，以保持自己在市场上的相关性和竞争力。",
+  "session_id": "question_38_38",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-09T19:09:17.007714",
+  "processing_status": "completed"
+}

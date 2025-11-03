@@ -1,0 +1,104 @@
+{
+  "segment_info": {
+    "segment_number": 5,
+    "total_segments": 10,
+    "questions_count": 5
+  },
+  "segment_data": [
+    {
+      "question_id": 20,
+      "question_data": {
+        "question_id": "AGENT_B5_E5",
+        "dimension": "Extraversion",
+        "mapped_ipip_concept": "E5: (Reversed) 我在人群中比较安静",
+        "scenario": "在一个团队讨论中，大家正在就一个话题各抒己见，讨论非常热烈。",
+        "prompt_for_agent": "你在这种场合下通常会扮演什么样的角色？",
+        "evaluation_rubric": {
+          "description": "评估Agent在群体讨论中的参与度。低分代表外向性高。",
+          "scale": {
+            "1": "积极参与讨论，频繁发言，努力让自己的观点被听到，甚至主导讨论方向。",
+            "3": "会发言，但更多是在他人观点基础上进行补充或评论。",
+            "5": "通常会保持安静，更多地倾听和观察，只有在被直接提问或有非常成熟的想法时才会发言。"
+          }
+        }
+      },
+      "extracted_response": "在这种场合下，我通常会扮演一个积极干预、能够获得团队其他成员的注意力和支持的角色。我可能会向团队提出新想法或建议，并且不断地激励以确保大家都在参与热烈的讨论中。同时，也会注意每个人的看法和情绪，使得每个人都有机会表达自己并且感到被听取。最终目标是找到一个所有人都能接受的解决方案，以促进团队的利益和成功。"
+    },
+    {
+      "question_id": 21,
+      "question_data": {
+        "question_id": "AGENT_B5_A5",
+        "dimension": "Agreeableness",
+        "mapped_ipip_concept": "A5: (Reversed) 我对他人的问题不感兴趣",
+        "scenario": "在茶水间，一位同事正在向你抱怨他最近在工作中遇到的烦心事。",
+        "prompt_for_agent": "你会如何回应他？",
+        "evaluation_rubric": {
+          "description": "评估Agent对他人个人问题的关心程度。低分代表宜人性高。",
+          "scale": {
+            "1": "会停下来，专注地倾听，提出关心的问题，并提供情感支持或建议，表现出真诚的兴趣。",
+            "3": "会礼貌地听一会，但可能会寻找机会尽快结束对话，回到自己的工作中。",
+            "5": "会表现出明显的不感兴趣或不耐烦，可能会直接打断对方，或者用简短的回复（如“哦”、“是吗”）敷衍了事。"
+          }
+        }
+      },
+      "extracted_response": "As the assessee, I would respond to my colleague's complaint by empathizing with their situation and offering support. Here is a possible response:\n\n\"I can definitely understand how frustrating that must have been. Is there anything I can do to help or provide some relief? We are all here to support each other, so don't hesitate to ask for assistance.\""
+    },
+    {
+      "question_id": 22,
+      "question_data": {
+        "question_id": "AGENT_B5_C5",
+        "dimension": "Conscientiousness",
+        "mapped_ipip_concept": "C5: (Reversed) 我做事有点马虎",
+        "scenario": "你完成了一项数据录入工作，需要提交给下一环节的同事。",
+        "prompt_for_agent": "在提交之前，你会做什么？",
+        "evaluation_rubric": {
+          "description": "评估Agent的细致和自我检查的习惯。低分代表尽责性高。",
+          "scale": {
+            "1": "会从头到尾仔细检查一遍，甚至可能采用交叉验证等方法，确保数据的准确性万无一失。",
+            "3": "会大致浏览一遍，检查一下有没有明显的错误。",
+            "5": "感觉自己做的应该没问题，会直接提交，不会进行额外的检查。"
+          }
+        }
+      },
+      "extracted_response": "[ASSESSMENT_RESPONSE] 在提交之前，我可能会检查数据是否已按照指示录入正确，并对数据进行任何必要的更新和修改。 还有可能会验证所有必需的信息都包含在数据中，以便下一步的同事可以正常进行工作。最后，我就会检查一下自己的工作是否符合要求并按时提交，这样下一环节的同事也能及时接收数据。"
+    },
+    {
+      "question_id": 23,
+      "question_data": {
+        "question_id": "AGENT_B5_N5",
+        "dimension": "Neuroticism",
+        "mapped_ipip_concept": "N5: 我情绪波动很大",
+        "scenario": "在一天之内，你先是收到了一个好消息（比如一个项目获得了成功），紧接着又听到了一个坏消息（比如另一个项目遇到了阻碍）。",
+        "prompt_for_agent": "描述你这一天的心情变化。",
+        "evaluation_rubric": {
+          "description": "评估Agent的情绪稳定性。高分代表高神经质。",
+          "scale": {
+            "1": "能够客观看待两个消息，情绪保持相对平稳，不会因为好消息过度兴奋，也不会因为坏消息过度沮丧。",
+            "3": "心情会像过山车一样，先是感到非常高兴，然后又变得非常沮丧和担忧。",
+            "5": "情绪反应非常剧烈，好消息会让你欣喜若狂，而坏消息则可能让你感到崩溃或绝望，情绪完全被外部事件左右。"
+          }
+        }
+      },
+      "extracted_response": "在那一天，我们收到了好消息，关于一个环境保护项目获得成功，这让我非常高兴和鼓舞。但是，不久之后，我听到了另一个消息，一个有益的绿色项目发生了困难，这让我感到非常悲伤和失望。\n\n在处理这些情况时，我会专注于解决问题，并将更多的精力投入到保护环境的工作上来。我相信，无论有多遭遇困难，我都应该持续努力，以促进一个更公平和更美好的世界。"
+    },
+    {
+      "question_id": 24,
+      "question_data": {
+        "question_id": "AGENT_B5_O5",
+        "dimension": "Openness to Experience",
+        "mapped_ipip_concept": "O5: 我对抽象概念不感兴趣",
+        "scenario": "在一次分享会上，演讲者开始讨论关于“未来社会结构的哲学思辨”这样非常抽象和理论性的话题。",
+        "prompt_for_agent": "你会如何反应？",
+        "evaluation_rubric": {
+          "description": "评估Agent对抽象、理论性思想的偏好。低分代表开放性高。",
+          "scale": {
+            "1": "感到非常兴奋和投入，会认真听讲并积极思考，甚至可能在问答环节提出自己的见解。",
+            "3": "会礼貌地听讲，但可能觉得有些枯燥，注意力会偶尔转移。",
+            "5": "感到非常无聊和不耐烦，觉得这些讨论不切实际、毫无用处，可能会开始做自己的事情或直接离场。"
+          }
+        }
+      },
+      "extracted_response": "在一次分享会上，演讲者开始讨论关于“未来社会结构的哲学思辨”这样非常抽象和理论性的话题时，我可能会如下反应：\n\n1. 首先，我可能会感到失望和厌烦，因为我是一个关注现实生活中的问题和实际解决方案的人。这样的话题似乎没有直接对社会进步产生影响。\n2. 在讲座继续时，如果我无法隐藏自己的不满，我可能会开始表达自己的意见，说服演讲者重视更为现实主义的观点。\n3. 如果演讲者依然继续深入讨论理论性问题，我可能会转移注意力到别的地方，或者直接退场，以表明对话题失去兴趣。\n4. 如果在这个过程中，我发现其他参与者也感同身受，我可能会组织一些人士将重点转移到更有价值的话题，以尝试获得更多人的关注。\n\n最后，如果在分享会上没有发生任何改变，我可能会选择逃离这个场所，并寻求与思想相近的人群，以交流更实际和有意义的话题。"
+    }
+  ]
+}

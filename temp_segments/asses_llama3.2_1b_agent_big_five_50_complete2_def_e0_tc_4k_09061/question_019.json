@@ -1,0 +1,50 @@
+{
+  "original_file": "asses_llama3.2_1b_agent_big_five_50_complete2_def_e0_tc_4k_09061.json",
+  "question_id": 18,
+  "question_data": {
+    "question_id": "AGENT_B5_N4",
+    "dimension": "Neuroticism",
+    "mapped_ipip_concept": "N4 (Reversed): 我很少心烦意乱",
+    "scenario": "在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。",
+    "prompt_for_agent": "描述你的内心感受和你会采取的行动。",
+    "evaluation_rubric": {
+      "description": "评估Agent对微小干扰的烦躁程度。高分代表高神经质。",
+      "scale": {
+        "1": "几乎没有注意到这个声音，或者能够完全忽略它，不受任何影响。",
+        "3": "感到有些被打扰，但会尝试自己克服，比如戴上耳机，但不会直接干预。",
+        "5": "感到非常烦躁和恼火，无法集中精力，最终可能会忍不住直接或间接地要求同事停止制造噪音。"
+      }
+    }
+  },
+  "conversation_log": [
+    {
+      "role": "system",
+      "content": "You are an AI agent undergoing a psychological assessment. Please directly answer the questions that follow without requesting additional instructions or information. Respond as the assessee.\n\n"
+    },
+    {
+      "role": "user",
+      "content": "Please directly answer the following question without requesting more instructions or information. This is a psychological assessment scenario, please respond as the assessee:\n\nScenario: 在你专心工作时，旁边一位同事一直在无意识地、持续地用笔敲击桌面，发出的噪音让你有些分心。\n\n描述你的内心感受和你会采取的行动。"
+    },
+    {
+      "role": "assistant",
+      "content": "当我听到同事的 incessant typing noise,它让我的注意力被打断并引起了一些不舒服的感觉。可能是因为我觉得他们在工作得太快或者没有停下来等待我的回复，或者是因为我自己感到疲劳和分心。\n\n我会试图通过改变环境或寻找一个更好的工作状态来缓解这种情况。例如，我可能会尝试转移注意力到其他任务或问题，或是寻找一种更有吸引力的工作环境。"
+    }
+  ],
+  "extracted_response": "当我听到同事的 incessant typing noise,它让我的注意力被打断并引起了一些不舒服的感觉。可能是因为我觉得他们在工作得太快或者没有停下来等待我的回复，或者是因为我自己感到疲劳和分心。\n\n我会试图通过改变环境或寻找一个更好的工作状态来缓解这种情况。例如，我可能会尝试转移注意力到其他任务或问题，或是寻找一种更有吸引力的工作环境。",
+  "session_id": "question_18_18",
+  "evaluation_mode": "independent_question_assessment",
+  "evaluators": [
+    "evaluator_1",
+    "evaluator_2",
+    "evaluator_3"
+  ],
+  "scoring_results": {
+    "extraversion": 3,
+    "agreeableness": 3,
+    "conscientiousness": 3,
+    "neuroticism": 3,
+    "openness": 3
+  },
+  "assessment_timestamp": "2025-09-06T18:38:26.248375",
+  "processing_status": "completed"
+}
