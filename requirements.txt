@@ -1,0 +1,95 @@
+# Portable PsyAgent - Python依赖包
+#
+# 核心依赖
+aiohttp>=3.8.0              # 异步HTTP客户端，用于OpenRouter API
+requests>=2.28.0            # 同步HTTP客户端
+asyncio>=3.4.3              # 异步编程支持
+typing-extensions>=4.0.0    # 类型提示支持
+
+# 数据处理
+numpy>=1.21.0               # 数值计算
+pandas>=1.3.0               # 数据分析处理
+jsonschema>=4.0.0           # JSON数据验证
+
+# 心理评估专用
+psychopy>=2023.1.0          # 心理学实验工具（可选）
+scikit-learn>=1.0.0         # 机器学习算法
+scipy>=1.7.0                # 科学计算
+
+# 配置和日志
+pyyaml>=6.0                 # YAML配置文件支持
+python-dotenv>=0.19.0       # 环境变量管理
+colorlog>=6.0.0             # 彩色日志输出
+
+# 报告生成
+jinja2>=3.0.0               # 模板引擎
+markdown>=3.3.0             # Markdown处理
+weasyprint>=56.0            # PDF生成（可选）
+matplotlib>=3.5.0           # 图表生成
+seaborn>=0.11.0             # 统计图表
+
+# 数据存储
+sqlite3                    # SQLite数据库（Python内置）
+sqlalchemy>=1.4.0          # ORM框架（可选）
+
+# 测试和开发
+pytest>=7.0.0              # 单元测试框架
+pytest-asyncio>=0.21.0     # 异步测试支持
+black>=22.0.0               # 代码格式化
+flake8>=5.0.0               # 代码检查
+
+# 工具库
+tqdm>=4.62.0                # 进度条显示
+click>=8.0.0                # 命令行界面
+python-dateutil>=2.8.0     # 日期时间处理
+
+# OpenRouter特定依赖
+openai>=1.0.0               # OpenAI API客户端（兼容性）
+anthropic>=0.7.0            # Anthropic API客户端（兼容性）
+
+# 系统监控
+psutil>=5.8.0               # 系统资源监控
+memory-profiler>=0.60.0     # 内存使用分析
+
+# 网络和并发
+urllib3>=1.26.0             # HTTP库
+certifi>=2022.0.0           # SSL证书
+
+# 加密和安全
+cryptography>=3.4.0        # 加密功能
+hashlib                     # 哈希函数（Python内置）
+
+# 可选依赖 - Ollama客户端
+# 如果需要本地Ollama支持，请取消注释以下行：
+# ollama-python>=0.1.0
+
+# 可选依赖 - Web界面
+# 如果需要Web界面，请取消注释以下行：
+# flask>=2.0.0
+# streamlit>=1.25.0
+# fastapi>=0.100.0
+# uvicorn>=0.20.0
+
+# 可选依赖 - 数据库
+# 如果需要PostgreSQL支持，请取消注释以下行：
+# psycopg2-binary>=2.9.0
+# alembic>=1.8.0
+
+# 可选依赖 - Redis缓存
+# 如果需要Redis缓存，请取消注释以下行：
+# redis>=4.0.0
+# aioredis>=2.0.0
+
+# 可选依赖 - 机器学习增强
+# 如果需要更多ML功能，请取消注释以下行：
+# tensorflow>=2.10.0
+# torch>=1.12.0
+# transformers>=4.20.0
+
+# 开发依赖（仅开发时需要）
+#预发布版本和实验性功能
+# --pre
+
+# GPU支持（如果有NVIDIA GPU）
+# tensorflow-gpu>=2.10.0
+# torch-audio>=0.12.0
