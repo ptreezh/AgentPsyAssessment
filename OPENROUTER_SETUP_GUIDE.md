@@ -281,7 +281,10 @@ print(f"可用OpenRouter模型: {len(models['openrouter'])}")
 
 1. 查看本指南的故障排除部分
 2. 运行 `python test_openrouter_integration.py` 进行诊断
-3. 检查项目的 GitHub Issues
+3. **官方支持**:
+   - 官网：https://agentpsy.com
+   - 作者：ptreezh <3061176@qq.com>
+   - GitHub Issues：https://github.com/ptreezh/AgentPsyAssessment/issues
 
 ---
 

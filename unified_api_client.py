@@ -3,6 +3,11 @@
 """
 统一AI模型API客户端
 支持Ollama本地模型和OpenRouter云模型
+
+作者: ptreezh <3061176@qq.com>
+官网: https://agentpsy.com
+版权: © 2025 Portable PsyAgent. All Rights Reserved.
+许可: MIT License
 """
 
 import os

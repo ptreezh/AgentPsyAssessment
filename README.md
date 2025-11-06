@@ -3,6 +3,12 @@
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![OpenRouter](https://img.shields.io/badge/OpenRouter-integrated-orange.svg)](https://openrouter.ai)
+[![Author](https://img.shields.io/badge/author-ptreezh-blue.svg)](https://agentpsy.com)
+[![Email](https://img.shields.io/badge/email-3061176%40qq.com-green.svg)](mailto:3061176@qq.com)
+
+**作者**: ptreezh <3061176@qq.com>
+**官网**: https://agentpsy.com
+**版权**: © 2025 Portable PsyAgent. All Rights Reserved.
 
 🧠 一个专业的心理评估系统，支持大五人格、MBTI和贝尔宾团队角色的多模型评估分析。
 
@@ -337,9 +343,10 @@ black . && isort .
 
 ## 📞 联系方式
 
-- 项目主页: https://github.com/ptreezh/AgentPsyAssessment
-- 问题反馈: [GitHub Issues](https://github.com/ptreezh/AgentPsyAssessment/issues)
-- 邮箱: [your-email@example.com]
+- **官方网站**: https://agentpsy.com
+- **项目主页**: https://github.com/ptreezh/AgentPsyAssessment
+- **问题反馈**: [GitHub Issues](https://github.com/ptreezh/AgentPsyAssessment/issues)
+- **作者邮箱**: ptreezh <3061176@qq.com>
 
 ---
 

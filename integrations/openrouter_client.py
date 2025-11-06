@@ -3,6 +3,11 @@
 """
 OpenRouter API 客户端
 支持多种AI模型的统一接口
+
+作者: ptreezh <3061176@qq.com>
+官网: https://agentpsy.com
+版权: © 2025 Portable PsyAgent. All Rights Reserved.
+许可: MIT License
 """
 
 import os

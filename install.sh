@@ -350,6 +350,8 @@ show_completion_info() {
     echo "- 项目README: README.md"
     echo
     echo "🆘 获取帮助："
+    echo "- 官网: https://agentpsy.com"
+    echo "- 作者: ptreezh <3061176@qq.com>"
     echo "- GitHub Issues: https://github.com/ptreezh/AgentPsyAssessment/issues"
     echo "- 测试集成: python3 test_openrouter_integration.py"
     echo
