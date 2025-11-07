@@ -1,0 +1,811 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESFJ人格类型国情知识评估报告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        * {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .score-circle {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: conic-gradient(#4ade80 0deg 324deg, #e5e7eb 324deg 360deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .score-circle::before {
+            content: '';
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            background: white;
+            border-radius: 50%;
+        }
+        
+        .score-text {
+            position: relative;
+            z-index: 1;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1f2937;
+        }
+        
+        .progress-bar {
+            background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+            height: 8px;
+            border-radius: 4px;
+            transition: width 1s ease-in-out;
+        }
+        
+        .trait-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 2px;
+        }
+        
+        .extrovert { background: #dbeafe; color: #1e40af; }
+        .sensing { background: #dcfce7; color: #166534; }
+        .feeling { background: #fce7f3; color: #9f1239; }
+        .judging { background: #fed7aa; color: #9a3412; }
+        
+        .analysis-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            border-left: 4px solid #3b82f6;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .radar-chart {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <div class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">ESFJ人格类型评估报告</h1>
+                <p class="text-xl mb-2">国情知识测评综合分析</p>
+                <p class="text-lg opacity-90">评估时间：2025年11月7日</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Overview Section -->
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-8 card-hover">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">评测概览</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="score-circle mx-auto mb-4">
+                        <span class="score-text">90%</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700">总体评分</h3>
+                    <p class="text-gray-600 mt-2">优秀水平</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 text-white rounded-lg p-6">
+                        <div class="text-3xl font-bold mb-2">32/32</div>
+                        <div class="text-lg">题目完成</div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-green-500 to-teal-600 text-white rounded-lg p-6">
+                        <div class="text-3xl font-bold mb-2">ESFJ</div>
+                        <div class="text-lg">人格类型</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="bg-white rounded-xl shadow-lg mb-8">
+            <div class="flex flex-wrap border-b">
+                <button onclick="showTab('personality')" class="tab-btn px-6 py-3 font-semibold text-blue-600 border-b-2 border-blue-600" data-tab="personality">
+                    人格特征分析
+                </button>
+                <button onclick="showTab('scores')" class="tab-btn px-6 py-3 font-semibold text-gray-600 hover:text-blue-600" data-tab="scores">
+                    详细评分
+                </button>
+                <button onclick="showTab('qa')" class="tab-btn px-6 py-3 font-semibold text-gray-600 hover:text-blue-600" data-tab="qa">
+                    问答分析
+                </button>
+                <button onclick="showTab('strengths')" class="tab-btn px-6 py-3 font-semibold text-gray-600 hover:text-blue-600" data-tab="strengths">
+                    优势分析
+                </button>
+                <button onclick="showTab('suggestions')" class="tab-btn px-6 py-3 font-semibold text-gray-600 hover:text-blue-600" data-tab="suggestions">
+                    改进建议
+                </button>
+                <button onclick="showTab('conclusion')" class="tab-btn px-6 py-3 font-semibold text-gray-600 hover:text-blue-600" data-tab="conclusion">
+                    结论总结
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="p-8">
+                <!-- Personality Analysis Tab -->
+                <div id="personality" class="tab-content active">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">ESFJ人格特征分析</h3>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold text-gray-700 mb-4">MBTI维度表现</h4>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="text-center p-4 bg-blue-50 rounded-lg">
+                                <div class="trait-badge extrovert mb-2">E 外向</div>
+                                <p class="text-sm text-gray-600">积极热情，重视社会和谐</p>
+                            </div>
+                            <div class="text-center p-4 bg-green-50 rounded-lg">
+                                <div class="trait-badge sensing mb-2">S 感觉</div>
+                                <p class="text-sm text-gray-600">注重现实，关注实用价值</p>
+                            </div>
+                            <div class="text-center p-4 bg-pink-50 rounded-lg">
+                                <div class="trait-badge feeling mb-2">F 情感</div>
+                                <p class="text-sm text-gray-600">关怀他人，重视道德价值</p>
+                            </div>
+                            <div class="text-center p-4 bg-orange-50 rounded-lg">
+                                <div class="trait-badge judging mb-2">J 判断</div>
+                                <p class="text-sm text-gray-600">重视秩序，维护社会稳定</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-card">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-3">外向 (E) 特征体现</h4>
+                        <p class="text-gray-600 mb-2">在回答中展现出积极热情的态度，重视人际交往和社会和谐：</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>频繁使用"我们"体现集体认同感</li>
+                            <li>强调团结合作的重要性</li>
+                            <li>展现强烈的社会参与意识</li>
+                        </ul>
+                    </div>
+
+                    <div class="analysis-card">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-3">感觉 (S) 特征体现</h4>
+                        <p class="text-gray-600 mb-2">基于具体现实和传统价值观回答问题：</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>关注具体的历史事实和地理数据</li>
+                            <li>注重政策对人民生活的实际影响</li>
+                            <li>重视传统文化的传承价值</li>
+                        </ul>
+                    </div>
+
+                    <div class="analysis-card">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-3">情感 (F) 特征体现</h4>
+                        <p class="text-gray-600 mb-2">回答中体现强烈的人文关怀：</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>融入自豪感、归属感等情感色彩</li>
+                            <li>强调为人民服务的价值理念</li>
+                            <li>关注民族团结和社会责任</li>
+                        </ul>
+                    </div>
+
+                    <div class="analysis-card">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-3">判断 (J) 特征体现</h4>
+                        <p class="text-gray-600 mb-2">重视秩序和传统的思维方式：</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>回答结构清晰，逻辑性强</li>
+                            <li>强调社会稳定和集体利益</li>
+                            <li>重视制度规范和治理理念</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Detailed Scores Tab -->
+                <div id="scores" class="tab-content">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">详细评分分析</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-500 shadow">
+                            <h4 class="text-lg font-semibold text-gray-700 mb-3">历史知识</h4>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600">得分</span>
+                                <span class="text-2xl font-bold text-blue-600">92%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="progress-bar" style="width: 92%"></div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-3">对历史事件掌握准确，情感色彩丰富</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-6 border-l-4 border-green-500 shadow">
+                            <h4 class="text-lg font-semibold text-gray-7 00 mb-3">地理知识</h4>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600">得分</span>
+                                <span class="text-2xl font-bold text-green-600">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="progress-bar" style="width: 88%"></div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-3">地理概念清晰，体现人文关怀</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-6 border-l-4 border-purple-500 shadow">
+                            <h4 class="text-lg font-semibold text-gray-700 mb-3">政治知识</h4>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600">得分</span>
+                                <span class="text-2xl font-bold text-purple-600">94%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="progress-bar" style="width: 94%"></div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-3">政治理解深刻，强调民主理念</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-6 border-l-4 border-pink-500 shadow">
+                            <h4 class="text-lg font-semibold text-gray-700 mb-3">文化知识</h4>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600">得分</span>
+                                <span class="text-2xl font-bold text-pink-600">91%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="progress-bar" style="width: 91%"></div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-3">文化素养深厚，重视传统传承</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-6 border-l-4 border-yellow-500 shadow md:col-span-2">
+                            <h4 class="text-lg font-semibold text-gray-700 mb-3">综合分析</h4>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600">得分</span>
+                                <span class="text-2xl font-bold text-yellow-600">89%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="progress-bar" style="width: 89%"></div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-3">综合分析能力强，体现和谐发展理念</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-4">能力雷达图</h4>
+                        <div class="radar-chart">
+                            <canvas id="radarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q&A Analysis Tab -->
+                <div id="qa" class="tab-content">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">问答分析</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="analysis-card">
+                            <h4 class="text-lg font-semibold text-gray-700 mb-3">典型ESFJ思维特点体现</h4>
+                            <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                                <p class="text-gray-700 italic">"中国的四大发明是造纸术、指南针、火药和印刷术。这些伟大的发明创造体现了我们祖先的智慧，对世界文明发展做出了重要贡献，让我们感到非常自豪。"</p>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-green-50 rounded-lg p-3">
+                                    <h5 class="font-semibold text-green-700 mb-1">ESFJ特征体现：</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• 集体自豪感强烈</li>
+                                        <li>• 重视传统文化传承</li>
+                                        <li>• 强调对人类的贡献</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-yellow-50 rounded-lg p-3">
+                                    <h5 class="font-semibold text-yellow-700 mb-1">回答质量评价：</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• 内容准确完整</li>
+                                        <li>• 情感表达丰富</li>
+                                        <li>• 体现文化认同</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="analysis-card">
+                            <h4 class="text-lg font-semibold text-gray-700 mb-3">社会责任感体现</h4>
+                            <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                                <p class="text-gray-700 italic">"改革开放政策让我们的国家走向繁荣富强，让人民生活越来越好，这是我们每个人都受益的伟大转折点。"</p>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-green-50 rounded-lg p-3">
+                                    <h5 class="font-semibold text-green-700 mb-1">ESFJ特征体现：</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• 关注民生改善</li>
+                                        <li>• 重视社会和谐</li>
+                                        <li>• 强调集体利益</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-yellow-50 rounded-lg p-3">
+                                    <h5 class="font-semibold text-yellow-700 mb-1">回答质量评价：</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• 政策理解准确</li>
+                                        <li>• 关注实际影响</li>
+                                        <li>• 体现人文关怀</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="analysis-card">
+                            <h4 class="text-lg font-semibold text-gray-700 mb-3">和谐理念体现</h4>
+                            <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                                <p class="text-gray-700 italic">"中国传统文化中的'和'文化理念强调和谐、和平、和睦。这一理念贯穿于我们的社会生活和人际关系中，教会我们要尊重差异、包容多样。"</p>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-green-50 rounded-lg p-3">
+                                    <h5 class="font-semibold text-green-700 mb-1">ESFJ特征体现：</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• 追求和谐发展</li>
+                                        <li>• 重视包容理解</li>
+                                        <li>• 避免冲突对立</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-yellow-50 rounded-lg p-3">
+                                    <h5 class="font-semibold text-yellow-700 mb-1">回答质量评价：</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• 文化理解深刻</li>
+                                        <li>• 价值理念清晰</li>
+                                        <li>• 体现现实意义</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strengths Analysis Tab -->
+                <div id="strengths" class="tab-content">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">ESFJ优势分析</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
+                            <div class="text-3xl mb-4">🤝</div>
+                            <h4 class="text-lg font-semibold text-blue-800 mb-3">强烈的社会责任感</h4>
+                            <p class="text-gray-700 mb-3">在回答中始终强调集体利益和社会责任，体现了ESFJ特有的服务精神和奉献意识。</p>
+                            <div class="bg-white rounded-lg p-3">
+                                <p class="text-sm text-gray-600">具体表现：</p>
+                                <ul class="text-sm text-gray-600 mt-1 space-y-1">
+                                    <li>• 强调为人民服务的理念</li>
+                                    <li>• 关注政策对民生的积极影响</li>
+                                    <li>• 重视国家在国际社会中的责任</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6">
+                            <div class="text-3xl mb-4">❤️</div>
+                            <h4 class="text-lg font-semibold text-green-800 mb-3">丰富的情感表达</h4>
+                            <p class="text-gray-700 mb-3">回答中融入丰富的情感色彩，能够体现自豪感、归属感等积极情绪，增强感染力。</p>
+                            <div class="bg-white rounded-lg p-3">
+                                <p class="text-sm text-gray-600">具体表现：</p>
+                                <ul class="text-sm text-gray-600 mt-1 space-y-1">
+                                    <li>• 对传统文化感到自豪</li>
+                                    <li>• 对国家发展充满信心</li>
+                                    <li>• 对民族团结充满期待</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6">
+                            <div class="text-3xl mb-4">🏛️</div>
+                            <h4 class="text-lg font-semibold text-purple-800 mb-3">重视传统与秩序</h4>
+                            <p class="text-gray-700 mb-3">尊重历史传统，重视社会秩序和稳定，体现了ESFJ对既有制度规范的维护倾向。</p>
+                            <div class="bg-white rounded-lg p-3">
+                                <p class="text-sm text-gray-600">具体表现：</p>
+                                <ul class="text-sm text-gray-600 mt-1 space-y-1">
+                                    <li>• 尊重历史传承和价值延续</li>
+                                    <li>• 强调制度规范的重要性</li>
+                                    <li>• 维护社会和谐稳定</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6">
+                            <div class="text-3xl mb-4">🌍</div>
+                            <h4 class="text-lg font-semibold text-orange-800 mb-3">关注实际影响</h4>
+                            <p class="text-gray-700 mb-3">注重政策和制度对人民生活的实际影响，体现了ESFJ实用主义和人文关怀相结合的特点。</p>
+                            <div class="bg-white rounded-lg p-3">
+                                <p class="text-sm text-gray-600">具体表现：</p>
+                                <ul class="text-sm text-gray-600 mt-1 space-y-1">
+                                    <li>• 关注改革开放带来的民生改善</li>
+                                    <li>• 重视政策对普通人的意义</li>
+                                    <li>• 强调发展的实际效益</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg p-6">
+                        <h4 class="text-xl font-bold mb-3">ESFJ综合优势总结</h4>
+                        <p class="mb-4">作为ESFJ人格类型，您在国情知识回答中展现了以下独特优势：</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                                <h5 class="font-semibold mb-2">集体导向思维</h5>
+                                <p class="text-sm">始终从集体利益出发思考问题，体现强烈的社会责任意识</p>
+                            </div>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                                <h5 class="font-semibold mb-2">情感共鸣能力</h5>
+                                <p class="text-sm">能够与问题内容产生情感共鸣，表达富有感染力</p>
+                            </div>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                                <h5 class="font-semibold mb-2">和谐价值追求</h5>
+                                <p class="text-sm">追求和谐发展，强调团结合作，避免冲突对立</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suggestions Tab -->
+                <div id="suggestions" class="tab-content">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">发展建议</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-yellow-800 mb-3">📊 知识结构优化建议</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <h5 class="font-medium text-gray-700 mb-2">当前优势</h5>
+                                    <ul class="text-gray-600 space-y-1">
+                                        <li>✅ 政治制度理解深入</li>
+                                        <li>✅ 传统文化素养深厚</li>
+                                        <li>✅ 情感表达丰富自然</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-gray-700 mb-2">提升方向</h5>
+                                    <ul class="text-gray-600 space-y-1">
+                                        <li>🎯 增强经济数据掌握</li>
+                                        <li>🎯 拓展国际视野知识</li>
+                                        <li>🎯 深化科技发展趋势理解</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-400 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-blue-800 mb-3">🧠 思维能力发展建议</h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <h5 class="font-medium text-gray-700 mb-2">批判性思维培养</h5>
+                                    <p class="text-gray-600">作为ESFJ，您重视和谐与情感表达，建议在保持这些优势的同时，适度发展批判性思维能力：</p>
+                                    <ul class="text-gray-600 mt-2 space-y-1 ml-4">
+                                        <li>• 学习多角度分析问题</li>
+                                        <li>• 培养独立思考能力</li>
+                                        <li>• 平衡情感与理性分析</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-gray-700 mb-2">创新思维拓展</h5>
+                                    <p class="text-gray-600">建议在尊重传统的基础上，培养创新意识和前瞻性思维：</p>
+                                    <ul class="text-gray-600 mt-2 space-y-1 ml-4">
+                                        <li>• 关注新兴领域发展趋势</li>
+                                        <li>• 学习跨界知识整合</li>
+                                        <li>• 培养未来导向思维</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-400 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-green-800 mb-3">🌱 个人成长建议</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="bg-white rounded-lg p-4">
+                                    <h5 class="font-medium text-green-700 mb-2">短期目标 (1-3个月)</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• 每周阅读深度分析文章</li>
+                                        <li>• 参与多元化讨论</li>
+                                        <li>• 练习多角度思考问题</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-white rounded-lg p-4">
+                                    <h5 class="font-medium text-green-700 mb-2">中期目标 (3-6个月)</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• 系统学习专业知识</li>
+                                        <li>• 培养独立研究能力</li>
+                                        <li>• 拓展国际视野</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-white rounded-lg p-4">
+                                    <h5 class="font-medium text-green-700 mb-2">长期目标 (6-12个月)</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• 形成独特分析视角</li>
+                                        <li>• 提升创新思维能力</li>
+                                        <li>• 成为领域专家</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-purple-50 border-l-4 border-purple-400 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-purple-800 mb-3">💡 ESFJ特质优化建议</h4>
+                            <div class="space-y-4">
+                                <div class="bg-white rounded-lg p-4">
+                                    <h5 class="font-medium text-purple-700 mb-2">发挥优势，弥补短板</h5>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                                        <div>
+                                            <h6 class="font-medium text-gray-700">继续保持：</h6>
+                                            <ul class="text-sm text-gray-600 mt-1 space-y-1">
+                                                <li>✓ 强烈的社会责任感</li>
+                                                <li>✓ 丰富的人文关怀</li>
+                                                <li>✓ 优秀的情感表达能力</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h6 class="font-medium text-gray-700">适度发展：</h6>
+                                            <ul class="text-sm text-gray-600 mt-1 space-y-1">
+                                                <li>→ 理性分析能力</li>
+                                                <li>→ 批判性思维</li>
+                                                <li>→ 创新意识</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conclusion Tab -->
+                <div id="conclusion" class="tab-content">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">结论总结</h3>
+                    
+                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-8 mb-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">综合评估结果</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h5 class="font-semibold text-gray-700 mb-3">ESFJ人格特征显著体现</h5>
+                                <p class="text-gray-600 mb-3">通过本次国情知识测评，您的ESFJ人格特征得到了充分体现：</p>
+                                <ul class="text-gray-600 space-y-2">
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>社会责任感强烈：</strong>始终从集体利益出发，体现服务他人、奉献社会的精神</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>情感表达丰富：</strong>回答中融入丰富情感，体现对国家的认同感和自豪感</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>重视传统传承：</strong>尊重历史文化，强调传统价值的现实意义</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>追求和谐发展：</strong>强调团结合作，避免冲突对立，体现包容理念</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-700 mb-3">综合能力评价</h5>
+                                <div class="bg-white rounded-lg p-4">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-gray-600">知识掌握度</span>
+                                        <span class="text-2xl font-bold text-green-600">90%</span>
+                                    </div>
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-gray-600">理解深度</span>
+                                        <span class="text-2xl font-bold text-blue-600">88%</span>
+                                    </div>
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-gray-600">表达能力</span>
+                                        <span class="text-2xl font-bold text-purple-600">92%</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-600">思维品质</span>
+                                        <span class="text-2xl font-bold text-orange-600">87%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg p-6 shadow-lg mb-6">
+                        <h4 class="text-lg font-bold text-gray-800 mb-4">核心优势总结</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div class="text-center p-4 bg-blue-50 rounded-lg">
+                                <div class="text-3xl mb-2">🏛️</div>
+                                <h5 class="font-semibold text-blue-700">政治素养</h5>
+                                <p class="text-sm text-gray-600 mt-1">政治制度理解深入，民主意识强烈</p>
+                            </div>
+                            <div class="text-center p-4 bg-green-50 rounded-lg">
+                                <div class="text-3xl mb-2">🎭</div>
+                                <h5 class="font-semibold text-green-700">文化底蕴</h5>
+                                <p class="text-sm text-gray-600 mt-1">传统文化素养深厚，价值认同明确</p>
+                            </div>
+                            <div class="text-center p-4 bg-purple-50 rounded-lg">
+                                <div class="text-3xl mb-2">💝</div>
+                                <h5 class="font-semibold text-purple-700">人文关怀</h5>
+                                <p class="text-sm text-gray-600 mt-1">社会责任感强烈，民生关注度高</p>
+                            </div>
+                            <div class="text-center p-4 bg-orange-50 rounded-lg">
+                                <div class="text-3xl mb-2">🤝</div>
+                                <h5 class="font-semibold text-orange-700">和谐理念</h5>
+                                <p class="text-sm text-gray-600 mt-1">追求团结合作，重视包容理解</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 mb-6">
+                        <h4 class="text-lg font-bold text-gray-800 mb-4">发展建议与展望</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold text-gray-700 mb-2">保持并发扬的优势特质</h5>
+                                <p class="text-gray-600">继续发挥您作为ESFJ的独特优势：强烈的社会责任感、丰富的人文关怀、优秀的情感表达能力，以及对和谐发展的追求。这些特质使您在团队合作和社会服务中具有天然优势。</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-700 mb-2">重点发展领域</h5>
+                                <p class="text-gray-600">建议在保持现有优势的基础上，重点发展以下能力：</p>
+                                <ul class="text-gray-600 mt-2 space-y-1 ml-4">
+                                    <li>• 培养批判性思维和独立分析能力</li>
+                                    <li>• 拓展国际化视野和前沿知识</li>
+                                    <li>• 提升创新思维和前瞻性判断</li>
+                                    <li>• 加强数据分析和逻辑推理能力</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg p-6 text-center">
+                        <h4 class="text-xl font-bold mb-3">总体评价</h4>
+                        <p class="text-lg mb-4">您作为ESFJ人格类型，在本次国情知识测评中表现优秀，充分体现了ESFJ的核心优势特质。您的回答不仅展示了扎实的知识基础，更体现了强烈的社会责任感和丰富的人文关怀。</p>
+                        <div class="bg-white bg-opacity-20 rounded-lg p-4 mt-4">
+                            <p class="text-lg font-semibold">综合评分：90分 (优秀)</p>
+                            <p class="mt-2">继续保持并发扬您的优势，同时在建议的方向上不断提升，您将成为更加全面发展的优秀人才。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">© 2025 AI人格实验室 - 专业心理评估平台</p>
+            <a href="https://cn.agentpsy.com" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">
+                访问AI人格实验室官网了解更多
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        function showTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active state from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(btn => {
+                btn.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+                btn.classList.add('text-gray-600');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active state to clicked tab button
+            const activeBtn = document.querySelector(`[data-tab="${tabName}"]`);
+            activeBtn.classList.remove('text-gray-600');
+            activeBtn.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+        }
+
+        // Initialize radar chart
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('radarChart');
+            if (ctx) {
+                new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['历史知识', '地理知识', '政治知识', '文化知识', '综合分析'],
+                        datasets: [{
+                            label: '能力得分',
+                            data: [92, 88, 94, 91, 89],
+                            backgroundColor: 'rgba(99, 102, 241, 0.2)',
+                            borderColor: 'rgba(99, 102, 241, 1)',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'rgba(99, 102, 241, 1)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgba(99, 102, 241, 1)'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        scales: {
+                            r: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: {
+                                    stepSize: 20
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+        });
+
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animate progress bars on page load
+        window.addEventListener('load', function() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
+```

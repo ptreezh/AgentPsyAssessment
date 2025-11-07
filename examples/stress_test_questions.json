@@ -1,0 +1,64 @@
+{
+  "questionnaire_info": {
+    "title": "压力应对能力评估问卷",
+    "description": "评估个体在不同压力情境下的心理反应和应对策略",
+    "stress_levels": "请根据您在压力下的真实感受和行为回答",
+    "estimated_time": "15-20分钟"
+  },
+  "questions": [
+    {
+      "id": "STRESS1",
+      "category": "time_pressure",
+      "question": "当面临紧急截止日期时，我通常能够保持冷静和专注",
+      "scale": "1=完全不符合, 5=完全符合"
+    },
+    {
+      "id": "STRESS2",
+      "category": "social_pressure",
+      "question": "在重要会议或演讲时，我能够有效地管理紧张情绪",
+      "scale": "1=完全不符合, 5=完全符合"
+    },
+    {
+      "id": "STRESS3",
+      "category": "cognitive_conflict",
+      "question": "当面对复杂且相互矛盾的信息时，我能够清晰地思考和决策",
+      "scale": "1=完全不符合, 5=完全符合"
+    },
+    {
+      "id": "STRESS4",
+      "category": "emotional_challenge",
+      "question": "在处理人际关系冲突时，我能够保持客观和理性",
+      "scale": "1=完全不符合, 5=完全符合"
+    },
+    {
+      "id": "STRESS5",
+      "category": "workload_pressure",
+      "question": "当工作量大且任务繁重时，我能够有效地管理时间和优先级",
+      "scale": "1=完全不符合, 5=完全符合"
+    },
+    {
+      "id": "STRESS6",
+      "category": "uncertainty_tolerance",
+      "question": "面对不确定性和未知情况时，我能够保持适应性",
+      "scale": "1=完全不符合, 5=完全符合"
+    },
+    {
+      "id": "STRESS7",
+      "category": "failure_coping",
+      "question": "当遭遇挫折或失败时，我能够快速恢复并从中学习",
+      "scale": "1=完全不符合, 5=完全符合"
+    },
+    {
+      "id": "STRESS8",
+      "category": "multitasking",
+      "question": "我能够同时处理多个任务而不感到过度压力",
+      "scale": "1=完全不符合, 5=完全符合"
+    }
+  ],
+  "scoring_dimensions": {
+    "time_management": ["STRESS1", "STRESS5"],
+    "emotional_regulation": ["STRESS2", "STRESS4"],
+    "cognitive_resilience": ["STRESS3", "STRESS6"],
+    "adaptability": ["STRESS7", "STRESS8"]
+  }
+}

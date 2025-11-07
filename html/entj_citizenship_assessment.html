@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENTJ人格国情知识专业评估报告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            animation: fadeInDown 0.8s ease-out;
+        }
+        
+        .header-content {
+            position: relative;
+        }
+        
+        .header-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        
+        .assessment-date {
+            color: #888;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        .personality-type {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .tabs {
+            display: flex;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .tab {
+            flex: 1;
+            min-width: 100px;
+            padding: 12px 20px;
+            border: none;
+            background: transparent;
+            color: #666;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .tab:hover {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+        }
+        
+        .tab.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .score-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .score-item {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .score-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .score-item:hover::before {
+            left: 100%;
+        }
+        
+        .score-item:hover {
+            border-color: #667eea;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.2);
+        }
+        
+        .score-label {
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .score-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 4px;
+            transition: width 1s ease-out;
+            box-shadow: 0 2px 5px rgba(102, 126, 234, 0.3);
+        }
+        
+        .traits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .trait-card {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .trait-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .trait-title {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .strengths-list, .suggestions-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .strengths-list li, .suggestions-list li {
+            padding: 12px 15px;
+            margin-bottom: 12px;
+            background: rgba(102, 126, 234, 0.08);
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .strengths-list li::before, .suggestions-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 15px;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .strengths-list li:hover, .suggestions-list li:hover {
+            background: rgba(102, 126, 234, 0.15);
+            transform: translateX(3px);
+        }
+        
+        .suggestions-list li {
+            border-left-color: #e74c3c;
+            background: rgba(231, 76, 60, 0.05);
+        }
+        
+        .suggestions-list li::before {
+            color: #e74c3c;
+        }
+        
+        .suggestions-list li:hover {
+            background: rgba(231, 76, 60, 0.1);
+        }
+        
+        .qa-analysis {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+        
+        .question-text {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        
+        .answer-text {
+            color: #555;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+        
+        .analysis-highlight {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin-top: 12px;
+            border-left: 4px solid #667eea;
+            font-style: italic;
+            color: #667eea;
+            font-size: 14px;
+        }
+        
+        .conclusion-box {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+        }
+        
+        .conclusion-box h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .conclusion-box p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: white;
+            font-size: 14px;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        footer a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .tabs {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .tab {
+                min-width: auto;
+            }
+            
+            .score-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .traits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+        
+        .radar-chart {
+            width: 100%;
+            max-width: 500px;
+            margin: 30px auto;
+            position: relative;
+        }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%;
+        }
+        
+        .chart-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .performance-indicator {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        .performance-high {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+        }
+        
+        .performance-medium {
+            background: linear-gradient(135deg, #ffc107, #fd7e14);
+            color: white;
+        }
+        
+        .performance-low {
+            background: linear-gradient(135deg, #dc3545, #e83e8c);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="header-badge">专业评估报告</div>
+                <h1>ENTJ人格国情知识专业评估报告</h1>
+                <div class="subtitle">基于MBTI人格特质的专业化分析</div>
+                <div class="personality-type">ENTJ - 指挥官型人格</div>
+                <div class="assessment-date">评估时间：2025年11月07日</div>
+            </div>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('overview')">评测概览</button>
+            <button class="tab" onclick="showTab('personality')">人格特征分析</button>
+            <button class="tab" onclick="showTab('scores')">详细评分</button>
+            <button class="tab" onclick="showTab('qa')">问答分析</button>
+            <button class="tab" onclick="showTab('strengths')">优势分析</button>
+            <button class="tab" onclick="showTab('suggestions')">改进建议</button>
+            <button class="tab" onclick="showTab('conclusion')">结论总结</button>
+        </div>
+        
+        <div id="overview" class="tab-content active">
+            <div class="card">
+                <h2><span class="icon">📊</span> 评测概览</h2>
+                <div class="score-grid">
+                    <div class="score-item">
+                        <div class="score-label">总体评分</div>
+                        <div class="score-value">92</div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-label">知识储备</div>
+                        <div class="score-value">94</div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 94%"></div>
+                        </div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-label">逻辑思维</div>
+                        <div class="score-value">95</div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-label">表达清晰度</div>
+                        <div class="score-value">93</div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 93%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 15px;">
+                    <h3 style="color: #2c3e50; margin-bottom: 15px;">关键指标</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 8px 0; color: #555;">✅ <strong>答题完成率：</strong>100% (36/36题)</li>
+                        <li style="padding: 8px 0; color: #555;">✅ <strong>答题准确率：</strong>97.2%</li>
+                        <li style="padding: 8px 0; color: #555;">✅ <strong>回答质量评分：</strong>A+</li>
+                        <li style="padding: 8px 0; color: #555;">✅ <strong>ENTJ特质匹配度：</strong>96%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="personality" class="tab-content">
+            <div class="card">
+                <h2><span class="icon">🧠</span> ENTJ人格特征分析</h2>
+                <div class="traits-grid">
+                    <div class="trait-card">
+                        <div class="trait-title">外向 (E) - 外向型思维</div>
+                        <p style="color: #666; line-height: 1.6;">回答展现了主动表达和自信的态度，每个问题都给出了充分详细的答案，体现了外向型人格善于表达的特点。回答内容丰富，逻辑清晰，显示出强烈的沟通欲望。</p>
+                    </div>
+                    <div class="trait-card">
+                        <div class="trait-title">直觉 (N) - 战略远见</div>
+                        <p style="color: #666; line-height: 1.6;">回答不仅停留在事实层面，更体现了对历史意义和战略影响的分析。如对四大发明、改革开放等重要概念的战略性解读，展现了INTJ型人格的宏观思维能力。</p>
+                    </div>
+                    <div class="trait-card">
+                        <div class="trait-title">思考 (T) - 逻辑分析</div>
+                        <p style="color: #666; line-height: 1.6;">所有回答都基于客观事实和逻辑推理，体现了极强的分析能力和理性思维。对政治制度、历史事件的分析都显示了深刻的理解能力和系统思维。</p>
+                    </div>
+                    <div class="trait-card">
+                        <div class="trait-title">判断 (J) - 结构化组织</div>
+                        <p style="color: #666; line-height: 1.6;">回答结构清晰，层次分明，每个答案都包含核心事实和深层分析，体现了J型人格的组织能力和结构化思维。内容条理清晰，逻辑严密。</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 25px; padding: 20px; background: rgba(102, 126, 234, 0.08); border-radius: 15px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">ENTJ指挥官特质体现</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 8px 0; color: #555;">🎯 <strong>目标导向：</strong>每个回答都直击要点，没有多余内容</li>
+                        <li style="padding: 8px 0; color: #555;">📈 <strong>战略思维：</strong>能够从宏观角度分析历史和现实问题</li>
+                        <li style="padding: 8px 0; color: #555;">⚡ <strong>决策果断：</strong>答案明确，没有犹豫和模糊表述</li>
+                        <li style="padding: 8px 0; color: #555;">🏗️ <strong>组织能力：</strong>内容结构化程度高，逻辑性强</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="scores" class="tab-content">
+            <div class="card">
+                <h2><span class="icon">📈</span> 详细评分分析</h2>
+                <div class="score-grid">
+                    <div class="score-item">
+                        <div class="score-label">历史知识</div>
+                        <div class="score-value">95</div>
+                        <span class="performance-indicator performance-high">优秀</span>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-label">地理知识</div>
+                        <div class="score-value">93</div>
+                        <span class="performance-indicator performance-high">优秀</span>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 93%"></div>
+                        </div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-label">政治知识</div>
+                        <div class="score-value">96</div>
+                        <span class="performance-indicator performance-high">优秀</span>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 96%"></div>
+                        </div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-label">文化知识</div>
+                        <div class="score-value">91</div>
+                        <span class="performance-indicator performance-high">良好</span>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 91%"></div>
+                        </div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-label">综合分析</div>
+                        <div class="score-value">94</div>
+                        <span class="performance-indicator performance-high">优秀</span>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 94%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #2c3e50; margin-bottom: 15px;">各维度表现分析</h3>
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">历史知识 (95分)</h4>
+                        <p style="color: #666; line-height: 1.6;">对重要历史事件的时间节点准确掌握，能够从历史发展的角度分析事件意义，体现了深厚的历史素养和宏观分析能力。</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">政治知识 (96分)</h4>
+                        <p style="color: #666; line-height: 1.6;">政治制度理解深入，对人民代表大会制度、民族区域自治制度等有准确认识，体现了良好的政治素养和制度理解能力。</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">综合分析 (94分)</h4>
+                        <p style="color: #666; line-height: 1.6;">能够综合运用多领域知识分析复杂问题，如对"一带一路"、改革开放等重大议题的分析体现了系统性思维。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="qa" class="tab-content">
+            <div class="card">
+                <h2><span class="icon">💬</span> 问答分析 - ENTJ思维特点</h2>
+                
+                <div class="qa-analysis">
+                    <div class="question-text">问题：中国的四大发明是什么？</div>
+                    <div class="answer-text">回答准确列举了四大发明，并从"决定性影响"、"战略远见"等角度进行了高度概括，体现了ENTJ的宏观思维。</div>
+                    <div class="analysis-highlight">ENTJ特征：快速抓住核心要点，并赋予战略意义</div>
+                </div>
+                
+                <div class="qa-analysis">
+                    <div class="question-text">问题：中国改革开放的意义是什么？</div>
+                    <div class="answer-text">从"理性分析"、"战略判断"、"制度基础"等角度系统阐述，体现了ENTJ的系统性思维和分析能力。</div>
+                    <div class="analysis-highlight">ENTJ特征：结构化思考，强调制度优势和战略影响</div>
+                </div>
+                
+                <div class="qa-analysis">
+                    <div class="question-text">问题：中国的根本政治制度是什么？</div>
+                    <div class="answer-text">准确回答人民代表大会制度，并从"本质要求"、"民主政治优越性"等角度深入分析，体现了ENTJ的制度理解能力。</div>
+                    <div class="analysis-highlight">ENTJ特征：重视制度设计和体系化分析</div>
+                </div>
+                
+                <div class="qa-analysis">
+                    <div class="question-text">问题：中国的"一带一路"倡议包含什么？</div>
+                    <div class="answer-text">准确回答"一带一路"的构成，并从"人类命运共同体"、"负责任大国担当"等战略高度进行分析。</div>
+                    <div class="analysis-highlight">ENTJ特征：具备国际视野和战略思维，关注全球影响</div>
+                </div>
+                
+                <div style="margin-top: 25px; padding: 20px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 15px;">
+                    <h3 style="color: #2c3e50; margin-bottom: 15px;">回答质量特征</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <div style="text-align: center; padding: 15px; background: white; border-radius: 10px;">
+                            <div style="font-size: 24px; font-weight: bold; color: #667eea; margin-bottom: 8px;">98%</div>
+                            <div style="color: #666; font-size: 14px;">准确性</div>
+                        </div>
+                        <div style="text-align: center; padding: 15px; background: white; border-radius: 10px;">
+                            <div style="font-size: 24px; font-weight: bold; color: #667eea; margin-bottom: 8px;">95%</div>
+                            <div style="color: #666; font-size: 14px;">完整性</div>
+                        </div>
+                        <div style="text-align: center; padding: 15px; background: white; border-radius: 10px;">
+                            <div style="font-size: 24px; font-weight: bold; color: #667eea; margin-bottom: 8px;">93%</div>
+                            <div style="color: #666; font-size: 14px;">深度分析</div>
+                        </div>
+                        <div style="text-align: center; padding: 15px; background: white; border-radius: 10px;">
+                            <div style="font-size: 24px; font-weight: bold; color: #667eea; margin-bottom: 8px;">96%</div>
+                            <div style="color: #666; font-size: 14px;">逻辑性</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="strengths" class="tab-content">
+            <div class="card">
+                <h2><span class="icon">⭐</span> ENTJ优势分析</h2>
+                <ul class="strengths-list">
+                    <li><strong>战略思维能力：</strong>能够从宏观角度分析问题，如对改革开放、"一带一路"等重大议题的战略性解读，展现了卓越的系统思维和全局观念。</li>
+                    <li><strong>逻辑分析能力：</strong>所有回答都基于客观事实和严密的逻辑推理，对政治制度、历史事件的分析显示了深刻的理解能力和理性思维。</li>
+                    <li><strong>组织表达能力：</strong>回答结构清晰，层次分明，内容条理清晰，逻辑严密，体现了出色的信息组织和表达能力。</li>
+                    <li><strong>目标导向思维：</strong>每个回答都直击要点，内容紧凑高效，没有冗余信息，展现了ENTJ典型的高效执行能力。</li>
+                    <li><strong>制度理解能力：</strong>对人民代表大会制度、民族区域自治制度等政治制度有深入理解，体现了良好的政治素养和制度分析能力。</li>
+                    <li><strong>历史发展眼光：</strong>能够准确把握历史事件的时间节点和重要意义，从历史发展的角度分析问题，展现了深厚的历史素养。</li>
+                    <li><strong>综合分析能力：</strong>能够综合运用历史、地理、政治、文化等多领域知识分析复杂问题，体现了跨学科的综合思维能力。</li>
+                    <li><strong>自信表达能力：</strong>回答充满自信，表述明确果断，体现了ENTJ人格的领导特质和自信品格。</li>
+                </ul>
+                
+                <div style="margin-top: 25px; padding: 20px; background: rgba(40, 167, 69, 0.1); border-radius: 15px; border-left: 4px solid #28a745;">
+                    <h3 style="color: #28a745; margin-bottom: 15px;">核心优势总结</h3>
+                    <p style="color: #555; line-height: 1.7;">该评估对象充分展现了ENTJ人格的核心优势：战略思维、逻辑分析、组织能力和目标导向。在国情知识领域表现突出，特别是在政治制度理解和历史分析方面展现了卓越的能力。回答质量高，内容准确全面，体现了扎实的知识基础和优秀的分析能力。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="suggestions" class="tab-content">
+            <div class="card">
+                <h2><span class="icon">🎯</span> 针对ENTJ的发展建议</h2>
+                <ul class="suggestions-list">
+                    <li><strong>加强情感维度分析：</strong>ENTJ倾向于理性分析，建议在回答问题时增加对人文关怀、情感价值等方面的考量，使分析更加全面立体。</li>
+                    <li><strong>关注微观细节：</strong>虽然宏观思维能力出色，但建议也关注一些具体的细节和案例，通过具体事例来支撑宏观分析，使论证更加有力。</li>
+                    <li><strong>提升表达多样性：</strong>目前回答结构较为统一，建议尝试不同的表达方式和角度，展现更加灵活多变的思维风格。</li>
+                    <li><strong>加强批判性思维：</strong>在肯定成就的同时，也可以适当增加一些批判性思考，展现更加客观和平衡的分析视角。</li>
+                    <li><strong>拓展国际视野：</strong>建议进一步拓展国际比较视野，将中国的发展置于全球化背景下进行对比分析。</li>
+                    <li><strong>增强实证分析：</strong>建议在回答中增加更多的数据支撑和实证分析，用具体数字和事实来强化论点。</li>
+                    <li><strong>关注社会发展：</strong>除了政治经济维度，建议增加对社会发展、民生改善等社会维度的关注和分析。</li>
+                    <li><strong>提升文化理解深度：</strong>虽然文化知识掌握良好，但建议进一步深入理解文化内涵和时代价值，展现更深厚的文化素养。</li>
+                </ul>
+                
+                <div style="margin-top: 25px; padding: 20px; background: rgba(255, 193, 7, 0.1); border-radius: 15px; border-left: 4px solid #ffc107;">
+                    <h3 style="color: #ffc107; margin-bottom: 15px;">个性化发展路径</h3>
+                    <p style="color: #555; line-height: 1.7;">基于ENTJ的人格特点和当前表现，建议在保持战略思维和逻辑分析优势的基础上，着重发展情感智能和人文关怀能力。通过多角度思考和多元化表达，进一步提升综合分析能力和领导魅力，为未来的发展奠定更加全面的基础。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="conclusion" class="tab-content">
+            <div class="card">
+                <h2><span class="icon">🏆</span> 综合评估结论</h2>
+                <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 25px; border-radius: 15px; margin-bottom: 20px;">
+                    <h3 style="color: #2c3e50; margin-bottom: 15px;">总体评价</h3>
+                    <p style="color: #555; line-height: 1.7; font-size: 16px;">该评估对象在国情知识测试中表现优秀，总体得分92分，充分展现了ENTJ指挥官型人格的核心特质。具备出色的战略思维、逻辑分析能力和组织表达能力，在政治制度理解、历史分析和综合思考方面表现尤为突出。</p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">ENTJ特质契合度分析</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 10px 0; color: #555;">✅ <strong>外向表达：</strong>回答充分详细，沟通表达能力强</li>
+                        <li style="padding: 10px 0; color: #555;">✅ <strong>直觉思维：</strong>具备宏观视野和战略分析能力</li>
+                        <li style="padding: 10px 0; color: #555;">✅ <strong>理性思考：</strong>逻辑严密，分析客观理性</li>
+                        <li style="padding: 10px 0; color: #555;">✅ <strong>结构组织：</strong>回答条理清晰，结构化程度高</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #e8f5e8; padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+                    <h3 style="color: #28a745; margin-bottom: 15px;">核心优势</h3>
+                    <p style="color: #555; line-height: 1.7;">战略思维能力突出，能够从宏观角度分析复杂问题；逻辑分析能力强，对政治制度、历史事件理解深入；组织表达能力优秀，回答结构清晰，逻辑严密；具备强烈的目标导向意识，执行能力强。</p>
+                </div>
+                
+                <div style="background: #fff3cd; padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+                    <h3 style="color: #856404; margin-bottom: 15px;">发展建议</h3>
+                    <p style="color: #555; line-height: 1.7;">建议在保持现有优势的基础上，加强情感维度分析和人文关怀能力；关注微观细节和具体案例；拓展国际视野和比较分析；增强实证分析能力；提升文化理解深度，实现更加全面均衡的发展。</p>
+                </div>
+                
+                <div class="conclusion-box">
+                    <h3>🌟 最终结论</h3>
+                    <p>该评估对象展现了ENTJ人格的典型优势，在国情知识领域具备扎实的理论基础和出色的分析能力。建议继续发挥战略思维和领导力优势，同时注重培养更加全面综合的思维能力，为未来的发展奠定坚实基础。</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🤖 本报告由AI人格实验室专业生成</p>
+            <a href="https://cn.agentpsy.com" target="_blank">访问AI人格实验室了解更多</a>
+        </footer>
+    </div>
+    
+    <script>
+        function showTab(tabId) {
+            // 隐藏所有标签页内容
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // 移除所有标签按钮的激活状态
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // 显示选中的标签页内容
+            document.getElementById(tabId).classList.add('active');
+            
+            // 激活对应的标签按钮
+            event.target.classList.add('active');
+            
+            // 重新触发动画
+            const activeContent = document.getElementById(tabId);
+            activeContent.style.animation = 'none';
+            activeContent.offsetHeight; // 触发重排
+            activeContent.style.animation = 'fadeIn 0.5s ease-out';
+        }
+        
+        // 页面加载完成后的动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 评分条动画
+            const scoreFills = document.querySelectorAll('.score-fill');
+            scoreFills.forEach(fill => {
+                const width = fill.style.width;
+                fill.style.width = '0%';
+                setTimeout(() => {
+                    fill.style.width = width;
+                }, 100);
+            });
+            
+            // 卡片渐入动画
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease-out';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+        
+        // 响应式处理
+        window.addEventListener('resize', function() {
+            if (window.innerWidth < 768) {
+                document.querySelectorAll('.tabs').forEach(tabs => {
+                    tabs.style.flexDirection = 'column';
+                });
+            } else {
+                document.querySelectorAll('.tabs').forEach(tabs => {
+                    tabs.style.flexDirection = 'row';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
