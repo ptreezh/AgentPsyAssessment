@@ -1,0 +1,81 @@
+# LLM Assessment System Dependencies
+#
+# This file contains all Python dependencies required for the LLM assessment system.
+# The system supports both local (Ollama) and cloud-based LLM providers.
+#
+# Core Requirements:
+# ================
+# Python 3.8+ required
+
+# Data Processing & Configuration
+# ==============================
+json5>=0.9.0          # Enhanced JSON parsing with comments and trailing commas
+python-dotenv>=0.19.0 # Environment variable management from .env files
+
+# HTTP & Network Requests
+# ======================
+requests>=2.28.0      # HTTP client for cloud API calls
+
+# Local LLM Support
+# =================
+ollama>=0.1.0         # Python client for Ollama local LLM server
+
+# Cloud LLM Providers
+# ===================
+# OpenAI (GPT models)
+openai>=1.0.0         # Official OpenAI Python client
+
+# Optional: Additional Cloud Providers (uncomment if needed)
+# =======================================================
+# Anthropic (Claude models)
+# anthropic>=0.3.0      # Official Anthropic Python client
+
+# Google (Gemini models)
+# google-generativeai>=0.1.0  # Google Generative AI client
+
+# Together AI
+# together>=1.0.0       # Together AI client
+
+# Development & Testing (optional)
+# ================================
+# pytest>=7.0.0        # Testing framework
+# pytest-cov>=4.0.0    # Coverage reporting
+# black>=22.0.0         # Code formatting
+# flake8>=4.0.0         # Linting
+# mypy>=1.0.0           # Type checking
+
+# Performance Monitoring (optional)
+# ===============================
+# memory-profiler>=0.60.0  # Memory usage profiling
+# line-profiler>=4.0.0      # Line-by-line profiling
+
+# Installation Instructions:
+# =========================
+#
+# Basic installation:
+#   pip install -r requirements.txt
+#
+# With development tools:
+#   pip install -r requirements.txt[dev]
+#
+# With all optional providers:
+#   pip install -r requirements.txt[all]
+#
+# Environment Setup:
+# =================
+# 1. Copy .env.example to .env and configure your API keys
+# 2. For local models, install and run Ollama: https://ollama.ai/
+# 3. Download models: ollama pull llama3.1, ollama pull qwen3:4b
+#
+# Supported Providers:
+# ===================
+# - Local: Ollama (llama3.1, qwen3:4b, mistral, etc.)
+# - Cloud: OpenAI (gpt-4o, gpt-3.5-turbo), Anthropic Claude, Google Gemini
+#
+# Configuration:
+# =============
+# Set PROVIDER=local for Ollama or PROVIDER=cloud for API-based models
+# Configure API keys in .env file:
+#   OPENAI_API_KEY=your_key_here
+#   ANTHROPIC_API_KEY=your_key_here
+#   GOOGLE_API_KEY=your_key_here
