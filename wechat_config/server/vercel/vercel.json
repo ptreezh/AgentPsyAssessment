@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/wechat.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/wechat",
+      "dest": "/api/wechat"
+    },
+    {
+      "src": "/wechat/",
+      "dest": "/api/wechat"
+    }
+  ],
+  "env": {
+    "WECHAT_TOKEN": "your_custom_token"
+  },
+  "functions": {
+    "api/wechat.py": {
+      "maxDuration": 10
+    }
+  }
+}

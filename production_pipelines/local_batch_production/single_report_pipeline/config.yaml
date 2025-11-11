@@ -1,0 +1,26 @@
+# 单文件测评流水线配置文件
+pipeline:
+  models:
+    primary_count: 3
+    primary_models: 
+      - "qwen3:8b"        # Alibaba (5.2 GB)
+      - "deepseek-r1:8b"  # DeepSeek (5.2 GB) 
+      - "mistral-nemo:latest"  # Mistral AI (7.1 GB)
+    dispute_resolution_models:
+      - "llama3:latest"   # Meta (4.7 GB)
+      - "gemma3:latest"   # Google (3.3 GB)
+    min_parameter_size: "3b"
+    selection_strategy: "diverse_brands"
+  dispute_resolution:
+    initial_threshold: 1.0
+    max_rounds: 3
+    additional_evaluators_per_round: 2
+  scoring:
+    scale: [1, 3, 5]
+    consistency_threshold: 0.8
+  output:
+    include_detailed_logs: true
+    confidence_calculation: true
+  performance:
+    max_concurrent_evaluations: 3
+    timeout_per_evaluation: 60  # seconds

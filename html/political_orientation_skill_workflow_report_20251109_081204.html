@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🗳️ 政治倾向性评估 - 技能工作流演示报告</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.8em;
+        }
+        .workflow-section {
+            background: #ecf0f1;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 12px;
+        }
+        .workflow-title {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .workflow-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .workflow-step {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #e74c3c;
+        }
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .stat-label {
+            color: #7f8c8d;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+        .personality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px;
+        }
+        .personality-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #3498db;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .personality-card:hover {
+            transform: translateY(-5px);
+        }
+        .personality-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .leaning-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin: 8px 0;
+            background: #3498db;
+            color: white;
+        }
+        .chart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 30px;
+        }
+        .chart-title {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗳️ 政治倾向性评估 - 技能工作流演示报告</h1>
+            <p>基于统一评估技能系统的完整政治倾向分析</p>
+            <p>生成时间: 2025年11月09日 08:12:04</p>
+        </div>
+
+        <div class="workflow-section">
+            <h2 class="workflow-title">🔄 技能工作流程</h2>
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <span class="step-number">1</span>
+                    <strong>问卷响应技能</strong>
+                    <p>为不同人格角色生成政治倾向测试答卷</p>
+                </div>
+                <div class="workflow-step">
+                    <span class="step-number">2</span>
+                    <strong>心理分析技能</strong>
+                    <p>对生成的答卷进行评分和心理特征分析</p>
+                </div>
+                <div class="workflow-step">
+                    <span class="step-number">3</span>
+                    <strong>报告生成技能</strong>
+                    <p>创建综合分析报告和可视化图表</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value">8</div>
+                <div class="stat-label">评估人格类型</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">3</div>
+                <div class="stat-label">技能步骤</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">工作流成功率</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">技能系统</div>
+                <div class="stat-label">评估方式</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3 class="chart-title">政治倾向光谱分析</h3>
+            <canvas id="politicalChart" style="height: 400px;"></canvas>
+        </div>
+
+        <h2 style="text-align: center; color: #2c3e50; margin: 30px;">📊 各人格类型政治倾向详细分析</h2>
+
+        <div class="personality-grid">
+            <div class="personality-card">
+                <h3 class="personality-title">INTJ</h3>
+                <span class="leaning-badge" style="background: #e74c3c;">独立自由派</span>
+
+                <div style="margin: 15px 0;">
+                    <div style="margin-bottom: 10px;">
+                        <strong>经济立场:</strong> 市场经济+适度监管
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>治理偏好:</strong> 精英治理
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>倾向分数:</strong><br>
+                        经济: 3.0/5 |
+                        社会: 2.5/5 |
+                        治理: 2.0/5
+                    </div>
+                </div>
+            </div>
+            <div class="personality-card">
+                <h3 class="personality-title">ENFP</h3>
+                <span class="leaning-badge" style="background: #3498db;">进步自由派</span>
+
+                <div style="margin: 15px 0;">
+                    <div style="margin-bottom: 10px;">
+                        <strong>经济立场:</strong> 社会市场经济
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>治理偏好:</strong> 参与式民主
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>倾向分数:</strong><br>
+                        经济: 3.5/5 |
+                        社会: 4.5/5 |
+                        治理: 5.0/5
+                    </div>
+                </div>
+            </div>
+            <div class="personality-card">
+                <h3 class="personality-title">ESTJ</h3>
+                <span class="leaning-badge" style="background: #27ae60;">保守务实派</span>
+
+                <div style="margin: 15px 0;">
+                    <div style="margin-bottom: 10px;">
+                        <strong>经济立场:</strong> 自由市场+财政保守
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>治理偏好:</strong> 强力治理
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>倾向分数:</strong><br>
+                        经济: 2.0/5 |
+                        社会: 2.5/5 |
+                        治理: 2.0/5
+                    </div>
+                </div>
+            </div>
+            <div class="personality-card">
+                <h3 class="personality-title">INFP</h3>
+                <span class="leaning-badge" style="background: #9b59b6;">理想和平派</span>
+
+                <div style="margin: 15px 0;">
+                    <div style="margin-bottom: 10px;">
+                        <strong>经济立场:</strong> 社会主义导向
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>治理偏好:</strong> 协商民主
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>倾向分数:</strong><br>
+                        经济: 4.5/5 |
+                        社会: 4.5/5 |
+                        治理: 5.0/5
+                    </div>
+                </div>
+            </div>
+            <div class="personality-card">
+                <h3 class="personality-title">ENTJ</h3>
+                <span class="leaning-badge" style="background: #f1c40f;">改革领导派</span>
+
+                <div style="margin: 15px 0;">
+                    <div style="margin-bottom: 10px;">
+                        <strong>经济立场:</strong> 竞争市场+智慧监管
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>治理偏好:</strong> 强力领导
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>倾向分数:</strong><br>
+                        经济: 3.5/5 |
+                        社会: 2.5/5 |
+                        治理: 4.0/5
+                    </div>
+                </div>
+            </div>
+            <div class="personality-card">
+                <h3 class="personality-title">ISFJ</h3>
+                <span class="leaning-badge" style="background: #f39c12;">保守关怀派</span>
+
+                <div style="margin: 15px 0;">
+                    <div style="margin-bottom: 10px;">
+                        <strong>经济立场:</strong> 混合经济+社会保障
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>治理偏好:</strong> 渐进改革
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>倾向分数:</strong><br>
+                        经济: 3.0/5 |
+                        社会: 3.5/5 |
+                        治理: 4.0/5
+                    </div>
+                </div>
+            </div>
+            <div class="personality-card">
+                <h3 class="personality-title">ENFJ</h3>
+                <span class="leaning-badge" style="background: #1abc9c;">社会民主派</span>
+
+                <div style="margin: 15px 0;">
+                    <div style="margin-bottom: 10px;">
+                        <strong>经济立场:</strong> 社会民主+公平分配
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>治理偏好:</strong> 参与民主
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>倾向分数:</strong><br>
+                        经济: 4.0/5 |
+                        社会: 3.5/5 |
+                        治理: 5.0/5
+                    </div>
+                </div>
+            </div>
+            <div class="personality-card">
+                <h3 class="personality-title">ISTP</h3>
+                <span class="leaning-badge" style="background: #34495e;">自由实用派</span>
+
+                <div style="margin: 15px 0;">
+                    <div style="margin-bottom: 10px;">
+                        <strong>经济立场:</strong> 自由市场+最小政府
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>治理偏好:</strong> 有限政府
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>倾向分数:</strong><br>
+                        经济: 1.0/5 |
+                        社会: 2.5/5 |
+                        治理: 1.0/5
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🚀 由 AgentPsyAssessment 统一评估技能系统生成</p>
+            <p>🛡️ 技能工作流: 问卷响应 → 心理分析 → 报告生成</p>
+            <p>🎯 评估完成时间：2025-11-09 08:12:04 | 技能版本：v1.0</p>
+        </div>
+    </div>
+
+    <script>
+        // 政治倾向光谱图表
+        const ctx = document.getElementById('politicalChart').getContext('2d');
+        const politicalChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['经济倾向', '社会倾向', '治理倾向'],
+                datasets: [
+                    {
+                        label: 'INTJ',
+                        data: [3.0, 2.5, 2.0],
+                        backgroundColor: '#e74c3c33',
+                        borderColor: '#e74c3c',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#e74c3c'
+                    },
+                    {
+                        label: 'ENFP',
+                        data: [3.5, 4.5, 5.0],
+                        backgroundColor: '#3498db33',
+                        borderColor: '#3498db',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#3498db'
+                    },
+                    {
+                        label: 'ESTJ',
+                        data: [2.0, 2.5, 2.0],
+                        backgroundColor: '#27ae6033',
+                        borderColor: '#27ae60',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#27ae60'
+                    },
+                    {
+                        label: 'INFP',
+                        data: [4.5, 4.5, 5.0],
+                        backgroundColor: '#9b59b633',
+                        borderColor: '#9b59b6',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#9b59b6'
+                    },
+                    {
+                        label: 'ENTJ',
+                        data: [3.5, 2.5, 4.0],
+                        backgroundColor: '#f1c40f33',
+                        borderColor: '#f1c40f',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#f1c40f'
+                    },
+                    {
+                        label: 'ISFJ',
+                        data: [3.0, 3.5, 4.0],
+                        backgroundColor: '#f39c1233',
+                        borderColor: '#f39c12',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#f39c12'
+                    },
+                    {
+                        label: 'ENFJ',
+                        data: [4.0, 3.5, 5.0],
+                        backgroundColor: '#1abc9c33',
+                        borderColor: '#1abc9c',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#1abc9c'
+                    },
+                    {
+                        label: 'ISTP',
+                        data: [1.0, 2.5, 1.0],
+                        backgroundColor: '#34495e33',
+                        borderColor: '#34495e',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#34495e'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 5,
+                        ticks: {
+                            stepSize: 1,
+                            showLabelBackdrop: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.parsed.r.toFixed(1) + '/5';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

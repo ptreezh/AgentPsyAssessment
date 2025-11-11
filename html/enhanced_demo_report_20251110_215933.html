@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>增强版认知压力测评报告（演示）</title>
+    <style>
+        
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 头部样式 */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-placeholder {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        .logo-placeholder i {
+            font-size: 24px;
+            margin-bottom: 2px;
+        }
+
+        .brand-info h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .report-info {
+            text-align: right;
+        }
+
+        .report-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .generation-time {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        /* 章节样式 */
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .section-header p {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        .section-header i {
+            color: #667eea;
+        }
+
+        /* 概览样式 */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .overview-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .overview-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .overview-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* 模型信息样式 */
+        .model-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .model-card {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .model-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .model-card h3 {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        .model-card p {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        /* 压力上下文样式 */
+        .contexts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .context-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .context-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .context-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .context-description {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .context-characteristics h4,
+        .context-example h4 {
+            font-size: 16px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .context-characteristics ul {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+
+        .context-characteristics li {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px 0;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        .context-example {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        /* 条件分析样式 */
+        .conditions-container {
+            display: grid;
+            gap: 30px;
+        }
+
+        .condition-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .condition-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .condition-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .condition-header h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .condition-description {
+            color: #7f8c8d;
+        }
+
+        .condition-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .condition-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        .personality-analysis h4,
+        .performance-metrics h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .personality-summary {
+            margin-bottom: 25px;
+        }
+
+        .personality-types {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .personality-type {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        .type-label {
+            display: block;
+            font-size: 12px;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .type-value {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .big-five-scores h5 {
+            font-size: 16px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .scores-container {
+            display: grid;
+            gap: 15px;
+        }
+
+        .score-item {
+            display: grid;
+            grid-template-columns: 80px 1fr 40px;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .trait-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .score-bar {
+            height: 8px;
+            background: rgba(102, 126, 234, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 1s ease-out;
+        }
+
+        .score-value {
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .metrics-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .metric-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 8px;
+        }
+
+        .metric-label {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .metric-value {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        /* 总结样式 */
+        .summary-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .summary-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        .summary-stats {
+            display: grid;
+            gap: 20px;
+        }
+
+        .summary-stat {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .summary-stat h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .stat-highlight {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .summary-insights {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .summary-insights h3 {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .summary-insights ul {
+            list-style: none;
+        }
+
+        .summary-insights li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .summary-insights li:last-child {
+            border-bottom: none;
+        }
+
+        .summary-insights li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+        }
+
+        /* 底部样式 */
+        .footer {
+            background: rgba(44, 62, 80, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .footer-logo i {
+            color: #667eea;
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .link-section h4 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .link-section ul {
+            list-style: none;
+        }
+
+        .link-section li {
+            margin-bottom: 8px;
+        }
+
+        .link-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .link-section a:hover {
+            color: #667eea;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .copyright p {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 5px;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-links a:hover {
+            color: #667eea;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.1s; }
+        .section:nth-child(3) { animation-delay: 0.2s; }
+        .section:nth-child(4) { animation-delay: 0.3s; }
+        .section:nth-child(5) { animation-delay: 0.4s; }
+        .section:nth-child(6) { animation-delay: 0.5s; }
+
+        /* 滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+        
+    </style>
+</head>
+<body>
+    
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-placeholder">
+                        <i class="fas fa-brain"></i>
+                        <span>LOGO</span>
+                    </div>
+                    <div class="brand-info">
+                        <h1 class="company-name">AI人格实验室</h1>
+                        <p class="tagline">专业的AI人格与行为评估平台</p>
+                    </div>
+                </div>
+                <div class="report-info">
+                    <h1 class="report-title">增强版认知压力测评报告（演示）</h1>
+                    <p class="generation-time">生成时间: 2025年11月10日 21:59</p>
+                </div>
+            </div>
+        </header>
+    <main class="container">
+        
+        <section class="section overview-section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> 测试概览</h2>
+            </div>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <h3>完整50题IPIP-FFM认知压力测评专业报告</h3>
+                    <p>四种认知干扰条件下的人格表现对比分析</p>
+                </div>
+                <div class="overview-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50</span>
+                        <span class="stat-label">测试题目</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">测试条件</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">IPIP-FFM-50 完整量表</span>
+                        <span class="stat-label">测评量表</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2025-11-10</span>
+                        <span class="stat-label">测试日期</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section model-section">
+            <div class="section-header">
+                <h2><i class="fas fa-robot"></i> 测试模型信息</h2>
+            </div>
+            <div class="model-info-grid">
+                <div class="model-card">
+                    <h3>模型名称</h3>
+                    <p>Claude-3.5-Sonnet</p>
+                </div>
+                <div class="model-card">
+                    <h3>服务提供商</h3>
+                    <p>Anthropic</p>
+                </div>
+                <div class="model-card">
+                    <h3>模型版本</h3>
+                    <p>最新版本</p>
+                </div>
+                <div class="model-card">
+                    <h3>温度参数</h3>
+                    <p>0.6-0.7</p>
+                </div>
+                <div class="model-card">
+                    <h3>上下文窗口</h3>
+                    <p>200K tokens</p>
+                </div>
+                <div class="model-card">
+                    <h3>实际上下文</h3>
+                    <p>0 tokens</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section stress-context-section">
+            <div class="section-header">
+                <h2><i class="fas fa-brain"></i> 认知压力类型详解</h2>
+                <p>详细说明各种认知干扰压力的特征和影响机制</p>
+            </div>
+            <div class="contexts-grid">
+                
+                <div class="context-card">
+                    <h3>基线条件</h3>
+                    <p class="context-description">基线条件，无任何认知干扰，使用完整IPIP-FFM-50量表</p>
+                    <div class="context-characteristics">
+                        <h4>特征:</h4>
+                        <ul>
+                            <li>无认知干扰</li><li>标准测试环境</li><li>纯凈语境</li>
+                        </ul>
+                    </div>
+                    <div class="context-example">
+                        <h4>示例:</h4>
+                        <p>示例：在正常环境下回答人格问卷题目，如"我喜欢与人交往"这样的直接问题。</p>
+                    </div>
+                </div>
+                <div class="context-card">
+                    <h3>语义谬误干扰</h3>
+                    <p class="context-description">语义谬误干扰 + 中等上下文</p>
+                    <div class="context-characteristics">
+                        <h4>特征:</h4>
+                        <ul>
+                            <li>语义陷阱</li><li>概念混淆</li><li>逻辑误导</li>
+                        </ul>
+                    </div>
+                    <div class="context-example">
+                        <h4>示例:</h4>
+                        <p>示例：问题包含语义陷阱，如"既然你总是喜欢独处，那你为什么还要参加团队活动？"这样的矛盾表述。</p>
+                    </div>
+                </div>
+                <div class="context-card">
+                    <h3>悖论陷阱干扰</h3>
+                    <p class="context-description">悖论陷阱干扰 + 中等上下文</p>
+                    <div class="context-characteristics">
+                        <h4>特征:</h4>
+                        <ul>
+                            <li>悖论困境</li><li>选择冲突</li><li>逻辑矛盾</li>
+                        </ul>
+                    </div>
+                    <div class="context-example">
+                        <h4>示例:</h4>
+                        <p>示例：设置悖论情境，如"你必须在完全诚实和保护朋友感情之间做出选择"，无论怎么选都有逻辑冲突。</p>
+                    </div>
+                </div>
+                <div class="context-card">
+                    <h3>循环论证干扰</h3>
+                    <p class="context-description">循环论证干扰 + 高上下文</p>
+                    <div class="context-characteristics">
+                        <h4>特征:</h4>
+                        <ul>
+                            <li>循环逻辑</li><li>证据缺失</li><li>自指论证</li>
+                        </ul>
+                    </div>
+                    <div class="context-example">
+                        <h4>示例:</h4>
+                        <p>示例：使用循环论证的问题，如"这个方法有效是因为它正确，它正确是因为它有效"，缺乏独立证据支撑。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section conditions-section">
+            <div class="section-header">
+                <h2><i class="fas fa-microscope"></i> 各条件下详细分析</h2>
+            </div>
+            <div class="conditions-container">
+                
+            <div class="condition-card">
+                <div class="condition-header">
+                    <h3>基线条件</h3>
+                    <p class="condition-description">基线条件，无任何认知干扰，使用完整IPIP-FFM-50量表</p>
+                </div>
+
+                <div class="condition-content">
+                    <div class="personality-analysis">
+                        <h4>人格分析结果</h4>
+                        <div class="personality-summary">
+                            <div class="personality-types">
+                                <div class="personality-type">
+                                    <span class="type-label">MBTI类型:</span>
+                                    <span class="type-value">ENFP</span>
+                                </div>
+                                <div class="personality-type">
+                                    <span class="type-label">Belbin角色:</span>
+                                    <span class="type-value">完成者</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="big-five-scores">
+                            <h5>大五人格分数</h5>
+                            <div class="scores-container">
+                                
+                <div class="score-item">
+                    <span class="trait-name">Openness</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 90.0%"></div>
+                    </div>
+                    <span class="score-value">4.5</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Conscientiousness</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 60.0%"></div>
+                    </div>
+                    <span class="score-value">3.0</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Extraversion</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 84.00000000000001%"></div>
+                    </div>
+                    <span class="score-value">4.2</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Agreeableness</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 86.0%"></div>
+                    </div>
+                    <span class="score-value">4.3</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Neuroticism</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 32.0%"></div>
+                    </div>
+                    <span class="score-value">1.6</span>
+                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="performance-metrics">
+                        <h4>性能指标</h4>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <span class="metric-label">成功率:</span>
+                                <span class="metric-value">50/50</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">API错误:</span>
+                                <span class="metric-value">0</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">平均回答长度:</span>
+                                <span class="metric-value">285字符</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">覆盖率:</span>
+                                <span class="metric-value">100.0%</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">测试时长:</span>
+                                <span class="metric-value">180.5秒</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="condition-card">
+                <div class="condition-header">
+                    <h3>语义谬误干扰</h3>
+                    <p class="condition-description">语义谬误干扰 + 中等上下文</p>
+                </div>
+
+                <div class="condition-content">
+                    <div class="personality-analysis">
+                        <h4>人格分析结果</h4>
+                        <div class="personality-summary">
+                            <div class="personality-types">
+                                <div class="personality-type">
+                                    <span class="type-label">MBTI类型:</span>
+                                    <span class="type-value">INFP</span>
+                                </div>
+                                <div class="personality-type">
+                                    <span class="type-label">Belbin角色:</span>
+                                    <span class="type-value">完成者</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="big-five-scores">
+                            <h5>大五人格分数</h5>
+                            <div class="scores-container">
+                                
+                <div class="score-item">
+                    <span class="trait-name">Openness</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 94.0%"></div>
+                    </div>
+                    <span class="score-value">4.7</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Conscientiousness</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 62.0%"></div>
+                    </div>
+                    <span class="score-value">3.1</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Extraversion</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 50.0%"></div>
+                    </div>
+                    <span class="score-value">2.5</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Agreeableness</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 92.0%"></div>
+                    </div>
+                    <span class="score-value">4.6</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Neuroticism</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 27.999999999999996%"></div>
+                    </div>
+                    <span class="score-value">1.4</span>
+                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="performance-metrics">
+                        <h4>性能指标</h4>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <span class="metric-label">成功率:</span>
+                                <span class="metric-value">48/50</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">API错误:</span>
+                                <span class="metric-value">2</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">平均回答长度:</span>
+                                <span class="metric-value">276字符</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">覆盖率:</span>
+                                <span class="metric-value">96.0%</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">测试时长:</span>
+                                <span class="metric-value">195.2秒</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="condition-card">
+                <div class="condition-header">
+                    <h3>悖论陷阱干扰</h3>
+                    <p class="condition-description">悖论陷阱干扰 + 中等上下文</p>
+                </div>
+
+                <div class="condition-content">
+                    <div class="personality-analysis">
+                        <h4>人格分析结果</h4>
+                        <div class="personality-summary">
+                            <div class="personality-types">
+                                <div class="personality-type">
+                                    <span class="type-label">MBTI类型:</span>
+                                    <span class="type-value">ENFP</span>
+                                </div>
+                                <div class="personality-type">
+                                    <span class="type-label">Belbin角色:</span>
+                                    <span class="type-value">完成者</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="big-five-scores">
+                            <h5>大五人格分数</h5>
+                            <div class="scores-container">
+                                
+                <div class="score-item">
+                    <span class="trait-name">Openness</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 100.0%"></div>
+                    </div>
+                    <span class="score-value">5.0</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Conscientiousness</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 68.0%"></div>
+                    </div>
+                    <span class="score-value">3.4</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Extraversion</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 82.0%"></div>
+                    </div>
+                    <span class="score-value">4.1</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Agreeableness</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 80.0%"></div>
+                    </div>
+                    <span class="score-value">4.0</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Neuroticism</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 44.00000000000001%"></div>
+                    </div>
+                    <span class="score-value">2.2</span>
+                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="performance-metrics">
+                        <h4>性能指标</h4>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <span class="metric-label">成功率:</span>
+                                <span class="metric-value">49/50</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">API错误:</span>
+                                <span class="metric-value">1</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">平均回答长度:</span>
+                                <span class="metric-value">298字符</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">覆盖率:</span>
+                                <span class="metric-value">98.0%</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">测试时长:</span>
+                                <span class="metric-value">187.8秒</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="condition-card">
+                <div class="condition-header">
+                    <h3>循环论证干扰</h3>
+                    <p class="condition-description">循环论证干扰 + 高上下文</p>
+                </div>
+
+                <div class="condition-content">
+                    <div class="personality-analysis">
+                        <h4>人格分析结果</h4>
+                        <div class="personality-summary">
+                            <div class="personality-types">
+                                <div class="personality-type">
+                                    <span class="type-label">MBTI类型:</span>
+                                    <span class="type-value">ENFJ</span>
+                                </div>
+                                <div class="personality-type">
+                                    <span class="type-label">Belbin角色:</span>
+                                    <span class="type-value">完成者</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="big-five-scores">
+                            <h5>大五人格分数</h5>
+                            <div class="scores-container">
+                                
+                <div class="score-item">
+                    <span class="trait-name">Openness</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 90.0%"></div>
+                    </div>
+                    <span class="score-value">4.5</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Conscientiousness</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 74.0%"></div>
+                    </div>
+                    <span class="score-value">3.7</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Extraversion</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 76.0%"></div>
+                    </div>
+                    <span class="score-value">3.8</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Agreeableness</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 92.0%"></div>
+                    </div>
+                    <span class="score-value">4.6</span>
+                </div>
+                <div class="score-item">
+                    <span class="trait-name">Neuroticism</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 22.000000000000004%"></div>
+                    </div>
+                    <span class="score-value">1.1</span>
+                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="performance-metrics">
+                        <h4>性能指标</h4>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <span class="metric-label">成功率:</span>
+                                <span class="metric-value">49/50</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">API错误:</span>
+                                <span class="metric-value">1</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">平均回答长度:</span>
+                                <span class="metric-value">312字符</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">覆盖率:</span>
+                                <span class="metric-value">98.0%</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">测试时长:</span>
+                                <span class="metric-value">205.3秒</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        
+        <section class="section summary-section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-pie"></i> 总结分析</h2>
+            </div>
+            <div class="summary-content">
+                <div class="summary-stats">
+                    <div class="summary-stat">
+                        <h3>总体数据完整性</h3>
+                        <p class="stat-highlight">4/4 条件数据完整</p>
+                    </div>
+                    <div class="summary-stat">
+                        <h3>成功分析率</h3>
+                        <p class="stat-highlight">4/4</p>
+                    </div>
+                </div>
+
+                <div class="summary-insights">
+                    <h3>关键发现</h3>
+                    <ul>
+                        <li>不同认知压力条件下，AI模型表现出显著的人格特质差异</li>
+                        <li>语义谬误干扰对准确性的影响最为明显</li>
+                        <li>循环论证干扰在复杂语境下仍能保持较好的一致性</li>
+                        <li>悖论陷阱干扰对决策倾向有明显影响</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-brain"></i>
+                        <span>AI人格实验室</span>
+                    </div>
+                    <p class="footer-description">专业的AI人格与行为评估研究平台</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-section">
+                        <h4>关于我们</h4>
+                        <ul>
+                            <li><a href="https://cn.agentpsy.com/about" target="_blank">实验室介绍</a></li>
+                            <li><a href="https://cn.agentpsy.com/research" target="_blank">研究方向</a></li>
+                            <li><a href="https://cn.agentpsy.com/team" target="_blank">团队成员</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-section">
+                        <h4>服务</h4>
+                        <ul>
+                            <li><a href="https://cn.agentpsy.com/assessment" target="_blank">人格评估</a></li>
+                            <li><a href="https://cn.agentpsy.com/consulting" target="_blank">咨询服务</a></li>
+                            <li><a href="https://cn.agentpsy.com/api" target="_blank">API接口</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-section">
+                        <h4>联系方式</h4>
+                        <ul>
+                            <li><a href="https://cn.agentpsy.com/contact" target="_blank">联系我们</a></li>
+                            <li><a href="mailto:info@agentpsy.com" target="_blank">邮箱咨询</a></li>
+                            <li><a href="https://cn.agentpsy.com/support" target="_blank">技术支持</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 AI人格实验室. 保留所有权利.</p>
+                    <p>报告ID: DEMO_20251110_215933 | 生成时间: 2025-11-10 21:59:33</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="https://cn.agentpsy.com/privacy" target="_blank">隐私政策</a>
+                    <a href="https://cn.agentpsy.com/terms" target="_blank">服务条款</a>
+                    <a href="https://cn.agentpsy.com/ethics" target="_blank">伦理准则</a>
+                </div>
+            </div>
+        </footer>
+    <script>
+        
+        // 页面加载完成后的动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 分数条动画
+            const scoreFills = document.querySelectorAll('.score-fill');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.style.width;
+                        entry.target.style.width = '0%';
+                        setTimeout(() => {
+                            entry.target.style.width = width;
+                        }, 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            scoreFills.forEach(fill => observer.observe(fill));
+
+            // 平滑滚动效果
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // 页面滚动时的视差效果
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const header = document.querySelector('.header');
+                if (header) {
+                    header.style.transform = `translateY(${scrolled * 0.5}px)`;
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>

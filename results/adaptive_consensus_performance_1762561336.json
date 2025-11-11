@@ -1,0 +1,135 @@
+{
+  "test_time": "2025-11-08T08:22:16.754076",
+  "total_tests": 4,
+  "successful_tests": 4,
+  "failed_tests": 0,
+  "total_processing_time": 0.001087188720703125,
+  "results": [
+    {
+      "scenario": "完全共识",
+      "success": true,
+      "result": {
+        "consensus_score": 3,
+        "final_scores": [
+          3,
+          3,
+          3
+        ],
+        "evaluator_count": 3,
+        "consensus_method": "perfect_consensus",
+        "processing_rounds": 1,
+        "score_distribution": {
+          "3": 3
+        },
+        "quality_metrics": {
+          "consensus_strength": 1.0,
+          "agreement_level": "high",
+          "agreement_ratio": 1.0,
+          "evaluator_diversity": 1
+        }
+      },
+      "processing_time": 0.0,
+      "evaluation_calls": 0,
+      "method_match": true,
+      "rounds_match": true
+    },
+    {
+      "scenario": "轻微分歧",
+      "success": true,
+      "result": {
+        "consensus_score": 3.67,
+        "final_scores": [
+          3,
+          3,
+          5
+        ],
+        "evaluator_count": 3,
+        "consensus_method": "minor_consensus",
+        "processing_rounds": 1,
+        "score_distribution": {
+          "3": 2,
+          "5": 1
+        },
+        "quality_metrics": {
+          "consensus_strength": 0.423,
+          "agreement_level": "medium",
+          "agreement_ratio": 0.667,
+          "evaluator_diversity": 2
+        }
+      },
+      "processing_time": 0.0,
+      "evaluation_calls": 0,
+      "method_match": true,
+      "rounds_match": true
+    },
+    {
+      "scenario": "严重分歧",
+      "success": true,
+      "result": {
+        "consensus_score": 2.33,
+        "final_scores": [
+          1,
+          3,
+          3
+        ],
+        "evaluator_count": 3,
+        "consensus_method": "minor_consensus",
+        "processing_rounds": 1,
+        "score_distribution": {
+          "1": 1,
+          "3": 2
+        },
+        "quality_metrics": {
+          "consensus_strength": 0.423,
+          "agreement_level": "medium",
+          "agreement_ratio": 0.667,
+          "evaluator_diversity": 2
+        }
+      },
+      "processing_time": 0.001087188720703125,
+      "evaluation_calls": 0,
+      "method_match": false,
+      "rounds_match": false
+    },
+    {
+      "scenario": "极端分歧",
+      "success": true,
+      "result": {
+        "consensus_score": 2.33,
+        "final_scores": [
+          1,
+          3,
+          3
+        ],
+        "evaluator_count": 3,
+        "consensus_method": "minor_consensus",
+        "processing_rounds": 2,
+        "score_distribution": {
+          "1": 1,
+          "3": 2
+        },
+        "quality_metrics": {
+          "consensus_strength": 0.423,
+          "agreement_level": "medium",
+          "agreement_ratio": 0.667,
+          "evaluator_diversity": 2
+        }
+      },
+      "processing_time": 0.0,
+      "evaluation_calls": 2,
+      "method_match": false,
+      "rounds_match": true
+    }
+  ],
+  "algorithm_info": {
+    "initial_evaluators": 3,
+    "max_evaluators": 7,
+    "allowed_scores": [
+      1,
+      3,
+      5
+    ],
+    "consensus_threshold": 2.0,
+    "bias_detection_threshold": 1.5
+  }
+}

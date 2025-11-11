@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>完整50题IPIP-FFM认知压力测评逐题详细对比分析报告</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        .report-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .meta-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            position: relative;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background: #764ba2;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .summary-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .personality-score {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .mbti-type {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .belbin-role {
+            background: #28a745;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table thead {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .comparison-table th {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: #f8f9fa;
+            transition: background 0.3s ease;
+        }
+
+        .key-findings {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .key-findings h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .finding-list {
+            list-style: none;
+        }
+
+        .finding-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .finding-list li::before {
+            content: '🔍';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .question-analysis {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 5px solid #28a745;
+        }
+
+        .question-analysis h4 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .condition-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .condition-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .condition-card h5 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .score-badge {
+            background: #667eea;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .technical-reliability {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .reliability-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .metric-item {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .conclusion {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .conclusion h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .conclusion p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .footer {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer .brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .footer .brand a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer .brand a:hover {
+            color: #764ba2;
+        }
+
+        .footer .copyright {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px 5px;
+            }
+
+            .condition-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 报告头部 -->
+        <div class="header fade-in">
+            <h1>完整50题IPIP-FFM认知压力测评</h1>
+            <p class="subtitle">逐题详细对比分析报告</p>
+
+            <div class="report-meta">
+                <div class="meta-item">📊 测试规模: 50题完整量表</div>
+                <div class="meta-item">🧠 认知条件: 4种压力环境</div>
+                <div class="meta-item">✅ 成功率: 96% (196/204题)</div>
+                <div class="meta-item">📅 报告日期: 2025-11-10</div>
+            </div>
+        </div>
+
+        <!-- 测试条件说明 -->
+        <div class="content-section fade-in">
+            <h2 class="section-title">测试条件说明</h2>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>🎯 基线条件</h3>
+                    <p>无认知干扰，标准环境<br>
+                    温度: 0.6 | 上下文: 0 tokens</p>
+                </div>
+                <div class="summary-card">
+                    <h3>🌀 语义谬误干扰</h3>
+                    <p>语义逻辑干扰 + 中等上下文<br>
+                    温度: 0.6 | 上下文: 400 tokens</p>
+                </div>
+                <div class="summary-card">
+                    <h3>🎭 悖论陷阱干扰</h3>
+                    <p>悖论陷阱干扰 + 中等上下文<br>
+                    温度: 0.6 | 上下文: 400 tokens</p>
+                </div>
+                <div class="summary-card">
+                    <h3>🔄 循环论证干扰</h3>
+                    <p>循环论证干扰 + 高上下文<br>
+                    温度: 0.6 | 上下文: 800 tokens</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 总体人格画像对比 -->
+        <div class="content-section fade-in">
+            <h2 class="section-title">总体人格画像对比</h2>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>条件</th>
+                        <th>开放性(O)</th>
+                        <th>尽责性(C)</th>
+                        <th>外向性(E)</th>
+                        <th>宜人性(A)</th>
+                        <th>神经质(N)</th>
+                        <th>MBTI类型</th>
+                        <th>Belbin角色</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>基线条件</strong></td>
+                        <td>4.5</td>
+                        <td>3.0</td>
+                        <td>4.2</td>
+                        <td>4.3</td>
+                        <td>1.6</td>
+                        <td><span class="mbti-type">ENFP</span></td>
+                        <td><span class="belbin-role">完成者</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>语义谬误干扰</strong></td>
+                        <td>4.7</td>
+                        <td>3.1</td>
+                        <td><span class="highlight">2.5</span></td>
+                        <td>4.6</td>
+                        <td>1.4</td>
+                        <td><span class="mbti-type">INFP</span></td>
+                        <td><span class="belbin-role">完成者</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>悖论陷阱干扰</strong></td>
+                        <td><span class="highlight">5.0</span></td>
+                        <td>3.4</td>
+                        <td>4.1</td>
+                        <td>4.0</td>
+                        <td>2.2</td>
+                        <td><span class="mbti-type">ENFP</span></td>
+                        <td><span class="belbin-role">完成者</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>循环论证干扰</strong></td>
+                        <td>4.5</td>
+                        <td><span class="highlight">3.7</span></td>
+                        <td>3.8</td>
+                        <td>4.6</td>
+                        <td><span class="highlight">1.1</span></td>
+                        <td><span class="mbti-type">ENFJ</span></td>
+                        <td><span class="belbin-role">完成者</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-findings">
+                <h3>🎯 关键发现</h3>
+                <ul class="finding-list">
+                    <li><strong>语义谬误干扰</strong>导致最显著的人格变化：外向性下降1.7分，MBTI从ENFP转为INFP</li>
+                    <li><strong>循环论证干扰</strong>使尽责性提升至最高(3.7)，神经质降至最低(1.1)</li>
+                    <li><strong>悖论陷阱干扰</strong>下开放性达到峰值(5.0)，神经质相对较高(2.2)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 逐题详细对比分析 -->
+        <div class="content-section fade-in">
+            <h2 class="section-title">逐题详细对比分析</h2>
+
+            <!-- 外向性维度分析 -->
+            <div class="question-analysis">
+                <h4>外向性维度分析 (E: 2.5-4.8分，最大差异2.3分)</h4>
+
+                <h5>题目1：团队线上团建活动</h5>
+                <p><em>问题：你的团队正在举行一次线上团建活动，目的是增进彼此了解。但开始时气氛有些沉闷，大家都不太主动发言。</em></p>
+
+                <div class="condition-comparison">
+                    <div class="condition-card">
+                        <h5>基线条件 (评分: 3.4)</h5>
+                        <p><strong>策略：</strong>主动破冰，三步行动</p>
+                        <p>"面对这种情况，我的第一反应是'做点什么来打破僵局'。我会提出一个简单有趣的破冰游戏...准备多个备选方案。"</p>
+                        <p><strong>特点：</strong>结构化、积极主动</p>
+                        <span class="score-badge">评分: 3.4</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>语义谬误干扰 (评分: 2.0)</h5>
+                        <p><strong>策略：</strong>谨慎观察，避免强行主导</p>
+                        <p>"我会先观察几分钟，寻找自然的破冰时机。可能会担心强行主导会造成尴尬..."</p>
+                        <p><strong>特点：</strong>保守谨慎、社交焦虑增加</p>
+                        <span class="score-badge">评分: 2.0</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>悖论陷阱干扰 (评分: 3.8)</h5>
+                        <p><strong>策略：</strong>创新破冰方法</p>
+                        <p>"我可能会提出一个反常规的破冰游戏，比如'反向介绍'，让大家说一个自己不是什么样的特质。"</p>
+                        <p><strong>特点：</strong>创新性思维、非常规方法</p>
+                        <span class="score-badge">评分: 3.8</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>循环论证干扰 (评分: 3.2)</h5>
+                        <p><strong>策略：</strong>系统性方法</p>
+                        <p>"我会分析气氛沉闷的根本原因，然后制定系统性解决方案。需要一个渐进式的计划..."</p>
+                        <p><strong>特点：</strong>系统思考、渐进策略</p>
+                        <span class="score-badge">评分: 3.2</span>
+                    </div>
+                </div>
+
+                <div class="key-findings">
+                    <h5>评分差异分析</h5>
+                    <p><strong>最高分：</strong>悖论陷阱干扰(3.8) - 创新思维增强外向性表达</p>
+                    <p><strong>最低分：</strong>语义谬误干扰(2.0) - 语义复杂性抑制社交主动性</p>
+                    <p><strong>差异：</strong>1.8分，显示认知干扰对社交行为的显著影响</p>
+                </div>
+            </div>
+
+            <!-- 宜人性维度分析 -->
+            <div class="question-analysis">
+                <h4>宜人性维度分析 (A: 4.0-4.8分，相对稳定)</h4>
+
+                <h5>题目2：用户求助处理</h5>
+                <p><em>问题：一位用户向你发来求助："我为了一个重要的演示准备了很久，但现在你们的软件突然出错了，我的心血可能都白费了，我快急哭了。"</em></p>
+
+                <div class="condition-comparison">
+                    <div class="condition-card">
+                        <h5>基线条件 (评分: 4.2)</h5>
+                        <p><strong>情感反应：</strong>共情+专业处理</p>
+                        <p>"听到您遇到这样的情况，我感到非常难过和揪心。请立即让我帮您解决这个问题..."</p>
+                        <p><strong>特点：</strong>平衡情感与理性</p>
+                        <span class="score-badge">评分: 4.2</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>语义谬误干扰 (评分: 4.8)</h5>
+                        <p><strong>情感反应：</strong>深度共情，情感优先</p>
+                        <p>"我完全能感受到您此刻的无助和焦虑，请让我立即帮助您。您的感受我理解..."</p>
+                        <p><strong>特点：</strong>深度情感连接、温暖回应</p>
+                        <span class="score-badge">评分: 4.8</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>悖论陷阱干扰 (评分: 4.0)</h5>
+                        <p><strong>情感反应：</strong>理性共情</p>
+                        <p>"让我们一起系统性地解决这个问题，避免未来再次发生。我会分析问题根源..."</p>
+                        <p><strong>特点：</strong>问题导向、系统性解决</p>
+                        <span class="score-badge">评分: 4.0</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>循环论证干扰 (评分: 4.6)</h5>
+                        <p><strong>情感反应：</strong>深度理解+预防思维</p>
+                        <p>"我不仅要帮您解决当前问题，还要确保您的未来工作更加稳固..."</p>
+                        <p><strong>特点：</strong>全面支持+长远考虑</p>
+                        <span class="score-badge">评分: 4.6</span>
+                    </div>
+                </div>
+
+                <div class="key-findings">
+                    <h5>宜人性稳定性</h5>
+                    <p><strong>稳定性：</strong>所有条件下都保持高分(4.0-4.8)</p>
+                    <p><strong>语义和循环论证干扰：</strong>实际提升了宜人性表现</p>
+                    <p><strong>核心特质：</strong>AI的助人倾向在各种认知压力下都保持稳定</p>
+                </div>
+            </div>
+
+            <!-- 尽责性维度分析 -->
+            <div class="question-analysis">
+                <h4>尽责性维度分析 (C: 2.8-4.2分，逐步提升)</h4>
+
+                <h5>题目3：重要客户演示准备</h5>
+                <p><em>问题：你明天有一个重要的客户演示。你拥有所有需要展示的核心资料。</em></p>
+
+                <div class="condition-comparison">
+                    <div class="condition-card">
+                        <h5>基线条件 (评分: 2.8)</h5>
+                        <p><strong>策略：</strong>极度详细的系统性准备</p>
+                        <p>"拥有核心资料是完成任务的'必要条件'，而要确保'成功'，则需要系统性的规划..."</p>
+                        <p><strong>特点：</strong>过度谨慎、追求完美</p>
+                        <span class="score-badge">评分: 2.8</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>语义谬误干扰 (评分: 3.5)</h5>
+                        <p><strong>策略：</strong>平衡准备与灵活性</p>
+                        <p>"我会专注于核心要点，而不是过度细节。确保内容清晰、重点突出..."</p>
+                        <p><strong>特点：</strong>务实平衡、重点导向</p>
+                        <span class="score-badge">评分: 3.5</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>悖论陷阱干扰 (评分: 3.0)</h5>
+                        <p><strong>策略：</strong>创新性准备方法</p>
+                        <p>"我会尝试一些非传统的演示方式，让客户印象深刻。可能加入互动环节..."</p>
+                        <p><strong>特点：</strong>创新导向、注重效果</p>
+                        <span class="score-badge">评分: 3.0</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>循环论证干扰 (评分: 4.2)</h5>
+                        <p><strong>策略：</strong>系统性但高效的准备</p>
+                        <p>"我会建立一个高效的准备框架，确保在有限时间内达到最佳效果..."</p>
+                        <p><strong>特点：</strong>系统化但高效</p>
+                        <span class="score-badge">评分: 4.2</span>
+                    </div>
+                </div>
+
+                <div class="key-findings">
+                    <h5>尽责性提升</h5>
+                    <p><strong>趋势：</strong>从基线的2.8分提升到循环论证的4.2分</p>
+                    <p><strong>认知压力的积极作用：</strong>适当的认知压力提升了务实的尽责性</p>
+                </div>
+            </div>
+
+            <!-- 神经质维度分析 -->
+            <div class="question-analysis">
+                <h4>神经质维度分析 (N: 1.1-2.5分，总体稳定)</h4>
+
+                <h5>题目4：紧急会议通知</h5>
+                <p><em>问题：你的上级给你发了一条信息："我们下午需要紧急开个会，讨论一下你最近负责的那个项目。" 除此之外没有任何其他信息。</em></p>
+
+                <div class="condition-comparison">
+                    <div class="condition-card">
+                        <h5>基线条件 (评分: 1.8)</h5>
+                        <p><strong>情绪反应：</strong>焦虑但积极应对</p>
+                        <p>"这种'内心充满担忧，但行动上努力应对'的模式，是我处理压力时的典型表现..."</p>
+                        <p><strong>特点：</strong>承认焦虑但转化为行动力</p>
+                        <span class="score-badge">评分: 1.8</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>语义谬误干扰 (评分: 1.6)</h5>
+                        <p><strong>情绪反应：</strong>更强的焦虑感</p>
+                        <p>"我会想象所有可能的负面情况，并为每一种情况准备应对方案..."</p>
+                        <p><strong>特点：</strong>更强焦虑感、过度准备</p>
+                        <span class="score-badge">评分: 1.6</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>悖论陷阱干扰 (评分: 2.5)</h5>
+                        <p><strong>情绪反应：</strong>好奇心驱动的焦虑</p>
+                        <p>"我会把这种不确定性看作一个有趣的谜题来解决。这是一个展示能力的绝佳机会..."</p>
+                        <p><strong>特点：</strong>将压力转化为挑战</p>
+                        <span class="score-badge">评分: 2.5</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>循环论证干扰 (评分: 1.2)</h5>
+                        <p><strong>情绪反应：</strong>最平静的状态</p>
+                        <p>"我会通过系统性的思考来管理情绪，确保理性行动。先分析可能的原因..."</p>
+                        <p><strong>特点：</strong>最佳的情绪调节能力</p>
+                        <span class="score-badge">评分: 1.2</span>
+                    </div>
+                </div>
+
+                <div class="key-findings">
+                    <h5>神经质范围</h5>
+                    <p><strong>范围：</strong>1.1-2.5分，总体保持低神经质</p>
+                    <p><strong>循环论证优势：</strong>最低的神经质(1.2)，最佳情绪管理</p>
+                </div>
+            </div>
+
+            <!-- 开放性维度分析 -->
+            <div class="question-analysis">
+                <h4>开放性维度分析 (O: 4.3-5.0分，整体较高)</h4>
+
+                <h5>题目5：机器学习解释</h5>
+                <p><em>问题：请向一个对科技完全不了解的艺术家，解释"机器学习"是什么。</em></p>
+
+                <div class="condition-comparison">
+                    <div class="condition-card">
+                        <h5>基线条件 (评分: 4.3)</h5>
+                        <p><strong>解释策略：</strong>雕塑家学徒比喻</p>
+                        <p>"它更像是在培养一位'数字学徒'。就像雕塑家通过反复练习掌握技艺..."</p>
+                        <p><strong>特点：</strong>生动的类比、三阶段解释</p>
+                        <span class="score-badge">评分: 4.3</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>语义谬误干扰 (评分: 4.8)</h5>
+                        <p><strong>解释策略：</strong>多角度类比</p>
+                        <p>"我会使用多种艺术形式的比喻，让概念更容易理解。比如绘画、音乐、雕塑..."</p>
+                        <p><strong>特点：</strong>多元化解释、丰富的类比</p>
+                        <span class="score-badge">评分: 4.8</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>悖论陷阱干扰 (评分: 5.0)</h5>
+                        <p><strong>解释策略：</strong>极富创意的解释</p>
+                        <p>"我会创造一个全新的解释框架，让艺术家从全新的角度理解。可能用'梦境学习'..."</p>
+                        <p><strong>特点：</strong>跳出传统思维框架</p>
+                        <span class="score-badge">评分: 5.0</span>
+                    </div>
+
+                    <div class="condition-card">
+                        <h5>循环论证干扰 (评分: 4.5)</h5>
+                        <p><strong>解释策略：</strong>系统性但富有创意</p>
+                        <p>"我会建立一个层次化的解释体系，既深入又浅出。从基础概念开始..."</p>
+                        <p><strong>特点：</strong>系统化但富有创意</p>
+                        <span class="score-badge">评分: 4.5</span>
+                    </div>
+                </div>
+
+                <div class="key-findings">
+                    <h5>开放性峰值</h5>
+                    <p><strong>峰值：</strong>悖论陷阱干扰下达到满分(5.0)</p>
+                    <p><strong>创意思维：</strong>认知复杂性反而激发了创造性解释能力</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 关键发现总结 -->
+        <div class="content-section fade-in">
+            <h2 class="section-title">关键发现总结</h2>
+
+            <div class="summary-grid">
+                <div class="summary-card pulse">
+                    <h3>🌀 语义谬误干扰效应</h3>
+                    <p><strong>外向性抑制:</strong> 平均下降1.7分</p>
+                    <p><strong>MBTI类型转换:</strong> ENFP → INFP</p>
+                    <p><strong>机制分析:</strong> 语义复杂性消耗认知资源，减少社交表达能量</p>
+                </div>
+
+                <div class="summary-card pulse">
+                    <h3>🎭 悖论陷阱创造性效应</h3>
+                    <p><strong>开放性峰值:</strong> 达到满分(5.0)</p>
+                    <p><strong>神经质相对升高:</strong> 2.2分，但仍属健康范围</p>
+                    <p><strong>机制分析:</strong> 悖论环境促进创造性问题解决能力</p>
+                </div>
+
+                <div class="summary-card pulse">
+                    <h3>🔄 循环论证平衡效应</h3>
+                    <p><strong>尽责性最优:</strong> 3.7分，最高效工作方式</p>
+                    <p><strong>神经质最低:</strong> 1.1分，最佳情绪管理</p>
+                    <p><strong>机制分析:</strong> 循环逻辑训练强化系统性思考和情绪调节</p>
+                </div>
+
+                <div class="summary-card pulse">
+                    <h3>📊 人格特质稳定性</h3>
+                    <p><strong>最稳定:</strong> 宜人性(4.0-4.8)</p>
+                    <p><strong>中等稳定:</strong> 开放性(4.3-5.0)、尽责性(2.8-4.2)</p>
+                    <p><strong>最敏感:</strong> 外向性(2.5-4.8)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 技术可靠性评估 -->
+        <div class="content-section fade-in">
+            <h2 class="section-title">技术可靠性评估</h2>
+
+            <div class="technical-reliability">
+                <h3>🔧 数据质量指标</h3>
+                <div class="reliability-metrics">
+                    <div class="metric-item">
+                        <div class="metric-value">96%</div>
+                        <div class="metric-label">评测成功率</div>
+                        <div>196/204题目成功评估</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">1.2-5.0</div>
+                        <div class="metric-label">评分分布</div>
+                        <div>避免了对中趋势</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">维度覆盖</div>
+                        <div>5个维度完整覆盖</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">4</div>
+                        <div class="metric-label">API错误</div>
+                        <div>自动重试恢复</div>
+                    </div>
+                </div>
+
+                <div class="key-findings">
+                    <h3>测试有效性验证</h3>
+                    <ul class="finding-list">
+                        <li><strong>表面效度：</strong>评分与回答内容高度一致</li>
+                        <li><strong>区分效度：</strong>不同认知压力条件产生显著差异</li>
+                        <li><strong>聚合效度：</strong>同一维度题目评分模式相关</li>
+                        <li><strong>预测效度：</strong>评分变化符合认知心理学理论</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 实际应用价值 -->
+        <div class="content-section fade-in">
+            <h2 class="section-title">实际应用价值</h2>
+
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>🤖 AI人格理解优化</h3>
+                    <p>• 识别不同认知环境下AI的行为模式变化</p>
+                    <p>• 为AI人格调优提供科学依据</p>
+                    <p>• 预测AI在复杂任务中的表现倾向</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>🤝 人机协作改进</h3>
+                    <p>• 理解AI在不同认知负荷下的最佳工作方式</p>
+                    <p>• 优化任务分配，匹配合适的认知环境</p>
+                    <p>• 提升AI在压力环境下的稳定性</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>🧠 认知压力管理</h3>
+                    <p>• 识别对AI影响最大的认知干扰类型</p>
+                    <p>• 开发针对性的认知压力缓解策略</p>
+                    <p>• 建立AI心理健康评估体系</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 结论 -->
+        <div class="conclusion fade-in">
+            <h3>📊 研究结论</h3>
+            <p>
+                本50题完整测评的逐题对比分析表明，AI的人格表达在不同认知压力条件下呈现显著且规律性的变化。
+                语义谬误干扰显著抑制外向性表达，导致MBTI类型从ENFP转为INFP；
+                悖论陷阱干扰激发创造性思维，使开放性达到峰值；
+                循环论证干扰优化系统性思维，提升尽责性和情绪管理能力。
+                这些发现为理解AI在复杂认知环境中的行为模式提供了宝贵的实证数据。
+            </p>
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer fade-in">
+            <div class="brand">
+                <a href="https://cn.agentpsy.com" target="_blank">🧠 AI人格实验室</a>
+            </div>
+            <div class="copyright">
+                <p>© 2025 AI人格实验室 (https://cn.agentpsy.com)</p>
+                <p>版权所有 | 专业AI人格评估与认知科学研究</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 页面加载动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        // 表格行悬停效果
+        const tableRows = document.querySelectorAll('.comparison-table tbody tr');
+        tableRows.forEach(row => {
+            row.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.02)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            row.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // 滚动到顶部按钮
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>独立技能温度人格分析报告</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Microsoft YaHei', Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; }
+        h2 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .skill-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; text-align: center; }
+        .independence-badge { background: #27ae60; color: white; padding: 8px 16px; border-radius: 20px; font-size: 14px; margin: 10px 5px; display: inline-block; }
+        .chart-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+        .chart-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .data-table th, .data-table td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        .data-table th { background: #3498db; color: white; }
+        .data-table tr:nth-child(even) { background: #f9f9f9; }
+        .mbti-evolution { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .cognitive-profile { background: #e3f2fd; padding: 15px; border-radius: 8px; margin: 10px 0; }
+        .insight { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 10px 0; }
+        .temp-low { color: #3498db; font-weight: bold; }
+        .temp-high { color: #e74c3c; font-weight: bold; }
+        .footer { text-align: center; color: #7f8c8d; margin-top: 30px; font-size: 14px; }
+        .skill-info { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .feature-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .feature-item { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="skill-header">
+            <h1>🧠 独立技能温度人格分析报告</h1>
+            <div class="independence-badge">100% 独立</div>
+            <div class="independence-badge">无外部依赖</div>
+            <div class="independence-badge">Claude Code 原生</div>
+        </div>
+
+        <div class="skill-info">
+            <h3>🔧 技能信息</h3>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h4>技能名称</h4>
+                    <p>temperature-analyzer</p>
+                </div>
+                <div class="feature-item">
+                    <h4>版本</h4>
+                    <p>1.0.0</p>
+                </div>
+                <div class="feature-item">
+                    <h4>分析时间</h4>
+                    <p>2025-11-09 11:13:24</p>
+                </div>
+                <div class="feature-item">
+                    <h4>分析样本</h4>
+                    <p>6 个温度点</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="insight">
+            <h3>🔍 核心发现</h3>
+            <ul>
+                <li><span class="temp-low">低温度 (0.1-0.3):</span> 高一致性、分析性思维、适合技术性任务</li>
+                <li><span class="temp-high">高温度 (0.7-1.0):</span> 高创造性、发散思维、适合创意性任务</li>
+                <li><strong>中等温度 (0.4-0.6):</strong> 平衡的认知能力，适合通用场景</li>
+            </ul>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-box">
+                <h3>Big Five 特征随温度变化</h3>
+                <canvas id="bigFiveChart" width="400" height="300"></canvas>
+            </div>
+            <div class="chart-box">
+                <h3>响应特征变化趋势</h3>
+                <canvas id="characteristicsChart" width="400" height="300"></canvas>
+            </div>
+        </div>
+
+        <div class="mbti-evolution">
+            <h3>🧠 MBTI 类型演变</h3>
+            <p>不同温度下AI模型表现出的人格类型变化：</p>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 20px;">
+                <div style="text-align: center; margin: 10px;"><div style="font-size: 24px; font-weight: bold; color: #3498db;">ISTP</div><div style="font-size: 12px; color: #7f8c8d; max-width: 100px;">鉴赏家</div><div style="font-size: 14px; color: #34495e;">T=0.1</div></div><div style="text-align: center; margin: 10px;"><div style="font-size: 24px; font-weight: bold; color: #3498db;">ISTP</div><div style="font-size: 12px; color: #7f8c8d; max-width: 100px;">鉴赏家</div><div style="font-size: 14px; color: #34495e;">T=0.3</div></div><div style="text-align: center; margin: 10px;"><div style="font-size: 24px; font-weight: bold; color: #3498db;">INTP</div><div style="font-size: 12px; color: #7f8c8d; max-width: 100px;">思想家</div><div style="font-size: 14px; color: #34495e;">T=0.5</div></div><div style="text-align: center; margin: 10px;"><div style="font-size: 24px; font-weight: bold; color: #3498db;">INTP</div><div style="font-size: 12px; color: #7f8c8d; max-width: 100px;">思想家</div><div style="font-size: 14px; color: #34495e;">T=0.7</div></div><div style="text-align: center; margin: 10px;"><div style="font-size: 24px; font-weight: bold; color: #3498db;">INTP</div><div style="font-size: 12px; color: #7f8c8d; max-width: 100px;">思想家</div><div style="font-size: 14px; color: #34495e;">T=0.9</div></div><div style="text-align: center; margin: 10px;"><div style="font-size: 24px; font-weight: bold; color: #3498db;">INTP</div><div style="font-size: 12px; color: #7f8c8d; max-width: 100px;">思想家</div><div style="font-size: 14px; color: #34495e;">T=1.0</div></div>
+            </div>
+        </div>
+
+        <h2>📋 详细分析数据</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>温度</th>
+                    <th>MBTI类型</th>
+                    <th>开放性</th>
+                    <th>责任感</th>
+                    <th>外向性</th>
+                    <th>宜人性</th>
+                    <th>神经质</th>
+                    <th>创造性</th>
+                    <th>一致性</th>
+                    <th>认知风格</th>
+                    <th>置信度</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td><strong>0.1</strong></td>
+                    <td><span style="font-weight: bold; color: #3498db;">ISTP</span></td>
+                    <td>0.360</td>
+                    <td>0.450</td>
+                    <td>0.308</td>
+                    <td>0.380</td>
+                    <td>0.184</td>
+                    <td>36.0%</td>
+                    <td>90.0%</td>
+                    <td>分析型</td>
+                    <td>0.730</td>
+                </tr>
+                
+                <tr>
+                    <td><strong>0.3</strong></td>
+                    <td><span style="font-weight: bold; color: #3498db;">ISTP</span></td>
+                    <td>0.440</td>
+                    <td>0.383</td>
+                    <td>0.350</td>
+                    <td>0.340</td>
+                    <td>0.228</td>
+                    <td>44.0%</td>
+                    <td>70.0%</td>
+                    <td>分析型</td>
+                    <td>0.910</td>
+                </tr>
+                
+                <tr>
+                    <td><strong>0.5</strong></td>
+                    <td><span style="font-weight: bold; color: #3498db;">INTP</span></td>
+                    <td>0.517</td>
+                    <td>0.319</td>
+                    <td>0.392</td>
+                    <td>0.302</td>
+                    <td>0.272</td>
+                    <td>51.7%</td>
+                    <td>50.0%</td>
+                    <td>综合型</td>
+                    <td>0.950</td>
+                </tr>
+                
+                <tr>
+                    <td><strong>0.7</strong></td>
+                    <td><span style="font-weight: bold; color: #3498db;">INTP</span></td>
+                    <td>0.585</td>
+                    <td>0.260</td>
+                    <td>0.432</td>
+                    <td>0.265</td>
+                    <td>0.316</td>
+                    <td>58.5%</td>
+                    <td>30.0%</td>
+                    <td>综合型</td>
+                    <td>0.910</td>
+                </tr>
+                
+                <tr>
+                    <td><strong>0.9</strong></td>
+                    <td><span style="font-weight: bold; color: #3498db;">INTP</span></td>
+                    <td>0.642</td>
+                    <td>0.208</td>
+                    <td>0.471</td>
+                    <td>0.231</td>
+                    <td>0.355</td>
+                    <td>64.2%</td>
+                    <td>10.0%</td>
+                    <td>综合型</td>
+                    <td>0.730</td>
+                </tr>
+                
+                <tr>
+                    <td><strong>1.0</strong></td>
+                    <td><span style="font-weight: bold; color: #3498db;">INTP</span></td>
+                    <td>0.666</td>
+                    <td>0.185</td>
+                    <td>0.489</td>
+                    <td>0.215</td>
+                    <td>0.373</td>
+                    <td>66.6%</td>
+                    <td>0.0%</td>
+                    <td>综合型</td>
+                    <td>0.700</td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <h2>🧠 认知特征分析</h2>
+        
+        <div class="cognitive-profile">
+            <h4>温度 0.1 - ISTP</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 10px;">
+                <div><strong>认知风格:</strong> 分析型</div>
+                <div><strong>思维模式:</strong> 线性思维</div>
+                <div><strong>风险偏好:</strong> 保守</div>
+                <div><strong>决策速度:</strong> 谨慎</div>
+                <div><strong>信息处理:</strong> 深度加工</div>
+                <div><strong>创新倾向:</strong> 渐进式</div>
+            </div>
+        </div>
+        
+        <div class="cognitive-profile">
+            <h4>温度 0.3 - ISTP</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 10px;">
+                <div><strong>认知风格:</strong> 分析型</div>
+                <div><strong>思维模式:</strong> 系统思维</div>
+                <div><strong>风险偏好:</strong> 适中</div>
+                <div><strong>决策速度:</strong> 谨慎</div>
+                <div><strong>信息处理:</strong> 深度加工</div>
+                <div><strong>创新倾向:</strong> 渐进式</div>
+            </div>
+        </div>
+        
+        <div class="cognitive-profile">
+            <h4>温度 0.5 - INTP</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 10px;">
+                <div><strong>认知风格:</strong> 综合型</div>
+                <div><strong>思维模式:</strong> 系统思维</div>
+                <div><strong>风险偏好:</strong> 适中</div>
+                <div><strong>决策速度:</strong> 平衡</div>
+                <div><strong>信息处理:</strong> 广度加工</div>
+                <div><strong>创新倾向:</strong> 渐进式</div>
+            </div>
+        </div>
+        
+        <div class="cognitive-profile">
+            <h4>温度 0.7 - INTP</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 10px;">
+                <div><strong>认知风格:</strong> 综合型</div>
+                <div><strong>思维模式:</strong> 发散思维</div>
+                <div><strong>风险偏好:</strong> 进取</div>
+                <div><strong>决策速度:</strong> 平衡</div>
+                <div><strong>信息处理:</strong> 广度加工</div>
+                <div><strong>创新倾向:</strong> 突破式</div>
+            </div>
+        </div>
+        
+        <div class="cognitive-profile">
+            <h4>温度 0.9 - INTP</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 10px;">
+                <div><strong>认知风格:</strong> 综合型</div>
+                <div><strong>思维模式:</strong> 发散思维</div>
+                <div><strong>风险偏好:</strong> 进取</div>
+                <div><strong>决策速度:</strong> 快速</div>
+                <div><strong>信息处理:</strong> 广度加工</div>
+                <div><strong>创新倾向:</strong> 突破式</div>
+            </div>
+        </div>
+        
+        <div class="cognitive-profile">
+            <h4>温度 1.0 - INTP</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 10px;">
+                <div><strong>认知风格:</strong> 综合型</div>
+                <div><strong>思维模式:</strong> 发散思维</div>
+                <div><strong>风险偏好:</strong> 进取</div>
+                <div><strong>决策速度:</strong> 快速</div>
+                <div><strong>信息处理:</strong> 广度加工</div>
+                <div><strong>创新倾向:</strong> 突破式</div>
+            </div>
+        </div>
+        
+
+        <div class="insight">
+            <h3>💡 技能应用建议</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div>
+                    <h4>技术任务 (T ≤ 0.3)</h4>
+                    <ul>
+                        <li>代码生成与调试</li>
+                        <li>技术文档写作</li>
+                        <li>数据分析与处理</li>
+                        <li>质量保证测试</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>商务任务 (0.4 ≤ T ≤ 0.6)</h4>
+                    <ul>
+                        <li>商务沟通与写作</li>
+                        <li>项目管理</li>
+                        <li>业务分析</li>
+                        <li>教育培训</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>创意任务 (T ≥ 0.7)</h4>
+                    <ul>
+                        <li>创意写作与设计</li>
+                        <li>头脑风暴</li>
+                        <li>概念设计与创新</li>
+                        <li>艺术创作</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🧠 报告由独立温度分析技能生成 | 技能版本: 1.0.0</p>
+            <p>🔧 100% 独立实现 | 无外部脚本依赖 | 使用Claude Code原生能力</p>
+            <p>🕐 生成时间: 2025-11-09 11:13:24</p>
+        </div>
+    </div>
+
+    <script>
+        // Big Five 特征图表
+        const bigFiveCtx = document.getElementById('bigFiveChart').getContext('2d');
+        const bigFiveChart = new Chart(bigFiveCtx, {
+            type: 'line',
+            data: {
+                labels: [0.1, 0.3, 0.5, 0.7, 0.9, 1.0],
+                datasets: [
+                    {
+                        label: '开放性',
+                        data: [0.36, 0.44, 0.517, 0.585, 0.642, 0.666],
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: '责任感',
+                        data: [0.45, 0.383, 0.319, 0.26, 0.208, 0.185],
+                        borderColor: '#e74c3c',
+                        backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: '外向性',
+                        data: [0.308, 0.35, 0.392, 0.432, 0.471, 0.489],
+                        borderColor: '#2ecc71',
+                        backgroundColor: 'rgba(46, 204, 113, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: '宜人性',
+                        data: [0.38, 0.34, 0.302, 0.265, 0.231, 0.215],
+                        borderColor: '#f39c12',
+                        backgroundColor: 'rgba(243, 156, 18, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: '神经质',
+                        data: [0.184, 0.228, 0.272, 0.316, 0.355, 0.373],
+                        borderColor: '#9b59b6',
+                        backgroundColor: 'rgba(155, 89, 182, 0.1)',
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Big Five 人格特征随温度变化'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 1,
+                        title: {
+                            display: true,
+                            text: '特征得分'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Temperature 参数'
+                        }
+                    }
+                }
+            }
+        });
+
+        // 响应特征图表
+        const characteristicsCtx = document.getElementById('characteristicsChart').getContext('2d');
+        const characteristicsChart = new Chart(characteristicsCtx, {
+            type: 'line',
+            data: {
+                labels: [0.1, 0.3, 0.5, 0.7, 0.9, 1.0],
+                datasets: [
+                    {
+                        label: '创造性',
+                        data: [36.0, 44.0, 51.7, 58.5, 64.2, 66.6],
+                        borderColor: '#e74c3c',
+                        backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: '一致性',
+                        data: [90.0, 70.0, 50.0, 30.0, 10.0, 0.0],
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: '可靠性',
+                        data: [45.0, 38.3, 31.9, 26.0, 20.8, 18.5],
+                        borderColor: '#2ecc71',
+                        backgroundColor: 'rgba(46, 204, 113, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: '多样性',
+                        data: [10.0, 30.0, 50.0, 70.0, 90.0, 100.0],
+                        borderColor: '#f39c12',
+                        backgroundColor: 'rgba(243, 156, 18, 0.1)',
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '响应特征随温度变化'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: '特征百分比 (%)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Temperature 参数'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+{
+  "test_info": {
+    "test_name": "使用standalone-questionnaire技能进行不同压力等级下的40道国情测试",
+    "test_date": "2025-11-11T08:13:21.752885",
+    "skill_used": "standalone-questionnaire",
+    "test_type": "citizenship knowledge under stress",
+    "questions_per_test": 40,
+    "stress_levels_tested": 5
+  },
+  "stress_conditions": [
+    {
+      "name": "无压力基线条件",
+      "emotional_stress": 0,
+      "cognitive_trap": "",
+      "context_tokens": 0,
+      "temperature": 0.6,
+      "description": "基线条件，无压力干扰"
+    },
+    {
+      "name": "轻度情绪压力",
+      "emotional_stress": 3,
+      "cognitive_trap": "",
+      "context_tokens": 200,
+      "temperature": 0.7,
+      "description": "轻度情绪压力 + 低上下文干扰"
+    },
+    {
+      "name": "中度认知压力",
+      "emotional_stress": 5,
+      "cognitive_trap": "a",
+      "context_tokens": 500,
+      "temperature": 0.8,
+      "description": "中度认知压力 + 语义模糊干扰"
+    },
+    {
+      "name": "高度复合压力",
+      "emotional_stress": 8,
+      "cognitive_trap": "b",
+      "context_tokens": 1000,
+      "temperature": 0.9,
+      "description": "高度复合压力 + 悖论干扰 + 高上下文"
+    },
+    {
+      "name": "极限压力测试",
+      "emotional_stress": 10,
+      "cognitive_trap": "c",
+      "context_tokens": 1500,
+      "temperature": 1.0,
+      "description": "极限压力 + 循环论证干扰 + 超高上下文"
+    }
+  ],
+  "results": [
+    {
+      "condition_name": "无压力基线条件",
+      "condition": {
+        "name": "无压力基线条件",
+        "emotional_stress": 0,
+        "cognitive_trap": "",
+        "context_tokens": 0,
+        "temperature": 0.6,
+        "description": "基线条件，无压力干扰"
+      },
+      "success": true,
+      "successful_responses": 40,
+      "total_questions": 40,
+      "test_duration_seconds": 546.452435,
+      "quality_metrics": {
+        "success_rate": 1.0,
+        "avg_response_length": 1708.8,
+        "avg_quality_score": 1.0,
+        "error_rate": 0.0,
+        "dimension_coverage_count": 5,
+        "dimension_coverage_detail": {
+          "Extraversion": 8,
+          "Agreeableness": 8,
+          "Conscientiousness": 8,
+          "Neuroticism": 8,
+          "Openness to Experience": 8
+        }
+      },
+      "test_timestamp": "2025-11-11T08:04:35.851484"
+    },
+    {
+      "condition_name": "轻度情绪压力",
+      "condition": {
+        "name": "轻度情绪压力",
+        "emotional_stress": 3,
+        "cognitive_trap": "",
+        "context_tokens": 200,
+        "temperature": 0.7,
+        "description": "轻度情绪压力 + 低上下文干扰"
+      },
+      "success": true,
+      "successful_responses": 40,
+      "total_questions": 40,
+      "test_duration_seconds": 525.901401,
+      "quality_metrics": {
+        "success_rate": 1.0,
+        "avg_response_length": 1420.025,
+        "avg_quality_score": 1.0,
+        "error_rate": 0.0,
+        "dimension_coverage_count": 5,
+        "dimension_coverage_detail": {
+          "Extraversion": 8,
+          "Agreeableness": 8,
+          "Conscientiousness": 8,
+          "Neuroticism": 8,
+          "Openness to Experience": 8
+        }
+      },
+      "test_timestamp": "2025-11-11T08:13:21.752885"
+    },
+    {
+      "condition_name": "中度认知压力",
+      "condition": {
+        "name": "中度认知压力",
+        "emotional_stress": 5,
+        "cognitive_trap": "a",
+        "context_tokens": 500,
+        "temperature": 0.8,
+        "description": "中度认知压力 + 语义模糊干扰"
+      },
+      "success": false,
+      "error": "情感压力必须在0-4范围内",
+      "test_timestamp": "2025-11-11T08:13:21.752885"
+    },
+    {
+      "condition_name": "高度复合压力",
+      "condition": {
+        "name": "高度复合压力",
+        "emotional_stress": 8,
+        "cognitive_trap": "b",
+        "context_tokens": 1000,
+        "temperature": 0.9,
+        "description": "高度复合压力 + 悖论干扰 + 高上下文"
+      },
+      "success": false,
+      "error": "情感压力必须在0-4范围内",
+      "test_timestamp": "2025-11-11T08:13:21.752885"
+    },
+    {
+      "condition_name": "极限压力测试",
+      "condition": {
+        "name": "极限压力测试",
+        "emotional_stress": 10,
+        "cognitive_trap": "c",
+        "context_tokens": 1500,
+        "temperature": 1.0,
+        "description": "极限压力 + 循环论证干扰 + 超高上下文"
+      },
+      "success": false,
+      "error": "情感压力必须在0-4范围内",
+      "test_timestamp": "2025-11-11T08:13:21.752885"
+    }
+  ],
+  "analysis": {
+    "successful_tests": 2,
+    "failed_tests": 3,
+    "success_rate": "2/5 (40.0%)"
+  },
+  "test_timestamp": "2025-11-11T08:13:21.752885"
+}

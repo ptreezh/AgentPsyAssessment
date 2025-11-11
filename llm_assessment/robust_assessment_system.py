@@ -85,7 +85,8 @@ class RobustAssessmentSystem:
     def _detect_custom_format(self, content: Dict) -> bool:
         """检测自定义格式"""
         # 任何包含问题内容的格式都算自定义
-        keys_to_check = ["questions", "items", "test_items", "problems", "scenarios"]
+        keys_to_check = ["questions", "items", "test_items", "problems", "scenarios",
+                         "assessment_items", "test_questions", "questionnaire", "survey"]
         return any(key in content for key in keys_to_check)
 
     def process_file(self, file_path: Union[str, Path],

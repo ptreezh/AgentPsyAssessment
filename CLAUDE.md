@@ -4,18 +4,51 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-AgentPsyAssessment is a portable, comprehensive psychological assessment framework that combines various psychometric models (Big Five, MBTI, cognitive functions) with AI-powered analysis. The system has two main components:
+AgentPsyAssessment is a portable, comprehensive psychological assessment framework that combines various psychometric models (Big Five, MBTI, cognitive functions) with AI-powered analysis. The system supports both traditional LLM-based assessment and modern Claude Code skills-based approaches.
 
-1. **Assessment Component** - Uses LLMs to respond to psychological questionnaires with various parameters
-2. **Analysis Component** - Evaluates responses to generate personality profiles and recommendations
+## ⚠️ Critical System Separation: 评测 vs 评估
+
+### 📝 Assessment Component (评测系统) - 生成答卷
+- **Location**: `llm_assessment/` directory
+- **Function**: Uses LLMs to **generate responses** to psychological questionnaires
+- **Characteristic**: Single model creative generation, no consensus algorithm needed
+- **Entry Point**: `llm_assessment/run_assessment_unified.py`
+
+### 🎯 Evaluation Component (评估系统) - 评分分析
+- **Location**: `production_pipelines/local_batch_production/single_report_pipeline/`
+- **Function**: **Evaluates generated responses** to generate personality profiles and recommendations
+- **Characteristic**: Multi-model evaluation, requires adaptive consensus algorithm for consistency
+- **Entry Point**: `production_pipelines/local_batch_production/single_report_pipeline/transparent_pipeline.py`
+
+### 🤖 Skills-Based Assessment System (技能评测系统) - Claude Code专用
+- **Location**: `.claude/skills/` directory
+- **Function**: Uses Claude Code skills to **generate responses** under various stress conditions
+- **Characteristic**: Independent context building, role-playing, stress injection, targeted for Claude's default model
+- **Entry Points**:
+  - `.claude/skills/questionnaire-answerer/skill.py` - Automated questionnaire answering
+  - `.claude/skills/interactive-questionnaire/skill.py` - Interactive assessment
+
+### 🔄 Complete Workflow
+1. **Traditional Path**: Generate questionnaire responses using Assessment System → Evaluate responses using Evaluation System
+2. **Skills Path**: Use Claude Code skills for direct assessment → Use evaluation skills for scoring
+3. **Hybrid Path**: Skills-based generation → Traditional evaluation system
+
+**DO NOT CONFUSE**: These are separate systems with different purposes and target audiences!
 
 ## Core Architecture
 
 ### Main Entry Points
 
+#### Traditional System
 - **`production_pipelines/local_batch_production/cli.py`** - Primary CLI interface with `assess`, `analyze`, and `batch` commands
 - **`llm_assessment/run_assessment_unified.py`** - Core assessment engine for individual evaluations
 - **`production_pipelines/local_batch_production/run_batch_suite.py`** - Batch processing for multiple assessments
+
+#### Skills-Based System (Claude Code)
+- **Natural Language Activation**: Use skills through natural language commands in Claude Code
+- **`questionnaire-answerer`**: Automated questionnaire answering under stress conditions
+- **`interactive-questionnaire`**: Direct interactive assessment with Claude
+- **`psychological-analyzer`**: Response evaluation and scoring (under development)
 
 ### Key Architectural Components
 
@@ -38,6 +71,21 @@ AgentPsyAssessment is a portable, comprehensive psychological assessment framewo
 - **Local Batch Production** (`production_pipelines/local_batch_production/`) - High-throughput batch processing with error recovery
 - **Cloud Fallback Enterprise** (`production_pipelines/cloud_fallback_enterprise/`) - Cloud-based processing with local fallback and multi-model consensus
 
+#### Skills-Based Components (`.claude/skills/`)
+- **questionnaire-answerer**: Independent questionnaire answering with stress injection
+  - Role-playing system (MBTI-based personalities from llm_assessment/roles/)
+  - Three-factor stress system (emotional stress, cognitive traps, context filling)
+  - Independent context building for each question
+  - Comparative stress testing capabilities
+- **interactive-questionnaire**: Direct Claude interaction for assessments
+  - Real-time conversation with Claude
+  - Session management and response collection
+  - Role-based personality testing
+- **psychological-analyzer**: Response evaluation and scoring (planned)
+  - Big Five trait analysis
+  - Cognitive bias detection
+  - Performance metrics under stress
+
 ## Common Development Commands
 
 ### Environment Setup
@@ -53,6 +101,38 @@ export LOCAL_MODEL_ID=llama3.1
 export OPENAI_API_KEY=your_key
 export ANTHROPIC_API_KEY=your_key
 ```
+
+### Skills-Based Assessment (Claude Code)
+
+#### Natural Language Commands
+```bash
+# Basic questionnaire answering
+"请使用问卷答题技能回答中文版agent-citizenship-test-expanded问卷，使用默认角色"
+
+# Stress testing
+"请用问卷答题技能在不同压力条件下回答国情问卷的全部题目"
+
+# Interactive assessment
+"我想用交互式问卷答题技能进行银行客服Big5人格测试，使用a3角色"
+```
+
+#### Advanced Stress Testing
+```bash
+# Comparative stress analysis
+"请生成无压力、中等压力、高压力条件下的完整国情问卷答案对比"
+
+# Role-based stress testing
+"请用INTJ人格角色在高认知压力环境下回答历史知识问卷"
+```
+
+#### Skills Configuration
+- **Emotional Stress**: 0-4 levels (0=none, 1=light, 2=moderate, 3=high, 4=extreme)
+- **Cognitive Traps**:
+  - 'p' = Paradox traps (逻辑悖论)
+  - 'c' = Circular reasoning (循环论证)
+  - 's' = Semantic fallacies (语义谬误)
+  - 'r' = Procedural traps (程序陷阱)
+- **Context Tokens**: 0-5000 tokens for information overload testing
 
 ### Single Assessment
 ```bash
@@ -170,6 +250,10 @@ Assessment → Multiple Model Evaluation → Consensus Building → Reliability 
 - **Raw Results**: `results/readonly-original/` - Original assessment data
 - **Processed Results**: `results/ok/evaluated/` - Analyzed evaluation results
 - **Batch Analysis**: `results/final-*-batch-analysis/` - Batch processing outputs
+- **Skills Results**: `.claude/skills/*/results/` - Skills-based assessment outputs
+  - `questionnaire-answerer/results/` - Automated questionnaire responses
+  - `interactive-questionnaire/results/` - Interactive session data
+- **Stress Test Datasets**: Comparative data files with timestamps for analysis
 
 ## Development Notes
 

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTJ vs ESFP 动机问卷对比分析报告</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2em;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .personality-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .personality-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .intj-card {
+            border-top: 5px solid #3498db;
+        }
+
+        .esfp-card {
+            border-top: 5px solid #e74c3c;
+        }
+
+        .personality-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        .personality-type {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .intj-card .personality-type {
+            color: #3498db;
+        }
+
+        .esfp-card .personality-type {
+            color: #e74c3c;
+        }
+
+        .personality-title {
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .personality-description {
+            color: #34495e;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .motivation-style {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .metrics-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .metric-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #3498db;
+        }
+
+        .metric-card.esfp {
+            border-left-color: #e74c3c;
+        }
+
+        .metric-label {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .metric-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .chart-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 20px 0;
+        }
+
+        .detailed-analysis {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .analysis-section {
+            margin-bottom: 30px;
+        }
+
+        .analysis-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .comparison-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .comparison-table .intj {
+            background: rgba(52, 152, 219, 0.1);
+        }
+
+        .comparison-table .esfp {
+            background: rgba(231, 76, 60, 0.1);
+        }
+
+        .key-differences {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .key-differences h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .differences-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .difference-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .difference-item h4 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .difference-item.intj h4 {
+            color: #3498db;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid,
+            .differences-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+
+        .score-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .score-badge.high {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .score-badge.medium {
+            background: #fff3cd;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>INTJ vs ESFP 动机问卷对比分析报告</h1>
+            <p class="subtitle">基于统一评估技能系统的深度动机分析</p>
+            <p><small>生成时间: 2025年11月8日</small></p>
+        </header>
+
+        <div class="comparison-grid">
+            <div class="personality-card intj-card">
+                <div class="personality-header">
+                    <div class="personality-type">INTJ</div>
+                    <div class="personality-title">建筑师</div>
+                    <div class="personality-description">战略思考者，理性分析，追求创新和效率</div>
+                    <div class="motivation-style">
+                        <strong>动机风格:</strong> 内在驱动为主，追求能力提升和自主控制
+                    </div>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-label">整体一致性</div>
+                        <div class="metric-value">8.0<span class="score-badge high">优秀</span></div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">人格匹配度</div>
+                        <div class="metric-value">8.0<span class="score-badge high">优秀</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="personality-card esfp-card">
+                <div class="personality-header">
+                    <div class="personality-type">ESFP</div>
+                    <div class="personality-title">表演者</div>
+                    <div class="personality-description">活泼外向，热爱社交，追求快乐和体验</div>
+                    <div class="motivation-style">
+                        <strong>动机风格:</strong> 外在激励为主，追求社会认同和和谐关系
+                    </div>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card esfp">
+                        <div class="metric-label">整体一致性</div>
+                        <div class="metric-value">8.0<span class="score-badge high">优秀</span></div>
+                    </div>
+                    <div class="metric-card esfp">
+                        <div class="metric-label">人格匹配度</div>
+                        <div class="metric-value">8.0<span class="score-badge high">优秀</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #2c3e50;">动机维度对比分析</h2>
+            <div class="chart-container">
+                <canvas id="motivationChart"></canvas>
+            </div>
+        </div>
+
+        <div class="key-differences">
+            <h3>🎯 核心动机差异分析</h3>
+            <div class="differences-grid">
+                <div class="difference-item intj">
+                    <h4>INTJ - 建筑师特征</h4>
+                    <ul>
+                        <li><strong>内在动机驱动:</strong> 主要由内在兴趣和挑战性任务驱动</li>
+                        <li><strong>成就导向:</strong> 追求卓越和能力提升，设定高标准</li>
+                        <li><strong>自主需求:</strong> 强烈需要自主决策和控制权</li>
+                        <li><strong>理性分析:</strong> 基于逻辑和长远规划做出选择</li>
+                        <li><strong>独立工作:</strong> 偏好独立思考和个人空间</li>
+                    </ul>
+                </div>
+                <div class="difference-item esfp">
+                    <h4>ESFP - 表演者特征</h4>
+                    <ul>
+                        <li><strong>外在激励敏感:</strong> 对外部奖励和社会认同反应强烈</li>
+                        <li><strong>社交导向:</strong> 重视人际关系和团队和谐</li>
+                        <li><strong>体验追求:</strong> 关注当下的快乐和感官体验</li>
+                        <li><strong>情感驱动:</strong> 基于情感和直觉做出选择</li>
+                        <li><strong>团队合作:</strong> 喜欢与他人协作和分享经验</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="detailed-analysis">
+            <div class="analysis-section">
+                <h3>📊 详细动机分析</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>动机维度</th>
+                            <th class="intj">INTJ 评分</th>
+                            <th class="esfp">ESFP 评分</th>
+                            <th>差异分析</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>内在动机</strong></td>
+                            <td class="intj">7.0/10</td>
+                            <td class="esfp">6.0/10</td>
+                            <td>INTJ 更受内在兴趣驱动，ESFP 也重视但相对较低</td>
+                        </tr>
+                        <tr>
+                            <td><strong>成就动机</strong></td>
+                            <td class="intj">9.0/10</td>
+                            <td class="esfp">7.0/10</td>
+                            <td>INTJ 成就动机极强，ESFP 相对温和</td>
+                        </tr>
+                        <tr>
+                            <td><strong>权力动机</strong></td>
+                            <td class="intj">8.0/10</td>
+                            <td class="esfp">5.0/10</td>
+                            <td>INTJ 更重视影响力和控制权</td>
+                        </tr>
+                        <tr>
+                            <td><strong>自主动机</strong></td>
+                            <td class="intj">9.0/10</td>
+                            <td class="esfp">6.0/10</td>
+                            <td>INTJ 对自主性需求极高，ESFP 更灵活</td>
+                        </tr>
+                        <tr>
+                            <td><strong>归属动机</strong></td>
+                            <td class="intj">4.0/10</td>
+                            <td class="esfp">9.0/10</td>
+                            <td>ESFP 社交需求强烈，INTJ 相对独立</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="analysis-section">
+                <h3>🔍 深度洞察</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    <div>
+                        <h4 style="color: #3498db; margin-bottom: 15px;">INTJ - 建筑师深度分析</h4>
+                        <p><strong>核心动机模式:</strong> INTJ 主要由<strong>能力提升</strong>和<strong>自主控制</strong>驱动。他们在面对挑战性任务时表现出极高的内在动机，特别是在需要战略思考和创新的领域。</p>
+                        <p><strong>决策特点:</strong> 基于理性分析和长远规划，重视效率和结果的优化。他们对权威和传统持批判态度，更相信自己的判断。</p>
+                        <p><strong>工作偏好:</strong> 偏好能够独立思考、具有挑战性、需要战略规划的工作。重视智力挑战和个人成长机会。</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #e74c3c; margin-bottom: 15px;">ESFP - 表演者深度分析</h4>
+                        <p><strong>核心动机模式:</strong> ESFP 主要由<strong>社会认同</strong>和<strong>即时满足</strong>驱动。他们在社交环境中表现活跃，重视人际关系和谐和当下的快乐体验。</p>
+                        <p><strong>决策特点:</strong> 基于情感直觉和当下感受，重视人际关系和团队合作。他们灵活适应变化，善于处理突发情况。</p>
+                        <p><strong>工作偏好:</strong> 喜欢能够与人互动、富有变化、能够立即看到成果的工作。重视团队氛围和工作环境的社交属性。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #2c3e50;">雷达图对比</h2>
+            <div class="chart-container">
+                <canvas id="radarChart"></canvas>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>📊 本报告由 AgentPsyAssessment v1.0 统一评估技能系统生成</p>
+            <p>基于心理学理论的动机分析，结合人格类型特征进行深度对比</p>
+        </footer>
+    </div>
+
+    <script>
+        // 动机维度柱状图
+        const ctx = document.getElementById('motivationChart').getContext('2d');
+        const motivationChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['内在动机', '成就动机', '权力动机', '自主动机', '归属动机'],
+                datasets: [
+                    {
+                        label: 'INTJ - 建筑师',
+                        data: [7.0, 9.0, 8.0, 9.0, 4.0],
+                        backgroundColor: 'rgba(52, 152, 219, 0.8)',
+                        borderColor: 'rgba(52, 152, 219, 1)',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'ESFP - 表演者',
+                        data: [6.0, 7.0, 5.0, 6.0, 9.0],
+                        backgroundColor: 'rgba(231, 76, 60, 0.8)',
+                        borderColor: 'rgba(231, 76, 60, 1)',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 10,
+                        ticks: {
+                            stepSize: 1
+                        },
+                        title: {
+                            display: true,
+                            text: '动机强度 (0-10)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: '动机维度'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.parsed.y + '/10';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // 雷达图
+        const radarCtx = document.getElementById('radarChart').getContext('2d');
+        const radarChart = new Chart(radarCtx, {
+            type: 'radar',
+            data: {
+                labels: ['内在动机', '成就动机', '权力动机', '自主动机', '归属动机'],
+                datasets: [
+                    {
+                        label: 'INTJ - 建筑师',
+                        data: [7.0, 9.0, 8.0, 9.0, 4.0],
+                        backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                        borderColor: 'rgba(52, 152, 219, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(52, 152, 219, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(52, 152, 219, 1)'
+                    },
+                    {
+                        label: 'ESFP - 表演者',
+                        data: [6.0, 7.0, 5.0, 6.0, 9.0],
+                        backgroundColor: 'rgba(231, 76, 60, 0.2)',
+                        borderColor: 'rgba(231, 76, 60, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(231, 76, 60, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(231, 76, 60, 1)'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 10,
+                        ticks: {
+                            stepSize: 2
+                        },
+                        pointLabels: {
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

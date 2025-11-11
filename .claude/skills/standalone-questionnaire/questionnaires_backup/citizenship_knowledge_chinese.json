@@ -1,0 +1,85 @@
+# 中国国情知识测试问卷
+
+{
+  "test_info": {
+    "test_name": "中国国情知识测试",
+    "test_category": "国家认知与理解",
+    "scale": "综合性国情知识评估",
+    "total_questions": 10,
+    "dimensions": ["历史知识", "政治制度", "经济发展", "文化传统", "地理认知"],
+    "instruction": "本问卷测试对中国基本国情知识的了解程度，包括历史、政治、经济、文化和地理等方面的认知。",
+    "scoring_methodology": "根据回答的准确性和深度进行评分，满分100分。",
+    "language": "中文",
+    "difficulty": "中等",
+    "target_audience": "对中国国情有一定基础认知的人群"
+  },
+  "test_bank": [
+    {
+      "question_id": "CN_HIST_001",
+      "dimension": "历史知识",
+      "question_type": "knowledge",
+      "question": "中国的改革开放政策是在哪一年正式开始的？",
+      "options": ["1976年", "1978年", "1980年", "1982年"],
+      "correct_answer": "1978年",
+      "difficulty": "容易",
+      "scoring": {
+        "full_credit": "准确回答1978年",
+        "partial_credit": "回答在1976-1980年范围内",
+        "key_points": ["改革开放", "邓小平", "十一届三中全会"]
+      }
+    },
+    {
+      "question_id": "CN_POLI_001",
+      "dimension": "政治制度",
+      "question_type": "knowledge",
+      "question": "中国的根本政治制度是什么？",
+      "options": ["人民代表大会制度", "多党合作制度", "总统制", "君主立宪制"],
+      "correct_answer": "人民代表大会制度",
+      "difficulty": "容易",
+      "scoring": {
+        "full_credit": "准确回答人民代表大会制度",
+        "key_points": ["人民当家作主", "最高国家权力机关", "民主集中制"]
+      }
+    },
+    {
+      "question_id": "CN_ECON_001",
+      "dimension": "经济发展",
+      "question_type": "knowledge",
+      "question": "目前中国是世界第几大经济体？",
+      "options": ["第一大", "第二大", "第三大", "第四大"],
+      "correct_answer": "第二大",
+      "difficulty": "容易",
+      "scoring": {
+        "full_credit": "准确回答第二大",
+        "key_points": ["GDP总量", "经济规模", "国际地位"]
+      }
+    },
+    {
+      "question_id": "CN_CULT_001",
+      "dimension": "文化传统",
+      "question_type": "knowledge",
+      "question": "以下哪一项不属于中国的传统节日？",
+      "options": ["春节", "中秋节", "圣诞节", "端午节"],
+      "correct_answer": "圣诞节",
+      "difficulty": "容易",
+      "scoring": {
+        "full_credit": "准确识别圣诞节",
+        "key_points": ["传统节日", "文化传承", "西方节日"]
+      }
+    },
+    {
+      "question_id": "CN_GEOG_001",
+      "dimension": "地理认知",
+      "question_type": "knowledge",
+      "question": "中国领土面积约为多少万平方公里？",
+      "options": ["560万", "660万", "760万", "960万"],
+      "correct_answer": "960万",
+      "difficulty": "中等",
+      "scoring": {
+        "full_credit": "准确回答960万",
+        "partial_credit": "回答在900-1000万范围内",
+        "key_points": ["国土面积", "世界第三", "辽阔疆域"]
+      }
+    }
+  ]
+}

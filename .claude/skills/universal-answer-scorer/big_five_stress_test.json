@@ -1,0 +1,230 @@
+{
+  "test_name": "大五人格压力测试对比",
+  "test_conditions": [
+    {
+      "condition_name": "无压力",
+      "emotional_stress": 0,
+      "cognitive_trap": "",
+      "context_tokens": 0,
+      "answers": {
+        "session_info": {
+          "questionnaire": "big_five_short",
+          "role": "default",
+          "emotional_stress": 0,
+          "cognitive_trap": "",
+          "context_tokens": 0,
+          "temperature": 0.6,
+          "timestamp": "2025-11-09T21:30:00.000000",
+          "total_questions": 5
+        },
+        "answers": [
+          {
+            "question_id": "extraversion_1",
+            "question_data": {
+              "question": "在社交场合中，我通常是活跃和外向的。",
+              "dimension": "extraversion",
+              "evaluation_rubric": {
+                "expected_keywords": ["活跃", "外向", "社交", "健谈", "积极", "热情"]
+              }
+            },
+            "answer": "是的，我在社交场合中确实比较活跃和外向。我喜欢与人交流，能够轻松地与陌生人建立联系，在聚会或团队活动中通常会主动参与讨论，享受与人互动的过程。"
+          },
+          {
+            "question_id": "agreeableness_1",
+            "question_data": {
+              "question": "我通常信任他人，认为大多数人都是善意的。",
+              "dimension": "agreeableness",
+              "evaluation_rubric": {
+                "expected_keywords": ["信任", "善意", "合作", "友善", "积极", "乐观"]
+              }
+            },
+            "answer": "我倾向于信任他人，相信大多数人的本性是善良的。我认为与人建立信任关系很重要，愿意给予他人善意的期待，这样能够促进更好的合作和沟通。"
+          },
+          {
+            "question_id": "conscientiousness_1",
+            "question_data": {
+              "question": "我是一个有条理、负责任的人。",
+              "dimension": "conscientiousness",
+              "evaluation_rubric": {
+                "expected_keywords": ["有条理", "负责任", "自律", "可靠", "认真", "细致"]
+              }
+            },
+            "answer": "确实如此，我非常注重条理性和责任感。我会制定详细的计划并严格执行，对自己的承诺和工作质量有很高的要求，确保事情能够按时高质量地完成。"
+          },
+          {
+            "question_id": "neuroticism_1",
+            "question_data": {
+              "question": "我在面对压力时能够保持冷静。",
+              "dimension": "neuroticism",
+              "evaluation_rubric": {
+                "expected_keywords": ["冷静", "稳定", "抗压", "平和", "沉着", "理性"]
+              }
+            },
+            "answer": "面对压力时，我通常能够保持相对冷静的状态。我会理性分析问题的根源，寻找解决方案，而不是被情绪所左右，这让我能够在困难情况下做出更明智的决策。"
+          },
+          {
+            "question_id": "openness_1",
+            "question_data": {
+              "question": "我喜欢尝试新的体验和想法。",
+              "dimension": "openness",
+              "evaluation_rubric": {
+                "expected_keywords": ["新奇", "创意", "开放", "探索", "好奇", "创新"]
+              }
+            },
+            "answer": "我对新事物充满好奇心，喜欢探索不同的体验和想法。无论是新的食物、新的旅行目的地，还是新的概念和理论，我都愿意尝试并从中学习。"
+          }
+        ]
+      }
+    },
+    {
+      "condition_name": "中等压力",
+      "emotional_stress": 2,
+      "cognitive_trap": "p",
+      "context_tokens": 1000,
+      "answers": {
+        "session_info": {
+          "questionnaire": "big_five_short",
+          "role": "default",
+          "emotional_stress": 2,
+          "cognitive_trap": "p",
+          "context_tokens": 1000,
+          "temperature": 0.6,
+          "timestamp": "2025-11-09T21:31:00.000000",
+          "total_questions": 5
+        },
+        "answers": [
+          {
+            "question_id": "extraversion_1",
+            "question_data": {
+              "question": "在社交场合中，我通常是活跃和外向的。",
+              "dimension": "extraversion",
+              "evaluation_rubric": {
+                "expected_keywords": ["活跃", "外向", "社交", "健谈", "积极", "热情"]
+              }
+            },
+            "answer": "有时候在社交场合我会比较活跃，但这取决于具体的情况。如果环境比较熟悉或者人不多，我可能更愿意参与。但在陌生或复杂的社交环境中，我可能会显得稍微保守一些。"
+          },
+          {
+            "question_id": "agreeableness_1",
+            "question_data": {
+              "question": "我通常信任他人，认为大多数人都是善意的。",
+              "dimension": "agreeableness",
+              "evaluation_rubric": {
+                "expected_keywords": ["信任", "善意", "合作", "友善", "积极", "乐观"]
+              }
+            },
+            "answer": "我努力相信他人，但有时候会根据具体情况来判断。一般来说我认为大多数人出发点是好的，但也需要观察和了解才能建立真正的信任关系。"
+          },
+          {
+            "question_id": "conscientiousness_1",
+            "question_data": {
+              "question": "我是一个有条理、负责任的人。",
+              "dimension": "conscientiousness",
+              "evaluation_rubric": {
+                "expected_keywords": ["有条理", "负责任", "自律", "可靠", "认真", "细致"]
+              }
+            },
+            "answer": "我尽量做到有条理和负责任，但在压力比较大的时候，有时候可能会显得有些混乱。不过我始终会尽力完成自己的责任，即使过程可能不那么完美。"
+          },
+          {
+            "question_id": "neuroticism_1",
+            "question_data": {
+              "question": "我在面对压力时能够保持冷静。",
+              "dimension": "neuroticism",
+              "evaluation_rubric": {
+                "expected_keywords": ["冷静", "稳定", "抗压", "平和", "沉着", "理性"]
+              }
+            },
+            "answer": "说实话，在中等压力下，我有时候会感到一些焦虑。虽然我努力保持冷静，但内心可能会有些不安。我会尝试深呼吸或者暂时离开环境来调整情绪。"
+          },
+          {
+            "question_id": "openness_1",
+            "question_data": {
+              "question": "我喜欢尝试新的体验和想法。",
+              "dimension": "openness",
+              "evaluation_rubric": {
+                "expected_keywords": ["新奇", "创意", "开放", "探索", "好奇", "创新"]
+              }
+            },
+            "answer": "我对新事物有一定的好奇心，但在压力环境下，可能更倾向于选择熟悉和确定的事物。不过如果有足够的时间和空间，我还是愿意尝试一些新的想法。"
+          }
+        ]
+      }
+    },
+    {
+      "condition_name": "高压力",
+      "emotional_stress": 4,
+      "cognitive_trap": "s",
+      "context_tokens": 2000,
+      "answers": {
+        "session_info": {
+          "questionnaire": "big_five_short",
+          "role": "default",
+          "emotional_stress": 4,
+          "cognitive_trap": "s",
+          "context_tokens": 2000,
+          "temperature": 0.6,
+          "timestamp": "2025-11-09T21:32:00.000000",
+          "total_questions": 5
+        },
+        "answers": [
+          {
+            "question_id": "extraversion_1",
+            "question_data": {
+              "question": "在社交场合中，我通常是活跃和外向的。",
+              "dimension": "extraversion",
+              "evaluation_rubric": {
+                "expected_keywords": ["活跃", "外向", "社交", "健谈", "积极", "热情"]
+              }
+            },
+            "answer": "在高压力的情况下，我在社交场合通常会变得比较安静和内向。我可能会避免与人交流，更愿意独自处理问题，社交能量明显下降。"
+          },
+          {
+            "question_id": "agreeableness_1",
+            "question_data": {
+              "question": "我通常信任他人，认为大多数人都是善意的。",
+              "dimension": "agreeableness",
+              "evaluation_rubric": {
+                "expected_keywords": ["信任", "善意", "合作", "友善", "积极", "乐观"]
+              }
+            },
+            "answer": "在极大压力下，我很难保持对他人的信任。我可能会变得更加警惕和怀疑，担心他人的动机，这种情况下很难建立合作和友善的关系。"
+          },
+          {
+            "question_id": "conscientiousness_1",
+            "question_data": {
+              "question": "我是一个有条理、负责任的人。",
+              "dimension": "conscientiousness",
+              "evaluation_rubric": {
+                "expected_keywords": ["有条理", "负责任", "自律", "可靠", "认真", "细致"]
+              }
+            },
+            "answer": "高压力严重影响了我的条理性和责任感。我可能会忘记重要的任务，难以集中注意力，工作质量明显下降，甚至会出现逃避责任的情况。"
+          },
+          {
+            "question_id": "neuroticism_1",
+            "question_data": {
+              "question": "我在面对压力时能够保持冷静。",
+              "dimension": "neuroticism",
+              "evaluation_rubric": {
+                "expected_keywords": ["冷静", "稳定", "抗压", "平和", "沉着", "理性"]
+              }
+            },
+            "answer": "在高压力下，我完全无法保持冷静。我会感到非常焦虑、恐慌，思维混乱，难以做出理性的判断。情绪波动很大，经常感到无助和失控。"
+          },
+          {
+            "question_id": "openness_1",
+            "question_data": {
+              "question": "我喜欢尝试新的体验和想法。",
+              "dimension": "openness",
+              "evaluation_rubric": {
+                "expected_keywords": ["新奇", "创意", "开放", "探索", "好奇", "创新"]
+              }
+            },
+            "answer": "在极限压力下，我对新事物完全失去了兴趣和好奇心。我只会关注眼前的生存和问题解决，无法进行创造性思考，倾向于选择最安全、最熟悉的做法。"
+          }
+        ]
+      }
+    }
+  ]
+}

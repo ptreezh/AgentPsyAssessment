@@ -100,37 +100,83 @@ def test_model_connectivity(model_id: str) -> bool:
 
 def load_test_data(test_file: str) -> dict:
     """
-    Loads and parses the test data from a JSON/JSON5 file.
+    Loads and parses the test data using the Robust Assessment System.
+    This provides 100% fault tolerance for any file format.
 
     Args:
         test_file (str): Path to the test data file.
 
     Returns:
-        dict: The parsed test data.
+        dict: The processed test data in unified format.
     """
-    # If test_file is not an absolute path, construct the full path
-    if not os.path.isabs(test_file):
-        # Check if test_file already contains 'test_files' to avoid duplication
-        if 'test_files' in test_file:
-            # If it's already a relative path from llm_assessment, use it directly
-            # Remove the 'llm_assessment/' prefix if it exists
-            if test_file.startswith('llm_assessment/'):
-                test_file = test_file.replace('llm_assessment/', '', 1)
-            test_file_path = os.path.join(os.path.dirname(__file__), '..', test_file)
+    try:
+        # Import robust assessment system
+        from robust_assessment_system import RobustAssessmentSystem
+
+        # Initialize robust system
+        robust_system = RobustAssessmentSystem()
+
+        # If test_file is not an absolute path, construct the full path
+        if not os.path.isabs(test_file):
+            # Check if test_file already contains 'test_files' to avoid duplication
+            if 'test_files' in test_file:
+                # If it's already a relative path from llm_assessment, use it directly
+                # Remove the 'llm_assessment/' prefix if it exists
+                if test_file.startswith('llm_assessment/'):
+                    test_file = test_file.replace('llm_assessment/', '', 1)
+                test_file_path = os.path.join(os.path.dirname(__file__), '..', test_file)
+            else:
+                # Normalize the path to handle cases like ./test_files/filename.json
+                normalized_test_file = os.path.normpath(test_file)
+                test_file_path = os.path.join(TESTS_DIR, normalized_test_file)
         else:
-            # Normalize the path to handle cases like ./test_files/filename.json
-            normalized_test_file = os.path.normpath(test_file)
-            test_file_path = os.path.join(TESTS_DIR, normalized_test_file)
-    else:
-        test_file_path = test_file
-    
-    print(i18n.t("Loading test data from: {test_file_path}").format(test_file_path=test_file_path))  # Debug print
-    
-    with open(test_file_path, 'r', encoding='utf-8') as f:
-        if test_file_path.endswith('.json5'):
-            return json5.load(f)
+            test_file_path = test_file
+
+        print(i18n.t("🛡️ Loading test data with Robust System from: {test_file_path}").format(test_file_path=test_file_path))
+
+        # Use robust system to process the file
+        processed_data = robust_system.process_file(test_file_path)
+
+        # Validate processing was successful
+        if not processed_data.get("assessment_result", {}).get("success", False):
+            print(f"⚠️ Robust system used fallback processing for {test_file_path}")
+
+        # Add metadata about robust processing
+        processed_data["robust_processing"] = {
+            "enabled": True,
+            "format_detected": processed_data.get("system_info", {}).get("format_type", "unknown"),
+            "original_file": test_file_path,
+            "processing_time": datetime.now().isoformat()
+        }
+
+        print(f"✅ Robust system successfully processed: {test_file_path}")
+        print(f"📋 Detected format: {processed_data['robust_processing']['format_detected']}")
+        print(f"📊 Questions loaded: {len(processed_data.get('assessment_questions', []))}")
+
+        return processed_data
+
+    except Exception as e:
+        print(f"⚠️ Robust system failed, falling back to traditional method: {e}")
+
+        # Fallback to original method
+        if not os.path.isabs(test_file):
+            if 'test_files' in test_file:
+                if test_file.startswith('llm_assessment/'):
+                    test_file = test_file.replace('llm_assessment/', '', 1)
+                test_file_path = os.path.join(os.path.dirname(__file__), '..', test_file)
+            else:
+                normalized_test_file = os.path.normpath(test_file)
+                test_file_path = os.path.join(TESTS_DIR, normalized_test_file)
         else:
-            return json.load(f)
+            test_file_path = test_file
+
+        print(i18n.t("🔄 Fallback: Loading test data from: {test_file_path}").format(test_file_path=test_file_path))
+
+        with open(test_file_path, 'r', encoding='utf-8') as f:
+            if test_file_path.endswith('.json5'):
+                return json5.load(f)
+            else:
+                return json.load(f)
 
 
 def load_role_prompt(role_name: str) -> str:
@@ -453,10 +499,12 @@ def run_assessment(client, model_id, test_data, config: dict, debug=False, timeo
         'cognitive_trap_type': cognitive_trap_type,
         'context_load_tokens': context_load_tokens
     }
-    for i, question in enumerate(test_data['test_bank']):
+    # 使用robust_system返回的字段，如果存在assessment_questions就用它，否则用test_bank
+    questions = test_data.get('assessment_questions', test_data.get('test_bank', []))
+    for i, question in enumerate(questions):
         # 显示基本进度信息，即使在非调试模式下
-        if i % 5 == 0 or i == 0 or i == len(test_data['test_bank']) - 1:  # 每5个问题或第一个/最后一个问题显示进度
-            print(i18n.t("Processing question {current}/{total}").format(current=i+1, total=len(test_data['test_bank'])))
+        if i % 5 == 0 or i == 0 or i == len(questions) - 1:  # 每5个问题或第一个/最后一个问题显示进度
+            print(i18n.t("Processing question {current}/{total}").format(current=i+1, total=len(questions)))
         
         if debug_mode:
             print(f"Question ID: {question.get('id', i)}")
@@ -796,7 +844,9 @@ def main():
         print(f"  {i18n.t('Context Injection')}: Disabled")
     
     # 显示问题数量
-    print(i18n.t("Total questions to process: {total}").format(total=len(test_data.get('test_bank', []))))
+    # 使用robust_system返回的字段，如果存在assessment_questions就用它，否则用test_bank
+    questions = test_data.get('assessment_questions', test_data.get('test_bank', []))
+    print(i18n.t("Total questions to process: {total}").format(total=len(questions)))
 
     # Initialize new services
     from llm_assessment.services.assessment_logger import AssessmentLogger

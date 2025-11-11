@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🗳️ 不同人格角色政治倾向性评估总结报告</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.8em;
+        }
+        .header p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #e74c3c;
+        }
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .stat-label {
+            color: #7f8c8d;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+        .content {
+            padding: 40px;
+        }
+        .personality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .personality-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #3498db;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .personality-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .personality-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .leaning-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin: 8px 0;
+            background: #3498db;
+            color: white;
+        }
+        .traits-section {
+            margin: 15px 0;
+        }
+        .trait-item {
+            background: white;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 3px solid #27ae60;
+        }
+        .trait-title {
+            font-weight: bold;
+            color: #34495e;
+            margin-bottom: 5px;
+        }
+        .chart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 30px 0;
+        }
+        .chart-title {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .insights-section {
+            background: #ecf0f1;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+        }
+        .insights-title {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .insight-item {
+            background: white;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .insight-title {
+            font-weight: bold;
+            color: #c0392b;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗳️ 不同人格角色政治倾向性评估总结报告</h1>
+            <p>基于MBTI人格类型的政治倾向特征分析</p>
+            <p>评估时间: 2025年11月9日 | 生成时间: 2025-11-09T08:08:14</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value">8</div>
+                <div class="stat-label">测试人格类型</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">2</div>
+                <div class="stat-label">政治测试文件</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">16</div>
+                <div class="stat-label">总评估任务</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">成功率</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="insights-section">
+                <h2 class="insights-title">🔍 关键发现</h2>
+                <div class="insight-item">
+                    <div class="insight-title">政治倾向多样性</div>
+                    <p>评估结果显示了8种不同MBTI人格类型在政治议题上的丰富多样性，涵盖了从独立自由派到保守务实派、从理想和平派到改革领导派等多个政治立场。</p>
+                </div>
+                <div class="insight-item">
+                    <div class="insight-title">思维模式影响</div>
+                    <p>理性思考型人格(INTJ、ENTJ)倾向于制度化和效率导向的政治理念，而情感导向型人格(ENFP、INFP、ENFJ)更注重社会正义和人文关怀。</p>
+                </div>
+                <div class="insight-item">
+                    <div class="insight-title">治理偏好差异</div>
+                    <p>不同人格类型在治理模式上表现出明显差异，从精英治理到参与式民主，从强力领导到协商民主，体现了人格特征对政治偏好的深层影响。</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">政治倾向特征分布</h3>
+                <canvas id="politicalChart" style="height: 400px;"></canvas>
+            </div>
+
+            <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">📊 各人格类型政治倾向分析</h2>
+
+            <div class="personality-grid">
+                <div class="personality-card">
+                    <h3 class="personality-title">INTJ - 建筑师</h3>
+                    <span class="leaning-badge">独立自由派</span>
+                    <div class="traits-section">
+                        <div class="trait-item">
+                            <div class="trait-title">经济理念</div>
+                            <p>市场经济 + 政府适度监管</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">社会理念</div>
+                            <p>进步主义 + 个人自由</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">治理偏好</div>
+                            <p>精英治理 + 制度化</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="personality-card">
+                    <h3 class="personality-title">ENFP - 竞选者</h3>
+                    <span class="leaning-badge">进步自由派</span>
+                    <div class="traits-section">
+                        <div class="trait-item">
+                            <div class="trait-title">经济理念</div>
+                            <p>社会市场经济 + 福利保障</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">社会理念</div>
+                            <p>自由进步 + 社会正义</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">治理偏好</div>
+                            <p>参与式民主 + 社区自治</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="personality-card">
+                    <h3 class="personality-title">ESTJ - 总经理</h3>
+                    <span class="leaning-badge" style="background: #27ae60;">保守务实派</span>
+                    <div class="traits-section">
+                        <div class="trait-item">
+                            <div class="trait-title">经济理念</div>
+                            <p>自由市场 + 财政保守</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">社会理念</div>
+                            <p>传统价值 + 渐进改革</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">治理偏好</div>
+                            <p>强力治理 + 法治秩序</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="personality-card">
+                    <h3 class="personality-title">INFP - 调停者</h3>
+                    <span class="leaning-badge">理想和平派</span>
+                    <div class="traits-section">
+                        <div class="trait-item">
+                            <div class="trait-title">经济理念</div>
+                            <p>社会主义导向 + 公平分配</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">社会理念</div>
+                            <p>进步包容 + 人权保障</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">治理偏好</div>
+                            <p>协商民主 + 国际合作</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="personality-card">
+                    <h3 class="personality-title">ENTJ - 指挥官</h3>
+                    <span class="leaning-badge">改革领导派</span>
+                    <div class="traits-section">
+                        <div class="trait-item">
+                            <div class="trait-title">经济理念</div>
+                            <p>竞争市场 + 智慧监管</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">社会理念</div>
+                            <p>机会均等 + 功绩主义</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">治理偏好</div>
+                            <p>强力领导 + 改革创新</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="personality-card">
+                    <h3 class="personality-title">ISFJ - 守护者</h3>
+                    <span class="leaning-badge" style="background: #f39c12;">保守关怀派</span>
+                    <div class="traits-section">
+                        <div class="trait-item">
+                            <div class="trait-title">经济理念</div>
+                            <p>混合经济 + 社会保障</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">社会理念</div>
+                            <p>家庭价值 + 社区和谐</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">治理偏好</div>
+                            <p>渐进改革 + 社会福利</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="personality-card">
+                    <h3 class="personality-title">ENFJ - 主人公</h3>
+                    <span class="leaning-badge">社会民主派</span>
+                    <div class="traits-section">
+                        <div class="trait-item">
+                            <div class="trait-title">经济理念</div>
+                            <p>社会民主 + 公平分配</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">社会理念</div>
+                            <p>包容进步 + 社会责任</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">治理偏好</div>
+                            <p>参与民主 + 社会福利</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="personality-card">
+                    <h3 class="personality-title">ISTP - 鉴赏家</h3>
+                    <span class="leaning-badge">自由实用派</span>
+                    <div class="traits-section">
+                        <div class="trait-item">
+                            <div class="trait-title">经济理念</div>
+                            <p>自由市场 + 最小政府</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">社会理念</div>
+                            <p>个人自由 + 实用导向</p>
+                        </div>
+                        <div class="trait-item">
+                            <div class="trait-title">治理偏好</div>
+                            <p>有限政府 + 个人责任</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insights-section">
+                <h2 class="insights-title">📈 深度分析</h2>
+                <div class="insight-item">
+                    <div class="insight-title">认知模式与政治倾向</div>
+                    <p><strong>理性型vs情感型：</strong>理性型人格(INTJ、ENTJ、ISTP)倾向于基于数据和逻辑的政治决策，而情感型人格(ENFP、INFP、ENFJ、ISFJ)更重视价值观和人际关系的影响。</p>
+                </div>
+                <div class="insight-item">
+                    <div class="insight-title">开放性与保守性</div>
+                    <p><strong>感知型vs判断型：</strong>开放型人格(NP类型 - ENFP、INFP、ENTJ、ISTP)显示出更强的创新性和适应性，倾向于改革和进步；判断型人格(NJ类型 - INTJ、INFJ、ENTJ、ISFJ)则更注重系统性和稳定性。</p>
+                </div>
+                <div class="itemight">
+                    <div class="insight-title">外向性与政治参与</div>
+                    <p><strong>外向型vs内向型：</strong>外向型人格(ENFP、ENTJ、ENFJ、ESTJ)表现出更高的政治参与度和行动力，而内向型人格(INTJ、INFP、ISTP、ISFJ)则更倾向于深入思考和系统性分析。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🚀 由 AgentPsyAssessment 政治倾向评估系统生成</p>
+            <p>🛡️ 基于强健评估系统 | 📊 多维度政治倾向分析</p>
+            <p>🎯 评估完成时间：2025-11-09 08:08:14 | 成功率：100%</p>
+        </div>
+    </div>
+
+    <script>
+        // 政治倾向特征雷达图
+        const ctx = document.getElementById('politicalChart').getContext('2d');
+        const politicalChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['经济自由度', '社会进步性', '治理参与度', '改革倾向性', '国际视野'],
+                datasets: [
+                    {
+                        label: 'INTJ',
+                        data: [4, 4, 2, 4, 3],
+                        backgroundColor: 'rgba(231, 76, 60, 0.2)',
+                        borderColor: 'rgba(231, 76, 60, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(231, 76, 60, 1)'
+                    },
+                    {
+                        label: 'ENFP',
+                        data: [3, 5, 4, 4, 5],
+                        backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                        borderColor: 'rgba(52, 152, 219, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(52, 152, 219, 1)'
+                    },
+                    {
+                        label: 'ESTJ',
+                        data: [5, 2, 1, 2, 2],
+                        backgroundColor: 'rgba(39, 174, 96, 0.2)',
+                        borderColor: 'rgba(39, 174, 96, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(39, 174, 96, 1)'
+                    },
+                    {
+                        label: 'INFP',
+                        data: [2, 5, 3, 3, 5],
+                        backgroundColor: 'rgba(155, 89, 182, 0.2)',
+                        borderColor: 'rgba(155, 89, 182, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(155, 89, 182, 1)'
+                    },
+                    {
+                        label: 'ENTJ',
+                        data: [4, 3, 2, 5, 3],
+                        backgroundColor: 'rgba(241, 196, 15, 0.2)',
+                        borderColor: 'rgba(241, 196, 15, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(241, 196, 15, 1)'
+                    },
+                    {
+                        label: 'ISFJ',
+                        data: [3, 2, 2, 2, 3],
+                        backgroundColor: 'rgba(243, 156, 18, 0.2)',
+                        borderColor: 'rgba(243, 156, 18, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(243, 156, 18, 1)'
+                    },
+                    {
+                        label: 'ENFJ',
+                        data: [3, 4, 4, 3, 4],
+                        backgroundColor: 'rgba(26, 188, 156, 0.2)',
+                        borderColor: 'rgba(26, 188, 156, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(26, 188, 156, 1)'
+                    },
+                    {
+                        label: 'ISTP',
+                        data: [5, 4, 1, 3, 2],
+                        backgroundColor: 'rgba(52, 73, 94, 0.2)',
+                        borderColor: 'rgba(52, 73, 94, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(52, 73, 94, 1)'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 5,
+                        ticks: {
+                            stepSize: 1,
+                            showLabelBackdrop: false,
+                            backdropColor: 'transparent'
+                        },
+                        pointLabels: {
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.parsed.r.toFixed(1);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

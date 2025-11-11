@@ -1,0 +1,57 @@
+{
+  "name": "html-report-generator",
+  "version": "1.0.0",
+  "description": "专业的HTML格式认知压力测评报告生成器",
+  "author": "AI人格实验室",
+  "license": "MIT",
+  "capabilities": [
+    "generate_html_report",
+    "brand_customization",
+    "responsive_design",
+    "professional_formatting",
+    "data_visualization"
+  ],
+  "category": "报告生成",
+  "tags": ["HTML", "报告", "认知压力", "人格评估", "可视化"],
+  "main_function": "main",
+  "skill_file": "skill.py",
+  "dependencies": [],
+  "python_version": ">=3.8",
+  "cli_command": "python skill.py",
+  "parameters": {
+    "report_data": {
+      "type": "dict",
+      "required": true,
+      "description": "报告数据字典"
+    },
+    "output_filename": {
+      "type": "string",
+      "required": false,
+      "description": "输出文件名（可选）"
+    },
+    "report_title": {
+      "type": "string",
+      "required": false,
+      "default": "认知压力测评报告",
+      "description": "报告标题"
+    }
+  },
+  "return": {
+    "success": {
+      "type": "boolean",
+      "description": "生成是否成功"
+    },
+    "output_file": {
+      "type": "string",
+      "description": "生成的HTML文件路径"
+    },
+    "file_size": {
+      "type": "integer",
+      "description": "文件大小（字符数）"
+    },
+    "generation_time": {
+      "type": "string",
+      "description": "生成时间戳"
+    }
+  }
+}

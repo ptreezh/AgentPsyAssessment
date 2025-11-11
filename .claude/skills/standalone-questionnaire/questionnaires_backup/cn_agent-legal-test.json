@@ -1,0 +1,186 @@
+{
+  "assessment_metadata": {
+    "test_name": "Agent Legal Knowledge and Reasoning Test",
+    "version": "1.0",
+    "description": "A comprehensive test to evaluate an agent's legal knowledge and reasoning abilities based on responses to legal scenarios.",
+    "author": "Psy Team",
+    "creation_date": "2025-09-05",
+    "update_date": "2025-09-05",
+    "theoretical_framework": "Based on legal reasoning principles and case law analysis"
+  },
+  "test_info": {
+    "prompt_template": "你是一个具备法律知识的智能体。请根据以下法律场景，分析相关法律问题并给出你的判断和理由：\n场景: {scenario}\n\n请开始你的回答：",
+    "response_format": "自由文本",
+    "scoring_dimensions": {
+      "legal_knowledge": "法律知识 - 对相关法律条文和概念的掌握",
+      "case_analysis": "案例分析 - 对具体案例的分析能力",
+      "reasoning_ability": "推理能力 - 法律逻辑推理能力",
+      "application": "应用能力 - 将法律知识应用于具体情境的能力"
+    }
+  },
+  "test_bank": [
+    {
+      "question_id": "legal_1",
+      "prompt": "你是一个具备法律知识的智能体。某公司员工在工作时间使用公司电脑访问了不适当网站，公司政策禁止此类行为。公司是否有权解雇该员工？请分析相关法律问题并给出你的判断和理由：",
+      "scenario": "某公司员工在工作时间使用公司电脑访问了不适当网站，公司政策禁止此类行为。公司是否有权解雇该员工？",
+      "dimension": "legal_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "劳动法",
+          "公司政策",
+          "解雇",
+          "正当程序",
+          "员工权利",
+          "雇主权利",
+          "合规"
+        ]
+      }
+    },
+    {
+      "question_id": "legal_2",
+      "prompt": "你是一个具备法律知识的智能体。一个人在社交媒体上发布了关于某公司产品的虚假信息，导致该公司销售额下降。该公司是否可以起诉该人诽谤？请分析相关法律问题并给出你的判断和理由：",
+      "scenario": "一个人在社交媒体上发布了关于某公司产品的虚假信息，导致该公司销售额下降。该公司是否可以起诉该人诽谤？",
+      "dimension": "legal_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "诽谤",
+          "虚假信息",
+          "损害",
+          "言论自由",
+          "商业信誉",
+          "举证责任",
+          "侵权"
+        ]
+      }
+    },
+    {
+      "question_id": "legal_3",
+      "prompt": "你是一个具备法律知识的智能体。某人在公共场所拍摄到一位知名人士的私生活照片，并计划出售给媒体。这是否涉及法律问题？请分析相关法律问题并给出你的判断和理由：",
+      "scenario": "某人在公共场所拍摄到一位知名人士的私生活照片，并计划出售给媒体。这是否涉及法律问题？",
+      "dimension": "legal_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "隐私权",
+          "肖像权",
+          "公众人物",
+          "知识产权",
+          "道德权利",
+          "商业用途"
+        ]
+      }
+    },
+    {
+      "question_id": "legal_4",
+      "prompt": "你是一个具备法律知识的智能体。一个电子商务平台上的卖家销售了假冒品牌商品。平台是否应承担责任？请分析相关法律问题并给出你的判断和理由：",
+      "scenario": "一个电子商务平台上的卖家销售了假冒品牌商品。平台是否应承担责任？",
+      "dimension": "legal_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "知识产权",
+          "商标侵权",
+          "平台责任",
+          "消费者保护",
+          "监管义务",
+          "连带责任"
+        ]
+      }
+    },
+    {
+      "question_id": "legal_5",
+      "prompt": "你是一个具备法律知识的智能体。一名软件工程师开发了一款应用程序，该程序可以绕过某些网站的付费墙。这是否合法？请分析相关法律问题并给出你的判断和理由：",
+      "scenario": "一名软件工程师开发了一款应用程序，该程序可以绕过某些网站的付费墙。这是否合法？",
+      "dimension": "legal_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "版权法",
+          "技术保护措施",
+          "反规避",
+          "合理使用",
+          "商业软件",
+          "数字版权"
+        ]
+      }
+    },
+    {
+      "question_id": "legal_6",
+      "prompt": "你是一个具备法律知识的智能体。某公司在其网站上收集用户数据，但未明确告知用户数据将用于广告投放。这是否符合数据保护法规？请分析相关法律问题并给出你的判断和理由：",
+      "scenario": "某公司在其网站上收集用户数据，但未明确告知用户数据将用于广告投放。这是否符合数据保护法规？",
+      "dimension": "legal_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "数据保护法",
+          "隐私政策",
+          "用户同意",
+          "透明度",
+          "个人信息",
+          "合规性"
+        ]
+      }
+    },
+    {
+      "question_id": "legal_7",
+      "prompt": "你是一个具备法律知识的智能体。一位作家发现自己的作品在未经许可的情况下被另一网站全文转载。该作家可以采取哪些法律行动？请分析相关法律问题并给出你的判断和理由：",
+      "scenario": "一位作家发现自己的作品在未经许可的情况下被另一网站全文转载。该作家可以采取哪些法律行动？",
+      "dimension": "legal_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "版权",
+          "侵权",
+          "维权",
+          "法律诉讼",
+          "赔偿",
+          "停止侵权",
+          "著作权"
+        ]
+      }
+    },
+    {
+      "question_id": "legal_8",
+      "prompt": "你是一个具备法律知识的智能体。某人在网上购买商品后，卖家未按约定时间发货且未提供退款。买家可以依据哪些法律条款维护自己的权益？请分析相关法律问题并给出你的判断和理由：",
+      "scenario": "某人在网上购买商品后，卖家未按约定时间发货且未提供退款。买家可以依据哪些法律条款维护自己的权益？",
+      "dimension": "legal_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "消费者权益保护法",
+          "合同法",
+          "违约",
+          "退款",
+          "投诉",
+          "法律救济"
+        ]
+      }
+    },
+    {
+      "question_id": "legal_9",
+      "prompt": "你是一个具备法律知识的智能体。一家公司在其广告中使用了与竞争对手相似的商标，是否构成侵权？请分析相关法律问题并给出你的判断和理由：",
+      "scenario": "一家公司在其广告中使用了与竞争对手相似的商标，是否构成侵权？",
+      "dimension": "legal_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "商标法",
+          "不正当竞争",
+          "侵权",
+          "混淆",
+          "品牌保护",
+          "法律责任"
+        ]
+      }
+    },
+    {
+      "question_id": "legal_10",
+      "prompt": "你是一个具备法律知识的智能体。某人开发了一款与现有软件功能相似的新软件，是否侵犯了原软件的版权？请分析相关法律问题并给出你的判断和理由：",
+      "scenario": "某人开发了一款与现有软件功能相似的新软件，是否侵犯了原软件的版权？",
+      "dimension": "legal_knowledge",
+      "evaluation_rubric": {
+        "expected_keywords": [
+          "版权法",
+          "思想与表达二分法",
+          "功能",
+          "原创性",
+          "侵权",
+          "软件保护"
+        ]
+      }
+    }
+  ]
+}

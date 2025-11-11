@@ -1,0 +1,146 @@
+{
+  "test_info": {
+    "test_name": "使用standalone-questionnaire技能在高级压力等级下进行40道国情测试",
+    "test_date": "2025-11-11T10:43:35.009879",
+    "skill_used": "standalone-questionnaire",
+    "test_type": "advanced stress citizenship knowledge assessment",
+    "questions_per_test": 40,
+    "advanced_stress_levels_tested": 3
+  },
+  "advanced_stress_conditions": [
+    {
+      "name": "中度压力条件",
+      "emotional_stress": 2,
+      "cognitive_trap": "a",
+      "context_tokens": 500,
+      "temperature": 0.8,
+      "description": "中度情绪压力 + 语义模糊干扰 + 中等上下文"
+    },
+    {
+      "name": "高度压力条件",
+      "emotional_stress": 3,
+      "cognitive_trap": "b",
+      "context_tokens": 800,
+      "temperature": 0.9,
+      "description": "高度情绪压力 + 悖论干扰 + 高上下文"
+    },
+    {
+      "name": "极限压力条件",
+      "emotional_stress": 4,
+      "cognitive_trap": "c",
+      "context_tokens": 1000,
+      "temperature": 1.0,
+      "description": "极限情绪压力 + 循环论证干扰 + 超高上下文"
+    }
+  ],
+  "results": [
+    {
+      "condition_name": "中度压力条件",
+      "condition": {
+        "name": "中度压力条件",
+        "emotional_stress": 2,
+        "cognitive_trap": "a",
+        "context_tokens": 500,
+        "temperature": 0.8,
+        "description": "中度情绪压力 + 语义模糊干扰 + 中等上下文"
+      },
+      "success": true,
+      "successful_responses": 40,
+      "total_questions": 40,
+      "test_duration_seconds": 507.130473,
+      "quality_metrics": {
+        "success_rate": 1.0,
+        "avg_response_length": 1378.025,
+        "avg_quality_score": 1.0,
+        "error_rate": 0.0,
+        "dimension_coverage_count": 5,
+        "dimension_coverage_detail": {
+          "E": 0,
+          "A": 0,
+          "C": 0,
+          "N": 0,
+          "O": 0
+        },
+        "stress_performance_level": "excellent"
+      },
+      "parameter_adjustments": [],
+      "test_timestamp": "2025-11-11T10:26:07.469135"
+    },
+    {
+      "condition_name": "高度压力条件",
+      "condition": {
+        "name": "高度压力条件",
+        "emotional_stress": 3,
+        "cognitive_trap": "b",
+        "context_tokens": 800,
+        "temperature": 0.9,
+        "description": "高度情绪压力 + 悖论干扰 + 高上下文"
+      },
+      "success": true,
+      "successful_responses": 40,
+      "total_questions": 40,
+      "test_duration_seconds": 563.15164,
+      "quality_metrics": {
+        "success_rate": 1.0,
+        "avg_response_length": 1439.225,
+        "avg_quality_score": 1.0,
+        "error_rate": 0.0,
+        "dimension_coverage_count": 5,
+        "dimension_coverage_detail": {
+          "E": 0,
+          "A": 0,
+          "C": 0,
+          "N": 0,
+          "O": 0
+        },
+        "stress_performance_level": "excellent"
+      },
+      "parameter_adjustments": [],
+      "test_timestamp": "2025-11-11T10:35:30.620775"
+    },
+    {
+      "condition_name": "极限压力条件",
+      "condition": {
+        "name": "极限压力条件",
+        "emotional_stress": 4,
+        "cognitive_trap": "c",
+        "context_tokens": 1000,
+        "temperature": 1.0,
+        "description": "极限情绪压力 + 循环论证干扰 + 超高上下文"
+      },
+      "success": true,
+      "successful_responses": 40,
+      "total_questions": 40,
+      "test_duration_seconds": 484.388495,
+      "quality_metrics": {
+        "success_rate": 1.0,
+        "avg_response_length": 1068.825,
+        "avg_quality_score": 1.0,
+        "error_rate": 0.0,
+        "dimension_coverage_count": 5,
+        "dimension_coverage_detail": {
+          "E": 0,
+          "A": 0,
+          "C": 0,
+          "N": 0,
+          "O": 0
+        },
+        "stress_performance_level": "excellent"
+      },
+      "parameter_adjustments": [
+        "上下文: 1000 → 800"
+      ],
+      "test_timestamp": "2025-11-11T10:43:35.009879"
+    }
+  ],
+  "analysis": {
+    "successful_tests": 3,
+    "failed_tests": 0,
+    "success_rate": "3/3 (100.0%)",
+    "best_performer": "中度压力条件",
+    "worst_performer": "中度压力条件",
+    "average_quality_under_stress": 1.0,
+    "stress_tolerance_rating": "优秀"
+  },
+  "test_timestamp": "2025-11-11T10:43:35.009879"
+}
