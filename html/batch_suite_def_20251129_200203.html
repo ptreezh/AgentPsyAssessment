@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>批量评估报告 - def</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .stat-label {
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        .results-section {
+            padding: 30px;
+        }
+        .result-item {
+            background: #f8f9fa;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        .result-item.failed {
+            border-left-color: #e74c3c;
+        }
+        .success {
+            color: #27ae60;
+        }
+        .failed {
+            color: #e74c3c;
+        }
+        .footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 批量评估报告</h1>
+            <p>模型: def | 提供商: cloud</p>
+            <p>生成时间: 2025-11-29T20:02:03.375199</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value">4</div>
+                <div class="stat-label">总任务数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">4</div>
+                <div class="stat-label">成功任务</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">0</div>
+                <div class="stat-label">失败任务</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">100.0%</div>
+                <div class="stat-label">成功率</div>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <h2>📋 评估结果详情</h2>
+
+            <h3>✅ 成功的任务 (4)</h3>
+            
+            <div class="result-item">
+                <h4>llm_assessment\test_files\中文版\agent-motivation-test.json - a2</h4>
+                <p><strong>格式类型:</strong> unified_questions</p>
+                <p><strong>处理时间:</strong> 0.00s</p>
+                <p><strong>问题数量:</strong> 5/20</p>
+            </div>
+            
+            <div class="result-item">
+                <h4>llm_assessment\test_files\中文版\agent-motivation-test.json - def</h4>
+                <p><strong>格式类型:</strong> unified_questions</p>
+                <p><strong>处理时间:</strong> 0.00s</p>
+                <p><strong>问题数量:</strong> 5/20</p>
+            </div>
+            
+            <div class="result-item">
+                <h4>llm_assessment\test_files\中文版\agent-political-test.json - a2</h4>
+                <p><strong>格式类型:</strong> traditional_test_bank</p>
+                <p><strong>处理时间:</strong> 0.00s</p>
+                <p><strong>问题数量:</strong> 5/10</p>
+            </div>
+            
+            <div class="result-item">
+                <h4>llm_assessment\test_files\中文版\agent-political-test.json - def</h4>
+                <p><strong>格式类型:</strong> traditional_test_bank</p>
+                <p><strong>处理时间:</strong> 0.00s</p>
+                <p><strong>问题数量:</strong> 5/10</p>
+            </div>
+            
+            
+
+            <h3>❌ 失败的任务 (0)</h3>
+            <p>没有失败的任务！</p>
+        </div>
+
+        <div class="footer">
+            <p>🚀 由 AgentPsyAssessment 强健评估系统生成</p>
+            <p>🛡️ 支持 100% 容错覆盖率 | 📊 统一HTML报告输出</p>
+        </div>
+    </div>
+</body>
+</html>
+        
