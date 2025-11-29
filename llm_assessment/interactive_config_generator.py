@@ -39,7 +39,8 @@ except (FileNotFoundError, json.JSONDecodeError) as e:
     TEST_FILE_PATH_TO_KEY = {}
 
 # --- Constants ---
-LLM_ASSESSMENT_DIR = "."
+# Use absolute path based on the script's location
+LLM_ASSESSMENT_DIR = os.path.dirname(os.path.abspath(__file__))
 TEST_FILES_DIR = os.path.join(LLM_ASSESSMENT_DIR, "test_files")
 ROLES_DIR = os.path.join(LLM_ASSESSMENT_DIR, "roles")
 RESULTS_DIR = os.path.join(LLM_ASSESSMENT_DIR, "results")
@@ -173,28 +174,16 @@ def select_models() -> List[str]:
     ]
     
     print("\n--- Model Selection ---")
-    print("You can select from common models or enter custom model names.")
-    
+    print("Select from common models:")
+
     selected_common = select_options(common_models, "Select Common Models", multi_select=True)
-    
-    # Allow custom model input
-    custom_models = []
-    try:
-        while True:
-            custom_model = input("Enter a custom model name (or press Enter to finish): ").strip()
-            if not custom_model:
-                break
-            custom_models.append(custom_model)
-    except EOFError:
-        # Handle non-interactive environments
-        print("\nNon-interactive mode: No custom models added.")
-    
-    all_models = selected_common + custom_models
-    if not all_models:
+
+    # 直接返回选择的模型，不进行任何自定义模型询问
+    if not selected_common:
         print("No models selected. Using default model.")
         return ["gemma3:latest"]
-    
-    return all_models
+
+    return selected_common
 
 def generate_config_non_interactive(template_name: str, models: List[str], test_files: List[str], 
                                   roles: List[str], output_file: str = None) -> Dict[str, Any]:
@@ -273,14 +262,46 @@ def main():
     # Select models
     selected_models = select_models()
     
-    # Get available tests based on language
-    available_tests = get_available_files(TEST_FILES_DIR, ".json", language, "test")
+    # Get available tests - fix for directory structure
+    available_tests = []
+
+    # Based on selected language, look in appropriate subdirectory
+    if language == "en":
+        subdir_path = os.path.join(TEST_FILES_DIR, "English")
+        if os.path.exists(subdir_path):
+            available_tests = [os.path.join("English", f) for f in os.listdir(subdir_path) if f.endswith('.json')]
+    elif language == "zh":
+        subdir_path = os.path.join(TEST_FILES_DIR, "中文版")
+        if os.path.exists(subdir_path):
+            available_tests = [os.path.join("中文版", f) for f in os.listdir(subdir_path) if f.endswith('.json')]
+
+    # If no tests found based on language, try both directories
     if not available_tests:
-        # Fallback to all JSON files if no language-specific files found
-        available_tests = [f for f in os.listdir(TEST_FILES_DIR) if f.endswith(".json")] if os.path.exists(TEST_FILES_DIR) else []
-    
-    selected_tests = select_options(available_tests, "Select Psychological Tests")
-    if not selected_tests:
+        for subdir in ['中文版', 'English']:
+            subdir_path = os.path.join(TEST_FILES_DIR, subdir)
+            if os.path.exists(subdir_path):
+                subdir_tests = [os.path.join(subdir, f) for f in os.listdir(subdir_path) if f.endswith('.json')]
+                available_tests.extend(subdir_tests)
+
+    if available_tests:
+        # Show a debug message to confirm we found files
+        print(f"Found {len(available_tests)} test files")
+
+        # For display in select_options, just use the filename without the subdirectory prefix
+        display_tests = [os.path.basename(test) for test in available_tests]
+
+        selected_tests = select_options(display_tests, "Select Psychological Tests")
+
+        # Map back to the full paths for actual use
+        selected_tests_full_path = []
+        for sel_test in selected_tests:
+            # Find the original full path for the selected test
+            for full_path_test in available_tests:
+                if os.path.basename(full_path_test) == sel_test:
+                    selected_tests_full_path.append(full_path_test)
+                    break
+    else:
+        print("No tests found in test file directories.")
         print("No tests selected. Exiting.")
         return
     
@@ -293,9 +314,9 @@ def main():
         selected_roles = ["default"]
     
     # Calculate estimated task count
-    estimated_tasks = manager.calculate_task_count(template_name, selected_models, selected_tests, selected_roles)
+    estimated_tasks = manager.calculate_task_count(template_name, selected_models, selected_tests_full_path, selected_roles)
     print(f"\nEstimated number of tasks to be generated: {estimated_tasks}")
-    
+
     if estimated_tasks > 1000:
         try:
             confirm = input("This will generate a large number of tasks. Continue? (y/N): ").strip().lower()
@@ -305,12 +326,12 @@ def main():
         except EOFError:
             # Handle non-interactive environments
             print("\nNon-interactive mode: Continuing with large task generation.")
-    
+
     print("\n--- Generating Configuration ---")
-    
+
     try:
         # Generate the configuration
-        config = manager.generate_config(template_name, selected_models, selected_tests, selected_roles)
+        config = manager.generate_config(template_name, selected_models, selected_tests_full_path, selected_roles)
         
         # Save configuration
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
